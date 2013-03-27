@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/135.txt.owl">
+   <event id="0" name="A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="4;0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL">
+      <relatedTo targetId="6;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="6;6" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="IN-STENT THROMBOSIS WAS NOTED">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IN-STENT THROMBOSIS WAS NOTED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS WAS NOTED"/>
+   <eventStmt sourceEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS WAS NOTED"/>
+   <eventStmt sourceEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED" relation="EQUAL" targetEvent="3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT"/>
+   <eventStmt sourceEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED" relation="EQUAL" targetEvent="A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION"/>
+   <eventStmt sourceEvent="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL" relation="BEFORE" targetEvent="PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL"/>
+   <eventStmt sourceEvent="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL" relation="BEFORE" targetEvent="PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL"/>
+   <eventStmt sourceEvent="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL" relation="FINISH" targetEvent="PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL"/>
+   <eventStmt sourceEvent="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL" relation="FINISH" targetEvent="PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL"/>
+   <eventStmt sourceEvent="PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL" relation="START" targetEvent="A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS WAS NOTED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS WAS NOTED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION]: [A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED]: StartAntiplateletTherapy [PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL]: InitialDrugElutingStentImplantation [3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [IN-STENT THROMBOSIS WAS NOTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT EXPIRED]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL]}</timelineEntry>
+</CNTROTimeLineEventList>

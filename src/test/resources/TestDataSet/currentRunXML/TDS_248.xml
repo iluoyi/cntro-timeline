@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/248.txt.owl">
+   <event id="0" name="THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)">
+      <relatedTo targetId="1;2;3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THOMBOSIS IN THE +LMT+ WAS CONFIRMED">
+      <relatedTo targetId="2;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THOMBOSIS IN THE +LMT+ WAS CONFIRMED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PASSED AWAY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PASSED AWAY</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)" relation="BEFORE" targetEvent="THOMBOSIS IN THE +LMT+ WAS CONFIRMED"/>
+   <eventStmt sourceEvent="THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)" relation="BEFORE" targetEvent="PATIENT PASSED AWAY"/>
+   <eventStmt sourceEvent="THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)" relation="BEFORE" targetEvent="DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED"/>
+   <eventStmt sourceEvent="THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)" relation="BEFORE" targetEvent="DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED"/>
+   <eventStmt sourceEvent="DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED" relation="BEFORE" targetEvent="THOMBOSIS IN THE +LMT+ WAS CONFIRMED"/>
+   <eventStmt sourceEvent="DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED" relation="BEFORE" targetEvent="PATIENT PASSED AWAY"/>
+   <eventStmt sourceEvent="THOMBOSIS IN THE +LMT+ WAS CONFIRMED" relation="BEFORE" targetEvent="PATIENT PASSED AWAY"/>
+   <eventStmt sourceEvent="THOMBOSIS IN THE +LMT+ WAS CONFIRMED" relation="BEFORE" targetEvent="PATIENT PASSED AWAY"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THE PATIENT HAD A TAXUS EXPRESS2 2.5X8MM STENT IMPLANTED IN THE LEFT MAIN TRUCK (LMT)]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [DUAL ANTI-PLATELET THERAPY (DAPT) WAS DISCONTINUED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THOMBOSIS IN THE +LMT+ WAS CONFIRMED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT PASSED AWAY]}</timelineEntry>
+</CNTROTimeLineEventList>

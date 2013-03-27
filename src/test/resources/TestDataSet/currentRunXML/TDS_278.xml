@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/278.txt.owl">
+   <event id="0" name="PT HAD TWO CYPHER STENTS (LOT &amp; CATALOG NUMBERS UNK) IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="1;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD TWO CYPHER STENTS (LOT &amp; CATALOG NUMBERS UNK) IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT IS REPORTED TO HAVE VERY LATE STENT THROMBOSIS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT IS REPORTED TO HAVE VERY LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT HAD TWO CYPHER STENTS (LOT &amp; CATALOG NUMBERS UNK) IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT IS REPORTED TO HAVE VERY LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PT HAD TWO CYPHER STENTS (LOT &amp; CATALOG NUMBERS UNK) IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT IS REPORTED TO HAVE VERY LATE STENT THROMBOSIS"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PT HAD TWO CYPHER STENTS (LOT &amp; CATALOG NUMBERS UNK) IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT IS REPORTED TO HAVE VERY LATE STENT THROMBOSIS]}</timelineEntry>
+</CNTROTimeLineEventList>

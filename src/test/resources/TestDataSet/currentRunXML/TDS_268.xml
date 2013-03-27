@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/268.txt.owl">
+   <event id="0" name="SHE WAS PRESCRIBED PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">SHE WAS PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="SHE DEVELOPED IN-STENT THROMBOSIS">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SHE DEVELOPED IN-STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="SHE WAS PRESCRIBED PLAVIX" relation="START" targetEvent="PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB"/>
+   <eventStmt sourceEvent="PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB" relation="BEFORE" targetEvent="SHE DEVELOPED IN-STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB" relation="BEFORE" targetEvent="SHE DEVELOPED IN-STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="SHE DEVELOPED IN-STENT THROMBOSIS" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{StartAntiplateletTherapy [SHE WAS PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [PT HAD FOUR CYPHER STENTS IMPLANTED IN HER LEFT ANTERIOR DESCENDING, RIGHT CORONARY ARTERY, MID-CIRCUMFLEX AND DISTAL OMB]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [SHE DEVELOPED IN-STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

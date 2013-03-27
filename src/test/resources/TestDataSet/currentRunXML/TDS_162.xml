@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/162.txt.owl">
+   <event id="0" name="THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT EXPERIENCED A STENT THROMBOSIS">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED A STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="THE PATIENT EXPERIENCED A ST AND MI">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT EXPERIENCED A ST AND MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM" relation="BEFORE" targetEvent="THE PATIENT EXPERIENCED A ST AND MI"/>
+   <eventStmt sourceEvent="THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM" relation="EQUAL" targetEvent="THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT"/>
+   <eventStmt sourceEvent="PATIENT EXPERIENCED A STENT THROMBOSIS" relation="BEFORE" targetEvent="THE PATIENT EXPERIENCED A ST AND MI"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT]: [THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT EXPERIENCED A STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [THE PATIENT EXPERIENCED A ST AND MI]}</timelineEntry>
+</CNTROTimeLineEventList>

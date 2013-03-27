@@ -1,0 +1,102 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2;3;4, , , , , , 
+
+EVENTID-5,2;3;4, , , , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-7, , , , , , , 
+
+EVENTID-8,1;1;2;3;4, , , , , , 
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> HE HAD BEEN TAKEN OFF HIS PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==>  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PT UNDERWENT BACK SURGERY
+      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT PASSED AWAY
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> DEATH
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( HE HAD BEEN TAKEN OFF HIS PLAVIX ...)==>[ BEFORE ]==>( PT UNDERWENT BACK SURGERY ...)
+   
+EVENT-RELATION # 2: ( HE HAD BEEN TAKEN OFF HIS PLAVIX ...)==>[ BEFORE ]==>( PT UNDERWENT BACK SURGERY ...)
+   
+EVENT-RELATION # 3: ( HE HAD BEEN TAKEN OFF HIS PLAVIX ...)==>[ BEFORE ]==>( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 4: ( HE HAD BEEN TAKEN OFF HIS PLAVIX ...)==>[ BEFORE ]==>( DEATH ...)
+   
+EVENT-RELATION # 5: ( HE HAD BEEN TAKEN OFF HIS PLAVIX ...)==>[ BEFORE ]==>( PT PASSED AWAY ...)
+   
+EVENT-RELATION # 6: ( CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THR ...)==>[ BEFORE ]==>( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 7: ( CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THR ...)==>[ BEFORE ]==>( DEATH ...)
+   
+EVENT-RELATION # 8: ( CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THR ...)==>[ BEFORE ]==>( PT PASSED AWAY ...)
+   
+EVENT-RELATION # 9: (  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS A ...)==>[ BEFORE ]==>( PT UNDERWENT BACK SURGERY ...)
+   
+EVENT-RELATION # 10: (  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS A ...)==>[ BEFORE ]==>( PT UNDERWENT BACK SURGERY ...)
+   
+EVENT-RELATION # 11: (  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS A ...)==>[ BEFORE ]==>( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 12: (  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS A ...)==>[ BEFORE ]==>( DEATH ...)
+   
+EVENT-RELATION # 13: (  3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS A ...)==>[ BEFORE ]==>( PT PASSED AWAY ...)
+   
+EVENT-RELATION # 14: ( PT UNDERWENT BACK SURGERY ...)==>[ BEFORE ]==>( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 15: ( PT UNDERWENT BACK SURGERY ...)==>[ BEFORE ]==>( DEATH ...)
+   
+EVENT-RELATION # 16: ( PT UNDERWENT BACK SURGERY ...)==>[ BEFORE ]==>( PT PASSED AWAY ...)
+   
+EVENT-RELATION # 17: ( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( DEATH ...)
+   
+EVENT-RELATION # 18: ( EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT PASSED AWAY ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {EndAntiplateletTherapy [HE HAD BEEN TAKEN OFF HIS PLAVIX]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM]: [THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation [CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE]: [ 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION]}
+EVENT-TimeLineEntry # 4: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT UNDERWENT BACK SURGERY]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction [EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 6: {Patient_Death [PT PASSED AWAY]: [DEATH]}

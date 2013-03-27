@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/214.txt.owl">
+   <event id="0" name="PATIENT WAS DISCHARGED ON ASPIRIN AND PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS DISCHARGED ON ASPIRIN AND PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD">
+      <relatedTo targetId="3;3;4;5;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="6;7" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE FIRST DIAGONAL ARTERY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE FIRST DIAGONAL ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="A 3.0X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE MID LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE MID LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY">
+      <relatedTo targetId="3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="IN-STENT VERY LATE THROMBOSIS.">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IN-STENT VERY LATE THROMBOSIS.</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="A MYOCARDIAL INFARCTION">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT PRESENTED EMERGENTLY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED EMERGENTLY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON ASPIRIN AND PLAVIX" relation="FINISH" targetEvent="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY"/>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON ASPIRIN AND PLAVIX" relation="START" targetEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD"/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="IN-STENT VERY LATE THROMBOSIS."/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="IN-STENT VERY LATE THROMBOSIS."/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY"/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="EQUAL" targetEvent="A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE FIRST DIAGONAL ARTERY"/>
+   <eventStmt sourceEvent="A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD" relation="EQUAL" targetEvent="A 3.0X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE MID LAD"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="IN-STENT VERY LATE THROMBOSIS."/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="IN-STENT VERY LATE THROMBOSIS." relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="IN-STENT VERY LATE THROMBOSIS." relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <timelineEntry>{StartAntiplateletTherapy [PATIENT WAS DISCHARGED ON ASPIRIN AND PLAVIX]: InitialDrugElutingStentImplantation [A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LAD]: [A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE FIRST DIAGONAL ARTERY]: [A 3.0X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE MID LAD]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT HAD STOPPED TAKING ALL ANTIPLATELET THERAPY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [IN-STENT VERY LATE THROMBOSIS.]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [A MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED EMERGENTLY]}</timelineEntry>
+</CNTROTimeLineEventList>

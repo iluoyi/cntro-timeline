@@ -1,0 +1,39 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> MULTIPLE TAXUS EXPRESS2 DRUG ELUTING STENTS WERE IMPLANTED IN THE LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> LATE STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> MYOCARDIAL INFARCTIONS
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( MULTIPLE TAXUS EXPRESS2 DRUG ELUTING STENTS WERE ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( MULTIPLE TAXUS EXPRESS2 DRUG ELUTING STENTS WERE ...)==>[ BEFORE ]==>( MYOCARDIAL INFARCTIONS ...)
+   
+EVENT-RELATION # 3: ( LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( MYOCARDIAL INFARCTIONS ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [MULTIPLE TAXUS EXPRESS2 DRUG ELUTING STENTS WERE IMPLANTED IN THE LESION]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [LATE STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [MYOCARDIAL INFARCTIONS]}

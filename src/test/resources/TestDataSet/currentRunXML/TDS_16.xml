@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/16.txt.owl">
+   <event id="0" name="INDEX PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INDEX PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT">
+      <relatedTo targetId="2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION"/>
+   <eventStmt sourceEvent="PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED"/>
+   <eventStmt sourceEvent="PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL"/>
+   <eventStmt sourceEvent="BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION" relation="BEFORE" targetEvent="PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED"/>
+   <eventStmt sourceEvent="BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION" relation="BEFORE" targetEvent="TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL"/>
+   <eventStmt sourceEvent="TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL" relation="BEFORE" targetEvent="PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED"/>
+   <timelineEntry>{Late_Stent_Thrombosis [PT HAD A LATE THROMBOSIS OF THE PREVIOUSLY IMPLANTED CYPHER STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [BROUGHT TO THE HOSP IN AN EMERGENCY SITUATION]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [TWO (2) EACH DRIVER 3.0/18 MM BARE METAL STENTS (BMS) WERE USED TO TREAT THE THROMBUS IN THE DISTAL VESSEL]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DID NOT RECOVER AFTER THE INTERVENTION AND EXPIRED]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{InitialDrugElutingStentImplantation [INDEX PROCEDURE]}</timelineEntry>
+</CNTROTimeLineEventList>

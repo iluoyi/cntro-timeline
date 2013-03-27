@@ -1,0 +1,44 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_270.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+3	2;4	 	 	 	 	 	 	
+2	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_270.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2;3;4	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+3	2;4	 	 	 	 	 	 	
+2	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_270.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_270.csv
+########## EVENTS ############
+EVENT # 0 ==> IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STENTS IN AN OVERLAPPING FASHION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> DUE TO STENT THROMBOSIS IN THE TARGET LESION      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS AND ACUTE CHEST PAIN      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STE ...)==>[ BEFORE ]==>( DUE TO STENT THROMBOSIS IN THE TARGET LESION ...)   
+EVENT-RELATION # 2: ( IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STE ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 3: ( IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STE ...)==>[ BEFORE ]==>( WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS ...)   
+EVENT-RELATION # 4: ( IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STE ...)==>[ BEFORE ]==>( PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT ...)   
+EVENT-RELATION # 5: ( DUE TO STENT THROMBOSIS IN THE TARGET LESION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 6: ( DUE TO STENT THROMBOSIS IN THE TARGET LESION ...)==>[ BEFORE ]==>( WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS ...)   
+EVENT-RELATION # 7: ( DUE TO STENT THROMBOSIS IN THE TARGET LESION ...)==>[ BEFORE ]==>( PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT ...)   
+EVENT-RELATION # 8: ( WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 9: ( WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS ...)==>[ BEFORE ]==>( PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT ...)   
+EVENT-RELATION # 10: ( PATIENT PRESENTED ...)==>[ BEFORE ]==>( PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [IMPLANTING TWO 3.0X20MM TAXUS EXPRESS2 STUDY STENTS IN AN OVERLAPPING FASHION]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [DUE TO STENT THROMBOSIS IN THE TARGET LESION]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [WITH ST SEGMENT ELEVATIONS IN THE INFERIOR LEADS AND ACUTE CHEST PAIN]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED]}EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [PATIENT WAS TREATED WITH AN UNKNOWN STUDY STENT]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2;3;4 ]

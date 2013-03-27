@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/150.txt.owl">
+   <event id="0" name="ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT WAS PRESCRIBED PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="3" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="PATIENT EXPERIENCED A THROMBOTIC EVENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED A THROMBOTIC EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PATIENT WAS PRESCRIBED PLAVIX" relation="START" targetEvent="TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="PATIENT EXPERIENCED A THROMBOTIC EVENT" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO CYPHER STENTS WERE IMPLANTED IN THE PROXIMAL AND MID LEFT ANTERIOR DESCENDING ARTERY]: StartAntiplateletTherapy [PATIENT WAS PRESCRIBED PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT EXPERIENCED A THROMBOTIC EVENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

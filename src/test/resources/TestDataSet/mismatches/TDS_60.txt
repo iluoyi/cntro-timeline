@@ -1,0 +1,52 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_60.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+1	0;2;3	 	 	 	 	 	 	
+4	 	 	 	2	 	 	3	
+3	0;1;2	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_60.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+1	0;2;2;3	 	 	 	 	 	 	
+4	 	 	 	2	 	 	3	
+3	0;0;1;2	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_60.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_60.csv
+########## EVENTS ############
+EVENT # 0 ==> HROMBOSIS WAS NOTED IN THE LMT TO THE LCX      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> SUDDEN CARDIAC ARREST OCCURRED      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX       		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PT DIED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( HROMBOSIS WAS NOTED IN THE LMT TO THE LCX ...)==>[ BEFORE ]==>( SUDDEN CARDIAC ARREST OCCURRED ...)   
+EVENT-RELATION # 2: ( HROMBOSIS WAS NOTED IN THE LMT TO THE LCX ...)==>[ BEFORE ]==>( PT DIED ...)   
+EVENT-RELATION # 3: ( HROMBOSIS WAS NOTED IN THE LMT TO THE LCX ...)==>[ BEFORE ]==>( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)   
+EVENT-RELATION # 4: ( SUDDEN CARDIAC ARREST OCCURRED ...)==>[ BEFORE ]==>( HROMBOSIS WAS NOTED IN THE LMT TO THE LCX ...)   
+EVENT-RELATION # 5: ( SUDDEN CARDIAC ARREST OCCURRED ...)==>[ BEFORE ]==>( PT DIED ...)   
+EVENT-RELATION # 6: ( SUDDEN CARDIAC ARREST OCCURRED ...)==>[ BEFORE ]==>( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)   
+EVENT-RELATION # 7: ( PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIB ...)==>[ FINISH ]==>( PT DIED ...)   
+EVENT-RELATION # 8: ( PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIB ...)==>[ START ]==>( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)   
+EVENT-RELATION # 9: ( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)==>[ BEFORE ]==>( HROMBOSIS WAS NOTED IN THE LMT TO THE LCX ...)   
+EVENT-RELATION # 10: ( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)==>[ BEFORE ]==>( SUDDEN CARDIAC ARREST OCCURRED ...)   
+EVENT-RELATION # 11: ( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)==>[ BEFORE ]==>( PT DIED ...)   
+EVENT-RELATION # 12: ( PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING S ...)==>[ EQUAL ]==>( A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PR ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {Late_Stent_Thrombosis : [HROMBOSIS WAS NOTED IN THE LMT TO THE LCX]}EVENT-TimeLineEntry # 2: {Myocardial_Infarction : [SUDDEN CARDIAC ARREST OCCURRED]}EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED]}EVENT-TimeLineEntry # 4: {InitialDrugElutingStentImplantation : [PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX] : [A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX ]}EVENT-TimeLineEntry # 5: {Patient_Death : [PT DIED]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 0;2;3 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 0;2;2;3 ]
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 0;1;2 ]
+Found: Event [ 3 ] --> [  BEFORE ] --> Event [ 0;0;1;2 ]

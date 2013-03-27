@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/227.txt.owl">
+   <event id="0" name="THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="3" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="A SECOND STENT WAS PLACED IN THE FIRST OBTUSE MARGINAL ARTERY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A SECOND STENT WAS PLACED IN THE FIRST OBTUSE MARGINAL ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS OCCURRED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="STENT THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="STENT THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="EQUAL" targetEvent="A SECOND STENT WAS PLACED IN THE FIRST OBTUSE MARGINAL ARTERY"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS OCCURRED" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THE STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY]: [A SECOND STENT WAS PLACED IN THE FIRST OBTUSE MARGINAL ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS OCCURRED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

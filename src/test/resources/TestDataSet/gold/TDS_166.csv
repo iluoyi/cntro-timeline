@@ -1,0 +1,29 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1, , , , , , 
+
+EVENTID-1, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> LATE STENT THROMBOSIS WAS OBSERVED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIEN ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS WAS OBSERVED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [LATE STENT THROMBOSIS WAS OBSERVED]}

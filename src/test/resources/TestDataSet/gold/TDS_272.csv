@@ -1,0 +1,73 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4, , , , , , 
+
+EVENTID-3,1;2;4, , , , , , 
+
+EVENTID-1,2;4, , , , , , 
+
+EVENTID-2,4, , , , , , 
+
+EVENTID-5, , , , , , ,4
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> STOPPAGE OF PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PT WAS STARTED ON EFFIENT 10MG DAILY
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTER ...)==>[ BEFORE ]==>( WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONAR ...)
+   
+EVENT-RELATION # 2: ( HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTER ...)==>[ BEFORE ]==>( HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 3: ( HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTER ...)==>[ BEFORE ]==>( STOPPAGE OF PLAVIX ...)
+   
+EVENT-RELATION # 4: ( HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTER ...)==>[ BEFORE ]==>( PT STATED THAT HE HAD A SECOND CYPHER STENT PLAC ...)
+   
+EVENT-RELATION # 5: ( STOPPAGE OF PLAVIX ...)==>[ BEFORE ]==>( WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONAR ...)
+   
+EVENT-RELATION # 6: ( STOPPAGE OF PLAVIX ...)==>[ BEFORE ]==>( HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 7: ( STOPPAGE OF PLAVIX ...)==>[ BEFORE ]==>( PT STATED THAT HE HAD A SECOND CYPHER STENT PLAC ...)
+   
+EVENT-RELATION # 8: ( WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONAR ...)==>[ BEFORE ]==>( HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 9: ( WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONAR ...)==>[ BEFORE ]==>( PT STATED THAT HE HAD A SECOND CYPHER STENT PLAC ...)
+   
+EVENT-RELATION # 10: ( HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT STATED THAT HE HAD A SECOND CYPHER STENT PLAC ...)
+   
+EVENT-RELATION # 11: ( PT WAS STARTED ON EFFIENT 10MG DAILY ...)==>[ START ]==>( PT STATED THAT HE HAD A SECOND CYPHER STENT PLAC ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY]}
+EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy : [STOPPAGE OF PLAVIX]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 5: {StartAntiplateletTherapy : [PT WAS STARTED ON EFFIENT 10MG DAILY]}
+EVENT-TimeLineEntry # 6: {FollowUpStentProcedure : [PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT]}

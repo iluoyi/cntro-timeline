@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/207.txt.owl">
+   <event id="0" name="A TAXUS EXPRESS2 2.5X24MM STENT WAS IMPLANTED IN THE MID LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A TAXUS EXPRESS2 2.5X24MM STENT WAS IMPLANTED IN THE MID LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId="2;3;4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="EQUAL" targetEvent="A TAXUS EXPRESS2 2.5X24MM STENT WAS IMPLANTED IN THE MID LAD"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)" relation="BEFORE" targetEvent="THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)" relation="BEFORE" targetEvent="THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A TAXUS EXPRESS2 2.5X24MM STENT WAS IMPLANTED IN THE MID LAD]: [A TAXUS EXPRESS2 3.0X20MM STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT DISCONTINUED ANTI-PLATELET THERAPY (ASPIRIN AND CLOPIDOGREL)]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS WAS IDENTIFIED IN THE TWO TAXUS EXPRESS2 STENTS PREVIOUSLY IMPLANTED IN THE LAD]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

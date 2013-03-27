@@ -1,0 +1,45 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_196.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;3;4	 	 	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_196.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;2;3;4	 	 	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_196.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_196.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT WAS PUT ON ASPIRIN AND PLAVIX      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LESION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> ANGIOGRAM SHOWED THROMBOSIS IN THE MID RCA      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> A 3.0X20MM PROMUS STENT      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> A 3.5X28MM PROMUS STENT WERE IMPLANTED IN THE LESION      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT WAS PUT ON ASPIRIN AND PLAVIX ...)==>[ START ]==>( A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED I ...)   
+EVENT-RELATION # 2: ( A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED I ...)==>[ BEFORE ]==>( ANGIOGRAM SHOWED THROMBOSIS IN THE MID RCA ...)   
+EVENT-RELATION # 3: ( A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED I ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 4: ( A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED I ...)==>[ BEFORE ]==>( A 3.0X20MM PROMUS STENT ...)   
+EVENT-RELATION # 5: ( ANGIOGRAM SHOWED THROMBOSIS IN THE MID RCA ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 6: ( ANGIOGRAM SHOWED THROMBOSIS IN THE MID RCA ...)==>[ BEFORE ]==>( A 3.0X20MM PROMUS STENT ...)   
+EVENT-RELATION # 7: ( PATIENT PRESENTED ...)==>[ BEFORE ]==>( A 3.0X20MM PROMUS STENT ...)   
+EVENT-RELATION # 8: ( A 3.0X20MM PROMUS STENT ...)==>[ EQUAL ]==>( A 3.5X28MM PROMUS STENT WERE IMPLANTED IN THE LE ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PATIENT WAS PUT ON ASPIRIN AND PLAVIX]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [A 3.50X32MM TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LESION]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [ANGIOGRAM SHOWED THROMBOSIS IN THE MID RCA]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED]}EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [A 3.0X20MM PROMUS STENT] : [A 3.5X28MM PROMUS STENT WERE IMPLANTED IN THE LESION]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3;4 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3;4 ]

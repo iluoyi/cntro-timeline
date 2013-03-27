@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/280.txt.owl">
+   <event id="0" name="THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="POST-INTERVENTIONAL TREATMENT WITH PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">POST-INTERVENTIONAL TREATMENT WITH PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="WHICH LED TO MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WHICH LED TO MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA" relation="BEFORE" targetEvent="PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)"/>
+   <eventStmt sourceEvent="THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA" relation="BEFORE" targetEvent="PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)"/>
+   <eventStmt sourceEvent="THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA" relation="BEFORE" targetEvent="WHICH LED TO MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="POST-INTERVENTIONAL TREATMENT WITH PLAVIX" relation="START" targetEvent="THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA"/>
+   <eventStmt sourceEvent="PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)" relation="BEFORE" targetEvent="WHICH LED TO MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THREE CYPHER STENTS OF UNKNOWN LENGTH AND DIAMETER, UNKNOWN LOT NUMBERS AND UNKNOWN EXPIRATION DATES, WERE DEPLOYED AT UNKNOWN PRESSURES IN UNIDENTIFIED SECTIONS OF THE LAD AND RCA]: StartAntiplateletTherapy [POST-INTERVENTIONAL TREATMENT WITH PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT SUFFERED THROMBOSIS AT THE SITE OF THE STENT(S)]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [WHICH LED TO MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

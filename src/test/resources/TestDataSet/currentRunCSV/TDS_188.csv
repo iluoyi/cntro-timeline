@@ -1,0 +1,41 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN MID RCA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED IN THE RCA
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUT ...)==>[ BEFORE ]==>( PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THR ...)
+   
+EVENT-RELATION # 2: ( AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUT ...)==>[ BEFORE ]==>( PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THR ...)
+   
+EVENT-RELATION # 3: ( AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUT ...)==>[ BEFORE ]==>( TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED ...)
+   
+EVENT-RELATION # 4: ( PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THR ...)==>[ BEFORE ]==>( TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN MID RCA]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {FollowUpStentProcedure [TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED IN THE RCA]}

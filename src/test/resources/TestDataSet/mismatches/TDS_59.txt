@@ -1,0 +1,43 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_59.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+4	2;3	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_59.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+4	2;2;3	 	5	 	 	 	 	
+5	 	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_59.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_59.csv
+########## EVENTS ############
+EVENT # 0 ==> DISCHARGED ON ASA AND TICLID      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:NINETEEN MONTHS}{Dur. unit:MONTH}{Dur. value:0}}}]   
+EVENT # 1 ==> A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT EXPIRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEAL ...)==>[ BEFORE ]==>( PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY A ...)   
+EVENT-RELATION # 2: ( A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEAL ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 3: ( A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANT ...)==>[ BEFORE ]==>( PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY A ...)   
+EVENT-RELATION # 4: ( A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANT ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 5: ( A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANT ...)==>[ EQUAL ]==>( ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMP ...)   
+EVENT-RELATION # 6: ( PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY A ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [DISCHARGED ON ASA AND TICLID]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY]}EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED] : [ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION]}EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST]}EVENT-TimeLineEntry # 5: {Patient_Death : [PATIENT EXPIRED]}
+
+##############################
+
+Expected: Event [ 4 ] --> [  BEFORE ] --> Event [ 2;3 ]
+Found: Event [ 4 ] --> [  BEFORE ] --> Event [ 2;2;3 ]

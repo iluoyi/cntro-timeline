@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/179.txt.owl">
+   <event id="0" name="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY">
+      <relatedTo targetId="1;2;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= )(Granularity=DAY)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="6" name="PATIENT IS CURRENTLY TAKING PLAVIX AND ASPIRIN">
+      <relatedTo targetId="1;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT IS CURRENTLY TAKING PLAVIX AND ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="STENTS WERE OCCLUDED WITH THROMBUS.">
+      <relatedTo targetId="1;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENTS WERE OCCLUDED WITH THROMBUS.</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT PRESENTED">
+      <relatedTo targetId="1;3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS">
+      <relatedTo targetId="1;1;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENTS WERE AGAIN OCCLUDED WITH THROMBUS">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENTS WERE AGAIN OCCLUDED WITH THROMBUS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT AGAIN PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT AGAIN PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="STENTS WERE OCCLUDED WITH THROMBUS."/>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="STENTS WERE OCCLUDED WITH THROMBUS."/>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY" relation="BEFORE" targetEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT IS CURRENTLY TAKING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="PATIENT IS CURRENTLY TAKING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <eventStmt sourceEvent="STENTS WERE OCCLUDED WITH THROMBUS." relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="STENTS WERE OCCLUDED WITH THROMBUS." relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <eventStmt sourceEvent="STENTS WERE OCCLUDED WITH THROMBUS." relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="STENTS WERE OCCLUDED WITH THROMBUS." relation="BEFORE" targetEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS" relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS" relation="BEFORE" targetEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS" relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <eventStmt sourceEvent="STENTS WERE AGAIN OCCLUDED WITH THROMBUS" relation="BEFORE" targetEvent="PATIENT AGAIN PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THREE TAXUS EXPRESS2 STENTS WERE PLACED IN AN UNSPECIFIED CORONARY ARTERY]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [PATIENT IS CURRENTLY TAKING PLAVIX AND ASPIRIN]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENTS WERE OCCLUDED WITH THROMBUS.]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [TWO STENTS WERE PLACED TO TREAT THE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENTS WERE AGAIN OCCLUDED WITH THROMBUS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT AGAIN PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,31 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_117.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_117.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_117.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_117.csv
+########## EVENTS ############
+EVENT # 0 ==> TREATED IN THE INDEX PROCEDURE, WAS STENTED WITH AN UNSPECIFIED TAXUS EXPRESS2 DRUG ELUTING STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> LATE STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PT DEATH OCCURRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TREATED IN THE INDEX PROCEDURE, WAS STENTED WITH ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS ...)   
+EVENT-RELATION # 2: ( TREATED IN THE INDEX PROCEDURE, WAS STENTED WITH ...)==>[ BEFORE ]==>( PT DEATH OCCURRED ...)   
+EVENT-RELATION # 3: ( LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( PT DEATH OCCURRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TREATED IN THE INDEX PROCEDURE, WAS STENTED WITH AN UNSPECIFIED TAXUS EXPRESS2 DRUG ELUTING STENT]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [LATE STENT THROMBOSIS]}EVENT-TimeLineEntry # 3: {Patient_Death : [PT DEATH OCCURRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

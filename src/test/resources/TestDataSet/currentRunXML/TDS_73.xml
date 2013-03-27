@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/73.txt.owl">
+   <event id="0" name="PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY REVEALED A CLOT">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY REVEALED A CLOT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED EMERGENTLY">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED EMERGENTLY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A CLOT"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A CLOT"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL" relation="BEFORE" targetEvent="PT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A CLOT" relation="BEFORE" targetEvent="PT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A CLOT" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT PRESENTED EMERGENTLY" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PHYSICIAN IMPLANTED A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT TO AN UNK VESSEL]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED A CLOT]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED EMERGENTLY]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,41 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PLAVIX WAS STOPPED
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENT THROMBOSIS OCCURRED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PLAVIX WAS STOPPED ...)==>[ BEFORE ]==>( STENT THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 2: ( PLAVIX WAS STOPPED ...)==>[ BEFORE ]==>( STENT THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 3: ( PLAVIX WAS STOPPED ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 4: ( STENT THROMBOSIS OCCURRED ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {EndAntiplateletTherapy [PLAVIX WAS STOPPED]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [STENT THROMBOSIS OCCURRED]}
+EVENT-TimeLineEntry # 3: {Patient_Death [PATIENT EXPIRED]}

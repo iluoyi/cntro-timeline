@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/231.txt.owl">
+   <event id="0" name="TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED TO THE EMERGENCY ROOM">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED TO THE EMERGENCY ROOM</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD" relation="BEFORE" targetEvent="PATIENT PRESENTED TO THE EMERGENCY ROOM"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD" relation="BEFORE" targetEvent="AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN" relation="BEFORE" targetEvent="PATIENT PRESENTED TO THE EMERGENCY ROOM"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN" relation="BEFORE" targetEvent="AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED" relation="BEFORE" targetEvent="PATIENT PRESENTED TO THE EMERGENCY ROOM"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 &amp; MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED TO THE EMERGENCY ROOM]}</timelineEntry>
+</CNTROTimeLineEventList>

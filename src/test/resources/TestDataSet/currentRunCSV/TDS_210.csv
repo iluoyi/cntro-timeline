@@ -1,0 +1,81 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;5, , , , , , 
+
+EVENTID-5,1;2;3;4, , , , , , 
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PLACEMENT OF TWO NON-ABBOTT STENTS
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 5 ==> TREATED WITH A NON-ABBOTT STENT
+      		[Type = FollowUpStentProcedure][Computed Time Value = (Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)
+      		[Type = FollowUpStentProcedure][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==>  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT WAS ADMITTED TO THE ER
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PLACEMENT OF TWO NON-ABBOTT STENTS ...)==>[ BEFORE ]==>( 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CI ...)
+   
+EVENT-RELATION # 2: ( PLACEMENT OF TWO NON-ABBOTT STENTS ...)==>[ BEFORE ]==>(  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD ...)
+   
+EVENT-RELATION # 3: ( PLACEMENT OF TWO NON-ABBOTT STENTS ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED TO THE ER ...)
+   
+EVENT-RELATION # 4: ( PLACEMENT OF TWO NON-ABBOTT STENTS ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 5: ( PLACEMENT OF TWO NON-ABBOTT STENTS ...)==>[ BEFORE ]==>( TREATED WITH A NON-ABBOTT STENT ...)
+   
+EVENT-RELATION # 6: ( TREATED WITH A NON-ABBOTT STENT ...)==>[ BEFORE ]==>( 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CI ...)
+   
+EVENT-RELATION # 7: ( TREATED WITH A NON-ABBOTT STENT ...)==>[ BEFORE ]==>(  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD ...)
+   
+EVENT-RELATION # 8: ( TREATED WITH A NON-ABBOTT STENT ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED TO THE ER ...)
+   
+EVENT-RELATION # 9: ( TREATED WITH A NON-ABBOTT STENT ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 10: ( 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CI ...)==>[ BEFORE ]==>(  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD ...)
+   
+EVENT-RELATION # 11: ( 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CI ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED TO THE ER ...)
+   
+EVENT-RELATION # 12: ( 2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CI ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 13: (  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED TO THE ER ...)
+   
+EVENT-RELATION # 14: (  AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 15: ( PATIENT WAS ADMITTED TO THE ER ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PLACEMENT OF TWO NON-ABBOTT STENTS]}
+EVENT-TimeLineEntry # 2: {FollowUpStentProcedure [TREATED WITH A NON-ABBOTT STENT]}
+EVENT-TimeLineEntry # 3: {FollowUpStentProcedure [2.5 X 12 MM PROMUS STENT DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis [ AN EKG DETERMINED THAT THE PATIENT'S STENTS HAD THROMBOSIS]}
+EVENT-TimeLineEntry # 5: {ER_Admission [PATIENT WAS ADMITTED TO THE ER]}
+EVENT-TimeLineEntry # 6: {Patient_Death [PATIENT EXPIRED]}

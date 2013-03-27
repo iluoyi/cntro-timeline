@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/190.txt.owl">
+   <event id="0" name="STENT THROMBOSIS OF THE PROXIMAL LAD IS REPORTED TO HAVE OCCURRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS OF THE PROXIMAL LAD IS REPORTED TO HAVE OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ONE ENDEAVOR SPRING RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE ENDEAVOR SPRING RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="ONE ENDEAVOR SPRINT RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LCX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE ENDEAVOR SPRINT RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LCX</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <timelineEntry>UNCLASSIFIED EVENTS:{Late_Stent_Thrombosis [STENT THROMBOSIS OF THE PROXIMAL LAD IS REPORTED TO HAVE OCCURRED]: InitialDrugElutingStentImplantation [ONE ENDEAVOR SPRING RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LAD]: [ONE ENDEAVOR SPRINT RX DRUG-ELUTING STENT WAS IMPLANTED AT THE PROXIMAL LCX]}</timelineEntry>
+</CNTROTimeLineEventList>

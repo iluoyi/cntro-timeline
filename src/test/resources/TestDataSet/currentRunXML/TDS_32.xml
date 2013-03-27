@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/32.txt.owl">
+   <event id="0" name="MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE">
+      <relatedTo targetId="2;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name=".0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">.0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED WITH THROMBOSIS">
+      <relatedTo targetId="3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED WITH THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="ACUTE MYOCARIAL INFARCTION">
+      <relatedTo targetId="3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT WAS ADMITTED TO THE HOSP">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS ADMITTED TO THE HOSP</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="PT PRESENTED WITH THROMBOSIS"/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="PT PRESENTED WITH THROMBOSIS"/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="PT WAS ADMITTED TO THE HOSP"/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="ACUTE MYOCARIAL INFARCTION"/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH THROMBOSIS" relation="BEFORE" targetEvent="PT WAS ADMITTED TO THE HOSP"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH THROMBOSIS" relation="BEFORE" targetEvent="ACUTE MYOCARIAL INFARCTION"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH THROMBOSIS" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="ACUTE MYOCARIAL INFARCTION" relation="BEFORE" targetEvent="PT WAS ADMITTED TO THE HOSP"/>
+   <eventStmt sourceEvent="ACUTE MYOCARIAL INFARCTION" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PT WAS ADMITTED TO THE HOSP" relation="BEFORE" targetEvent="DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE]: [.0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT PRESENTED WITH THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT WAS ADMITTED TO THE HOSP]}</timelineEntry>
+   <timelineEntry>{Patient_Death [DIED]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{StartAntiplateletTherapy [MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,37 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_277.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+3	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_277.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+3	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_277.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_277.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT PRESENTED WITH ACUTE ST ELEVATION AND ANTERIOR INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> A 3.00X16MM TAXUS EXPRESS2 STENT WAS THEN DEPLOYED IN THE LESION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> THROMBOSIS IN THE PREVIOUSLY PLACED STENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT PRESENTED WITH ACUTE ST ELEVATION AND AN ...)==>[ BEFORE ]==>( THROMBOSIS IN THE PREVIOUSLY PLACED STENT ...)   
+EVENT-RELATION # 2: ( PATIENT PRESENTED WITH ACUTE ST ELEVATION AND AN ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 3: ( PATIENT PRESENTED WITH ACUTE ST ELEVATION AND AN ...)==>[ BEFORE ]==>( A 3.00X16MM TAXUS EXPRESS2 STENT WAS THEN DEPLOY ...)   
+EVENT-RELATION # 4: ( A 3.00X16MM TAXUS EXPRESS2 STENT WAS THEN DEPLOY ...)==>[ BEFORE ]==>( THROMBOSIS IN THE PREVIOUSLY PLACED STENT ...)   
+EVENT-RELATION # 5: ( A 3.00X16MM TAXUS EXPRESS2 STENT WAS THEN DEPLOY ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 6: ( THROMBOSIS IN THE PREVIOUSLY PLACED STENT ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [PATIENT PRESENTED WITH ACUTE ST ELEVATION AND ANTERIOR INFARCTION]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [A 3.00X16MM TAXUS EXPRESS2 STENT WAS THEN DEPLOYED IN THE LESION]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [THROMBOSIS IN THE PREVIOUSLY PLACED STENT]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED]}
+
+##############################
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

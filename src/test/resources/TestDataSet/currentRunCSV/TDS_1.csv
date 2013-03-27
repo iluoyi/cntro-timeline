@@ -1,0 +1,94 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;3;3;4;5, ,0;6, , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-7, , , ,3, , ,1
+
+EVENTID-3,2;2;4;5, , , , , , 
+
+EVENTID-5,2;4, , ,4, , , 
+
+EVENTID-2,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ONE REGULAR STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> ANOTHER MEDICATED STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> PT REMAINED ON PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED
+      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> CARDIAC ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT PASSED AWAY THAT NIGHT
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)
+   
+EVENT-RELATION # 2: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ BEFORE ]==>( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)
+   
+EVENT-RELATION # 3: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ BEFORE ]==>( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)
+   
+EVENT-RELATION # 4: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ BEFORE ]==>( PT PASSED AWAY THAT NIGHT ...)
+   
+EVENT-RELATION # 5: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ BEFORE ]==>( THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCEND ...)
+   
+EVENT-RELATION # 6: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ EQUAL ]==>( ONE REGULAR STENT ...)
+   
+EVENT-RELATION # 7: ( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)==>[ EQUAL ]==>( ANOTHER MEDICATED STENT ...)
+   
+EVENT-RELATION # 8: ( PT REMAINED ON PLAVIX ...)==>[ FINISH ]==>( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)
+   
+EVENT-RELATION # 9: ( PT REMAINED ON PLAVIX ...)==>[ START ]==>( CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ...)
+   
+EVENT-RELATION # 10: ( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)
+   
+EVENT-RELATION # 11: ( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)
+   
+EVENT-RELATION # 12: ( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)==>[ BEFORE ]==>( PT PASSED AWAY THAT NIGHT ...)
+   
+EVENT-RELATION # 13: ( PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED ...)==>[ BEFORE ]==>( THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCEND ...)
+   
+EVENT-RELATION # 14: ( THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCEND ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)
+   
+EVENT-RELATION # 15: ( THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCEND ...)==>[ BEFORE ]==>( PT PASSED AWAY THAT NIGHT ...)
+   
+EVENT-RELATION # 16: ( THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCEND ...)==>[ FINISH ]==>( PT PASSED AWAY THAT NIGHT ...)
+   
+EVENT-RELATION # 17: ( CARDIAC ARREST ...)==>[ BEFORE ]==>( PT PASSED AWAY THAT NIGHT ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [ONE REGULAR STENT]: [CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY]: [ANOTHER MEDICATED STENT]: StartAntiplateletTherapy [PT REMAINED ON PLAVIX]}
+EVENT-TimeLineEntry # 2: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis [THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction [CARDIAC ARREST]}
+EVENT-TimeLineEntry # 5: {Patient_Death [PT PASSED AWAY THAT NIGHT]}

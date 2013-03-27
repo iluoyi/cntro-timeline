@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/59.txt.owl">
+   <event id="0" name="DISCHARGED ON ASA AND TICLID">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DISCHARGED ON ASA AND TICLID</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:NINETEEN MONTHS}{Dur. unit:MONTH}{Dur. value:19}}}</eventProperty>
+   </event>
+   <event id="1" name="A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="5" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST"/>
+   <eventStmt sourceEvent="A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST"/>
+   <eventStmt sourceEvent="A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST"/>
+   <eventStmt sourceEvent="A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED" relation="EQUAL" targetEvent="ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION"/>
+   <eventStmt sourceEvent="PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <timelineEntry>{Late_Stent_Thrombosis [A REPEAT CORONARY ANGIOGRAM WAS CONDUCTED REVEALING THROMBUS INSIDE THE CYPHER STENTS IMPLANTED IN THE LAD. ADDITIONALLY, A THROMBUS WAS PRESENT IN THE PROXIMAL CIRCUMFLEX ARTERY]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A CYPHER 2.5X 28 MM STENT (STENT #1) WAS IMPLANTED]: [ADDITIONAL CYPHER 3.0 X 33 MM (STENT #2) WAS IMPLANTED AT 16 ATM FOR 30 SEC IN OVERLAPPING FASHION]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT EXPERIENCED CHEST PAIN AND CARDIO-PULMONARY ARREST]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT EXPIRED]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{StartAntiplateletTherapy [DISCHARGED ON ASA AND TICLID]}</timelineEntry>
+</CNTROTimeLineEventList>

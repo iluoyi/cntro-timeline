@@ -1,0 +1,49 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1, , , , , , ,0;2
+
+EVENTID-2, , , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PHYSICIAN IMPLANTED TWO TAXUS STENTS, UNKNOWN SIZES, ONE TO THE LEFT ANTERIOR DESCENDING (LAD) ARTERY AND THE OTHER TO THE CIRCUMFLEX (CX) ARTERY.
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==>  PT WAS DISCHARGED ON "THROMBO ASS" AND PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:6 MONTHS }{Dur. unit:MONTH}{Dur. value:6}}}]
+   
+EVENT-DESC-EVENT # 2 ==> INITIAL PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> ANGIOGRAPHY REVEALED A THROMBOSIS IN THE LAD
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT PRESENTED WITH "SUSPECTED INFARCT."
+      		[Type = Myocardial_Infarction][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: (  PT WAS DISCHARGED ON "THROMBO ASS" AND PLAVIX ...)==>[ START ]==>( PHYSICIAN IMPLANTED TWO TAXUS STENTS, UNKNOWN SI ...)
+   
+EVENT-RELATION # 2: (  PT WAS DISCHARGED ON "THROMBO ASS" AND PLAVIX ...)==>[ START ]==>( INITIAL PROCEDURE ...)
+   
+EVENT-RELATION # 3: ( ANGIOGRAPHY REVEALED A THROMBOSIS IN THE LAD ...)==>[ BEFORE ]==>( PT PRESENTED WITH "SUSPECTED INFARCT." ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PHYSICIAN IMPLANTED TWO TAXUS STENTS, UNKNOWN SIZES, ONE TO THE LEFT ANTERIOR DESCENDING (LAD) ARTERY AND THE OTHER TO THE CIRCUMFLEX (CX) ARTERY.]: StartAntiplateletTherapy [ PT WAS DISCHARGED ON "THROMBO ASS" AND PLAVIX]: InitialDrugElutingStentImplantation [INITIAL PROCEDURE]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED A THROMBOSIS IN THE LAD]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [PT PRESENTED WITH "SUSPECTED INFARCT."]}

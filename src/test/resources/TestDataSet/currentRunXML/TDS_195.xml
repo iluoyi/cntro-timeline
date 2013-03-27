@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/195.txt.owl">
+   <event id="0" name="3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="1" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="TICLOPIDINE AND ASPIRIN WERE PRESCRIBED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="3" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">TICLOPIDINE AND ASPIRIN WERE PRESCRIBED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= )(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <eventStmt sourceEvent="3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="EQUAL" targetEvent="2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)"/>
+   <eventStmt sourceEvent="TICLOPIDINE AND ASPIRIN WERE PRESCRIBED" relation="FINISH" targetEvent="PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY"/>
+   <eventStmt sourceEvent="TICLOPIDINE AND ASPIRIN WERE PRESCRIBED" relation="START" targetEvent="3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY"/>
+   <eventStmt sourceEvent="PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]: StartAntiplateletTherapy [TICLOPIDINE AND ASPIRIN WERE PRESCRIBED]: InitialDrugElutingStentImplantation [2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD]}</timelineEntry>
+</CNTROTimeLineEventList>

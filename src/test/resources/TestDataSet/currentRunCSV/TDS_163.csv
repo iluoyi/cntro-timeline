@@ -1,0 +1,48 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> WAS PRESCRIBED PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 1 ==> INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> CORONARY STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT EXPERIENCED A MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( WAS PRESCRIBED PLAVIX ...)==>[ START ]==>( INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION ...)
+   
+EVENT-RELATION # 2: ( INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION ...)==>[ BEFORE ]==>( CORONARY STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 3: ( INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION ...)==>[ BEFORE ]==>( CORONARY STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 4: ( INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 5: ( CORONARY STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED A MYOCARDIAL INFARCTION ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [WAS PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [CORONARY STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [PATIENT EXPERIENCED A MYOCARDIAL INFARCTION]}

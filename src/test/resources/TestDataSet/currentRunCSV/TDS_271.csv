@@ -1,0 +1,41 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG- ...)==>[ BEFORE ]==>( ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS A ...)
+   
+EVENT-RELATION # 2: ( A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG- ...)==>[ BEFORE ]==>( ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS A ...)
+   
+EVENT-RELATION # 3: ( A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG- ...)==>[ BEFORE ]==>( PT PRESENTED ...)
+   
+EVENT-RELATION # 4: ( ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS A ...)==>[ BEFORE ]==>( PT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT]}
+EVENT-TimeLineEntry # 3: {ER_Admission [PT PRESENTED]}

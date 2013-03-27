@@ -1,0 +1,63 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-4,1;2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> DISTAL CIRCUMFLEX(CX) STENTING PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= )(Granularity=DAY)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> 100% IN-STENT THROMBOSIS OF THE MID CX STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 05/13/0010)(Granularity=DAY)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> MID CX STENTING PROCEDURE
+      		[Type = FollowUpStentProcedure][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> PT WAS REHOSPITALIZED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PLACEMENT OF A XIENCE STENT
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( DISTAL CIRCUMFLEX(CX) STENTING PROCEDURE ...)==>[ BEFORE ]==>( 100% IN-STENT THROMBOSIS OF THE MID CX STENT ...)
+   
+EVENT-RELATION # 2: ( DISTAL CIRCUMFLEX(CX) STENTING PROCEDURE ...)==>[ BEFORE ]==>( PT WAS REHOSPITALIZED ...)
+   
+EVENT-RELATION # 3: ( DISTAL CIRCUMFLEX(CX) STENTING PROCEDURE ...)==>[ BEFORE ]==>( PLACEMENT OF A XIENCE STENT ...)
+   
+EVENT-RELATION # 4: ( 100% IN-STENT THROMBOSIS OF THE MID CX STENT ...)==>[ BEFORE ]==>( PT WAS REHOSPITALIZED ...)
+   
+EVENT-RELATION # 5: ( 100% IN-STENT THROMBOSIS OF THE MID CX STENT ...)==>[ BEFORE ]==>( PLACEMENT OF A XIENCE STENT ...)
+   
+EVENT-RELATION # 6: ( MID CX STENTING PROCEDURE ...)==>[ BEFORE ]==>( 100% IN-STENT THROMBOSIS OF THE MID CX STENT ...)
+   
+EVENT-RELATION # 7: ( MID CX STENTING PROCEDURE ...)==>[ BEFORE ]==>( PT WAS REHOSPITALIZED ...)
+   
+EVENT-RELATION # 8: ( MID CX STENTING PROCEDURE ...)==>[ BEFORE ]==>( PLACEMENT OF A XIENCE STENT ...)
+   
+EVENT-RELATION # 9: ( PT WAS REHOSPITALIZED ...)==>[ BEFORE ]==>( PLACEMENT OF A XIENCE STENT ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [DISTAL CIRCUMFLEX(CX) STENTING PROCEDURE]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [100% IN-STENT THROMBOSIS OF THE MID CX STENT]}
+EVENT-TimeLineEntry # 3: {FollowUpStentProcedure : [MID CX STENTING PROCEDURE]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PT WAS REHOSPITALIZED]}
+EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [PLACEMENT OF A XIENCE STENT]}

@@ -1,0 +1,51 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_90.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	4	 	 	 	 	
+4	 	 	 	 	 	 	 	
+5	 	 	 	 	 	 	0	
+6	1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+3	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_90.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2;3	 	4	 	 	 	 	
+4	 	 	 	 	 	 	 	
+5	 	 	 	 	 	 	0	
+6	1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+3	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_90.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_90.csv
+########## EVENTS ############
+EVENT # 0 ==> TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> PT WAS DISCHARGED ON ASA AND TICLID      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> RETURNED TO THE HOSPITAL      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> FOUR STENTS WERE IMPLANTED IN THE RCA      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PT PASSED AWAY DURING THE PROCEDURE      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE I ...)==>[ BEFORE ]==>( RETURNED TO THE HOSPITAL ...)   
+EVENT-RELATION # 2: ( TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE I ...)==>[ BEFORE ]==>( PT PASSED AWAY DURING THE PROCEDURE ...)   
+EVENT-RELATION # 3: ( TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE I ...)==>[ BEFORE ]==>( FOUR STENTS WERE IMPLANTED IN THE RCA ...)   
+EVENT-RELATION # 4: ( TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE I ...)==>[ EQUAL ]==>( ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL  ...)   
+EVENT-RELATION # 5: ( PT WAS DISCHARGED ON ASA AND TICLID ...)==>[ START ]==>( TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE I ...)   
+EVENT-RELATION # 6: ( ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSL ...)==>[ BEFORE ]==>( RETURNED TO THE HOSPITAL ...)   
+EVENT-RELATION # 7: ( ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSL ...)==>[ BEFORE ]==>( PT PASSED AWAY DURING THE PROCEDURE ...)   
+EVENT-RELATION # 8: ( ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSL ...)==>[ BEFORE ]==>( FOUR STENTS WERE IMPLANTED IN THE RCA ...)   
+EVENT-RELATION # 9: ( RETURNED TO THE HOSPITAL ...)==>[ BEFORE ]==>( PT PASSED AWAY DURING THE PROCEDURE ...)   
+EVENT-RELATION # 10: ( RETURNED TO THE HOSPITAL ...)==>[ BEFORE ]==>( FOUR STENTS WERE IMPLANTED IN THE RCA ...)   
+EVENT-RELATION # 11: ( FOUR STENTS WERE IMPLANTED IN THE RCA ...)==>[ BEFORE ]==>( PT PASSED AWAY DURING THE PROCEDURE ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD] : [ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX]}EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [PT WAS DISCHARGED ON ASA AND TICLID]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS]}EVENT-TimeLineEntry # 4: {ER_Admission : [RETURNED TO THE HOSPITAL]}EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [FOUR STENTS WERE IMPLANTED IN THE RCA]}EVENT-TimeLineEntry # 6: {Patient_Death : [PT PASSED AWAY DURING THE PROCEDURE]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2;3 ]

@@ -1,0 +1,55 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;1;2, , , , , , 
+
+EVENTID-1,2;2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIO ...)
+   
+EVENT-RELATION # 2: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 3: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED I ...)
+   
+EVENT-RELATION # 4: ( TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED I ...)==>[ BEFORE ]==>( INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIO ...)
+   
+EVENT-RELATION # 5: ( TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED I ...)==>[ BEFORE ]==>( INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIO ...)
+   
+EVENT-RELATION # 6: ( TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED I ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 7: ( INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIO ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 8: ( INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIO ...)==>[ BEFORE ]==>( DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction [MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation [TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis [INDICATIVE OF THROMBOSIS IN THE MID LEFT ANTERIOR DESCENDING ARTERY]}
+EVENT-TimeLineEntry # 4: {Patient_Death [DIED]}

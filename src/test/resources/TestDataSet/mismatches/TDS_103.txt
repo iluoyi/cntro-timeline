@@ -1,0 +1,54 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_103.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4	 	 	 	 	 	 	
+5	1;2;3;4	 	 	 	 	 	 	
+2	1;3;4	 	 	 	 	 	 	
+1	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_103.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;2;3;4	 	 	 	 	 	 	
+5	1;2;2;3;4	 	 	 	 	 	 	
+2	1;3;4	 	 	 	 	 	 	
+1	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_103.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_103.csv
+########## EVENTS ############
+EVENT # 0 ==> UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED IN THE LEFT ANTERIOR DESCENDING (LAD)      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> STOPPED HIS PLAVIX      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT WAS SCHEDULED FOR PROSTATE SURGERY       		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE 100% OCCLUDED      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT WENT INTO 'V-TACH'      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PATIENT EXPIRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT W ...)==>[ BEFORE ]==>( PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE  ...)   
+EVENT-RELATION # 2: ( UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT W ...)==>[ BEFORE ]==>( PATIENT WAS SCHEDULED FOR PROSTATE SURGERY  ...)   
+EVENT-RELATION # 3: ( UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT W ...)==>[ BEFORE ]==>( PATIENT WENT INTO 'V-TACH' ...)   
+EVENT-RELATION # 4: ( UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT W ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 5: ( STOPPED HIS PLAVIX ...)==>[ BEFORE ]==>( PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE  ...)   
+EVENT-RELATION # 6: ( STOPPED HIS PLAVIX ...)==>[ BEFORE ]==>( PATIENT WAS SCHEDULED FOR PROSTATE SURGERY  ...)   
+EVENT-RELATION # 7: ( STOPPED HIS PLAVIX ...)==>[ BEFORE ]==>( PATIENT WENT INTO 'V-TACH' ...)   
+EVENT-RELATION # 8: ( STOPPED HIS PLAVIX ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 9: ( PATIENT WAS SCHEDULED FOR PROSTATE SURGERY  ...)==>[ BEFORE ]==>( PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE  ...)   
+EVENT-RELATION # 10: ( PATIENT WAS SCHEDULED FOR PROSTATE SURGERY  ...)==>[ BEFORE ]==>( PATIENT WENT INTO 'V-TACH' ...)   
+EVENT-RELATION # 11: ( PATIENT WAS SCHEDULED FOR PROSTATE SURGERY  ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 12: ( PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE  ...)==>[ BEFORE ]==>( PATIENT WENT INTO 'V-TACH' ...)   
+EVENT-RELATION # 13: ( PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE  ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 14: ( PATIENT WENT INTO 'V-TACH' ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [UNKNOWN SIZE TAXUS EXPRESS2 DRUG ELUTING STENT WAS DEPLOYED IN THE LEFT ANTERIOR DESCENDING (LAD)]}EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy : [STOPPED HIS PLAVIX]}EVENT-TimeLineEntry # 3: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis : [PATIENT WAS SCHEDULED FOR PROSTATE SURGERY ]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [PREVIOUSLY DEPLOYED TAXUS STENT WAS FOUND TO BE 100% OCCLUDED]}EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [PATIENT WENT INTO 'V-TACH']}EVENT-TimeLineEntry # 6: {Patient_Death : [PATIENT EXPIRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;2;3;4 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;2;2;3;4 ]

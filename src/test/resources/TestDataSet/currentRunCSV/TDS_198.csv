@@ -1,0 +1,48 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;2;3, ,0, , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ONE NON-BSC STENT IMPLANTED.
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> CLOTTING OF THE PREVIOUSLY IMPLANTED STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> THE PATIENT EXPERIENCED A HEART ATTACK 
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENT ...)==>[ BEFORE ]==>( CLOTTING OF THE PREVIOUSLY IMPLANTED STENT ...)
+   
+EVENT-RELATION # 2: ( PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENT ...)==>[ BEFORE ]==>( CLOTTING OF THE PREVIOUSLY IMPLANTED STENT ...)
+   
+EVENT-RELATION # 3: ( PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENT ...)==>[ BEFORE ]==>( THE PATIENT EXPERIENCED A HEART ATTACK  ...)
+   
+EVENT-RELATION # 4: ( PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENT ...)==>[ EQUAL ]==>( ONE NON-BSC STENT IMPLANTED. ...)
+   
+EVENT-RELATION # 5: ( CLOTTING OF THE PREVIOUSLY IMPLANTED STENT ...)==>[ BEFORE ]==>( THE PATIENT EXPERIENCED A HEART ATTACK  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [ONE NON-BSC STENT IMPLANTED.]: [PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [CLOTTING OF THE PREVIOUSLY IMPLANTED STENT]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [THE PATIENT EXPERIENCED A HEART ATTACK ]}

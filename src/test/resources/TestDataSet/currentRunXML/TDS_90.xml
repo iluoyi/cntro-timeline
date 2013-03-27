@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/90.txt.owl">
+   <event id="0" name="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="4" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT WAS DISCHARGED ON ASA AND TICLID">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS DISCHARGED ON ASA AND TICLID</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="RETURNED TO THE HOSPITAL">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">RETURNED TO THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="FOUR STENTS WERE IMPLANTED IN THE RCA">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">FOUR STENTS WERE IMPLANTED IN THE RCA</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PASSED AWAY DURING THE PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PASSED AWAY DURING THE PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD" relation="BEFORE" targetEvent="RETURNED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD" relation="BEFORE" targetEvent="RETURNED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD" relation="BEFORE" targetEvent="PT PASSED AWAY DURING THE PROCEDURE"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD" relation="BEFORE" targetEvent="FOUR STENTS WERE IMPLANTED IN THE RCA"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD" relation="EQUAL" targetEvent="ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX"/>
+   <eventStmt sourceEvent="PT WAS DISCHARGED ON ASA AND TICLID" relation="START" targetEvent="TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS" relation="BEFORE" targetEvent="RETURNED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS" relation="BEFORE" targetEvent="PT PASSED AWAY DURING THE PROCEDURE"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS" relation="BEFORE" targetEvent="FOUR STENTS WERE IMPLANTED IN THE RCA"/>
+   <eventStmt sourceEvent="RETURNED TO THE HOSPITAL" relation="BEFORE" targetEvent="PT PASSED AWAY DURING THE PROCEDURE"/>
+   <eventStmt sourceEvent="RETURNED TO THE HOSPITAL" relation="BEFORE" targetEvent="FOUR STENTS WERE IMPLANTED IN THE RCA"/>
+   <eventStmt sourceEvent="FOUR STENTS WERE IMPLANTED IN THE RCA" relation="BEFORE" targetEvent="PT PASSED AWAY DURING THE PROCEDURE"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO CYPHER STENTS (3.0/23MM AND 3.5/23MM) WERE IMPLANTED IN THE PT'S PROXIMAL LAD]: [ONE 2.5/18MM CYPHER WAS IMPLANTED IN THE DISTAL CIRCUMFLEX]: StartAntiplateletTherapy [PT WAS DISCHARGED ON ASA AND TICLID]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY IDENTIFIED THROMBUS IN THE PREVIOUSLY IMPLANTED LAD STENTS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [RETURNED TO THE HOSPITAL]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [FOUR STENTS WERE IMPLANTED IN THE RCA]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT PASSED AWAY DURING THE PROCEDURE]}</timelineEntry>
+</CNTROTimeLineEventList>

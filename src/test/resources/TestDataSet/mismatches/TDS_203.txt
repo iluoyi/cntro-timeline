@@ -1,0 +1,52 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_203.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;3;4;5	 	6	 	 	 	 	
+2	3;4;5	 	 	 	 	 	 	
+4	3;5	 	 	 	 	 	 	
+3	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_203.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;2;3;4;5	 	6	 	 	 	 	
+2	3;4;5	 	 	 	 	 	 	
+4	3;5	 	 	 	 	 	 	
+3	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_203.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_203.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT WAS DISCHARGED THE NEXT DAY ON ASPIRIN AND CLOPIDOGREL      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==>  SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITION TO OSTIAL LAD HAVING A 90-95% LESION.      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL INFARCTION (MI)      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> HE WAS DIRECTED TO THE EMERGENCY ROOM      		[Type = ER_Admission][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]   
+EVENT # 5 ==> 3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM, 2.5X28MM) IN THE PROXIMAL, DISTAL AND OSTIAL PORTION OF THE LAD      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> A NON TARGET LESION LOCATED IN THE DISTAL LAD WAS ALSO TREATED WITH THE IMPLANT OF A 2.5X12MM TAXUS EXPRESS2 STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT WAS DISCHARGED THE NEXT DAY ON ASPIRIN A ...)==>[ START ]==>( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)   
+EVENT-RELATION # 2: ( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)==>[ BEFORE ]==>(  SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITI ...)   
+EVENT-RELATION # 3: ( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)==>[ BEFORE ]==>( HE WAS DIRECTED TO THE EMERGENCY ROOM ...)   
+EVENT-RELATION # 4: ( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)==>[ BEFORE ]==>( HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL IN ...)   
+EVENT-RELATION # 5: ( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)==>[ BEFORE ]==>( 3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM ...)   
+EVENT-RELATION # 6: ( PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STE ...)==>[ EQUAL ]==>( A NON TARGET LESION LOCATED IN THE DISTAL LAD WA ...)   
+EVENT-RELATION # 7: (  SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITI ...)==>[ BEFORE ]==>( HE WAS DIRECTED TO THE EMERGENCY ROOM ...)   
+EVENT-RELATION # 8: (  SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITI ...)==>[ BEFORE ]==>( HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL IN ...)   
+EVENT-RELATION # 9: (  SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITI ...)==>[ BEFORE ]==>( 3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM ...)   
+EVENT-RELATION # 10: ( HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL IN ...)==>[ BEFORE ]==>( HE WAS DIRECTED TO THE EMERGENCY ROOM ...)   
+EVENT-RELATION # 11: ( HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL IN ...)==>[ BEFORE ]==>( 3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM ...)   
+EVENT-RELATION # 12: ( HE WAS DIRECTED TO THE EMERGENCY ROOM ...)==>[ BEFORE ]==>( 3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PATIENT WAS DISCHARGED THE NEXT DAY ON ASPIRIN AND CLOPIDOGREL]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PLACEMENT OF A 2.75X38MM TAXUS LIBERTE STUDY STENT]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [ SUBTOTAL THROMBOSIS OF THE DISTAL LAD IN ADDITION TO OSTIAL LAD HAVING A 90-95% LESION.]}EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [HE WAS DIAGNOSED WITH A NON-Q-WAVE MYOCARDIAL INFARCTION (MI)]}EVENT-TimeLineEntry # 5: {ER_Admission : [HE WAS DIRECTED TO THE EMERGENCY ROOM]}EVENT-TimeLineEntry # 6: {FollowUpStentProcedure : [3 OVERLAPPING NON BSC STENTS (3.0X12MM, 3.0X28MM, 2.5X28MM) IN THE PROXIMAL, DISTAL AND OSTIAL PORTION OF THE LAD]}EVENT-TimeLineEntry # 7: {InitialDrugElutingStentImplantation : [A NON TARGET LESION LOCATED IN THE DISTAL LAD WAS ALSO TREATED WITH THE IMPLANT OF A 2.5X12MM TAXUS EXPRESS2 STENT]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3;4;5 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3;4;5 ]

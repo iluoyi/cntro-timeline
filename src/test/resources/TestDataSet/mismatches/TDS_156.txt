@@ -1,0 +1,40 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_156.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3	 	0	 	 	 	 	
+4	 	 	 	3	 	 	1	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_156.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2;3	 	0	 	 	 	 	
+4	 	 	 	3	 	 	1	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_156.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_156.csv
+########## EVENTS ############
+EVENT # 0 ==> FOLLOWED BY PLACEMENT OF AN OVERLAPPING 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> THE LESION WAS TREATED WITH DIRECT STENTING OF A 3.0X16MM TAXUS EXPRESS2 STENT PROXIMALLY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> MEDICATIONS TAKEN AT TIME OF INDEX PROCEDURE INCLUDED BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETABLOCKERS, ACE INHIBITORS AND STATINS      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==>  ANGIOGRAPHY IDENTIFIED THROMBOSIS IN THE LCX AT THE OVERLAPPING SEGMENT OF THE TWO PREVIOUSLY PLACED TAXUS EXPRESS2 STENTS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> THE REMAINING LESION WAS TREATED WITH PLACEMENT OF A DRUG ELUTING STENT OVERLAPPING WITH THE PREVIOUSLY PLACED STENTS      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( THE LESION WAS TREATED WITH DIRECT STENTING OF A ...)==>[ BEFORE ]==>(  ANGIOGRAPHY IDENTIFIED THROMBOSIS IN THE LCX AT ...)   
+EVENT-RELATION # 2: ( THE LESION WAS TREATED WITH DIRECT STENTING OF A ...)==>[ BEFORE ]==>( THE REMAINING LESION WAS TREATED WITH PLACEMENT  ...)   
+EVENT-RELATION # 3: ( THE LESION WAS TREATED WITH DIRECT STENTING OF A ...)==>[ EQUAL ]==>( FOLLOWED BY PLACEMENT OF AN OVERLAPPING 2.5X8MM  ...)   
+EVENT-RELATION # 4: ( MEDICATIONS TAKEN AT TIME OF INDEX PROCEDURE INC ...)==>[ FINISH ]==>( THE REMAINING LESION WAS TREATED WITH PLACEMENT  ...)   
+EVENT-RELATION # 5: ( MEDICATIONS TAKEN AT TIME OF INDEX PROCEDURE INC ...)==>[ START ]==>( THE LESION WAS TREATED WITH DIRECT STENTING OF A ...)   
+EVENT-RELATION # 6: (  ANGIOGRAPHY IDENTIFIED THROMBOSIS IN THE LCX AT ...)==>[ BEFORE ]==>( THE REMAINING LESION WAS TREATED WITH PLACEMENT  ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [FOLLOWED BY PLACEMENT OF AN OVERLAPPING 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY] : [THE LESION WAS TREATED WITH DIRECT STENTING OF A 3.0X16MM TAXUS EXPRESS2 STENT PROXIMALLY]}EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [MEDICATIONS TAKEN AT TIME OF INDEX PROCEDURE INCLUDED BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETABLOCKERS, ACE INHIBITORS AND STATINS]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [ ANGIOGRAPHY IDENTIFIED THROMBOSIS IN THE LCX AT THE OVERLAPPING SEGMENT OF THE TWO PREVIOUSLY PLACED TAXUS EXPRESS2 STENTS]}EVENT-TimeLineEntry # 4: {FollowUpStentProcedure : [THE REMAINING LESION WAS TREATED WITH PLACEMENT OF A DRUG ELUTING STENT OVERLAPPING WITH THE PREVIOUSLY PLACED STENTS]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3 ]

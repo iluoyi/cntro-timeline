@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/23.txt.owl">
+   <event id="0" name="TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="THROMBOSIS">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT HAD AMI">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD AMI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX" relation="BEFORE" targetEvent="PT HAD AMI"/>
+   <eventStmt sourceEvent="TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX" relation="BEFORE" targetEvent="PT HAD AMI"/>
+   <eventStmt sourceEvent="TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="THROMBOSIS" relation="BEFORE" targetEvent="PT HAD AMI"/>
+   <eventStmt sourceEvent="THROMBOSIS" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PT HAD AMI" relation="BEFORE" targetEvent="DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT HAD AMI]}</timelineEntry>
+   <timelineEntry>{Patient_Death [DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

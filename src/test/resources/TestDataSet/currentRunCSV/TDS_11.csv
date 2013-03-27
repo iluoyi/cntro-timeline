@@ -1,0 +1,55 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;2;3, , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-2,3;3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> INDEX PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBUS IN THE CYPHER STENT 
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( THROMBUS IN THE CYPHER STENT  ...)
+   
+EVENT-RELATION # 2: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIA ...)
+   
+EVENT-RELATION # 3: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIA ...)
+   
+EVENT-RELATION # 4: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 5: ( THROMBUS IN THE CYPHER STENT  ...)==>[ BEFORE ]==>( PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIA ...)
+   
+EVENT-RELATION # 6: ( THROMBUS IN THE CYPHER STENT  ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 7: ( PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIA ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 8: ( PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIA ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [INDEX PROCEDURE]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [THROMBUS IN THE CYPHER STENT ]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST]}
+EVENT-TimeLineEntry # 4: {Patient_Death [PT EXPIRED]}

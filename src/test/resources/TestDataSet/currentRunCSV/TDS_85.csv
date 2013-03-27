@@ -1,0 +1,104 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1, , , , , , ,2;0;3
+
+EVENTID-2, , , , , , , 
+
+EVENTID-3,4;4;5;6, ,7;8, , , , 
+
+EVENTID-9, , , ,6, , ,2;0;3
+
+EVENTID-4,5;6, , , , , , 
+
+EVENTID-5,6;6, , , , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-8, , , , , , , 
+
+EVENTID-7, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CYPHER (2.5/18 MM) WAS IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==>  CYPHER (2.5/23 MM) WAS IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 9 ==> ASA 200 MG/DAY WAS INITIATED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:16 WEEKS}{Dur. unit:WEEK}{Dur. value:16}}}]
+   
+EVENT-DESC-EVENT # 4 ==> THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PT WAS ADMITTED TO THE HOSP
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> HE PASSED AWAY
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==>  CYPHER (3.0/18) WAS IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIAT ...)==>[ START ]==>(  CYPHER (2.5/23 MM) WAS IMPLANTED ...)
+   
+EVENT-RELATION # 2: ( TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIAT ...)==>[ START ]==>( CYPHER (2.5/18 MM) WAS IMPLANTED ...)
+   
+EVENT-RELATION # 3: ( TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIAT ...)==>[ START ]==>( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)
+   
+EVENT-RELATION # 4: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ BEFORE ]==>( THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STEN ...)
+   
+EVENT-RELATION # 5: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ BEFORE ]==>( THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STEN ...)
+   
+EVENT-RELATION # 6: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)
+   
+EVENT-RELATION # 7: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ BEFORE ]==>( HE PASSED AWAY ...)
+   
+EVENT-RELATION # 8: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ EQUAL ]==>(  CYPHER (3.0/18) WAS IMPLANTED ...)
+   
+EVENT-RELATION # 9: ( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)==>[ EQUAL ]==>( A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL ...)
+   
+EVENT-RELATION # 10: ( ASA 200 MG/DAY WAS INITIATED ...)==>[ FINISH ]==>( HE PASSED AWAY ...)
+   
+EVENT-RELATION # 11: ( ASA 200 MG/DAY WAS INITIATED ...)==>[ START ]==>(  CYPHER (2.5/23 MM) WAS IMPLANTED ...)
+   
+EVENT-RELATION # 12: ( ASA 200 MG/DAY WAS INITIATED ...)==>[ START ]==>( CYPHER (2.5/18 MM) WAS IMPLANTED ...)
+   
+EVENT-RELATION # 13: ( ASA 200 MG/DAY WAS INITIATED ...)==>[ START ]==>( TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN  ...)
+   
+EVENT-RELATION # 14: ( THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STEN ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)
+   
+EVENT-RELATION # 15: ( THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STEN ...)==>[ BEFORE ]==>( HE PASSED AWAY ...)
+   
+EVENT-RELATION # 16: ( PT WAS ADMITTED TO THE HOSP ...)==>[ BEFORE ]==>( HE PASSED AWAY ...)
+   
+EVENT-RELATION # 17: ( PT WAS ADMITTED TO THE HOSP ...)==>[ BEFORE ]==>( HE PASSED AWAY ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [CYPHER (2.5/18 MM) WAS IMPLANTED]: StartAntiplateletTherapy [TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED]: InitialDrugElutingStentImplantation [ CYPHER (2.5/23 MM) WAS IMPLANTED]: [TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY]: StartAntiplateletTherapy [ASA 200 MG/DAY WAS INITIATED]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE]}
+EVENT-TimeLineEntry # 3: {ER_Admission [PT WAS ADMITTED TO THE HOSP]}
+EVENT-TimeLineEntry # 4: {Patient_Death [HE PASSED AWAY]}
+EVENT-TimeLineEntry # 5: {InitialDrugElutingStentImplantation [A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)]: [ CYPHER (3.0/18) WAS IMPLANTED]}

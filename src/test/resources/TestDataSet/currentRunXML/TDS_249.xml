@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/249.txt.owl">
+   <event id="0" name="THE PT WAS DISCHARGED ON BAYASPIRIN AND PANALDINE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">THE PT WAS DISCHARGED ON BAYASPIRIN AND PANALDINE</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="3" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="ANOTHER MANUFACTURER'S DRUG ELUTING STENT WAS ALSO PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING DURING THIS PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANOTHER MANUFACTURER'S DRUG ELUTING STENT WAS ALSO PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING DURING THIS PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="FOLLOW UP CORONARY ANGIOGRAPHY FOUND THROMBUS AT THE TAXUS EXPRESS2 STENT IN THE PROXIMAL CIRCUMFLEX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">FOLLOW UP CORONARY ANGIOGRAPHY FOUND THROMBUS AT THE TAXUS EXPRESS2 STENT IN THE PROXIMAL CIRCUMFLEX</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THE PT WAS DISCHARGED ON BAYASPIRIN AND PANALDINE" relation="START" targetEvent="PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT"/>
+   <eventStmt sourceEvent="PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT" relation="BEFORE" targetEvent="FOLLOW UP CORONARY ANGIOGRAPHY FOUND THROMBUS AT THE TAXUS EXPRESS2 STENT IN THE PROXIMAL CIRCUMFLEX"/>
+   <eventStmt sourceEvent="PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT" relation="EQUAL" targetEvent="ANOTHER MANUFACTURER'S DRUG ELUTING STENT WAS ALSO PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING DURING THIS PROCEDURE"/>
+   <timelineEntry>{StartAntiplateletTherapy [THE PT WAS DISCHARGED ON BAYASPIRIN AND PANALDINE]: InitialDrugElutingStentImplantation [PLACEMENT OF A 2.75X32MM TAXUS EXPRESS2 STENT]: [ANOTHER MANUFACTURER'S DRUG ELUTING STENT WAS ALSO PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING DURING THIS PROCEDURE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [FOLLOW UP CORONARY ANGIOGRAPHY FOUND THROMBUS AT THE TAXUS EXPRESS2 STENT IN THE PROXIMAL CIRCUMFLEX]}</timelineEntry>
+</CNTROTimeLineEventList>

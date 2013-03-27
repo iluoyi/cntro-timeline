@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/37.txt.owl">
+   <event id="0" name="ASA AND PLAVIX WERE DISCONTINUED">
+      <relatedTo targetId="1;2;3;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ASA AND PLAVIX WERE DISCONTINUED</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER">
+      <relatedTo targetId="1;2;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL "J" CATHETER</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="ASA AND PLAVIX WERE GIVEN AGAIN">
+      <relatedTo targetId="1;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ASA AND PLAVIX WERE GIVEN AGAIN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL">
+      <relatedTo targetId="4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId="5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PLACEMENT OF A CYPHER SELECT STENT">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLACEMENT OF A CYPHER SELECT STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE">
+      <relatedTo targetId="8;8" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="2 TAXUS LIBERTE DRUG ELUTING STENTS WERE DEPLOYED IN AN OVERLAPPING FASHION, A 2.75X20MM STENT WAS DEPLOYED AT 15ATM IN THE DISTAL PORTION AND A 3X20MM STENT WAS DEPLOYED AT 12ATM IN THE PROXIMAL PORTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">2 TAXUS LIBERTE DRUG ELUTING STENTS WERE DEPLOYED IN AN OVERLAPPING FASHION, A 2.75X20MM STENT WAS DEPLOYED AT 15ATM IN THE DISTAL PORTION AND A 3X20MM STENT WAS DEPLOYED AT 12ATM IN THE PROXIMAL PORTION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="10" name="PT WAS DISCHARGED THE FOLLOWING DAY ON ASA AND PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="7;9" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS DISCHARGED THE FOLLOWING DAY ON ASA AND PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT EXPIRED ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED </eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="ASA AND PLAVIX WERE GIVEN AGAIN"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE DISCONTINUED" relation="BEFORE" targetEvent="PLACEMENT OF A CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL"/>
+   <eventStmt sourceEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER" relation="BEFORE" targetEvent="ASA AND PLAVIX WERE GIVEN AGAIN"/>
+   <eventStmt sourceEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL &#34;J&#34; CATHETER" relation="BEFORE" targetEvent="PLACEMENT OF A CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE GIVEN AGAIN" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE GIVEN AGAIN" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE GIVEN AGAIN" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="ASA AND PLAVIX WERE GIVEN AGAIN" relation="BEFORE" targetEvent="PLACEMENT OF A CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL" relation="BEFORE" targetEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL" relation="BEFORE" targetEvent="PLACEMENT OF A CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PLACEMENT OF A CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="PLACEMENT OF A CYPHER SELECT STENT" relation="BEFORE" targetEvent="PT EXPIRED "/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT WAS DISCHARGED THE FOLLOWING DAY ON ASA AND PLAVIX" relation="START" targetEvent="CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE"/>
+   <eventStmt sourceEvent="PT WAS DISCHARGED THE FOLLOWING DAY ON ASA AND PLAVIX" relation="START" targetEvent="2 TAXUS LIBERTE DRUG ELUTING STENTS WERE DEPLOYED IN AN OVERLAPPING FASHION, A 2.75X20MM STENT WAS DEPLOYED AT 15ATM IN THE DISTAL PORTION AND A 3X20MM STENT WAS DEPLOYED AT 12ATM IN THE PROXIMAL PORTION"/>
+   <timelineEntry>{EndAntiplateletTherapy [ASA AND PLAVIX WERE DISCONTINUED]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT NEEDED LITHOTRIPSY AND INSERTION OF A URETHRAL "J" CATHETER]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [ASA AND PLAVIX WERE GIVEN AGAIN]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED 100% THROMBOTIC OCCLUSION OF THE LAD AT THE STENT LEVEL]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT EXPERIENCED CHEST PAIN AND AN ACUTE MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PLACEMENT OF A CYPHER SELECT STENT]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE]: [2 TAXUS LIBERTE DRUG ELUTING STENTS WERE DEPLOYED IN AN OVERLAPPING FASHION, A 2.75X20MM STENT WAS DEPLOYED AT 15ATM IN THE DISTAL PORTION AND A 3X20MM STENT WAS DEPLOYED AT 12ATM IN THE PROXIMAL PORTION]: StartAntiplateletTherapy [PT WAS DISCHARGED THE FOLLOWING DAY ON ASA AND PLAVIX]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED ]}</timelineEntry>
+</CNTROTimeLineEventList>

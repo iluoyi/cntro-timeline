@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/160.txt.owl">
+   <event id="0" name="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS">
+      <relatedTo targetId="1;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY">
+      <relatedTo targetId="0;1;1;2;3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="6" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="A 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY, OVERLAPPING">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY, OVERLAPPING</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId="0;1;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="THE EVENT WAS TREATED WITH RELOADING OF CLOPIDOGREL, HEPARIN, AND INTEGRILIN">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">THE EVENT WAS TREATED WITH RELOADING OF CLOPIDOGREL, HEPARIN, AND INTEGRILIN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS">
+      <relatedTo targetId="0;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="A MYOCARDIAL INFARCTION WAS CONFIRMED">
+      <relatedTo targetId="0;1;2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A MYOCARDIAL INFARCTION WAS CONFIRMED</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="8" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT </eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="A 2.5X18MM NON-BSC DRUG ELUTING STENT PLACED OVERLAPPING WITH THE PREVIOUSLY PLACED DISTAL STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5X18MM NON-BSC DRUG ELUTING STENT PLACED OVERLAPPING WITH THE PREVIOUSLY PLACED DISTAL STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED"/>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS" relation="BEFORE" targetEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY"/>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS" relation="BEFORE" targetEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT "/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS"/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED"/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="BEFORE" targetEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT "/>
+   <eventStmt sourceEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY" relation="EQUAL" targetEvent="A 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY, OVERLAPPING"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT "/>
+   <eventStmt sourceEvent="THE EVENT WAS TREATED WITH RELOADING OF CLOPIDOGREL, HEPARIN, AND INTEGRILIN" relation="START" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS" relation="BEFORE" targetEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS" relation="BEFORE" targetEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS" relation="BEFORE" targetEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS" relation="BEFORE" targetEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT "/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED" relation="BEFORE" targetEvent="PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS"/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED" relation="BEFORE" targetEvent="THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY"/>
+   <eventStmt sourceEvent="A MYOCARDIAL INFARCTION WAS CONFIRMED" relation="BEFORE" targetEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT "/>
+   <eventStmt sourceEvent="PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT " relation="EQUAL" targetEvent="A 2.5X18MM NON-BSC DRUG ELUTING STENT PLACED OVERLAPPING WITH THE PREVIOUSLY PLACED DISTAL STENT"/>
+   <timelineEntry>{StartAntiplateletTherapy [PATIENT WAS DISCHARGED ON BIVALIRUDIN, ASPIRIN, CLOPIDOGREL, BETA BLOCKERS AND STATINS]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THE LESION WAS THEN TREATED WITH PLACEMENT OF A 2.75X16MM TAXUS EXPRESS2 STENT PROXIMALLY]: [A 2.5X8MM TAXUS EXPRESS2 STENT DISTALLY, OVERLAPPING]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]: StartAntiplateletTherapy [THE EVENT WAS TREATED WITH RELOADING OF CLOPIDOGREL, HEPARIN, AND INTEGRILIN]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED A TOTALLY OCCLUDED LATE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [A MYOCARDIAL INFARCTION WAS CONFIRMED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PLACEMENT OF A 2.25X23MM DRUG ELUTING STENT ]: [A 2.5X18MM NON-BSC DRUG ELUTING STENT PLACED OVERLAPPING WITH THE PREVIOUSLY PLACED DISTAL STENT]}</timelineEntry>
+</CNTROTimeLineEventList>

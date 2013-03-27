@@ -1,0 +1,41 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> TAXUS STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> CAUSED BY IN-STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> THE PATIENT SUFFERED A HEART ATTACK
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( TAXUS STENT WAS IMPLANTED IN THE LEFT ANTERIOR D ...)==>[ BEFORE ]==>( CAUSED BY IN-STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( TAXUS STENT WAS IMPLANTED IN THE LEFT ANTERIOR D ...)==>[ BEFORE ]==>( CAUSED BY IN-STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 3: ( TAXUS STENT WAS IMPLANTED IN THE LEFT ANTERIOR D ...)==>[ BEFORE ]==>( THE PATIENT SUFFERED A HEART ATTACK ...)
+   
+EVENT-RELATION # 4: ( CAUSED BY IN-STENT THROMBOSIS ...)==>[ BEFORE ]==>( THE PATIENT SUFFERED A HEART ATTACK ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [TAXUS STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [CAUSED BY IN-STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [THE PATIENT SUFFERED A HEART ATTACK]}

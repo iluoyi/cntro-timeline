@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/84.txt.owl">
+   <event id="0" name="THREE IMPLANTED CYPHER STENTS">
+      <relatedTo targetId="1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE IMPLANTED CYPHER STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT HAD A VERY LATE THROMBOSIS">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD A VERY LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="HE WAS ADMITTED WITH CHEST PAIN ">
+      <relatedTo targetId="3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE WAS ADMITTED WITH CHEST PAIN </eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THREE IMPLANTED CYPHER STENTS" relation="BEFORE" targetEvent="PT HAD A VERY LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="THREE IMPLANTED CYPHER STENTS" relation="BEFORE" targetEvent="HE WAS ADMITTED WITH CHEST PAIN "/>
+   <eventStmt sourceEvent="THREE IMPLANTED CYPHER STENTS" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="THREE IMPLANTED CYPHER STENTS" relation="BEFORE" targetEvent="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="PT HAD A VERY LATE THROMBOSIS" relation="BEFORE" targetEvent="HE WAS ADMITTED WITH CHEST PAIN "/>
+   <eventStmt sourceEvent="PT HAD A VERY LATE THROMBOSIS" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT HAD A VERY LATE THROMBOSIS" relation="BEFORE" targetEvent="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="HE WAS ADMITTED WITH CHEST PAIN " relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="HE WAS ADMITTED WITH CHEST PAIN " relation="BEFORE" targetEvent="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS"/>
+   <eventStmt sourceEvent="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS" relation="BEFORE" targetEvent="PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THREE IMPLANTED CYPHER STENTS]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT HAD A VERY LATE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [HE WAS ADMITTED WITH CHEST PAIN ]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PERCUTANEOUS CORONARY INTERVENTION TO TREAT THE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

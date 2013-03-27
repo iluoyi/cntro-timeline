@@ -1,0 +1,41 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT SUFFERED A NON-QWAVE MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STE ...)==>[ BEFORE ]==>( A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE O ...)
+   
+EVENT-RELATION # 2: ( PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STE ...)==>[ BEFORE ]==>( A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE O ...)
+   
+EVENT-RELATION # 3: ( PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STE ...)==>[ BEFORE ]==>( PATIENT SUFFERED A NON-QWAVE MI ...)
+   
+EVENT-RELATION # 4: ( A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE O ...)==>[ BEFORE ]==>( PATIENT SUFFERED A NON-QWAVE MI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [PATIENT SUFFERED A NON-QWAVE MI]}

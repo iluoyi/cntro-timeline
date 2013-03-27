@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/254.txt.owl">
+   <event id="0" name="PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD">
+      <relatedTo targetId="3;3;4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT">
+      <relatedTo targetId="4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS">
+      <relatedTo targetId="1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG" relation="FINISH" targetEvent="DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG"/>
+   <eventStmt sourceEvent="PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG" relation="START" targetEvent="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD"/>
+   <eventStmt sourceEvent="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT"/>
+   <eventStmt sourceEvent="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT"/>
+   <eventStmt sourceEvent="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD" relation="BEFORE" targetEvent="THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS"/>
+   <eventStmt sourceEvent="A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD" relation="BEFORE" targetEvent="DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT" relation="BEFORE" targetEvent="THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT" relation="BEFORE" targetEvent="DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG"/>
+   <eventStmt sourceEvent="THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS" relation="BEFORE" targetEvent="DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG"/>
+   <timelineEntry>{StartAntiplateletTherapy [PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG]: InitialDrugElutingStentImplantation [A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG]}</timelineEntry>
+</CNTROTimeLineEventList>

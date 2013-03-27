@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/107.txt.owl">
+   <event id="0" name="PT WAS TAKING ASA AND CLOPIDOGREL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS TAKING ASA AND CLOPIDOGREL</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)">
+      <relatedTo targetId="3;3;1;1;4;5;6;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="7;8;9;10" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="THREE ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE 1ST OBTUSE MARGINAL (OVERLAPPING) ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE 1ST OBTUSE MARGINAL (OVERLAPPING) </eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="10" name="ONE ENDEAVOR DRUG-ELUTING STENT WAS IMPLANTED IN THE MID LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE ENDEAVOR DRUG-ELUTING STENT WAS IMPLANTED IN THE MID LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="AND DISTAL LCX ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AND DISTAL LCX </eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="ONE STENT FROM ANOTHER MFR WAS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="11" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE STENT FROM ANOTHER MFR WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="11" name="TWO STENTS FROM ANOTHER MFR WERE IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO STENTS FROM ANOTHER MFR WERE IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THERE WAS EVIDENCE OF STENT THROMBOSIS">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THERE WAS EVIDENCE OF STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT PRESENTED">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="THREE STENTS FROM ANOTHER MFR WERE IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE STENTS FROM ANOTHER MFR WERE IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="PROXIMAL LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT WAS TAKING ASA AND CLOPIDOGREL" relation="FINISH" targetEvent="THERE WAS EVIDENCE OF STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PT WAS TAKING ASA AND CLOPIDOGREL" relation="START" targetEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="THREE STENTS FROM ANOTHER MFR WERE IMPLANTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="THREE STENTS FROM ANOTHER MFR WERE IMPLANTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="THERE WAS EVIDENCE OF STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="THERE WAS EVIDENCE OF STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="ONE STENT FROM ANOTHER MFR WAS IMPLANTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="BEFORE" targetEvent="ONE STENT FROM ANOTHER MFR WAS IMPLANTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="EQUAL" targetEvent="THREE ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE 1ST OBTUSE MARGINAL (OVERLAPPING) "/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="EQUAL" targetEvent="PROXIMAL LAD"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="EQUAL" targetEvent="AND DISTAL LCX "/>
+   <eventStmt sourceEvent="TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)" relation="EQUAL" targetEvent="ONE ENDEAVOR DRUG-ELUTING STENT WAS IMPLANTED IN THE MID LAD"/>
+   <eventStmt sourceEvent="ONE STENT FROM ANOTHER MFR WAS IMPLANTED" relation="EQUAL" targetEvent="TWO STENTS FROM ANOTHER MFR WERE IMPLANTED"/>
+   <eventStmt sourceEvent="THERE WAS EVIDENCE OF STENT THROMBOSIS" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="THERE WAS EVIDENCE OF STENT THROMBOSIS" relation="BEFORE" targetEvent="NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED"/>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS TAKING ASA AND CLOPIDOGREL]: InitialDrugElutingStentImplantation [TWO ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE DISTAL LAD (OVERLAPPING)]: [THREE ENDEAVOR DRUG-ELUTING STENTS WERE IMPLANTED IN THE 1ST OBTUSE MARGINAL (OVERLAPPING) ]: [ONE ENDEAVOR DRUG-ELUTING STENT WAS IMPLANTED IN THE MID LAD]: [AND DISTAL LCX ]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [ONE STENT FROM ANOTHER MFR WAS IMPLANTED]: [TWO STENTS FROM ANOTHER MFR WERE IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THERE WAS EVIDENCE OF STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [NON-SUDDEN CARDIAC DEATH WAS REPORTED TO HAVE OCCURRED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [THREE STENTS FROM ANOTHER MFR WERE IMPLANTED]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PROXIMAL LAD]}</timelineEntry>
+</CNTROTimeLineEventList>

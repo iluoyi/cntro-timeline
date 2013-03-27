@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/11.txt.owl">
+   <event id="0" name="INDEX PROCEDURE">
+      <relatedTo targetId="1;2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INDEX PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THROMBUS IN THE CYPHER STENT ">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBUS IN THE CYPHER STENT </eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="THROMBUS IN THE CYPHER STENT "/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="THROMBUS IN THE CYPHER STENT " relation="BEFORE" targetEvent="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST"/>
+   <eventStmt sourceEvent="THROMBUS IN THE CYPHER STENT " relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [INDEX PROCEDURE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBUS IN THE CYPHER STENT ]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT WENT INTO VENTRICULAR FIBRILLATION AND CARDIAC ARREST]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

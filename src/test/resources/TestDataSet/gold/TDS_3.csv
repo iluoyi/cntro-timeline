@@ -1,0 +1,65 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3;4, ,5, , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PT WAS PLACED ON PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:6 MONTHS}{Dur. unit:MONTH}{Dur. value:6}}}]
+   
+EVENT-DESC-EVENT # 1 ==> ONE WAS PLACED IN THE D1
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2002)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 5 ==> SECOND IN THE RIVA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> BOTH CYPHER STENTS WERE OCCLUDED BY THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= Jun 2004)(Granularity=MONTH)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> SUDDEN CARDIAC INSUFFICIENCY
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PT WAS PLACED ON PLAVIX ...)==>[ START ]==>( ONE WAS PLACED IN THE D1 ...)
+   
+EVENT-RELATION # 2: ( ONE WAS PLACED IN THE D1 ...)==>[ BEFORE ]==>( BOTH CYPHER STENTS WERE OCCLUDED BY THROMBOSIS ...)
+   
+EVENT-RELATION # 3: ( ONE WAS PLACED IN THE D1 ...)==>[ BEFORE ]==>( SUDDEN CARDIAC INSUFFICIENCY ...)
+   
+EVENT-RELATION # 4: ( ONE WAS PLACED IN THE D1 ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+EVENT-RELATION # 5: ( ONE WAS PLACED IN THE D1 ...)==>[ EQUAL ]==>( SECOND IN THE RIVA ...)
+   
+EVENT-RELATION # 6: ( BOTH CYPHER STENTS WERE OCCLUDED BY THROMBOSIS ...)==>[ BEFORE ]==>( SUDDEN CARDIAC INSUFFICIENCY ...)
+   
+EVENT-RELATION # 7: ( BOTH CYPHER STENTS WERE OCCLUDED BY THROMBOSIS ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+EVENT-RELATION # 8: ( SUDDEN CARDIAC INSUFFICIENCY ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [PT WAS PLACED ON PLAVIX]: InitialDrugElutingStentImplantation [ONE WAS PLACED IN THE D1]: [SECOND IN THE RIVA]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [BOTH CYPHER STENTS WERE OCCLUDED BY THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [SUDDEN CARDIAC INSUFFICIENCY]}
+EVENT-TimeLineEntry # 4: {Patient_Death [PT DIED]}

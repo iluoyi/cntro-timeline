@@ -1,0 +1,79 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, ,3;4, , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-3, , , , , , , 
+
+EVENTID-5,6;7, , , , , ,0
+
+EVENTID-1, , , ,6, , , 
+
+EVENTID-2, , ,7, , , , 
+
+EVENTID-7,6, , , , , , 
+
+EVENTID-6, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> IMPLANTED A TAXUS EXPRESS2 8.8% 3.00 X 32 MM DRUG ELUTING STENT IN THE NON TORTUOUS, NON CALCIFIED, 90% STENOSED 3.0 MM DIAMETER MID RIGHT CORONARY ARTERY (RCA) 
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> ISION BARE METAL STENT IN THE LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PT WAS DISCHARGED ON CLOPIDOGREL AND ASPIRIN
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBOSIS IN THE DRUG ELUTING STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT'S PLAVIX WAS STOPPED
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> PLAVIX WAS STOPPED
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PT DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)==>[ BEFORE ]==>( THROMBOSIS IN THE DRUG ELUTING STENT ...)
+   
+EVENT-RELATION # 2: ( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)==>[ BEFORE ]==>( PT'S PLAVIX WAS STOPPED ...)
+   
+EVENT-RELATION # 3: ( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)==>[ EQUAL ]==>( ISION BARE METAL STENT IN THE LEFT ANTERIOR DESC ...)
+   
+EVENT-RELATION # 4: ( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)==>[ EQUAL ]==>( IMPLANTED A TAXUS EXPRESS2 8.8% 3.00 X 32 MM DRU ...)
+   
+EVENT-RELATION # 5: ( PT WAS DISCHARGED ON CLOPIDOGREL AND ASPIRIN ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+EVENT-RELATION # 6: ( PT WAS DISCHARGED ON CLOPIDOGREL AND ASPIRIN ...)==>[ BEFORE ]==>( PLAVIX WAS STOPPED ...)
+   
+EVENT-RELATION # 7: ( PT WAS DISCHARGED ON CLOPIDOGREL AND ASPIRIN ...)==>[ START ]==>( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)
+   
+EVENT-RELATION # 8: ( THROMBOSIS IN THE DRUG ELUTING STENT ...)==>[ FINISH ]==>( PT DIED ...)
+   
+EVENT-RELATION # 9: ( PT'S PLAVIX WAS STOPPED ...)==>[ EQUAL ]==>( PLAVIX WAS STOPPED ...)
+   
+EVENT-RELATION # 10: ( PLAVIX WAS STOPPED ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE]: [IMPLANTED A TAXUS EXPRESS2 8.8% 3.00 X 32 MM DRUG ELUTING STENT IN THE NON TORTUOUS, NON CALCIFIED, 90% STENOSED 3.0 MM DIAMETER MID RIGHT CORONARY ARTERY (RCA) ]: [ISION BARE METAL STENT IN THE LEFT ANTERIOR DESCENDING ARTERY]: StartAntiplateletTherapy [PT WAS DISCHARGED ON CLOPIDOGREL AND ASPIRIN]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [THROMBOSIS IN THE DRUG ELUTING STENT]}
+EVENT-TimeLineEntry # 3: {EndAntiplateletTherapy [PT'S PLAVIX WAS STOPPED]: [PLAVIX WAS STOPPED]}
+EVENT-TimeLineEntry # 4: {Patient_Death [PT DIED]}

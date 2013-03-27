@@ -1,0 +1,35 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_193.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2	 	0	 	 	 	 	
+3	2;1	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_193.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2	 	0	 	 	 	 	
+3	2;1	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_193.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_193.csv
+########## EVENTS ############
+EVENT # 0 ==> A SECOND CYPHER (2.5MM/23MM) WAS THEN IMPLANTED INSIDE THE PROXIMAL PORTION OF THE BARE METAL STENT      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> LESION WAS DIRECT STENTED WITH 2.5MM X 18MM CYPHER STENT      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PREVIOUSLY IMPLANTED BARE METAL STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> THROMBUS WAS ALSO OBSERVED IN THE FRACTURED PORTION OF THE STENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( LESION WAS DIRECT STENTED WITH 2.5MM X 18MM CYPH ...)==>[ BEFORE ]==>( THROMBUS WAS ALSO OBSERVED IN THE FRACTURED PORT ...)   
+EVENT-RELATION # 2: ( LESION WAS DIRECT STENTED WITH 2.5MM X 18MM CYPH ...)==>[ EQUAL ]==>( A SECOND CYPHER (2.5MM/23MM) WAS THEN IMPLANTED  ...)   
+EVENT-RELATION # 3: ( PREVIOUSLY IMPLANTED BARE METAL STENT ...)==>[ BEFORE ]==>( THROMBUS WAS ALSO OBSERVED IN THE FRACTURED PORT ...)   
+EVENT-RELATION # 4: ( PREVIOUSLY IMPLANTED BARE METAL STENT ...)==>[ BEFORE ]==>( LESION WAS DIRECT STENTED WITH 2.5MM X 18MM CYPH ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {FollowUpStentProcedure : [A SECOND CYPHER (2.5MM/23MM) WAS THEN IMPLANTED INSIDE THE PROXIMAL PORTION OF THE BARE METAL STENT] : [LESION WAS DIRECT STENTED WITH 2.5MM X 18MM CYPHER STENT]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PREVIOUSLY IMPLANTED BARE METAL STENT]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [THROMBUS WAS ALSO OBSERVED IN THE FRACTURED PORTION OF THE STENT]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2 ]

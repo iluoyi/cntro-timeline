@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/44.txt.owl">
+   <event id="0" name="TWO OTHER STENTS">
+      <relatedTo targetId="1;2;3;4;5;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO OTHER STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT WENT INTO CARDIOPULMONARY ARREST ">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WENT INTO CARDIOPULMONARY ARREST </eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="WAS TAKEN TO THE HOSP AS AN EMERGENCY">
+      <relatedTo targetId="4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WAS TAKEN TO THE HOSP AS AN EMERGENCY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY"/>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY"/>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent="PT WENT INTO CARDIOPULMONARY ARREST "/>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE"/>
+   <eventStmt sourceEvent="TWO OTHER STENTS" relation="BEFORE" targetEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE"/>
+   <eventStmt sourceEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE" relation="BEFORE" targetEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY"/>
+   <eventStmt sourceEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE" relation="BEFORE" targetEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY"/>
+   <eventStmt sourceEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE" relation="BEFORE" targetEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY"/>
+   <eventStmt sourceEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE" relation="BEFORE" targetEvent="PT WENT INTO CARDIOPULMONARY ARREST "/>
+   <eventStmt sourceEvent=" TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY" relation="BEFORE" targetEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY"/>
+   <eventStmt sourceEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY" relation="BEFORE" targetEvent="PT WENT INTO CARDIOPULMONARY ARREST "/>
+   <eventStmt sourceEvent="THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT WENT INTO CARDIOPULMONARY ARREST " relation="BEFORE" targetEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY"/>
+   <eventStmt sourceEvent="PT WENT INTO CARDIOPULMONARY ARREST " relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="WAS TAKEN TO THE HOSP AS AN EMERGENCY" relation="BEFORE" targetEvent="PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO OTHER STENTS]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [ TWO CYPHER STENTS IMPLANTED BY KISSING TECHNIQUE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS AT AN IMPLANTED CYPHER AT LEFT MAIN CORONARY ARTERY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT WENT INTO CARDIOPULMONARY ARREST ]}</timelineEntry>
+   <timelineEntry>{ER_Admission [WAS TAKEN TO THE HOSP AS AN EMERGENCY]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,36 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_23.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+3	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_23.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+3	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_23.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_23.csv
+########## EVENTS ############
+EVENT # 0 ==> TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PT HAD AMI      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> DIED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX ...)==>[ BEFORE ]==>( PT HAD AMI ...)   
+EVENT-RELATION # 2: ( TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 3: ( THROMBOSIS ...)==>[ BEFORE ]==>( PT HAD AMI ...)   
+EVENT-RELATION # 4: ( THROMBOSIS ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 5: ( PT HAD AMI ...)==>[ BEFORE ]==>( DIED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TWO CYPHERS STENTS IMPLANTED TO THE LEFT CX]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [THROMBOSIS]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [PT HAD AMI]}EVENT-TimeLineEntry # 4: {Patient_Death : [DIED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

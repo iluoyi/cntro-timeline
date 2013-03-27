@@ -1,0 +1,128 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;3;4;5, , , , , , 
+
+EVENTID-6,1;2;4;5;7;8, , , , , , 
+
+EVENTID-7,1;2;2;4;5, , , , , , 
+
+EVENTID-8, , , , , , , 
+
+EVENTID-9, , , , , , ,7;8
+
+EVENTID-3,1;2;2;4;5, , , , , , 
+
+EVENTID-2,4;4;5, , , , , , 
+
+EVENTID-1, , , , , , , 
+
+EVENTID-4,5, , , , , , 
+
+EVENTID-5, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PATIENT STOPPED THE ANTIPLATELET THERAPY
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> ST ELEVATION MYOCARDIAL INFARCTION (STEMI)
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> IMPLANTATION OF TWO CYPHER STENTS
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 9 ==> ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> SURGERY OF A COLON MASS
+      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> THROMBOTIC EVENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT HAD A THROMBOTIC EVENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT HAD A CARDIOPULMONARY ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> SUBSEQUENTLY DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 2: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 3: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( SURGERY OF A COLON MASS ...)
+   
+EVENT-RELATION # 4: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( SURGERY OF A COLON MASS ...)
+   
+EVENT-RELATION # 5: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 6: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 7: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 8: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 9: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 10: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 11: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( IMPLANTATION OF TWO CYPHER STENTS ...)
+   
+EVENT-RELATION # 12: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPL ...)
+   
+EVENT-RELATION # 13: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 14: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 15: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 16: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 17: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 18: ( ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE ...)==>[ START ]==>( IMPLANTATION OF TWO CYPHER STENTS ...)
+   
+EVENT-RELATION # 19: ( ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE ...)==>[ START ]==>( A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPL ...)
+   
+EVENT-RELATION # 20: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 21: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 22: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 23: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 24: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 25: ( THROMBOTIC EVENT ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 26: ( THROMBOTIC EVENT ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)
+   
+EVENT-RELATION # 27: ( THROMBOTIC EVENT ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 28: ( PATIENT HAD A CARDIOPULMONARY ARREST ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {EndAntiplateletTherapy [PATIENT STOPPED THE ANTIPLATELET THERAPY]}
+EVENT-TimeLineEntry # 2: {Myocardial_Infarction [ST ELEVATION MYOCARDIAL INFARCTION (STEMI)]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation [IMPLANTATION OF TWO CYPHER STENTS]: [A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.]: StartAntiplateletTherapy [ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE]}
+EVENT-TimeLineEntry # 4: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [SURGERY OF A COLON MASS]}
+EVENT-TimeLineEntry # 5: {Late_Stent_Thrombosis [THROMBOTIC EVENT]: [PATIENT HAD A THROMBOTIC EVENT]}
+EVENT-TimeLineEntry # 6: {Myocardial_Infarction [PATIENT HAD A CARDIOPULMONARY ARREST]}
+EVENT-TimeLineEntry # 7: {Patient_Death [SUBSEQUENTLY DIED]}

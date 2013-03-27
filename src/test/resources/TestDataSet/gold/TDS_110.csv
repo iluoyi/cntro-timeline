@@ -1,0 +1,61 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-2,1;3, , , , , , 
+
+EVENTID-4,1;3, , , , , , 
+
+EVENTID-1,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ANGIOGRAM REVEALED STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> SEVERE CHEST PAIN
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> XIENCE V 3.0 X 28 MM WAS IMPLANTED TO TREAT THE RESTENOSIS
+      		[Type = FollowUpStentProcedure][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> PT RETURNED
+      		[Type = ER_Admission][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE THE ANGIOGRAM WAS BEING PERFORMED, AND SUBSEQUENTLY DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ANGIOGRAM REVEALED STENT THROMBOSIS ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 2: ( ANGIOGRAM REVEALED STENT THROMBOSIS ...)==>[ BEFORE ]==>( SEVERE CHEST PAIN ...)
+   
+EVENT-RELATION # 3: ( ANGIOGRAM REVEALED STENT THROMBOSIS ...)==>[ BEFORE ]==>( PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE  ...)
+   
+EVENT-RELATION # 4: ( SEVERE CHEST PAIN ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 5: ( SEVERE CHEST PAIN ...)==>[ BEFORE ]==>( PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE  ...)
+   
+EVENT-RELATION # 6: ( XIENCE V 3.0 X 28 MM WAS IMPLANTED TO TREAT THE  ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 7: ( XIENCE V 3.0 X 28 MM WAS IMPLANTED TO TREAT THE  ...)==>[ BEFORE ]==>( PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE  ...)
+   
+EVENT-RELATION # 8: ( PT RETURNED ...)==>[ BEFORE ]==>( PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Late_Stent_Thrombosis : [ANGIOGRAM REVEALED STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 2: {Myocardial_Infarction : [SEVERE CHEST PAIN]}
+EVENT-TimeLineEntry # 3: {FollowUpStentProcedure : [XIENCE V 3.0 X 28 MM WAS IMPLANTED TO TREAT THE RESTENOSIS]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PT RETURNED]}
+EVENT-TimeLineEntry # 5: {Patient_Death : [PT WENT INTO CARDIAC ARREST ON THE TABLE, WHILE THE ANGIOGRAM WAS BEING PERFORMED, AND SUBSEQUENTLY DIED]}

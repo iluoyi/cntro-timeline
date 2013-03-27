@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/252.txt.owl">
+   <event id="0" name="PT WAS GIVEN REAPRO AS WELL AS PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS GIVEN REAPRO AS WELL AS PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL">
+      <relatedTo targetId="3;3;4;5;1;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="THE PHYSICIAN TOOK THE PT OFF THE MEDICATIONS AND WAS NOT PUT BACK ON THEM">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PHYSICIAN TOOK THE PT OFF THE MEDICATIONS AND WAS NOT PUT BACK ON THEM</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG">
+      <relatedTo targetId="4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="4;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT PRESENTED">
+      <relatedTo targetId="6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PLACED A VISION 3.0X18 MM STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLACED A VISION 3.0X18 MM STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT WAS GIVEN REAPRO AS WELL AS PLAVIX" relation="FINISH" targetEvent="THE PHYSICIAN TOOK THE PT OFF THE MEDICATIONS AND WAS NOT PUT BACK ON THEM"/>
+   <eventStmt sourceEvent="PT WAS GIVEN REAPRO AS WELL AS PLAVIX" relation="START" targetEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="THE PHYSICIAN TOOK THE PT OFF THE MEDICATIONS AND WAS NOT PUT BACK ON THEM"/>
+   <eventStmt sourceEvent="A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL" relation="BEFORE" targetEvent="PLACED A VISION 3.0X18 MM STENT"/>
+   <eventStmt sourceEvent="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG" relation="BEFORE" targetEvent="CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG" relation="BEFORE" targetEvent="PLACED A VISION 3.0X18 MM STENT"/>
+   <eventStmt sourceEvent="CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PLACED A VISION 3.0X18 MM STENT"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="PLACED A VISION 3.0X18 MM STENT"/>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS GIVEN REAPRO AS WELL AS PLAVIX]: InitialDrugElutingStentImplantation [A 3.0X12MM RX PROMUS STENT WAS PLACED IN THE OSTIUM AND PROXIMAL DIAGONAL]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [THE PHYSICIAN TOOK THE PT OFF THE MEDICATIONS AND WAS NOT PUT BACK ON THEM]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [TOTALLY OCCLUDED LEFT ANTERIOR DESCENDING (LAD) AND DIAG]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CONSISTENT WITH AN ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PLACED A VISION 3.0X18 MM STENT]}</timelineEntry>
+</CNTROTimeLineEventList>

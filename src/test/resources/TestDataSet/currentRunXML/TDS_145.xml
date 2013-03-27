@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/145.txt.owl">
+   <event id="0" name="HE HAD BEEN PRESCRIBED PLAVIX">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="3" relation="START"/>
+      <eventProperty name="description" type="text">HE HAD BEEN PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="3" name="PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="RESULTING IN MI">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">RESULTING IN MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="HE HAD BEEN PRESCRIBED PLAVIX" relation="BEFORE" targetEvent="PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS"/>
+   <eventStmt sourceEvent="HE HAD BEEN PRESCRIBED PLAVIX" relation="BEFORE" targetEvent="RESULTING IN MI"/>
+   <eventStmt sourceEvent="HE HAD BEEN PRESCRIBED PLAVIX" relation="START" targetEvent="PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD"/>
+   <eventStmt sourceEvent="PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD" relation="BEFORE" targetEvent="PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS"/>
+   <eventStmt sourceEvent="PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD" relation="BEFORE" targetEvent="RESULTING IN MI"/>
+   <eventStmt sourceEvent="PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS" relation="BEFORE" targetEvent="RESULTING IN MI"/>
+   <timelineEntry>{StartAntiplateletTherapy [HE HAD BEEN PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [RESULTING IN MI]}</timelineEntry>
+</CNTROTimeLineEventList>

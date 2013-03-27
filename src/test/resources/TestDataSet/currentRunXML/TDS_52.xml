@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/52.txt.owl">
+   <event id="0" name="VERY LATE STENT THROMBOSIS">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">VERY LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)">
+      <relatedTo targetId="1;2;3;5;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PT WAS PUT ON PLAVIX ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="4" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS PUT ON PLAVIX </eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS">
+      <relatedTo targetId="1;2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED">
+      <relatedTo targetId="1;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name=" PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY"/>
+   <eventStmt sourceEvent="VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent=" PT DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)" relation="BEFORE" targetEvent="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)" relation="BEFORE" targetEvent=" PT DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)" relation="BEFORE" targetEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)" relation="BEFORE" targetEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS"/>
+   <eventStmt sourceEvent="PT WAS PUT ON PLAVIX " relation="START" targetEvent="PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS" relation="BEFORE" targetEvent="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS" relation="BEFORE" targetEvent=" PT DIED"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent=" PT DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY" relation="BEFORE" targetEvent=" PT DIED"/>
+   <timelineEntry>{Late_Stent_Thrombosis [VERY LATE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PHYSICIAN IMPLANTED A 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD)]: StartAntiplateletTherapy [PT WAS PUT ON PLAVIX ]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PHYSICIAN TREATED THE LAD WITH A 2.50X12MM STENT OF UNKNOWN TYPE FOR IN-STENT RESTENOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PHYSICIAN RESTENTED THE ENTIRE VESSEL WITH BARE METAL STENTS OF UNK SIZE, TYPE, AND QUANTITY]}</timelineEntry>
+   <timelineEntry>{Patient_Death [ PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

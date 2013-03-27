@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/71.txt.owl">
+   <event id="0" name="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId="1;2;3;4;5;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="5" relation="START"/>
+      <eventProperty name="description" type="text">ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="7" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="WITH AN ACUTE MI">
+      <relatedTo targetId="3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WITH AN ACUTE MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT PRESENTED">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="WITH AN ACUTE MI"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE" relation="START" targetEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="BEFORE" targetEvent="WITH AN ACUTE MI"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT" relation="EQUAL" targetEvent="STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD" relation="BEFORE" targetEvent="WITH AN ACUTE MI"/>
+   <eventStmt sourceEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="WITH AN ACUTE MI" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="WITH AN ACUTE MI" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <timelineEntry>{Myocardial_Infarction [PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE]: InitialDrugElutingStentImplantation [STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT]: [STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [WITH AN ACUTE MI]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

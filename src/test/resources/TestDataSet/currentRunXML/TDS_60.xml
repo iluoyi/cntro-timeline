@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/60.txt.owl">
+   <event id="0" name="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HROMBOSIS WAS NOTED IN THE LMT TO THE LCX</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="SUDDEN CARDIAC ARREST OCCURRED">
+      <relatedTo targetId="0;2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUDDEN CARDIAC ARREST OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="2" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="3" relation="START"/>
+      <eventProperty name="description" type="text">PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX">
+      <relatedTo targetId="0;0;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="5" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX </eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX" relation="BEFORE" targetEvent="SUDDEN CARDIAC ARREST OCCURRED"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX" relation="BEFORE" targetEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX"/>
+   <eventStmt sourceEvent="SUDDEN CARDIAC ARREST OCCURRED" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX"/>
+   <eventStmt sourceEvent="SUDDEN CARDIAC ARREST OCCURRED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="SUDDEN CARDIAC ARREST OCCURRED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="SUDDEN CARDIAC ARREST OCCURRED" relation="BEFORE" targetEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX"/>
+   <eventStmt sourceEvent="PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED" relation="FINISH" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED" relation="START" targetEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX"/>
+   <eventStmt sourceEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX"/>
+   <eventStmt sourceEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED IN THE LMT TO THE LCX"/>
+   <eventStmt sourceEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX" relation="BEFORE" targetEvent="SUDDEN CARDIAC ARREST OCCURRED"/>
+   <eventStmt sourceEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX" relation="EQUAL" targetEvent="A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX "/>
+   <timelineEntry>{Late_Stent_Thrombosis [HROMBOSIS WAS NOTED IN THE LMT TO THE LCX]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [SUDDEN CARDIAC ARREST OCCURRED]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [PT HAD TAKEN ANTIPLATELET MEDICATION AS PRESCRIBED]: InitialDrugElutingStentImplantation [PT HAD A 2.75X20MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) DEPLOYED IN THE DISTAL LCX]: [A 3.0X16MM TAXUS EXPRESS2 DES DEPLOYED IN THE PROXIMAL LCX ]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

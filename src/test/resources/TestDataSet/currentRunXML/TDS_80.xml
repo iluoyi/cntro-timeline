@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/80.txt.owl">
+   <event id="0" name="PATIENT STOPPED THE ANTIPLATELET THERAPY">
+      <relatedTo targetId="1;2;3;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT STOPPED THE ANTIPLATELET THERAPY</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)">
+      <relatedTo targetId="1;2;4;5;7;8" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ST ELEVATION MYOCARDIAL INFARCTION (STEMI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="IMPLANTATION OF TWO CYPHER STENTS">
+      <relatedTo targetId="1;2;2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IMPLANTATION OF TWO CYPHER STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="7;8" relation="START"/>
+      <eventProperty name="description" type="text">ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="SURGERY OF A COLON MASS">
+      <relatedTo targetId="1;2;2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SURGERY OF A COLON MASS</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="THROMBOTIC EVENT">
+      <relatedTo targetId="4;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOTIC EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT HAD A THROMBOTIC EVENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD A THROMBOTIC EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT HAD A CARDIOPULMONARY ARREST">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD A CARDIOPULMONARY ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="SUBSEQUENTLY DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUBSEQUENTLY DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="PATIENT HAD A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="SURGERY OF A COLON MASS"/>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="SURGERY OF A COLON MASS"/>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="PATIENT STOPPED THE ANTIPLATELET THERAPY" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="PATIENT HAD A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="IMPLANTATION OF TWO CYPHER STENTS"/>
+   <eventStmt sourceEvent="ST ELEVATION MYOCARDIAL INFARCTION (STEMI)" relation="BEFORE" targetEvent="A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY."/>
+   <eventStmt sourceEvent="IMPLANTATION OF TWO CYPHER STENTS" relation="BEFORE" targetEvent="PATIENT HAD A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="IMPLANTATION OF TWO CYPHER STENTS" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="IMPLANTATION OF TWO CYPHER STENTS" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="IMPLANTATION OF TWO CYPHER STENTS" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="IMPLANTATION OF TWO CYPHER STENTS" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE" relation="START" targetEvent="IMPLANTATION OF TWO CYPHER STENTS"/>
+   <eventStmt sourceEvent="ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE" relation="START" targetEvent="A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY."/>
+   <eventStmt sourceEvent="SURGERY OF A COLON MASS" relation="BEFORE" targetEvent="PATIENT HAD A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="SURGERY OF A COLON MASS" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="SURGERY OF A COLON MASS" relation="BEFORE" targetEvent="THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="SURGERY OF A COLON MASS" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="SURGERY OF A COLON MASS" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="THROMBOTIC EVENT" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="THROMBOTIC EVENT" relation="BEFORE" targetEvent="PATIENT HAD A CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="THROMBOTIC EVENT" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="PATIENT HAD A CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT STOPPED THE ANTIPLATELET THERAPY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ST ELEVATION MYOCARDIAL INFARCTION (STEMI)]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [IMPLANTATION OF TWO CYPHER STENTS]: [A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.]: StartAntiplateletTherapy [ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [SURGERY OF A COLON MASS]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOTIC EVENT]: [PATIENT HAD A THROMBOTIC EVENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT HAD A CARDIOPULMONARY ARREST]}</timelineEntry>
+   <timelineEntry>{Patient_Death [SUBSEQUENTLY DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/213.txt.owl">
+   <event id="0" name="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A STENT THROMBOSIS OCCURRED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A STENT THROMBOSIS OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A NEW STENT WAS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A NEW STENT WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD" relation="BEFORE" targetEvent="A STENT THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD" relation="BEFORE" targetEvent="A STENT THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD" relation="BEFORE" targetEvent="A NEW STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="A STENT THROMBOSIS OCCURRED" relation="BEFORE" targetEvent="A NEW STENT WAS IMPLANTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING CORONARY STENT DELIVERY SYSTEM LENGTH 12MM, DIAMETER 3.0MM WAS USED TO TREAT A CALCIFIED LESION IN A PATIENT'S PROXIMAL LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [A STENT THROMBOSIS OCCURRED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [A NEW STENT WAS IMPLANTED]}</timelineEntry>
+</CNTROTimeLineEventList>

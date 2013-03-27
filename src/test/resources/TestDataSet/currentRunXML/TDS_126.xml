@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/126.txt.owl">
+   <event id="0" name="PT WAS INSTRUCTED TO AND DID TAKE PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS INSTRUCTED TO AND DID TAKE PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:TWELVE MONTHS }{Dur. unit:MONTH}{Dur. value:12}}}</eventProperty>
+   </event>
+   <event id="1" name="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)">
+      <relatedTo targetId="2;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CIRCUMFLEX STENOSIS">
+      <relatedTo targetId="3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CIRCUMFLEX STENOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT SUFFERED A MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUFFERED A MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT IS NOW DECEASED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT IS NOW DECEASED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT WAS INSTRUCTED TO AND DID TAKE PLAVIX" relation="START" targetEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)" relation="BEFORE" targetEvent="CIRCUMFLEX STENOSIS"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)" relation="BEFORE" targetEvent="CIRCUMFLEX STENOSIS"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)" relation="BEFORE" targetEvent="PT SUFFERED A MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)" relation="BEFORE" targetEvent="PT IS NOW DECEASED"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)" relation="BEFORE" targetEvent="ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT"/>
+   <eventStmt sourceEvent="CIRCUMFLEX STENOSIS" relation="BEFORE" targetEvent="PT SUFFERED A MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="CIRCUMFLEX STENOSIS" relation="BEFORE" targetEvent="PT IS NOW DECEASED"/>
+   <eventStmt sourceEvent="CIRCUMFLEX STENOSIS" relation="BEFORE" targetEvent="ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT"/>
+   <eventStmt sourceEvent="PT SUFFERED A MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PT IS NOW DECEASED"/>
+   <eventStmt sourceEvent="PT SUFFERED A MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT"/>
+   <eventStmt sourceEvent="ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT" relation="BEFORE" targetEvent="PT IS NOW DECEASED"/>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS INSTRUCTED TO AND DID TAKE PLAVIX]: InitialDrugElutingStentImplantation [TAXUS EXPRESS2 PACLITAXEL-ELUTING CORONARY STENT 3.00X8MM WAS IMPLANTED IN THE PROXIMAL CIRCUMFLEX (CX)]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CIRCUMFLEX STENOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT SUFFERED A MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [ADDITIONAL STENTING WITH AN UNSPECIFIED TAXUS STENT TO TREAT THE EVENT]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT IS NOW DECEASED]}</timelineEntry>
+</CNTROTimeLineEventList>

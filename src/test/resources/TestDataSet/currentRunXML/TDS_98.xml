@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/98.txt.owl">
+   <event id="0" name="PATIENT HAD STOPPED TAKING PLAVIX">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD STOPPED TAKING PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT"/>
+   <eventStmt sourceEvent="PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT"/>
+   <eventStmt sourceEvent="PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT HAD STOPPED TAKING PLAVIX]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PHYSICIAN PLACED A TAXUS EXPRESS2 2.5X24MM DRUG ELUTING STENT TO THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY REVEALED A THROMBOSIS IN THE PREVIOUSLY PLACED TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

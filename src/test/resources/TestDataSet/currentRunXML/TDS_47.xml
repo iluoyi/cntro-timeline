@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/47.txt.owl">
+   <event id="0" name="PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name=" PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM" relation="BEFORE" targetEvent="STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS"/>
+   <eventStmt sourceEvent="PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM" relation="BEFORE" targetEvent="STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS"/>
+   <eventStmt sourceEvent="PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM" relation="BEFORE" targetEvent=" PT DIED"/>
+   <eventStmt sourceEvent="STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS" relation="BEFORE" targetEvent=" PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PT HAD TWO TAXUS EXPRESS2 DRUG ELUTING STENTS, SIZES 2.75X24MM (LOT #8333051) AND 3.0X16MM]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT IN THE LEFT ANTERIOR DESCENDING CORONARY ARTERY IS OCCLUDED BY A THROMBUS]}</timelineEntry>
+   <timelineEntry>{Patient_Death [ PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

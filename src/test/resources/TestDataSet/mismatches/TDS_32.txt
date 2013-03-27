@@ -1,0 +1,59 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_32.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	 	 	 	 	 	 	 	
+2	3;4;5;6	 	 	 	 	 	 	
+3	4;5;6	 	 	 	 	 	 	
+5	4;6	 	 	 	 	 	 	
+4	6	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_32.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2;3;4;5	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+2	3;4;5	 	 	 	 	 	 	
+4	3;5	 	 	 	 	 	 	
+3	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_32.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_32.csv
+########## EVENTS ############
+EVENT # 0 ==> MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> .0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PT PRESENTED WITH THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> ACUTE MYOCARIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PT WAS ADMITTED TO THE HOSP      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> DIED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT PRESENTED WITH THROMBOSIS ...)   
+EVENT-RELATION # 2: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)   
+EVENT-RELATION # 3: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( ACUTE MYOCARIAL INFARCTION ...)   
+EVENT-RELATION # 4: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 5: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)   
+EVENT-RELATION # 6: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( ACUTE MYOCARIAL INFARCTION ...)   
+EVENT-RELATION # 7: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 8: ( ACUTE MYOCARIAL INFARCTION ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)   
+EVENT-RELATION # 9: ( ACUTE MYOCARIAL INFARCTION ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 10: ( PT WAS ADMITTED TO THE HOSP ...)==>[ BEFORE ]==>( DIED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [.0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED]}EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [PT PRESENTED WITH THROMBOSIS]}EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [ACUTE MYOCARIAL INFARCTION]}EVENT-TimeLineEntry # 6: {ER_Admission : [PT WAS ADMITTED TO THE HOSP]}EVENT-TimeLineEntry # 7: {Patient_Death : [DIED]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3;4;5 ]
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;5;6 ]
+Found: Event [ 6 ] --> [  BEFORE ] --> Event [   ]
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 4;5;6 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;5 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 4;6 ]
+Found: Event [ 4 ] --> [  BEFORE ] --> Event [ 3;5 ]

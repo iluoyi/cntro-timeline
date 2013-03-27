@@ -1,0 +1,39 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_164.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+3	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_164.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+3	1;1;2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_164.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_164.csv
+########## EVENTS ############
+EVENT # 0 ==> AN UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]   
+EVENT # 3 ==> HAD STOPPED TAKING PLAVIX      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> STENT THROMBOSIS, WHICH WAS DETECTED ANGIOGRAPHICALLY      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)]   
+EVENT # 2 ==> PATIENT PRESENTED EMERGENTLY      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( AN UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANT ...)==>[ BEFORE ]==>( STENT THROMBOSIS, WHICH WAS DETECTED ANGIOGRAPHI ...)   
+EVENT-RELATION # 2: ( AN UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANT ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   
+EVENT-RELATION # 3: ( HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( STENT THROMBOSIS, WHICH WAS DETECTED ANGIOGRAPHI ...)   
+EVENT-RELATION # 4: ( HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   
+EVENT-RELATION # 5: ( STENT THROMBOSIS, WHICH WAS DETECTED ANGIOGRAPHI ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [AN UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy : [HAD STOPPED TAKING PLAVIX]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [STENT THROMBOSIS, WHICH WAS DETECTED ANGIOGRAPHICALLY]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED EMERGENTLY]}
+
+##############################
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2 ]
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2 ]
+Found: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

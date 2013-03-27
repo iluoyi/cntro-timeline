@@ -1,0 +1,42 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_254.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	1	 	 	2	
+2	3;4;1	 	 	 	 	 	 	
+3	4;1	 	 	 	 	 	 	
+4	1	 	 	 	 	 	 	
+1	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_254.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	1	 	 	2	
+2	3;3;4;1	 	 	 	 	 	 	
+3	4;1	 	 	 	 	 	 	
+4	1	 	 	 	 	 	 	
+1	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_254.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_254.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 ...)==>[ FINISH ]==>( DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG ...)   
+EVENT-RELATION # 2: ( PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 ...)==>[ START ]==>( A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 A ...)   
+EVENT-RELATION # 3: ( A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 A ...)==>[ BEFORE ]==>( ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE ...)   
+EVENT-RELATION # 4: ( A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 A ...)==>[ BEFORE ]==>( THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-E ...)   
+EVENT-RELATION # 5: ( A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 A ...)==>[ BEFORE ]==>( DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG ...)   
+EVENT-RELATION # 6: ( ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE ...)==>[ BEFORE ]==>( THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-E ...)   
+EVENT-RELATION # 7: ( ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE ...)==>[ BEFORE ]==>( DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG ...)   
+EVENT-RELATION # 8: ( THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-E ...)==>[ BEFORE ]==>( DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [PATIENT WAS INSTRUCTED TO TAKE DAILY ASPIRIN 100 MG FOR LIFE, CLOPIDOGREL 75 MG]: InitialDrugElutingStentImplantation [A 2.5 X 18 MM CYPHER STENT WAS IMPLANTED AT 16 AT ON THE PROXIMAL LAD]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [ANGIOGRAPHY SHOWED A THROMBOTIC OCCLUSION OF THE IMPLANTED STENT]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction [THE ECG DEMONSTRATED SIGNIFICANT ST-SEGMENT RE-ELEVATIONS]}EVENT-TimeLineEntry # 4: {EndAntiplateletTherapy [DAILY DOSE OF CLOPIDOGREL WAS RAISED TO 150 MG]}
+
+##############################
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;1 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;3;4;1 ]

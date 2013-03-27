@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/166.txt.owl">
+   <event id="0" name="TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT">
+      <relatedTo targetId="1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="LATE STENT THROMBOSIS WAS OBSERVED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE STENT THROMBOSIS WAS OBSERVED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS WAS OBSERVED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PATIENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE STENT THROMBOSIS WAS OBSERVED]}</timelineEntry>
+</CNTROTimeLineEventList>

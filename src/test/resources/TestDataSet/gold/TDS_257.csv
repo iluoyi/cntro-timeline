@@ -1,0 +1,55 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1, , , , , , 
+
+EVENTID-1, , , , , , , 
+
+EVENTID-2,3;4, , , , , ,1
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> INDICATION FOR THE PROCEDURE WAS AN ACUTE MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENT IMPLANTATION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT WAS PRESCRIBED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 3 ==> PT EXPERIENCED A THROMBOTIC EVENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> AND SUBSEQUENT MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( INDICATION FOR THE PROCEDURE WAS AN ACUTE MI ...)==>[ BEFORE ]==>( STENT IMPLANTATION ...)
+   
+EVENT-RELATION # 2: ( PT WAS PRESCRIBED ...)==>[ BEFORE ]==>( PT EXPERIENCED A THROMBOTIC EVENT ...)
+   
+EVENT-RELATION # 3: ( PT WAS PRESCRIBED ...)==>[ BEFORE ]==>( AND SUBSEQUENT MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 4: ( PT WAS PRESCRIBED ...)==>[ START ]==>( STENT IMPLANTATION ...)
+   
+EVENT-RELATION # 5: ( PT EXPERIENCED A THROMBOTIC EVENT ...)==>[ BEFORE ]==>( AND SUBSEQUENT MYOCARDIAL INFARCTION ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [INDICATION FOR THE PROCEDURE WAS AN ACUTE MI]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [STENT IMPLANTATION]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [PT WAS PRESCRIBED]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [PT EXPERIENCED A THROMBOTIC EVENT]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [AND SUBSEQUENT MYOCARDIAL INFARCTION]}

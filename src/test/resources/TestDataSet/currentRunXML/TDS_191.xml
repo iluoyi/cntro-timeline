@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/191.txt.owl">
+   <event id="0" name="PATIENT WAS DISCHARGED ON PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS DISCHARGED ON PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED">
+      <relatedTo targetId="2;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;3;4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT PRESENTED">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT SUBSEQUENTLY EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUBSEQUENTLY EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON PLAVIX" relation="START" targetEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED"/>
+   <eventStmt sourceEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED" relation="BEFORE" targetEvent="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED" relation="BEFORE" targetEvent="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED" relation="BEFORE" targetEvent="PATIENT SUBSEQUENTLY EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT SUBSEQUENTLY EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED"/>
+   <eventStmt sourceEvent="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT SUBSEQUENTLY EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="PATIENT SUBSEQUENTLY EXPIRED"/>
+   <timelineEntry>{StartAntiplateletTherapy [PATIENT WAS DISCHARGED ON PLAVIX]: InitialDrugElutingStentImplantation [A 2.25X32MM TAXUS LIBERTE+ ATOM DRUG ELUTING STENT WAS ADVANCED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [DIAGNOSTIC CATHETERIZATION REVEALED THROMBUS IN THE LEFT ANTERIOR DESCENDING ARTERY]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT SUBSEQUENTLY EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

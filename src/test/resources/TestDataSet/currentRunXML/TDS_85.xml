@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/85.txt.owl">
+   <event id="0" name="CYPHER (2.5/18 MM) WAS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CYPHER (2.5/18 MM) WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2;0;3" relation="START"/>
+      <eventProperty name="description" type="text">TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name=" CYPHER (2.5/23 MM) WAS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> CYPHER (2.5/23 MM) WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId="4;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="7;8" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="ASA 200 MG/DAY WAS INITIATED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="6" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2;0;3" relation="START"/>
+      <eventProperty name="description" type="text">ASA 200 MG/DAY WAS INITIATED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:16 WEEKS}{Dur. unit:WEEK}{Dur. value:16}}}</eventProperty>
+   </event>
+   <event id="4" name="THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE">
+      <relatedTo targetId="5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT WAS ADMITTED TO THE HOSP">
+      <relatedTo targetId="6;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS ADMITTED TO THE HOSP</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="HE PASSED AWAY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE PASSED AWAY</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name=" CYPHER (3.0/18) WAS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> CYPHER (3.0/18) WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED" relation="START" targetEvent=" CYPHER (2.5/23 MM) WAS IMPLANTED"/>
+   <eventStmt sourceEvent="TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED" relation="START" targetEvent="CYPHER (2.5/18 MM) WAS IMPLANTED"/>
+   <eventStmt sourceEvent="TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED" relation="START" targetEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PT WAS ADMITTED TO THE HOSP"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="HE PASSED AWAY"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="EQUAL" targetEvent=" CYPHER (3.0/18) WAS IMPLANTED"/>
+   <eventStmt sourceEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="EQUAL" targetEvent="A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="ASA 200 MG/DAY WAS INITIATED" relation="FINISH" targetEvent="HE PASSED AWAY"/>
+   <eventStmt sourceEvent="ASA 200 MG/DAY WAS INITIATED" relation="START" targetEvent=" CYPHER (2.5/23 MM) WAS IMPLANTED"/>
+   <eventStmt sourceEvent="ASA 200 MG/DAY WAS INITIATED" relation="START" targetEvent="CYPHER (2.5/18 MM) WAS IMPLANTED"/>
+   <eventStmt sourceEvent="ASA 200 MG/DAY WAS INITIATED" relation="START" targetEvent="TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE" relation="BEFORE" targetEvent="PT WAS ADMITTED TO THE HOSP"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE" relation="BEFORE" targetEvent="HE PASSED AWAY"/>
+   <eventStmt sourceEvent="PT WAS ADMITTED TO THE HOSP" relation="BEFORE" targetEvent="HE PASSED AWAY"/>
+   <eventStmt sourceEvent="PT WAS ADMITTED TO THE HOSP" relation="BEFORE" targetEvent="HE PASSED AWAY"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [CYPHER (2.5/18 MM) WAS IMPLANTED]: StartAntiplateletTherapy [TICLOPIDINE HYDROCHLORIDE 200 MG/DAY WAS INITIATED]: InitialDrugElutingStentImplantation [ CYPHER (2.5/23 MM) WAS IMPLANTED]: [TWO OVERLAPPING CYPHER STENTS WERE IMPLANTED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY]: StartAntiplateletTherapy [ASA 200 MG/DAY WAS INITIATED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS WAS OBSERVED IN THE THREE CYPHER STENTS IMPLANTED AT INDEX PROCEDURE]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT WAS ADMITTED TO THE HOSP]}</timelineEntry>
+   <timelineEntry>{Patient_Death [HE PASSED AWAY]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A THIRD CYPHER STENT WAS IMPLANTED IN THE DISTAL RIGHT CORONARY ARTERY (RCA)]: [ CYPHER (3.0/18) WAS IMPLANTED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,53 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , ,1, , , , 
+
+EVENTID-2, , , ,3, , ,0
+
+EVENTID-1, , , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> 3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> TICLOPIDINE AND ASPIRIN WERE PRESCRIBED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> 2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY
+      		[Type = EndAntiplateletTherapy][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= )(Granularity=DAY)(Computed As=ASSERTED)]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( 3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN T ...)==>[ EQUAL ]==>( 2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEF ...)
+   
+EVENT-RELATION # 2: ( TICLOPIDINE AND ASPIRIN WERE PRESCRIBED ...)==>[ FINISH ]==>( PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY ...)
+   
+EVENT-RELATION # 3: ( TICLOPIDINE AND ASPIRIN WERE PRESCRIBED ...)==>[ START ]==>( 3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN T ...)
+   
+EVENT-RELATION # 4: ( PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [3.00X16MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}
+EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [TICLOPIDINE AND ASPIRIN WERE PRESCRIBED]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [2.50X24MM TAXUS EXPRESS2 WAS DEPLOYED IN THE LEFT CIRCUMFLEX (LCX)]}
+EVENT-TimeLineEntry # 4: {EndAntiplateletTherapy : [PATIENT STOPPED TAKING THE ANTIPLATELET THERAPY]}
+EVENT-TimeLineEntry # 5: {Late_Stent_Thrombosis : [ANGIOGRAPHY REVEALED IN-STENT THROMBOSIS IN THE PROXIMAL LAD]}

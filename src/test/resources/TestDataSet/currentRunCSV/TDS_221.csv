@@ -1,0 +1,36 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2, ,0, , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBT ...)==>[ BEFORE ]==>( DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STE ...)
+   
+EVENT-RELATION # 2: ( PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBT ...)==>[ EQUAL ]==>( PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STE ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT]: [PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM]}

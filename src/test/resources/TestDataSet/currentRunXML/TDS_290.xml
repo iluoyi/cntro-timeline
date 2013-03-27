@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/290.txt.owl">
+   <event id="0" name="AN ACUTE MI">
+      <relatedTo targetId="1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ACUTE MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="IN-STENT THROMBOSIS">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IN-STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="PT SUFFERED AN MI">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUFFERED AN MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="SUBSEQUENTLY DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUBSEQUENTLY DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="AN ACUTE MI" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="AN ACUTE MI" relation="BEFORE" targetEvent="PT SUFFERED AN MI"/>
+   <eventStmt sourceEvent="AN ACUTE MI" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="AN ACUTE MI" relation="BEFORE" targetEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="PT SUFFERED AN MI"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS" relation="BEFORE" targetEvent="PT SUFFERED AN MI"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <eventStmt sourceEvent="PT SUFFERED AN MI" relation="BEFORE" targetEvent="SUBSEQUENTLY DIED"/>
+   <timelineEntry>{Myocardial_Infarction [AN ACUTE MI]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT CIRCUMFLEX ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [IN-STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT SUFFERED AN MI]}</timelineEntry>
+   <timelineEntry>{Patient_Death [SUBSEQUENTLY DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

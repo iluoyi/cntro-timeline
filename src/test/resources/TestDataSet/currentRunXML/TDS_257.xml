@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/257.txt.owl">
+   <event id="0" name="INDICATION FOR THE PROCEDURE WAS AN ACUTE MI">
+      <relatedTo targetId="1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INDICATION FOR THE PROCEDURE WAS AN ACUTE MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT IMPLANTATION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT IMPLANTATION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT WAS PRESCRIBED">
+      <relatedTo targetId="3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS PRESCRIBED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="3" name="PT EXPERIENCED A THROMBOTIC EVENT">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPERIENCED A THROMBOTIC EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="AND SUBSEQUENT MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AND SUBSEQUENT MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="INDICATION FOR THE PROCEDURE WAS AN ACUTE MI" relation="BEFORE" targetEvent="STENT IMPLANTATION"/>
+   <eventStmt sourceEvent="PT WAS PRESCRIBED" relation="BEFORE" targetEvent="PT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="PT WAS PRESCRIBED" relation="BEFORE" targetEvent="AND SUBSEQUENT MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PT WAS PRESCRIBED" relation="START" targetEvent="STENT IMPLANTATION"/>
+   <eventStmt sourceEvent="PT EXPERIENCED A THROMBOTIC EVENT" relation="BEFORE" targetEvent="AND SUBSEQUENT MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{Myocardial_Infarction [INDICATION FOR THE PROCEDURE WAS AN ACUTE MI]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [STENT IMPLANTATION]: StartAntiplateletTherapy [PT WAS PRESCRIBED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT EXPERIENCED A THROMBOTIC EVENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [AND SUBSEQUENT MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

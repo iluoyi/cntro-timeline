@@ -1,0 +1,79 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_239.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	1	 	 	2	
+2	3;4;5;6;7	 	8	 	 	 	 	
+8	 	 	 	 	 	 	 	
+1	3;4;5;6;7	 	 	 	 	 	 	
+5	3;4;6;7	 	 	 	 	 	 	
+3	4;6;7	 	 	 	 	 	 	
+6	4;7	 	 	 	 	 	 	
+4	7	 	 	 	 	 	 	
+7	 	 	 	 	 	 	 	
+9	 	 	 	 	 	 	7	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_239.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	1	 	 	2	
+2	3;4;5;5;6;7	 	8	 	 	 	 	
+8	 	 	 	 	 	 	 	
+1	3;4;5;5;6;7	 	 	 	 	 	 	
+5	3;3;4;6;7	 	 	 	 	 	 	
+3	4;6;7	 	 	 	 	 	 	
+6	4;7	 	 	 	 	 	 	
+4	7	 	 	 	 	 	 	
+7	 	 	 	 	 	 	 	
+9	 	 	 	 	 	 	7	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_239.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_239.csv
+########## EVENTS ############
+EVENT # 0 ==> MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> A 2.5X16MM TAXUS WAS IMPLANTED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 8 ==> A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PATIENT HAD STOPPED TAKING PLAVIX      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> EMERGENTLY HOSPITALIZED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 7 ==> IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 9 ==> MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASP ...)==>[ FINISH ]==>( PATIENT HAD STOPPED TAKING PLAVIX ...)   
+EVENT-RELATION # 2: ( MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASP ...)==>[ START ]==>( A 2.5X16MM TAXUS WAS IMPLANTED ...)   
+EVENT-RELATION # 3: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ BEFORE ]==>( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)   
+EVENT-RELATION # 4: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ BEFORE ]==>( EMERGENTLY HOSPITALIZED ...)   
+EVENT-RELATION # 5: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ BEFORE ]==>( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)   
+EVENT-RELATION # 6: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ BEFORE ]==>( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)   
+EVENT-RELATION # 7: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 8: ( A 2.5X16MM TAXUS WAS IMPLANTED ...)==>[ EQUAL ]==>( A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLA ...)   
+EVENT-RELATION # 9: ( PATIENT HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)   
+EVENT-RELATION # 10: ( PATIENT HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( EMERGENTLY HOSPITALIZED ...)   
+EVENT-RELATION # 11: ( PATIENT HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)   
+EVENT-RELATION # 12: ( PATIENT HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)   
+EVENT-RELATION # 13: ( PATIENT HAD STOPPED TAKING PLAVIX ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 14: ( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)==>[ BEFORE ]==>( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)   
+EVENT-RELATION # 15: ( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)==>[ BEFORE ]==>( EMERGENTLY HOSPITALIZED ...)   
+EVENT-RELATION # 16: ( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)==>[ BEFORE ]==>( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)   
+EVENT-RELATION # 17: ( PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 18: ( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)==>[ BEFORE ]==>( EMERGENTLY HOSPITALIZED ...)   
+EVENT-RELATION # 19: ( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)==>[ BEFORE ]==>( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)   
+EVENT-RELATION # 20: ( CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALL ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 21: ( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( EMERGENTLY HOSPITALIZED ...)   
+EVENT-RELATION # 22: ( DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 23: ( EMERGENTLY HOSPITALIZED ...)==>[ BEFORE ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   
+EVENT-RELATION # 24: ( MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVI ...)==>[ START ]==>( IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCT ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX]: InitialDrugElutingStentImplantation [A 2.5X16MM TAXUS WAS IMPLANTED]: [A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT]}EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy [PATIENT HAD STOPPED TAKING PLAVIX]}EVENT-TimeLineEntry # 3: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis [CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH]}EVENT-TimeLineEntry # 5: {Myocardial_Infarction [DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION]}EVENT-TimeLineEntry # 6: {ER_Admission [EMERGENTLY HOSPITALIZED]}EVENT-TimeLineEntry # 7: {FollowUpStentProcedure [IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED]: StartAntiplateletTherapy [MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX]}
+
+##############################
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;5;6;7 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;5;5;6;7 ]
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 3;4;5;6;7 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 3;4;5;5;6;7 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 3;4;6;7 ]
+Found: Event [ 5 ] --> [  BEFORE ] --> Event [ 3;3;4;6;7 ]

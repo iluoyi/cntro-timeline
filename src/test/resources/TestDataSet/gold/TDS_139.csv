@@ -1,0 +1,73 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-5,2;3;4;1, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-4,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CLOPIDOGREL 75 MG DOSING WAS STARTED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE MID RIGHT CORONARY ARTERY (RCA)
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF IN-STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> INFERIOR MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT WAS ADMITTED TO THE HOSPITAL
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( CLOPIDOGREL 75 MG DOSING WAS STARTED ...)==>[ START ]==>( DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE ...)
+   
+EVENT-RELATION # 2: ( DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE ...)==>[ BEFORE ]==>( CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF ...)
+   
+EVENT-RELATION # 3: ( DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSPITAL ...)
+   
+EVENT-RELATION # 4: ( DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE ...)==>[ BEFORE ]==>( INFERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 5: ( ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY ...)==>[ BEFORE ]==>( CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF ...)
+   
+EVENT-RELATION # 6: ( ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSPITAL ...)
+   
+EVENT-RELATION # 7: ( ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY ...)==>[ BEFORE ]==>( INFERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 8: ( ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY ...)==>[ BEFORE ]==>( DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE ...)
+   
+EVENT-RELATION # 9: ( CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSPITAL ...)
+   
+EVENT-RELATION # 10: ( CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF ...)==>[ BEFORE ]==>( INFERIOR MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 11: ( INFERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSPITAL ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [CLOPIDOGREL 75 MG DOSING WAS STARTED]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [DEPLOYMENT OF A PROMUS DRUG ELUTING STENT TO THE MID RIGHT CORONARY ARTERY (RCA)]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [ASPIRIN 325 MG DOSING WAS STARTED PREVIOUSLY]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [CARDIAC CATHETERIZATION REVEALED THE PRESENCE OF IN-STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [INFERIOR MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 6: {ER_Admission : [PT WAS ADMITTED TO THE HOSPITAL]}

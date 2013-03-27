@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/286.txt.owl">
+   <event id="0" name="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED" relation="BEFORE" targetEvent="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED" relation="BEFORE" targetEvent="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED" relation="BEFORE" targetEvent="3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION"/>
+   <eventStmt sourceEvent="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS" relation="BEFORE" targetEvent="3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION]}</timelineEntry>
+</CNTROTimeLineEventList>

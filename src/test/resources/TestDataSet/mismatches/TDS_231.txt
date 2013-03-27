@@ -1,0 +1,37 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_231.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+3	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_231.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+3	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_231.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_231.csv
+########## EVENTS ############
+EVENT # 0 ==> TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 & MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED TO THE EMERGENCY ROOM      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# ...)==>[ BEFORE ]==>( ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOS ...)   
+EVENT-RELATION # 2: ( TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# ...)==>[ BEFORE ]==>( PATIENT PRESENTED TO THE EMERGENCY ROOM ...)   
+EVENT-RELATION # 3: ( TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# ...)==>[ BEFORE ]==>( AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCU ...)   
+EVENT-RELATION # 4: ( ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOS ...)==>[ BEFORE ]==>( PATIENT PRESENTED TO THE EMERGENCY ROOM ...)   
+EVENT-RELATION # 5: ( ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOS ...)==>[ BEFORE ]==>( AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCU ...)   
+EVENT-RELATION # 6: ( AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCU ...)==>[ BEFORE ]==>( PATIENT PRESENTED TO THE EMERGENCY ROOM ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TWO ENDEAVOR SPRINT RX DRUG-ELUTING STENTS (MFR# 2953200-2010-02122 & MFR# 2593200-2010-02123) WERE IMPLANTED (OVERLAPPING) AT THE PROX LAD]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [ANGIOGRAPHY WAS CARRIED OUT AND A STENT THROMBOSIS OF THE STUDY STENT WAS SHOWN]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [AN ACUTE NON STEMI (MI) IS REPORTED TO HAVE OCCURRED]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED TO THE EMERGENCY ROOM]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2;3 ]

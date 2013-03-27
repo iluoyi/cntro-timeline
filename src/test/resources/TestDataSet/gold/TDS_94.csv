@@ -1,0 +1,70 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4, , , , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-4,1;2;3, , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> THE INDEX PROCEDURE FOR THE STUDY 
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 5 ==> PT HAD TWO CYPHER 2.5 X 18 MM STENTS IMPLANTED IN THE OBTUSE MARGINAL (OM) BRANCH TO TREAT AN IN-STENT RESTENOSIS (ISR) OF A PREVIOUSLY IMPLANTED BARE METAL/EXPRESS STENT (BMS) FOR THE STUDY PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLANTED IN DIFFERENT TARGET LESIONS: FIVE BARE METAL STENTS (BMS), EIGHT CYPHER STENTS, AND ONE TAXUS STENT
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> VERY LATE STENT THROMBOSIS (VLT)
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> ACUTE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( THE INDEX PROCEDURE FOR THE STUDY  ...)==>[ BEFORE ]==>( VERY LATE STENT THROMBOSIS (VLT) ...)
+   
+EVENT-RELATION # 2: ( THE INDEX PROCEDURE FOR THE STUDY  ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 3: ( THE INDEX PROCEDURE FOR THE STUDY  ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 4: ( THE INDEX PROCEDURE FOR THE STUDY  ...)==>[ BEFORE ]==>( PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLA ...)
+   
+EVENT-RELATION # 5: ( PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLA ...)==>[ BEFORE ]==>( VERY LATE STENT THROMBOSIS (VLT) ...)
+   
+EVENT-RELATION # 6: ( PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLA ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 7: ( PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLA ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 8: ( VERY LATE STENT THROMBOSIS (VLT) ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 9: ( VERY LATE STENT THROMBOSIS (VLT) ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 10: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [THE INDEX PROCEDURE FOR THE STUDY ] : [PT HAD TWO CYPHER 2.5 X 18 MM STENTS IMPLANTED IN THE OBTUSE MARGINAL (OM) BRANCH TO TREAT AN IN-STENT RESTENOSIS (ISR) OF A PREVIOUSLY IMPLANTED BARE METAL/EXPRESS STENT (BMS) FOR THE STUDY PROCEDURE]}
+EVENT-TimeLineEntry # 2: {FollowUpStentProcedure : [PT HAD A TOTAL OF FOURTEEN ASSORTED STENTS IMPLANTED IN DIFFERENT TARGET LESIONS: FIVE BARE METAL STENTS (BMS), EIGHT CYPHER STENTS, AND ONE TAXUS STENT]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [VERY LATE STENT THROMBOSIS (VLT)]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [ACUTE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 5: {Patient_Death : [PT EXPIRED]}

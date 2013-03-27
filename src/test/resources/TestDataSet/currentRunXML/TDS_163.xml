@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/163.txt.owl">
+   <event id="0" name="WAS PRESCRIBED PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">WAS PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CORONARY STENT THROMBOSIS">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="WAS PRESCRIBED PLAVIX" relation="START" targetEvent="INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION" relation="BEFORE" targetEvent="CORONARY STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION" relation="BEFORE" targetEvent="CORONARY STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="CORONARY STENT THROMBOSIS" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{StartAntiplateletTherapy [WAS PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [INDEX PROCEDURE FOR CYPHER STENT IMPLANTATION]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CORONARY STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT EXPERIENCED A MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

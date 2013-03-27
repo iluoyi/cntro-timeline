@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/265.txt.owl">
+   <event id="0" name="PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="3" name="EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="ADMITTED TO THE EMERGENCY ROOM">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ADMITTED TO THE EMERGENCY ROOM</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS" relation="BEFORE" targetEvent="REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS" relation="BEFORE" targetEvent="ADMITTED TO THE EMERGENCY ROOM"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS" relation="BEFORE" targetEvent="EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD" relation="BEFORE" targetEvent="ADMITTED TO THE EMERGENCY ROOM"/>
+   <eventStmt sourceEvent="REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD" relation="BEFORE" targetEvent="EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="ADMITTED TO THE EMERGENCY ROOM"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PATIENT UNDERWENT STENTING OF AN UNKNOWN RESTENOSED STENT WITHIN THE PRE-DILATED MID LAD AND THE UNK RESTENOSED STENT WITHIN THE PRE-DILATED MID RCA, WITH XIENCE V STENTS]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [REVEALED STENT THROMBOSIS WITHIN THE XIENCE V STENT IN THE MID LAD]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [EKG FINDINGS REVEALED A NON Q-WAVE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [ADMITTED TO THE EMERGENCY ROOM]}</timelineEntry>
+</CNTROTimeLineEventList>

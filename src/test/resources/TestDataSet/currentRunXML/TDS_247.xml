@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/247.txt.owl">
+   <event id="0" name="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="1;2;3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PLAVIX WAS DISCONTINUED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLAVIX WAS DISCONTINUED</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT EXPERIENCED A THROMBOTIC EVENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPERIENCED A THROMBOTIC EVENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="MI">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="MI"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PLAVIX WAS DISCONTINUED"/>
+   <eventStmt sourceEvent="A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PLAVIX WAS DISCONTINUED"/>
+   <eventStmt sourceEvent="PLAVIX WAS DISCONTINUED" relation="BEFORE" targetEvent="PT EXPERIENCED A THROMBOTIC EVENT"/>
+   <eventStmt sourceEvent="PLAVIX WAS DISCONTINUED" relation="BEFORE" targetEvent="MI"/>
+   <eventStmt sourceEvent="PT EXPERIENCED A THROMBOTIC EVENT" relation="BEFORE" targetEvent="MI"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A CYPHER STENT WAS IMPLANTED IN THE PT'S LEFT ANTERIOR DESCENDING ARTERY]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PLAVIX WAS DISCONTINUED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT EXPERIENCED A THROMBOTIC EVENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MI]}</timelineEntry>
+</CNTROTimeLineEventList>

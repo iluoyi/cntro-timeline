@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/198.txt.owl">
+   <event id="0" name="ONE NON-BSC STENT IMPLANTED.">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE NON-BSC STENT IMPLANTED.</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CLOTTING OF THE PREVIOUSLY IMPLANTED STENT">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CLOTTING OF THE PREVIOUSLY IMPLANTED STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="THE PATIENT EXPERIENCED A HEART ATTACK ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT EXPERIENCED A HEART ATTACK </eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS" relation="BEFORE" targetEvent="CLOTTING OF THE PREVIOUSLY IMPLANTED STENT"/>
+   <eventStmt sourceEvent="PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS" relation="BEFORE" targetEvent="CLOTTING OF THE PREVIOUSLY IMPLANTED STENT"/>
+   <eventStmt sourceEvent="PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS" relation="BEFORE" targetEvent="THE PATIENT EXPERIENCED A HEART ATTACK "/>
+   <eventStmt sourceEvent="PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS" relation="EQUAL" targetEvent="ONE NON-BSC STENT IMPLANTED."/>
+   <eventStmt sourceEvent="CLOTTING OF THE PREVIOUSLY IMPLANTED STENT" relation="BEFORE" targetEvent="THE PATIENT EXPERIENCED A HEART ATTACK "/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [ONE NON-BSC STENT IMPLANTED.]: [PATIENT HAD TWO UNSPECIFIED TAXUS EXPRESS2 STENTS]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CLOTTING OF THE PREVIOUSLY IMPLANTED STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [THE PATIENT EXPERIENCED A HEART ATTACK ]}</timelineEntry>
+</CNTROTimeLineEventList>

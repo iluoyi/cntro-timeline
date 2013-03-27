@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/55.txt.owl">
+   <event id="0" name="HE HAD BEEN TAKEN OFF HIS PLAVIX">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE HAD BEEN TAKEN OFF HIS PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="THROMBOSIS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT UNDERWENT BACK SURGERY">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT UNDERWENT BACK SURGERY</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION">
+      <relatedTo targetId="3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT PASSED AWAY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PASSED AWAY</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="DEATH">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DEATH</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="HE HAD BEEN TAKEN OFF HIS PLAVIX" relation="BEFORE" targetEvent="PT UNDERWENT BACK SURGERY"/>
+   <eventStmt sourceEvent="HE HAD BEEN TAKEN OFF HIS PLAVIX" relation="BEFORE" targetEvent="PT UNDERWENT BACK SURGERY"/>
+   <eventStmt sourceEvent="HE HAD BEEN TAKEN OFF HIS PLAVIX" relation="BEFORE" targetEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="HE HAD BEEN TAKEN OFF HIS PLAVIX" relation="BEFORE" targetEvent="DEATH"/>
+   <eventStmt sourceEvent="HE HAD BEEN TAKEN OFF HIS PLAVIX" relation="BEFORE" targetEvent="PT PASSED AWAY"/>
+   <eventStmt sourceEvent="CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM" relation="BEFORE" targetEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM" relation="BEFORE" targetEvent="DEATH"/>
+   <eventStmt sourceEvent="CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM" relation="BEFORE" targetEvent="PT PASSED AWAY"/>
+   <eventStmt sourceEvent=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION" relation="BEFORE" targetEvent="PT UNDERWENT BACK SURGERY"/>
+   <eventStmt sourceEvent=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION" relation="BEFORE" targetEvent="PT UNDERWENT BACK SURGERY"/>
+   <eventStmt sourceEvent=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION" relation="BEFORE" targetEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION" relation="BEFORE" targetEvent="DEATH"/>
+   <eventStmt sourceEvent=" 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION" relation="BEFORE" targetEvent="PT PASSED AWAY"/>
+   <eventStmt sourceEvent="PT UNDERWENT BACK SURGERY" relation="BEFORE" targetEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PT UNDERWENT BACK SURGERY" relation="BEFORE" targetEvent="DEATH"/>
+   <eventStmt sourceEvent="PT UNDERWENT BACK SURGERY" relation="BEFORE" targetEvent="PT PASSED AWAY"/>
+   <eventStmt sourceEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="DEATH"/>
+   <eventStmt sourceEvent="EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT PASSED AWAY"/>
+   <timelineEntry>{EndAntiplateletTherapy [HE HAD BEEN TAKEN OFF HIS PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CINEANGIOGRAMS SHOWED THAT THE PT HAD A 100% THROMBOSIS IN HIS LM]: [THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE]: [ 3.0X8MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS ADVANCED TO THE AREA OF THE LESION]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT UNDERWENT BACK SURGERY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [EKG SHOWED AN ANTERIOR MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT PASSED AWAY]: [DEATH]}</timelineEntry>
+</CNTROTimeLineEventList>

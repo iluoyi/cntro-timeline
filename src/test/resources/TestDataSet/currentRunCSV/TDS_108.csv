@@ -1,0 +1,77 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2;3;4;4, ,5, , , , 
+
+EVENTID-6, , , , , , ,0
+
+EVENTID-5, , , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-3,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PATIENT WAS DISCHARGED THE NEXT DAY ON BAYASPIRIN AND PANALDINE
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PLACEMENT OF A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENT THROMBOSIS WAS CONFIRMED IN THE LMCA
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> ACUTE MYOCARDIAL INFARCTION (AMI)
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( STENT THROMBOSIS WAS CONFIRMED IN THE LMCA ...)
+   
+EVENT-RELATION # 2: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( STENT THROMBOSIS WAS CONFIRMED IN THE LMCA ...)
+   
+EVENT-RELATION # 3: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 4: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION (AMI) ...)
+   
+EVENT-RELATION # 5: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 6: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 7: ( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)==>[ EQUAL ]==>( PLACEMENT OF A 3.0X20MM TAXUS EXPRESS2 DRUG ELUT ...)
+   
+EVENT-RELATION # 8: ( PATIENT WAS DISCHARGED THE NEXT DAY ON BAYASPIRI ...)==>[ START ]==>( PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTI ...)
+   
+EVENT-RELATION # 9: ( STENT THROMBOSIS WAS CONFIRMED IN THE LMCA ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 10: ( STENT THROMBOSIS WAS CONFIRMED IN THE LMCA ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION (AMI) ...)
+   
+EVENT-RELATION # 11: ( ACUTE MYOCARDIAL INFARCTION (AMI) ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PLACEMENT OF A 2.5X8MM TAXUS EXPRESS2 DRUG ELUTING STENT]: StartAntiplateletTherapy [PATIENT WAS DISCHARGED THE NEXT DAY ON BAYASPIRIN AND PANALDINE]: InitialDrugElutingStentImplantation [PLACEMENT OF A 3.0X20MM TAXUS EXPRESS2 DRUG ELUTING STENT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [STENT THROMBOSIS WAS CONFIRMED IN THE LMCA]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION (AMI)]}
+EVENT-TimeLineEntry # 4: {ER_Admission [PATIENT PRESENTED]}
+EVENT-TimeLineEntry # 5: {Patient_Death [PATIENT EXPIRED]}

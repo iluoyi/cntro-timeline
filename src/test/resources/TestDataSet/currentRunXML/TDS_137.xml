@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/137.txt.owl">
+   <event id="0" name="THREE PROMUS STENTS WERE IMPLANTED DURING A PCI ">
+      <relatedTo targetId="1;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE PROMUS STENTS WERE IMPLANTED DURING A PCI </eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PROMUS STENTS WERE FOUND TO HAVE 100% STENOSIS DUE TO IN-STENT THROMBOSIS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PROMUS STENTS WERE FOUND TO HAVE 100% STENOSIS DUE TO IN-STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THREE PROMUS STENTS WERE IMPLANTED DURING A PCI " relation="BEFORE" targetEvent="PROMUS STENTS WERE FOUND TO HAVE 100% STENOSIS DUE TO IN-STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="THREE PROMUS STENTS WERE IMPLANTED DURING A PCI " relation="BEFORE" targetEvent="PROMUS STENTS WERE FOUND TO HAVE 100% STENOSIS DUE TO IN-STENT THROMBOSIS"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THREE PROMUS STENTS WERE IMPLANTED DURING A PCI ]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PROMUS STENTS WERE FOUND TO HAVE 100% STENOSIS DUE TO IN-STENT THROMBOSIS]}</timelineEntry>
+</CNTROTimeLineEventList>

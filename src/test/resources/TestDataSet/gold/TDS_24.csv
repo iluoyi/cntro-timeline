@@ -1,0 +1,51 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CYPHER STENT IMPLANTED FOR ANGINA IN THE PDA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT EXPERIENCED ACS AND RESTENOSIS
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> IN-STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> SUDDEN CARDIAC DEATH
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( CYPHER STENT IMPLANTED FOR ANGINA IN THE PDA ...)==>[ BEFORE ]==>( IN-STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( CYPHER STENT IMPLANTED FOR ANGINA IN THE PDA ...)==>[ BEFORE ]==>( SUDDEN CARDIAC DEATH ...)
+   
+EVENT-RELATION # 3: ( CYPHER STENT IMPLANTED FOR ANGINA IN THE PDA ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED ACS AND RESTENOSIS ...)
+   
+EVENT-RELATION # 4: ( PATIENT EXPERIENCED ACS AND RESTENOSIS ...)==>[ BEFORE ]==>( IN-STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 5: ( PATIENT EXPERIENCED ACS AND RESTENOSIS ...)==>[ BEFORE ]==>( SUDDEN CARDIAC DEATH ...)
+   
+EVENT-RELATION # 6: ( IN-STENT THROMBOSIS ...)==>[ BEFORE ]==>( SUDDEN CARDIAC DEATH ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [CYPHER STENT IMPLANTED FOR ANGINA IN THE PDA]}
+EVENT-TimeLineEntry # 2: {FollowUpStentProcedure : [PATIENT EXPERIENCED ACS AND RESTENOSIS]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [IN-STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Patient_Death : [SUDDEN CARDIAC DEATH]}

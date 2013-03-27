@@ -1,0 +1,74 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2;3, ,4;5, , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-6, , , , , , ,0
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-3,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> A 3.5X20MM TAXUS LIBERTE' STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> WITH A MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ BEFORE ]==>( OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF T ...)
+   
+EVENT-RELATION # 2: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ BEFORE ]==>( OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF T ...)
+   
+EVENT-RELATION # 3: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 4: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ BEFORE ]==>( WITH A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 5: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ EQUAL ]==>( A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE P ...)
+   
+EVENT-RELATION # 6: ( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)==>[ EQUAL ]==>( A 3.5X20MM TAXUS LIBERTE' STENT ...)
+   
+EVENT-RELATION # 7: ( THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 1 ...)==>[ START ]==>( A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN  ...)
+   
+EVENT-RELATION # 8: ( OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF T ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 9: ( OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF T ...)==>[ BEFORE ]==>( WITH A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 10: ( WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION]: [A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD]: [A 3.5X20MM TAXUS LIBERTE' STENT]: StartAntiplateletTherapy [THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [WITH A MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 4: {ER_Admission [PATIENT PRESENTED]}

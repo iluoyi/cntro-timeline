@@ -1,0 +1,35 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_258.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+3	 	 	 	 	 	 	0	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_258.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+3	 	 	 	 	 	 	0	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_258.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_258.csv
+########## EVENTS ############
+EVENT # 0 ==> PT HAD AN UNK CYPHER STENT IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> THE PT WAS PRESCRIBED PLAVIX      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]   
+EVENT # 1 ==> PT EXPERIENCED IN STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> SUBSEQUENT MYOCARDIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PT HAD AN UNK CYPHER STENT IMPLANTED IN THE PROX ...)==>[ BEFORE ]==>( PT EXPERIENCED IN STENT THROMBOSIS ...)   
+EVENT-RELATION # 2: ( PT HAD AN UNK CYPHER STENT IMPLANTED IN THE PROX ...)==>[ BEFORE ]==>( SUBSEQUENT MYOCARDIAL INFARCTION ...)   
+EVENT-RELATION # 3: ( THE PT WAS PRESCRIBED PLAVIX ...)==>[ START ]==>( PT HAD AN UNK CYPHER STENT IMPLANTED IN THE PROX ...)   
+EVENT-RELATION # 4: ( PT EXPERIENCED IN STENT THROMBOSIS ...)==>[ BEFORE ]==>( SUBSEQUENT MYOCARDIAL INFARCTION ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [PT HAD AN UNK CYPHER STENT IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY]}EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [THE PT WAS PRESCRIBED PLAVIX]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [PT EXPERIENCED IN STENT THROMBOSIS]}EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [SUBSEQUENT MYOCARDIAL INFARCTION]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

@@ -1,0 +1,30 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_206.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2	 	0	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_206.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2	 	0	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_206.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_206.csv
+########## EVENTS ############
+EVENT # 0 ==> A NON-ABBOTT STENT WAS IMPLANTED AT THE PROXIMAL END OF THE XIENCE V STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> A XIENCE V 2.5 X 18 MM WAS IMPLANTED IN THE PRE-DILATED PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)]   
+EVENT # 2 ==> THROMBOSIS WAS CONFIRMED AROUND THE IMPLANTED XIENCE V STENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( A XIENCE V 2.5 X 18 MM WAS IMPLANTED IN THE PRE- ...)==>[ BEFORE ]==>( THROMBOSIS WAS CONFIRMED AROUND THE IMPLANTED XI ...)   
+EVENT-RELATION # 2: ( A XIENCE V 2.5 X 18 MM WAS IMPLANTED IN THE PRE- ...)==>[ EQUAL ]==>( A NON-ABBOTT STENT WAS IMPLANTED AT THE PROXIMAL ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A NON-ABBOTT STENT WAS IMPLANTED AT THE PROXIMAL END OF THE XIENCE V STENT] : [A XIENCE V 2.5 X 18 MM WAS IMPLANTED IN THE PRE-DILATED PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [THROMBOSIS WAS CONFIRMED AROUND THE IMPLANTED XIENCE V STENT]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2 ]

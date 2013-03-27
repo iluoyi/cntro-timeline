@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/243.txt.owl">
+   <event id="0" name="3 MONTHS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3 MONTHS</eventProperty>
+      <eventProperty name="eventType" type="text">Duration</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name=" 3 MONTHS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> 3 MONTHS</eventProperty>
+      <eventProperty name="eventType" type="text">TimeInterval</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:INFERRED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="2" name="HE WAS PRESCRIBED PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="3" relation="START"/>
+      <eventProperty name="description" type="text">HE WAS PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="3" name="PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="6" name="NON-Q MYOCARDIAL INFARCTION,">
+      <relatedTo targetId="4;5;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">NON-Q MYOCARDIAL INFARCTION,</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="HE SUFFERED VERY LATE STENT THROMBOSIS">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE SUFFERED VERY LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="5" name="DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="HE WAS PRESCRIBED PLAVIX" relation="START" targetEvent="PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY"/>
+   <eventStmt sourceEvent="PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="HE SUFFERED VERY LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="NON-Q MYOCARDIAL INFARCTION," relation="BEFORE" targetEvent="HE SUFFERED VERY LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="NON-Q MYOCARDIAL INFARCTION," relation="BEFORE" targetEvent="DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="NON-Q MYOCARDIAL INFARCTION," relation="BEFORE" targetEvent="PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY"/>
+   <eventStmt sourceEvent="HE SUFFERED VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{StartAntiplateletTherapy [HE WAS PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [PATIENT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [NON-Q MYOCARDIAL INFARCTION,]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HE SUFFERED VERY LATE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [DIAGNOSED WITH AN ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{Duration [3 MONTHS]: TimeInterval [ 3 MONTHS]}</timelineEntry>
+</CNTROTimeLineEventList>

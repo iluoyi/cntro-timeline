@@ -1,0 +1,48 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> BETA BLOCKERS, ACE INHIBITORS, ASPIRIN, PLAVIX AND STATINS WERE INITIATED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS DEPLOYED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> STENT IN THE PROXIMAL LAD WAS TOTALLY OCCLUDED WITH THROMBUS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> THE LESION WAS RESTENTED WITH A TAXUS EXPRESS2 3.5X24MM DRUG ELUTING STENT DEPLOYED
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( BETA BLOCKERS, ACE INHIBITORS, ASPIRIN, PLAVIX A ...)==>[ START ]==>( A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS ...)
+   
+EVENT-RELATION # 2: ( A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( STENT IN THE PROXIMAL LAD WAS TOTALLY OCCLUDED W ...)
+   
+EVENT-RELATION # 3: ( A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( STENT IN THE PROXIMAL LAD WAS TOTALLY OCCLUDED W ...)
+   
+EVENT-RELATION # 4: ( A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( THE LESION WAS RESTENTED WITH A TAXUS EXPRESS2 3 ...)
+   
+EVENT-RELATION # 5: ( STENT IN THE PROXIMAL LAD WAS TOTALLY OCCLUDED W ...)==>[ BEFORE ]==>( THE LESION WAS RESTENTED WITH A TAXUS EXPRESS2 3 ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [BETA BLOCKERS, ACE INHIBITORS, ASPIRIN, PLAVIX AND STATINS WERE INITIATED]: InitialDrugElutingStentImplantation [A TAXUS EXPRESS2 3.0X16MM DRUG ELUTING STENT WAS DEPLOYED]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [STENT IN THE PROXIMAL LAD WAS TOTALLY OCCLUDED WITH THROMBUS]}
+EVENT-TimeLineEntry # 3: {FollowUpStentProcedure [THE LESION WAS RESTENTED WITH A TAXUS EXPRESS2 3.5X24MM DRUG ELUTING STENT DEPLOYED]}

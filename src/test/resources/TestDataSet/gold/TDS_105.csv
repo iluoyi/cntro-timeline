@@ -1,0 +1,73 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;5, , , , , , 
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-3,2;4, , , , , , 
+
+EVENTID-2,4, , , , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENT THROMBOSIS WAS ALSO EVIDENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> SUFFERED CARDIAC ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT PRESENTED IN THE HOSPITAL
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM & 3.00 X 23MM)
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLA ...)==>[ BEFORE ]==>( STENT THROMBOSIS WAS ALSO EVIDENT ...)
+   
+EVENT-RELATION # 2: ( ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLA ...)==>[ BEFORE ]==>( PATIENT PRESENTED IN THE HOSPITAL ...)
+   
+EVENT-RELATION # 3: ( ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLA ...)==>[ BEFORE ]==>( SUFFERED CARDIAC ARREST ...)
+   
+EVENT-RELATION # 4: ( ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLA ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 5: ( ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLA ...)==>[ BEFORE ]==>( TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER  ...)
+   
+EVENT-RELATION # 6: ( STENT THROMBOSIS WAS ALSO EVIDENT ...)==>[ BEFORE ]==>( PATIENT PRESENTED IN THE HOSPITAL ...)
+   
+EVENT-RELATION # 7: ( STENT THROMBOSIS WAS ALSO EVIDENT ...)==>[ BEFORE ]==>( SUFFERED CARDIAC ARREST ...)
+   
+EVENT-RELATION # 8: ( STENT THROMBOSIS WAS ALSO EVIDENT ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 9: ( SUFFERED CARDIAC ARREST ...)==>[ BEFORE ]==>( PATIENT PRESENTED IN THE HOSPITAL ...)
+   
+EVENT-RELATION # 10: ( SUFFERED CARDIAC ARREST ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 11: ( PATIENT PRESENTED IN THE HOSPITAL ...)==>[ BEFORE ]==>( DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [STENT THROMBOSIS WAS ALSO EVIDENT]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [SUFFERED CARDIAC ARREST]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED IN THE HOSPITAL]}
+EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM & 3.00 X 23MM)]}
+EVENT-TimeLineEntry # 6: {Patient_Death : [DIED]}

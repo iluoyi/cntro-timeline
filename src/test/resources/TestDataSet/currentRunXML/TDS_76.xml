@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/76.txt.owl">
+   <event id="0" name="PROCEDURE">
+      <relatedTo targetId="1;1;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA">
+      <relatedTo targetId="2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="DIAGNOSED WITH AMI">
+      <relatedTo targetId="2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIAGNOSED WITH AMI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT WAS EMERGENTLY HOSPITALIZED">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS EMERGENTLY HOSPITALIZED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END">
+      <relatedTo targetId="4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA"/>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA"/>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="PT WAS EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="DIAGNOSED WITH AMI"/>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PROCEDURE" relation="BEFORE" targetEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA" relation="BEFORE" targetEvent="PT WAS EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA" relation="BEFORE" targetEvent="DIAGNOSED WITH AMI"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA" relation="BEFORE" targetEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END"/>
+   <eventStmt sourceEvent="DIAGNOSED WITH AMI" relation="BEFORE" targetEvent="PT WAS EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="DIAGNOSED WITH AMI" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="DIAGNOSED WITH AMI" relation="BEFORE" targetEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END"/>
+   <eventStmt sourceEvent="PT WAS EMERGENTLY HOSPITALIZED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT WAS EMERGENTLY HOSPITALIZED" relation="BEFORE" targetEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END"/>
+   <eventStmt sourceEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END" relation="BEFORE" targetEvent="PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PROCEDURE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS WAS OBSERVED FROM THE PROXIMAL TO INSIDE OF THE IMPLANTED CYPHER AT THE PROXIMAL RCA]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [DIAGNOSED WITH AMI]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT WAS EMERGENTLY HOSPITALIZED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [BMS (LIBERTE: 3.5/12MM) WAS ADDITIONALLY IMPLANTED IN THE CYPHER FROM THE PROXIMAL END]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

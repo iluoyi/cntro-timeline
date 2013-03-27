@@ -1,0 +1,68 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;3;4;5, , , , , , 
+
+EVENTID-5,2;3;4, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 5 ==> PT DISCONTINUED PLAVIX THERAPY
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> THROMBOSIS OCCURRED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> THE PT DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT DEATH OCCURRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPL ...)==>[ BEFORE ]==>( THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 2: ( TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPL ...)==>[ BEFORE ]==>( PT DEATH OCCURRED ...)
+   
+EVENT-RELATION # 3: ( TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPL ...)==>[ BEFORE ]==>( THE PT DIED ...)
+   
+EVENT-RELATION # 4: ( TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPL ...)==>[ BEFORE ]==>( PT DISCONTINUED PLAVIX THERAPY ...)
+   
+EVENT-RELATION # 5: ( PT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>( THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 6: ( PT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>( PT DEATH OCCURRED ...)
+   
+EVENT-RELATION # 7: ( PT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>( THE PT DIED ...)
+   
+EVENT-RELATION # 8: ( THROMBOSIS OCCURRED ...)==>[ BEFORE ]==>( PT DEATH OCCURRED ...)
+   
+EVENT-RELATION # 9: ( THROMBOSIS OCCURRED ...)==>[ BEFORE ]==>( THE PT DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE] : [TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS IMPLANTED]}
+EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy : [PT DISCONTINUED PLAVIX THERAPY]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [THROMBOSIS OCCURRED]}
+EVENT-TimeLineEntry # 4: {Patient_Death : [THE PT DIED]}
+EVENT-TimeLineEntry # 5: {Patient_Death : [PT DEATH OCCURRED]}

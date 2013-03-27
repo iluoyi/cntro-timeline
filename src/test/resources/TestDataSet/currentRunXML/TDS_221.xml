@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/221.txt.owl">
+   <event id="0" name="PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT" relation="BEFORE" targetEvent="DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT" relation="EQUAL" targetEvent="PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PROXIMAL CIRCUMFLEX ARTERY WITH ONE XIENCE V STENT]: [PATIENT UNDERWENT DIRECT STENTING IN THE 1ST OBTUSE MARGINAL (OM) WITH ONE XIENCE V STENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [DIAGNOSTIC CORONARY ANGIOGRAPHY REVEALED 95% STENT THROMBOSIS IN THE OM]}</timelineEntry>
+</CNTROTimeLineEventList>

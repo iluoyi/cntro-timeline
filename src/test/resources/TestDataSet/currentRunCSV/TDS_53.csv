@@ -1,0 +1,95 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-4, , , ,5, , ,2;3
+
+EVENTID-3, , , , , , , 
+
+EVENTID-2, , , , , , , 
+
+EVENTID-6,7;5;8, , , , , , 
+
+EVENTID-7,5;8, , , , , , 
+
+EVENTID-8,5, , , , , , 
+
+EVENTID-5, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> VISIBLE THROMBOSIS IN THE MID TO PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY
+      		[Type = Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT PRESENTED WITH MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT WAS COMPLIANT WITH PLAVIX AND ASPIRIN USE AT THE TIME OF THIS EVENT
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PHYSICIAN PLACED A TAXUS EXPRESS2 2.75X20MM DRUG ELUTING STENT TO TREAT THE THROMBOSIS
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> INITIAL PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 6 ==> HE HAS AN ACUTE STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> PATIENT RETURNED
+      		[Type = ER_Admission][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 8 ==> PLACEMENT OF A NON BSC 3.0X20MM STENT TO THE SAME AREA
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> DIED OF "SUDDEN DEATH."
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( VISIBLE THROMBOSIS IN THE MID TO PROXIMAL LEFT A ...)==>[ BEFORE ]==>( PATIENT PRESENTED WITH MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 2: ( VISIBLE THROMBOSIS IN THE MID TO PROXIMAL LEFT A ...)==>[ BEFORE ]==>( INITIAL PROCEDURE ...)
+   
+EVENT-RELATION # 3: ( VISIBLE THROMBOSIS IN THE MID TO PROXIMAL LEFT A ...)==>[ BEFORE ]==>( PHYSICIAN PLACED A TAXUS EXPRESS2 2.75X20MM DRUG ...)
+   
+EVENT-RELATION # 4: ( PATIENT PRESENTED WITH MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( INITIAL PROCEDURE ...)
+   
+EVENT-RELATION # 5: ( PATIENT PRESENTED WITH MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PHYSICIAN PLACED A TAXUS EXPRESS2 2.75X20MM DRUG ...)
+   
+EVENT-RELATION # 6: ( PATIENT WAS COMPLIANT WITH PLAVIX AND ASPIRIN US ...)==>[ FINISH ]==>( DIED OF "SUDDEN DEATH." ...)
+   
+EVENT-RELATION # 7: ( PATIENT WAS COMPLIANT WITH PLAVIX AND ASPIRIN US ...)==>[ START ]==>( INITIAL PROCEDURE ...)
+   
+EVENT-RELATION # 8: ( PATIENT WAS COMPLIANT WITH PLAVIX AND ASPIRIN US ...)==>[ START ]==>( PHYSICIAN PLACED A TAXUS EXPRESS2 2.75X20MM DRUG ...)
+   
+EVENT-RELATION # 9: ( HE HAS AN ACUTE STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT RETURNED ...)
+   
+EVENT-RELATION # 10: ( HE HAS AN ACUTE STENT THROMBOSIS ...)==>[ BEFORE ]==>( DIED OF "SUDDEN DEATH." ...)
+   
+EVENT-RELATION # 11: ( HE HAS AN ACUTE STENT THROMBOSIS ...)==>[ BEFORE ]==>( PLACEMENT OF A NON BSC 3.0X20MM STENT TO THE SAM ...)
+   
+EVENT-RELATION # 12: ( PATIENT RETURNED ...)==>[ BEFORE ]==>( DIED OF "SUDDEN DEATH." ...)
+   
+EVENT-RELATION # 13: ( PATIENT RETURNED ...)==>[ BEFORE ]==>( PLACEMENT OF A NON BSC 3.0X20MM STENT TO THE SAM ...)
+   
+EVENT-RELATION # 14: ( PLACEMENT OF A NON BSC 3.0X20MM STENT TO THE SAM ...)==>[ BEFORE ]==>( DIED OF "SUDDEN DEATH." ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Thrombosis [VISIBLE THROMBOSIS IN THE MID TO PROXIMAL LEFT ANTERIOR DESCENDING (LAD) ARTERY]}
+EVENT-TimeLineEntry # 2: {Myocardial_Infarction [PATIENT PRESENTED WITH MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy [PATIENT WAS COMPLIANT WITH PLAVIX AND ASPIRIN USE AT THE TIME OF THIS EVENT]: InitialDrugElutingStentImplantation [PHYSICIAN PLACED A TAXUS EXPRESS2 2.75X20MM DRUG ELUTING STENT TO TREAT THE THROMBOSIS]: [INITIAL PROCEDURE]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis [HE HAS AN ACUTE STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 5: {ER_Admission [PATIENT RETURNED]}
+EVENT-TimeLineEntry # 6: {FollowUpStentProcedure [PLACEMENT OF A NON BSC 3.0X20MM STENT TO THE SAME AREA]}
+EVENT-TimeLineEntry # 7: {Patient_Death [DIED OF "SUDDEN DEATH."]}

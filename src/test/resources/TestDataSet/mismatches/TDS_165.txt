@@ -1,0 +1,29 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_165.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_165.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_165.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_165.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT SUFFERED A MYOCARDIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> AN UNSPECIFIED TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> CAUSED BY LATE STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( AN UNSPECIFIED TAXUS EXPRESS2 DRUG ELUTING STENT ...)==>[ BEFORE ]==>( CAUSED BY LATE STENT THROMBOSIS ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [PATIENT SUFFERED A MYOCARDIAL INFARCTION]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [AN UNSPECIFIED TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [CAUSED BY LATE STENT THROMBOSIS]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2 ]

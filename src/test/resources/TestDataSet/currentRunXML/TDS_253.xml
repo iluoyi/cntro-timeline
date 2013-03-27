@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/253.txt.owl">
+   <event id="0" name="PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD">
+      <relatedTo targetId="3;3;4;5;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="6" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS">
+      <relatedTo targetId="4;5;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="AN ST ELEVATED MI">
+      <relatedTo targetId="4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ST ELEVATED MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT PRESENTED TO THE ER">
+      <relatedTo targetId="1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED TO THE ER</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY" relation="FINISH" targetEvent="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL"/>
+   <eventStmt sourceEvent="PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY" relation="START" targetEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="BEFORE" targetEvent="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="BEFORE" targetEvent="PT PRESENTED TO THE ER"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="BEFORE" targetEvent="AN ST ELEVATED MI"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="BEFORE" targetEvent="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL"/>
+   <eventStmt sourceEvent="A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD" relation="EQUAL" targetEvent="A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS" relation="BEFORE" targetEvent="PT PRESENTED TO THE ER"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS" relation="BEFORE" targetEvent="AN ST ELEVATED MI"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS" relation="BEFORE" targetEvent="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL"/>
+   <eventStmt sourceEvent="AN ST ELEVATED MI" relation="BEFORE" targetEvent="PT PRESENTED TO THE ER"/>
+   <eventStmt sourceEvent="AN ST ELEVATED MI" relation="BEFORE" targetEvent="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL"/>
+   <eventStmt sourceEvent="PT PRESENTED TO THE ER" relation="BEFORE" targetEvent="PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL"/>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY]: InitialDrugElutingStentImplantation [A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD]: [A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [AN ST ELEVATED MI]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED TO THE ER]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL]}</timelineEntry>
+</CNTROTimeLineEventList>

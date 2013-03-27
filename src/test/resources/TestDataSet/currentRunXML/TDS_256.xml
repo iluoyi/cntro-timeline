@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/256.txt.owl">
+   <event id="0" name="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT WAS PLACED ON PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS PLACED ON PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:ONE YEAR}{Dur. unit:YEAR}{Dur. value:1}}}</eventProperty>
+   </event>
+   <event id="1" name="PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT WAS RESTARTED ON PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS RESTARTED ON PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS"/>
+   <eventStmt sourceEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PT WAS PLACED ON PLAVIX" relation="START" targetEvent="A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PT WAS RESTARTED ON PLAVIX" relation="START" targetEvent="PT PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN A NON-TORTUOUS RIGHT CORONARY ARTERY (RCA)]: StartAntiplateletTherapy [PT WAS PLACED ON PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PROXIMAL PORTION OF THE STENT THAT WAS LOCATED IN THE DISTAL RCA WAS OCCLUDED WITH THROMBUS]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS RESTARTED ON PLAVIX]: ER_Admission [PT PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

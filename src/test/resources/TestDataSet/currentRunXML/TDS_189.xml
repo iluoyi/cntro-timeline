@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/189.txt.owl">
+   <event id="0" name="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="4;5" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="A 3.5X20MM TAXUS LIBERTE' STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.5X20MM TAXUS LIBERTE' STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="WITH A MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WITH A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="BEFORE" targetEvent="OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX"/>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="BEFORE" targetEvent="OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX"/>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="BEFORE" targetEvent="WITH A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="EQUAL" targetEvent="A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD"/>
+   <eventStmt sourceEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION" relation="EQUAL" targetEvent="A 3.5X20MM TAXUS LIBERTE' STENT"/>
+   <eventStmt sourceEvent="THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY" relation="START" targetEvent="A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION"/>
+   <eventStmt sourceEvent="OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX" relation="BEFORE" targetEvent="WITH A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.0X12MM TAXUS LIBERTE' STENT WAS DEPLOYED IN THE LESION]: [A 3.0X12MM NON BSC STENT WERE IMPLANTED IN THE PROXIMAL TO MID LAD]: [A 3.5X20MM TAXUS LIBERTE' STENT]: StartAntiplateletTherapy [THE PATIENT WAS PLACED ON 75MG TICLOPIDINE AND 100MG ASPIRIN PER DAY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [OCCLUSION WAS CONFIRMED IN THE PROXIMAL END OF THE 3.0X12MM TAXUS LIBERTE' STENT LOCATED IN THE LCX]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [WITH A MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

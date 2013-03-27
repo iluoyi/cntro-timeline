@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/271.txt.owl">
+   <event id="0" name="A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT" relation="BEFORE" targetEvent="ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT"/>
+   <eventStmt sourceEvent="A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT" relation="BEFORE" targetEvent="ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT"/>
+   <eventStmt sourceEvent="A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.5MM DIAMETER X 30MM LENGTH ENDEAVOR RX DRUG-ELUTING CORONARY STENT WAS DEPLOYED IN A PT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ANGIOGRAPHY SHOWED TOTAL OCCLUSION BY THROMBUS AT RCA#2 PROXIMAL STENT]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,136 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;5;6;7;8, , , , , , 
+
+EVENTID-6,1;2;3;4;8, , , , , , 
+
+EVENTID-9,10, , , , , ,5;6;7
+
+EVENTID-7, , , , , , , 
+
+EVENTID-5,1;2;3;4;8, , , , , , 
+
+EVENTID-8, , , , , , , 
+
+EVENTID-10, , , , , , , 
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ACUTE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> INDEX PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 9 ==> POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> DEPLOYING ONE 2.5X18MM CYPHER STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> DEPLOYING A 2.5X18MM CYPHER STENT
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 10 ==> PATIENT IS REPORTED TO HAVE STOPPED TAKING
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> SHE WAS IN CARDIAC ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT PRESENTED EMERGENTLY
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)
+   
+EVENT-RELATION # 2: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( SHE WAS IN CARDIAC ARREST ...)
+   
+EVENT-RELATION # 3: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)
+   
+EVENT-RELATION # 4: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 5: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PROCEDURE ...)
+   
+EVENT-RELATION # 6: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( INDEX PROCEDURE ...)
+   
+EVENT-RELATION # 7: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( DEPLOYING ONE 2.5X18MM CYPHER STENT ...)
+   
+EVENT-RELATION # 8: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( DEPLOYING A 2.5X18MM CYPHER STENT ...)
+   
+EVENT-RELATION # 9: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)
+   
+EVENT-RELATION # 10: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( SHE WAS IN CARDIAC ARREST ...)
+   
+EVENT-RELATION # 11: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)
+   
+EVENT-RELATION # 12: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 13: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( DEPLOYING A 2.5X18MM CYPHER STENT ...)
+   
+EVENT-RELATION # 14: ( POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND  ...)==>[ BEFORE ]==>( PATIENT IS REPORTED TO HAVE STOPPED TAKING ...)
+   
+EVENT-RELATION # 15: ( POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND  ...)==>[ START ]==>( PROCEDURE ...)
+   
+EVENT-RELATION # 16: ( POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND  ...)==>[ START ]==>( INDEX PROCEDURE ...)
+   
+EVENT-RELATION # 17: ( POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND  ...)==>[ START ]==>( DEPLOYING ONE 2.5X18MM CYPHER STENT ...)
+   
+EVENT-RELATION # 18: ( PROCEDURE ...)==>[ BEFORE ]==>( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)
+   
+EVENT-RELATION # 19: ( PROCEDURE ...)==>[ BEFORE ]==>( SHE WAS IN CARDIAC ARREST ...)
+   
+EVENT-RELATION # 20: ( PROCEDURE ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)
+   
+EVENT-RELATION # 21: ( PROCEDURE ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 22: ( PROCEDURE ...)==>[ BEFORE ]==>( DEPLOYING A 2.5X18MM CYPHER STENT ...)
+   
+EVENT-RELATION # 23: ( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)==>[ BEFORE ]==>( SHE WAS IN CARDIAC ARREST ...)
+   
+EVENT-RELATION # 24: ( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)
+   
+EVENT-RELATION # 25: ( LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE ST ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 26: ( SHE WAS IN CARDIAC ARREST ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)
+   
+EVENT-RELATION # 27: ( SHE WAS IN CARDIAC ARREST ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 28: ( PATIENT PRESENTED EMERGENTLY ...)==>[ BEFORE ]==>( DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [ACUTE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [INDEX PROCEDURE]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [POST-PROCEDURE MEDICATIONS INCLUDED ASPIRIN AND PLAVIX]}
+EVENT-TimeLineEntry # 4: {InitialDrugElutingStentImplantation : [DEPLOYING ONE 2.5X18MM CYPHER STENT] : [PROCEDURE]}
+EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [DEPLOYING A 2.5X18MM CYPHER STENT]}
+EVENT-TimeLineEntry # 6: {EndAntiplateletTherapy : [PATIENT IS REPORTED TO HAVE STOPPED TAKING]}
+EVENT-TimeLineEntry # 7: {Late_Stent_Thrombosis : [LAD WAS TOTALLY OCCLUDED NEAR THE SITE OF THE STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 8: {Myocardial_Infarction : [SHE WAS IN CARDIAC ARREST]}
+EVENT-TimeLineEntry # 9: {ER_Admission : [PATIENT PRESENTED EMERGENTLY]}
+EVENT-TimeLineEntry # 10: {Patient_Death : [DIED]}

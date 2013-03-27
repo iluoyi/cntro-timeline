@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/161.txt.owl">
+   <event id="0" name="A TAXUS EXPRESS2 DRUG ELUTING STENT WAS PLACED IN AN UNKNOWN VESSEL">
+      <relatedTo targetId="1;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A TAXUS EXPRESS2 DRUG ELUTING STENT WAS PLACED IN AN UNKNOWN VESSEL</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="VERY LATE STENT THROMBOSIS OCCURRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">VERY LATE STENT THROMBOSIS OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 DRUG ELUTING STENT WAS PLACED IN AN UNKNOWN VESSEL" relation="BEFORE" targetEvent="VERY LATE STENT THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 DRUG ELUTING STENT WAS PLACED IN AN UNKNOWN VESSEL" relation="BEFORE" targetEvent="VERY LATE STENT THROMBOSIS OCCURRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A TAXUS EXPRESS2 DRUG ELUTING STENT WAS PLACED IN AN UNKNOWN VESSEL]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [VERY LATE STENT THROMBOSIS OCCURRED]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/62.txt.owl">
+   <event id="0" name="PT WAS TAKEN OFF OF PCPS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS TAKEN OFF OF PCPS</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PANALDINE AND BAYASPIRIN WERE GIVEN">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">PANALDINE AND BAYASPIRIN WERE GIVEN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="NON-BSC BARE METAL STENT WAS IMPLANTED">
+      <relatedTo targetId="3;4;5;6;7;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">NON-BSC BARE METAL STENT WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="PT PRESENTED IN 2007 WITH CHEST PAIN">
+      <relatedTo targetId="3;4;9;10;5;6;7;11;11;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED IN 2007 WITH CHEST PAIN</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="11" name="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT">
+      <relatedTo targetId="3;4;9;10;10;5;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="12" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="12" name="A 3.00X20MM TAXUS EXPRESS2 DRUG ELUTING STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.00X20MM TAXUS EXPRESS2 DRUG ELUTING STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="10" name="PT RETURNED FOR AN ENDOSCOPY OF THE COLON">
+      <relatedTo targetId="3;4;9;9;5;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT RETURNED FOR AN ENDOSCOPY OF THE COLON</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="CANCER WAS DIAGNOSED">
+      <relatedTo targetId="3;4;5;5;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CANCER WAS DIAGNOSED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)">
+      <relatedTo targetId="4;5;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PHYSICIAN OPERATED ON THE SIGMOID">
+      <relatedTo targetId="3;4;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN OPERATED ON THE SIGMOID</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION">
+      <relatedTo targetId="3;4;5;6;6;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="VENTRICULAR FIBRILLATION OCCURRED ">
+      <relatedTo targetId="3;5;6;7;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">VENTRICULAR FIBRILLATION OCCURRED </eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PANALDINE AND BAYASPIRIN WERE GIVEN" relation="START" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="NON-BSC BARE METAL STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="CANCER WAS DIAGNOSED"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="PT PRESENTED IN 2007 WITH CHEST PAIN" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="CANCER WAS DIAGNOSED"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT" relation="EQUAL" targetEvent="A 3.00X20MM TAXUS EXPRESS2 DRUG ELUTING STENT"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="CANCER WAS DIAGNOSED"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="CANCER WAS DIAGNOSED"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="PT RETURNED FOR AN ENDOSCOPY OF THE COLON" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="CANCER WAS DIAGNOSED" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="PHYSICIAN OPERATED ON THE SIGMOID" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="PHYSICIAN OPERATED ON THE SIGMOID" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="PHYSICIAN OPERATED ON THE SIGMOID" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN OPERATED ON THE SIGMOID" relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="PHYSICIAN OPERATED ON THE SIGMOID" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="VENTRICULAR FIBRILLATION OCCURRED "/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION" relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <eventStmt sourceEvent="VENTRICULAR FIBRILLATION OCCURRED " relation="BEFORE" targetEvent="HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)"/>
+   <eventStmt sourceEvent="VENTRICULAR FIBRILLATION OCCURRED " relation="BEFORE" targetEvent="PHYSICIAN OPERATED ON THE SIGMOID"/>
+   <eventStmt sourceEvent="VENTRICULAR FIBRILLATION OCCURRED " relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="VENTRICULAR FIBRILLATION OCCURRED " relation="BEFORE" targetEvent="PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION"/>
+   <eventStmt sourceEvent="VENTRICULAR FIBRILLATION OCCURRED " relation="BEFORE" targetEvent="NON-BSC BARE METAL STENT WAS IMPLANTED"/>
+   <timelineEntry>{StartAntiplateletTherapy [PANALDINE AND BAYASPIRIN WERE GIVEN]: FollowUpStentProcedure [NON-BSC BARE METAL STENT WAS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT PRESENTED IN 2007 WITH CHEST PAIN]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [IMPLANTED A 3.50X28MM TAXUS EXPRESS2 DRUG ELUTING STENT]: [A 3.00X20MM TAXUS EXPRESS2 DRUG ELUTING STENT]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT RETURNED FOR AN ENDOSCOPY OF THE COLON]}</timelineEntry>
+   <timelineEntry>{ER_Admission [CANCER WAS DIAGNOSED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HROMBOSIS WAS NOTED AT THE DISTAL SIDE OF THE 3.00X20MM TAXUS STENT AND AT THE PROXIMAL SIDE OF THE MID RIGHT CORONARY ARTERY (RCA)]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PHYSICIAN OPERATED ON THE SIGMOID]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PT WAS TAKEN OFF OF ANTIPLATELET MEDICATION]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [VENTRICULAR FIBRILLATION OCCURRED ]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{EndAntiplateletTherapy [PT WAS TAKEN OFF OF PCPS]}</timelineEntry>
+</CNTROTimeLineEventList>

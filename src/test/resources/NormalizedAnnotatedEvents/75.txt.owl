@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY AE-lst "http://www.cntro.org/AE-lst.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY CNTRO "http://informatics.mayo.edu/CNTRO#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY annotation_1 "http://informatics.mayo.edu/annotation_1#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY CNTemporalRelation "http://informatics.mayo.edu/CNTemporalRelation#" >
+]>
+
+
+<rdf:RDF xmlns="http://informatics.mayo.edu/annotation_1#"
+     xml:base="http://informatics.mayo.edu/annotation_1"
+     xmlns:AE-lst="http://www.cntro.org/AE-lst.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CNTemporalRelation="http://informatics.mayo.edu/CNTemporalRelation#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:annotation_1="http://informatics.mayo.edu/annotation_1#"
+     xmlns:CNTRO="http://informatics.mayo.edu/CNTRO#">
+    <owl:Ontology rdf:about="http://informatics.mayo.edu/annotation_1">
+        <owl:imports rdf:resource="http://informatics.mayo.edu/CNTRO/AE-lst%20(new).owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration1">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en">TWO WEEKS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration2">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en">TEN DAYS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration3 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration3">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en">THREE WEEKS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#EndAntiplateletTherapy1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;EndAntiplateletTherapy1">
+        <rdf:type rdf:resource="&AE-lst;EndAntiplateletTherapy"/>
+        <rdfs:label xml:lang="en">PANALDINE WAS DISCONTINUED.</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;StartAntiplateletTherapy3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure1">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">TAXUS EXPRESS2 3.0X32MM DRUG ELUTING STENT WAS PLACED IN THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#InitialDrugElutingStentImplantation1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;InitialDrugElutingStentImplantation1">
+        <rdf:type rdf:resource="&AE-lst;InitialDrugElutingStentImplantation"/>
+        <rdfs:label xml:lang="en">PHYSICIAN IMPLANTED A LIBERTE&#39; 4.0X16MM BARE METAL STENT TO THE PROXIMAL RIGHT CORONARY ARTERY (RCA)</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+        <CNTRO:equal rdf:resource="&annotation_1;InitialDrugElutingStentImplantation2"/>
+        <CNTRO:equal rdf:resource="&annotation_1;InitialDrugElutingStentImplantation3"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;InitialDrugElutingStentImplantation1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#InitialDrugElutingStentImplantation2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;InitialDrugElutingStentImplantation2">
+        <rdf:type rdf:resource="&AE-lst;InitialDrugElutingStentImplantation"/>
+        <rdfs:label xml:lang="en">NON BSC 3.5X24MM STENT WAS IMPLANTED IN THE DISTAL RCA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#InitialDrugElutingStentImplantation3 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;InitialDrugElutingStentImplantation3">
+        <rdf:type rdf:resource="&AE-lst;InitialDrugElutingStentImplantation"/>
+        <rdfs:label xml:lang="en">ANOTHER NON BSC STENT, A 4.0X24MM, WAS IMPLANTED IN THE PROXIMAL SIDE OF THE DISTAL RCA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Late_Stent_Thrombosis1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Late_Stent_Thrombosis1">
+        <rdf:type rdf:resource="&AE-lst;Late_Stent_Thrombosis"/>
+        <rdfs:label xml:lang="en">ANGIOGRAPHY CONFIRMED 99% OCCLUSION IN THE DISTAL RCA AND TOTAL OCCLUSION IN THE MID LAD</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;Myocardial_Infarction1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;Late_Stent_Thrombosis1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;Myocardial_Infarction1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Myocardial_Infarction1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Myocardial_Infarction1">
+        <rdf:type rdf:resource="&AE-lst;Myocardial_Infarction"/>
+        <rdfs:label xml:lang="en">PT HAD AN ACUTE MYOCARDIAL INFARCTION</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;Patient_Death1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;Myocardial_Infarction1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;Patient_Death1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Patient_Death1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Patient_Death1">
+        <rdf:type rdf:resource="&AE-lst;Patient_Death"/>
+        <rdfs:label xml:lang="en">THE PT DIED OF CARDIAC ARREST</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#StartAntiplateletTherapy1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;StartAntiplateletTherapy1">
+        <rdf:type rdf:resource="&AE-lst;StartAntiplateletTherapy"/>
+        <rdfs:label xml:lang="en">HEPARIN AND ASPIRIN WERE PRESCRIBED POST PROCEDURE</rdfs:label>
+        <CNTRO:start rdf:resource="&annotation_1;InitialDrugElutingStentImplantation1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedProperty rdf:resource="&CNTRO;start"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;InitialDrugElutingStentImplantation1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;StartAntiplateletTherapy1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#StartAntiplateletTherapy2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;StartAntiplateletTherapy2">
+        <rdf:type rdf:resource="&AE-lst;StartAntiplateletTherapy"/>
+        <rdfs:label xml:lang="en">PANALDINE WAS PRESCRIBED POST PROCEDURE</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;EndAntiplateletTherapy1"/>
+        <CNTRO:start rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration2"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;EndAntiplateletTherapy1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;StartAntiplateletTherapy2"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#StartAntiplateletTherapy3 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;StartAntiplateletTherapy3">
+        <rdf:type rdf:resource="&AE-lst;StartAntiplateletTherapy"/>
+        <rdfs:label xml:lang="en">PHYSICIAN PRESCRIBED HEPARIN AND ASPIRIN</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;Late_Stent_Thrombosis1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration3"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;Late_Stent_Thrombosis1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;StartAntiplateletTherapy3"/>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

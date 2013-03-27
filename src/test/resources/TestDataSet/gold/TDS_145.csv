@@ -1,0 +1,51 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, , , , , ,3
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> HE HAD BEEN PRESCRIBED PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> RESULTING IN MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( HE HAD BEEN PRESCRIBED PLAVIX ...)==>[ BEFORE ]==>( PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE  ...)
+   
+EVENT-RELATION # 2: ( HE HAD BEEN PRESCRIBED PLAVIX ...)==>[ BEFORE ]==>( RESULTING IN MI ...)
+   
+EVENT-RELATION # 3: ( HE HAD BEEN PRESCRIBED PLAVIX ...)==>[ START ]==>( PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD ...)
+   
+EVENT-RELATION # 4: ( PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD ...)==>[ BEFORE ]==>( PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE  ...)
+   
+EVENT-RELATION # 5: ( PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD ...)==>[ BEFORE ]==>( RESULTING IN MI ...)
+   
+EVENT-RELATION # 6: ( PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE  ...)==>[ BEFORE ]==>( RESULTING IN MI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [HE HAD BEEN PRESCRIBED PLAVIX]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PATIENT HAD 3 CYPHER STENTS IMPLANTED IN HIS LAD]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [PATIENT SUFFERED A SUBSEQUENT THROMBOSIS IN THE LAD CYPHER STENTS]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [RESULTING IN MI]}

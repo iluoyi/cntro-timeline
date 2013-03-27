@@ -1,0 +1,31 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_188.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_188.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_188.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_188.csv
+########## EVENTS ############
+EVENT # 0 ==> AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN MID RCA      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED IN THE RCA      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUT ...)==>[ BEFORE ]==>( PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THR ...)   
+EVENT-RELATION # 2: ( AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUT ...)==>[ BEFORE ]==>( TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED ...)   
+EVENT-RELATION # 3: ( PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THR ...)==>[ BEFORE ]==>( TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN MID RCA]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [PATIENT SUFFERED 100% PROXIMAL-MID RCA STENT THROMBOSIS]}EVENT-TimeLineEntry # 3: {FollowUpStentProcedure : [TWO OTHER BRAND BARE METAL STENTS WERE IMPLANTED IN THE RCA]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

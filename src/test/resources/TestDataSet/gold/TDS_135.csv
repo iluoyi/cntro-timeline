@@ -1,0 +1,72 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;3, ,4;0, , , , 
+
+EVENTID-5,6, , ,6, , ,1
+
+EVENTID-4, , , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+
+EVENTID-6, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> 3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> IN-STENT THROMBOSIS WAS NOTED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED ...)==>[ BEFORE ]==>( IN-STENT THROMBOSIS WAS NOTED ...)
+   
+EVENT-RELATION # 2: ( A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+EVENT-RELATION # 3: ( A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED ...)==>[ EQUAL ]==>( 3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED ...)
+   
+EVENT-RELATION # 4: ( A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED ...)==>[ EQUAL ]==>( A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTA ...)
+   
+EVENT-RELATION # 5: ( PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOG ...)==>[ BEFORE ]==>( PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 10 ...)
+   
+EVENT-RELATION # 6: ( PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOG ...)==>[ FINISH ]==>( PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 10 ...)
+   
+EVENT-RELATION # 7: ( PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOG ...)==>[ START ]==>( A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED ...)
+   
+EVENT-RELATION # 8: ( IN-STENT THROMBOSIS WAS NOTED ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A 3.0X15MM NON BSC STENT WAS PLACED IN THE DISTAL PORTION OF THE LESION] : [A 3.5X28MM TAXUS LIBERTE' STENT WAS DEPLOYED]}
+EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [PATIENT WAS PLACED ON 100MG ASPIRIN AND CLOPIDOGREL]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [3.0X24MM AND 3.0X33MM NON BSC STENTS WERE PLACED PROXIMALLY TO THE 3.0X15MM STENT]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [IN-STENT THROMBOSIS WAS NOTED]}
+EVENT-TimeLineEntry # 5: {Patient_Death : [PATIENT EXPIRED]}
+EVENT-TimeLineEntry # 6: {EndAntiplateletTherapy : [PATIENT'S ANTIPLATELET THERAPY WAS CHANGED TO 100MG ASPIRIN AND 100 MG CILOSTAZOL]}

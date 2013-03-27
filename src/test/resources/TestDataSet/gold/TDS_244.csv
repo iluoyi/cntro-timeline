@@ -1,0 +1,47 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PLAVIX WAS PRESCRIBED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 1 ==> TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> LATE STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> CAUSED MYOCARDIAL INFARCTION. TREATMENT
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PLAVIX WAS PRESCRIBED ...)==>[ START ]==>( TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UN ...)
+   
+EVENT-RELATION # 2: ( TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UN ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 3: ( TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UN ...)==>[ BEFORE ]==>( CAUSED MYOCARDIAL INFARCTION. TREATMENT ...)
+   
+EVENT-RELATION # 4: ( LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( CAUSED MYOCARDIAL INFARCTION. TREATMENT ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PLAVIX WAS PRESCRIBED]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [LATE STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [CAUSED MYOCARDIAL INFARCTION. TREATMENT]}

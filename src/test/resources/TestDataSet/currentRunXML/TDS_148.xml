@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/148.txt.owl">
+   <event id="0" name="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX">
+      <relatedTo targetId="1;1;2;2;3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE 1ST OBTUSE MARGINAL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE 1ST OBTUSE MARGINAL</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENTS IMPLANTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENTS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED IN THE MID CIRCUMFLEX AND THE 1ST OBTUSE MARGINAL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED IN THE MID CIRCUMFLEX AND THE 1ST OBTUSE MARGINAL</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE 1ST OBTUSE MARGINAL"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE 1ST OBTUSE MARGINAL"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED IN THE MID CIRCUMFLEX AND THE 1ST OBTUSE MARGINAL"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED IN THE MID CIRCUMFLEX AND THE 1ST OBTUSE MARGINAL"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENTS IMPLANTED"/>
+   <eventStmt sourceEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX" relation="BEFORE" targetEvent="TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENTS IMPLANTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE DISTAL LCX]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENT WAS IMPLANTED IN THE 1ST OBTUSE MARGINAL]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [TWO ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG-ELUTING STENTS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED IN THE MID CIRCUMFLEX AND THE 1ST OBTUSE MARGINAL]}</timelineEntry>
+</CNTROTimeLineEventList>

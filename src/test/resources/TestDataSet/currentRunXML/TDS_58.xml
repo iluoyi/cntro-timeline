@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/58.txt.owl">
+   <event id="0" name="INDEX PROCEDURE">
+      <relatedTo targetId="1;2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INDEX PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST">
+      <relatedTo targetId="1;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT WAS TRANSFERRED TO THE HOSPITAL">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS TRANSFERRED TO THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PATIENT WAS TRANSFERRED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="INDEX PROCEDURE" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX" relation="BEFORE" targetEvent="PATIENT WAS TRANSFERRED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX" relation="BEFORE" targetEvent="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="PATIENT WAS TRANSFERRED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT WAS TRANSFERRED TO THE HOSPITAL" relation="BEFORE" targetEvent="PATIENT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [INDEX PROCEDURE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CORONARY ANGIOGRAPHY WAS DONE AND REVEALED THROMBUS IN THE TWO (2) PREVIOUSLY IMPLANTED CYPHER STENTS IN AND DISTAL TO THE PROXIMAL/MID LEFT ANTERIOR DESCENDING (LAD) AND ALSO IN THE PROXIMAL CIRCUMFLEX]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT WAS REPORTED TO BE IN CARDIOPULMONARY ARREST]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT WAS TRANSFERRED TO THE HOSPITAL]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

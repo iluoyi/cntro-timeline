@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/272.txt.owl">
+   <event id="0" name="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="3" name="STOPPAGE OF PLAVIX">
+      <relatedTo targetId="1;2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STOPPAGE OF PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2009)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT WAS STARTED ON EFFIENT 10MG DAILY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="4" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS STARTED ON EFFIENT 10MG DAILY</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY" relation="BEFORE" targetEvent="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT"/>
+   <eventStmt sourceEvent="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY" relation="BEFORE" targetEvent="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT"/>
+   <eventStmt sourceEvent="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY" relation="BEFORE" targetEvent="HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY" relation="BEFORE" targetEvent="STOPPAGE OF PLAVIX"/>
+   <eventStmt sourceEvent="HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY" relation="BEFORE" targetEvent="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT"/>
+   <eventStmt sourceEvent="STOPPAGE OF PLAVIX" relation="BEFORE" targetEvent="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT"/>
+   <eventStmt sourceEvent="STOPPAGE OF PLAVIX" relation="BEFORE" targetEvent="HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="STOPPAGE OF PLAVIX" relation="BEFORE" targetEvent="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT"/>
+   <eventStmt sourceEvent="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT" relation="BEFORE" targetEvent="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT"/>
+   <eventStmt sourceEvent="HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT"/>
+   <eventStmt sourceEvent="PT WAS STARTED ON EFFIENT 10MG DAILY" relation="START" targetEvent="PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [HE HAD A CYPHER STENT PLACED IN AN UNKNOWN ARTERY]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [STOPPAGE OF PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [WAS FOUND TO HAVE OCCLUSION OF THE RIGHT CORONARY ARTERY AT THE AREA OF THE PREVIOUSLY-IMPLANTED CYPHER STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [HE EXPERIENCED AN ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS STARTED ON EFFIENT 10MG DAILY]: FollowUpStentProcedure [PT STATED THAT HE HAD A SECOND CYPHER STENT PLACED IN AN UNKNOWN ARTERY AS TREATMENT]}</timelineEntry>
+</CNTROTimeLineEventList>

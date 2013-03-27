@@ -1,0 +1,63 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_192.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4	 	 	 	 	 	 	
+3	1;2;4	 	 	 	 	 	 	
+5	 	 	 	3	 	 	 	
+1	2;4	 	 	 	 	 	 	
+2	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_192.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	1	 	 	 	
+2	3;4;1;1;5	 	 	 	 	 	 	
+1	3;4;5	 	 	 	 	 	 	
+3	4;5	 	 	 	 	 	 	
+4	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_192.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_192.csv
+########## EVENTS ############
+EVENT # 0 ==> AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PLAVIX TREATMENT WAS STOPPED      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> PATIENT WAS DISCHARGED ON PLAVIX      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> VERY LATE STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED EMERGENTLY      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> A NON BSC STENT WAS PLACED IN THE LESION      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( VERY LATE STENT THROMBOSIS ...)   
+EVENT-RELATION # 2: ( AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   
+EVENT-RELATION # 3: ( AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( PLAVIX TREATMENT WAS STOPPED ...)   
+EVENT-RELATION # 4: ( AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS ...)==>[ BEFORE ]==>( A NON BSC STENT WAS PLACED IN THE LESION ...)   
+EVENT-RELATION # 5: ( PLAVIX TREATMENT WAS STOPPED ...)==>[ BEFORE ]==>( VERY LATE STENT THROMBOSIS ...)   
+EVENT-RELATION # 6: ( PLAVIX TREATMENT WAS STOPPED ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   
+EVENT-RELATION # 7: ( PLAVIX TREATMENT WAS STOPPED ...)==>[ BEFORE ]==>( A NON BSC STENT WAS PLACED IN THE LESION ...)   
+EVENT-RELATION # 8: ( PATIENT WAS DISCHARGED ON PLAVIX ...)==>[ FINISH ]==>( PLAVIX TREATMENT WAS STOPPED ...)   
+EVENT-RELATION # 9: ( VERY LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT PRESENTED EMERGENTLY ...)   
+EVENT-RELATION # 10: ( VERY LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( A NON BSC STENT WAS PLACED IN THE LESION ...)   
+EVENT-RELATION # 11: ( PATIENT PRESENTED EMERGENTLY ...)==>[ BEFORE ]==>( A NON BSC STENT WAS PLACED IN THE LESION ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION]}EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy : [PLAVIX TREATMENT WAS STOPPED]}EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [PATIENT WAS DISCHARGED ON PLAVIX]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [VERY LATE STENT THROMBOSIS]}EVENT-TimeLineEntry # 5: {ER_Admission : [PATIENT PRESENTED EMERGENTLY]}EVENT-TimeLineEntry # 6: {FollowUpStentProcedure : [A NON BSC STENT WAS PLACED IN THE LESION]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [   ]
+
+Expected: Event [ 0 ] --> [  FINISH ] --> Event [   ]
+Found: Event [ 0 ] --> [  FINISH ] --> Event [ 1 ]
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;2;4 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 3;4;1;1;5 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 3;4;5 ]
+
+Expected: Event [ 5 ] --> [  FINISH ] --> Event [ 3 ]
+Found: Event [ 1 ] --> [  FINISH ] --> Event [   ]
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;4 ]
+Found: Event [ 3 ] --> [  BEFORE ] --> Event [ 4;5 ]

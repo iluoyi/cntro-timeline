@@ -1,0 +1,46 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, ,3, , , , 
+
+EVENTID-3, , , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ATIENT UNDERWENT STENTING OF THE PREDILATED MID RIGHT CORONARY ARTERY (RCA) WITH ONE XIENCE V STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD) WITH ONE XIENCE V STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> CAUSE OF DEATH WAS STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2010)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT'S DEATH
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ATIENT UNDERWENT STENTING OF THE PREDILATED MID  ...)==>[ BEFORE ]==>( CAUSE OF DEATH WAS STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( ATIENT UNDERWENT STENTING OF THE PREDILATED MID  ...)==>[ BEFORE ]==>( PATIENT'S DEATH ...)
+   
+EVENT-RELATION # 3: ( ATIENT UNDERWENT STENTING OF THE PREDILATED MID  ...)==>[ EQUAL ]==>( PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD) W ...)
+   
+EVENT-RELATION # 4: ( CAUSE OF DEATH WAS STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT'S DEATH ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [ATIENT UNDERWENT STENTING OF THE PREDILATED MID RIGHT CORONARY ARTERY (RCA) WITH ONE XIENCE V STENT]: [PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD) WITH ONE XIENCE V STENT]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [CAUSE OF DEATH WAS STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Patient_Death [PATIENT'S DEATH]}

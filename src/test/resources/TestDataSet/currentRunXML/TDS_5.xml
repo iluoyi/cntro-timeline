@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/5.txt.owl">
+   <event id="0" name="ANTIPLATELET THERAPY WAS: ASPIRIN 100 MG/DAY, AND TICLID 200 MG/DAY.">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">ANTIPLATELET THERAPY WAS: ASPIRIN 100 MG/DAY, AND TICLID 200 MG/DAY.</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="CYPHER 3.5 X 23MM STENT WAS IMPLANTED ">
+      <relatedTo targetId="2;2;3;3;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CYPHER 3.5 X 23MM STENT WAS IMPLANTED </eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="LATE THROMBOSIS">
+      <relatedTo targetId="4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="6" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT WAS RETURNED TO THE HOSPITAL">
+      <relatedTo targetId="4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS RETURNED TO THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="CARDIOPULMONARY ARREST">
+      <relatedTo targetId="5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CARDIOPULMONARY ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="AN ADDITIONAL UNKNOWN STENT.">
+      <relatedTo targetId="5;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ADDITIONAL UNKNOWN STENT.</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="ANTIPLATELET THERAPY WAS: ASPIRIN 100 MG/DAY, AND TICLID 200 MG/DAY." relation="START" targetEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED "/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="PT WAS RETURNED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="PT WAS RETURNED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="CYPHER 3.5 X 23MM STENT WAS IMPLANTED " relation="BEFORE" targetEvent="AN ADDITIONAL UNKNOWN STENT."/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="AN ADDITIONAL UNKNOWN STENT."/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="FINISH" targetEvent="AN ADDITIONAL UNKNOWN STENT."/>
+   <eventStmt sourceEvent="PT WAS RETURNED TO THE HOSPITAL" relation="BEFORE" targetEvent="CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="PT WAS RETURNED TO THE HOSPITAL" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="PT WAS RETURNED TO THE HOSPITAL" relation="BEFORE" targetEvent="AN ADDITIONAL UNKNOWN STENT."/>
+   <eventStmt sourceEvent="CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="AN ADDITIONAL UNKNOWN STENT."/>
+   <eventStmt sourceEvent="AN ADDITIONAL UNKNOWN STENT." relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="AN ADDITIONAL UNKNOWN STENT." relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <timelineEntry>{StartAntiplateletTherapy [ANTIPLATELET THERAPY WAS: ASPIRIN 100 MG/DAY, AND TICLID 200 MG/DAY.]: InitialDrugElutingStentImplantation [CYPHER 3.5 X 23MM STENT WAS IMPLANTED ]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT WAS RETURNED TO THE HOSPITAL]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CARDIOPULMONARY ARREST]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [AN ADDITIONAL UNKNOWN STENT.]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

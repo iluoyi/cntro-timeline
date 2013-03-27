@@ -1,0 +1,49 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PATIENT DISCONTINUED THE USE OF PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> 2 CYPHER STENTS IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT SUFFERED A VERY LATE THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PLACED A 2.75 X 23MM BMS
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT DISCONTINUED THE USE OF PLAVIX ...)==>[ BEFORE ]==>( PATIENT SUFFERED A VERY LATE THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( PATIENT DISCONTINUED THE USE OF PLAVIX ...)==>[ BEFORE ]==>( PLACED A 2.75 X 23MM BMS ...)
+   
+EVENT-RELATION # 3: ( 2 CYPHER STENTS IMPLANTED ...)==>[ BEFORE ]==>( PATIENT SUFFERED A VERY LATE THROMBOSIS ...)
+   
+EVENT-RELATION # 4: ( 2 CYPHER STENTS IMPLANTED ...)==>[ BEFORE ]==>( PLACED A 2.75 X 23MM BMS ...)
+   
+EVENT-RELATION # 5: ( PATIENT SUFFERED A VERY LATE THROMBOSIS ...)==>[ BEFORE ]==>( PLACED A 2.75 X 23MM BMS ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {EndAntiplateletTherapy : [PATIENT DISCONTINUED THE USE OF PLAVIX]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [2 CYPHER STENTS IMPLANTED]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [PATIENT SUFFERED A VERY LATE THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {FollowUpStentProcedure : [PLACED A 2.75 X 23MM BMS]}

@@ -1,0 +1,105 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4, , , , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-4,1;1;2;3, ,5, , , , 
+
+EVENTID-6, , , , , , ,4
+
+EVENTID-7,1;1;2;3, , , , , , 
+
+EVENTID-1,2;2;3;3, , , , , , 
+
+EVENTID-8,2, , , , , , 
+
+EVENTID-3, , , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> 3.5 X 13MM CYPHERS WERE IMPLANTED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> 3.5 X 33MM
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PT WAS DISCHARGED HOME ON ASPIRIN, CLOPIDOGREL STATINS, ACE INHIBITORS AND BETA-BLOCKERS
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> ASA AND CLOPIDOGREL WERE DISCONTINUED
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG STANDING LUMBER2 TO SACRAL CANAL STENOSIS BY LAMINECTOMY
+      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> IN-STENT THROMBOSIS 
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT SUBSEQUENTLY DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT COMPLAINED OF CHEST PAIN
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)
+   
+EVENT-RELATION # 2: ( ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+EVENT-RELATION # 3: ( ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 4: ( ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARC ...)==>[ BEFORE ]==>( 3.5 X 33MM ...)
+   
+EVENT-RELATION # 5: ( 3.5 X 33MM ...)==>[ BEFORE ]==>( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)
+   
+EVENT-RELATION # 6: ( 3.5 X 33MM ...)==>[ BEFORE ]==>( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)
+   
+EVENT-RELATION # 7: ( 3.5 X 33MM ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+EVENT-RELATION # 8: ( 3.5 X 33MM ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 9: ( 3.5 X 33MM ...)==>[ EQUAL ]==>( 3.5 X 13MM CYPHERS WERE IMPLANTED ...)
+   
+EVENT-RELATION # 10: ( PT WAS DISCHARGED HOME ON ASPIRIN, CLOPIDOGREL S ...)==>[ START ]==>( 3.5 X 33MM ...)
+   
+EVENT-RELATION # 11: ( ASA AND CLOPIDOGREL WERE DISCONTINUED ...)==>[ BEFORE ]==>( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)
+   
+EVENT-RELATION # 12: ( ASA AND CLOPIDOGREL WERE DISCONTINUED ...)==>[ BEFORE ]==>( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)
+   
+EVENT-RELATION # 13: ( ASA AND CLOPIDOGREL WERE DISCONTINUED ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+EVENT-RELATION # 14: ( ASA AND CLOPIDOGREL WERE DISCONTINUED ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 15: ( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+EVENT-RELATION # 16: ( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+EVENT-RELATION # 17: ( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 18: ( PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG  ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED ...)
+   
+EVENT-RELATION # 19: ( IN-STENT THROMBOSIS  ...)==>[ BEFORE ]==>( PT COMPLAINED OF CHEST PAIN ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction [ACUTE INFERIOR WALL NON Q-WAVE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation [3.5 X 13MM CYPHERS WERE IMPLANTED]: [3.5 X 33MM]: StartAntiplateletTherapy [PT WAS DISCHARGED HOME ON ASPIRIN, CLOPIDOGREL STATINS, ACE INHIBITORS AND BETA-BLOCKERS]}
+EVENT-TimeLineEntry # 3: {EndAntiplateletTherapy [ASA AND CLOPIDOGREL WERE DISCONTINUED]}
+EVENT-TimeLineEntry # 4: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT WAS ADMITTED FOR PLANNED TREATMENT OF A LONG STANDING LUMBER2 TO SACRAL CANAL STENOSIS BY LAMINECTOMY]}
+EVENT-TimeLineEntry # 5: {Late_Stent_Thrombosis [IN-STENT THROMBOSIS ]}
+EVENT-TimeLineEntry # 6: {Patient_Death [PT SUBSEQUENTLY DIED]}
+EVENT-TimeLineEntry # 7: {Myocardial_Infarction [PT COMPLAINED OF CHEST PAIN]}

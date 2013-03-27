@@ -1,0 +1,81 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;3;4;5;6, , , , , , 
+
+EVENTID-5,2;3;4;6, , , , , , 
+
+EVENTID-2,3;4, , , , , , 
+
+EVENTID-3,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-6, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PATIENT HAD BEEN TAKING ASPIRIN AND CLOPIDOGREL
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 STENTS WERE IMPLANTED IN THE PROXIMAL AND MID RCA WITH A GAP BETWEEN THE TWO STENTS
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUDED WITH THROMBUS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> A MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> TWO NON BSC STENTS WERE IMPLANTED
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUD ...)
+   
+EVENT-RELATION # 2: ( PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 3: ( PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 4: ( PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 ST ...)
+   
+EVENT-RELATION # 5: ( PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( TWO NON BSC STENTS WERE IMPLANTED ...)
+   
+EVENT-RELATION # 6: ( A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 ST ...)==>[ BEFORE ]==>( IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUD ...)
+   
+EVENT-RELATION # 7: ( A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 ST ...)==>[ BEFORE ]==>( A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 8: ( A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 ST ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 9: ( A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 ST ...)==>[ BEFORE ]==>( TWO NON BSC STENTS WERE IMPLANTED ...)
+   
+EVENT-RELATION # 10: ( IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUD ...)==>[ BEFORE ]==>( A MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 11: ( IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUD ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 12: ( A MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PATIENT HAD BEEN TAKING ASPIRIN AND CLOPIDOGREL]}
+EVENT-TimeLineEntry # 2: {Myocardial_Infarction : [PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [A 2.75X8MM AND AN UNKNOWN SIZE TAXUS EXPRESS2 STENTS WERE IMPLANTED IN THE PROXIMAL AND MID RCA WITH A GAP BETWEEN THE TWO STENTS]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [IT WAS CONFIRMED THAT THE RCA WAS TOTALLY OCCLUDED WITH THROMBUS]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [A MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 6: {ER_Admission : [PATIENT PRESENTED]}
+EVENT-TimeLineEntry # 7: {FollowUpStentProcedure : [TWO NON BSC STENTS WERE IMPLANTED]}

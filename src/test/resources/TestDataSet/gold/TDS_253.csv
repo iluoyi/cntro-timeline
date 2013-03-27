@@ -1,0 +1,81 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , ,1, , ,2
+
+EVENTID-2,3;4;5;1, ,6, , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-3,4;5;1, , , , , , 
+
+EVENTID-5,4;1, , , , , , 
+
+EVENTID-4,1, , , , , , 
+
+EVENTID-1, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> AN ST ELEVATED MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT PRESENTED TO THE ER
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY ...)==>[ FINISH ]==>( PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRAS ...)
+   
+EVENT-RELATION # 2: ( PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY ...)==>[ START ]==>( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)
+   
+EVENT-RELATION # 3: ( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)==>[ BEFORE ]==>( ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE M ...)
+   
+EVENT-RELATION # 4: ( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)==>[ BEFORE ]==>( PT PRESENTED TO THE ER ...)
+   
+EVENT-RELATION # 5: ( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)==>[ BEFORE ]==>( AN ST ELEVATED MI ...)
+   
+EVENT-RELATION # 6: ( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)==>[ BEFORE ]==>( PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRAS ...)
+   
+EVENT-RELATION # 7: ( A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANT ...)==>[ EQUAL ]==>( A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLAN ...)
+   
+EVENT-RELATION # 8: ( ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE M ...)==>[ BEFORE ]==>( PT PRESENTED TO THE ER ...)
+   
+EVENT-RELATION # 9: ( ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE M ...)==>[ BEFORE ]==>( AN ST ELEVATED MI ...)
+   
+EVENT-RELATION # 10: ( ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE M ...)==>[ BEFORE ]==>( PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRAS ...)
+   
+EVENT-RELATION # 11: ( AN ST ELEVATED MI ...)==>[ BEFORE ]==>( PT PRESENTED TO THE ER ...)
+   
+EVENT-RELATION # 12: ( AN ST ELEVATED MI ...)==>[ BEFORE ]==>( PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRAS ...)
+   
+EVENT-RELATION # 13: ( PT PRESENTED TO THE ER ...)==>[ BEFORE ]==>( PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRAS ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy [PT WAS TAKING 81MG ASPIRIN AND 75MG PLAVIX DAILY]: InitialDrugElutingStentImplantation [A 2.25X16MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE DISTAL LAD]: [A 2.25X28 MM TAXUS LIBERTE ATOM STENT WAS IMPLANTED IN THE MID TO DISTAL LAD]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [ANGIOGRAPHY CONFIRMED A TOTAL OCCLUSION OF THE MID LEFT ANTERIOR DESCENDING (LAD) ARTERY FROM STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction [AN ST ELEVATED MI]}
+EVENT-TimeLineEntry # 4: {ER_Admission [PT PRESENTED TO THE ER]}
+EVENT-TimeLineEntry # 5: {EndAntiplateletTherapy [PT'S MEDICATION WAS SWITCHED FROM PLAVIX TO PRASUGREL]}

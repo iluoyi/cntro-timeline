@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/86.txt.owl">
+   <event id="0" name="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)">
+      <relatedTo targetId="1;1;2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="4" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="ONE OTHER DRUG-ELUTING STENT (BRAND NAME UNK) WAS IMPLANTED IN THE MID RCA">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE OTHER DRUG-ELUTING STENT (BRAND NAME UNK) WAS IMPLANTED IN THE MID RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT WAS ON ANTI-PLATELETS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS ON ANTI-PLATELETS</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT SUFFERED A NON-SUDDEN, CARDIAC DEATH">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUFFERED A NON-SUDDEN, CARDIAC DEATH</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS WAS REPORTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS WAS REPORTED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS REPORTED"/>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS REPORTED"/>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="BEFORE" targetEvent="PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD"/>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="BEFORE" targetEvent="PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD"/>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="BEFORE" targetEvent="PT SUFFERED A NON-SUDDEN, CARDIAC DEATH"/>
+   <eventStmt sourceEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)" relation="EQUAL" targetEvent="ONE OTHER DRUG-ELUTING STENT (BRAND NAME UNK) WAS IMPLANTED IN THE MID RCA"/>
+   <eventStmt sourceEvent="PT WAS ON ANTI-PLATELETS" relation="FINISH" targetEvent="STENT THROMBOSIS WAS REPORTED"/>
+   <eventStmt sourceEvent="PT WAS ON ANTI-PLATELETS" relation="START" targetEvent="THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)"/>
+   <eventStmt sourceEvent="PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD" relation="BEFORE" targetEvent="PT SUFFERED A NON-SUDDEN, CARDIAC DEATH"/>
+   <eventStmt sourceEvent="PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD" relation="BEFORE" targetEvent="PT SUFFERED A NON-SUDDEN, CARDIAC DEATH"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THREE ENDEAVOR DRUG-ELUTING STENTS ( MFR REPORT# 2953200-2008-00861-00863) WERE IMPLANTED IN THE MID LAD (OVERLAPPING)]: [ONE OTHER DRUG-ELUTING STENT (BRAND NAME UNK) WAS IMPLANTED IN THE MID RCA]: StartAntiplateletTherapy [PT WAS ON ANTI-PLATELETS]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT REQUIRED A CABG REVASCULARIZATION OF THE MID AND PROXIMAL LAD]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT SUFFERED A NON-SUDDEN, CARDIAC DEATH]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS WAS REPORTED]}</timelineEntry>
+</CNTROTimeLineEventList>

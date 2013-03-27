@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/237.txt.owl">
+   <event id="0" name="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA" relation="BEFORE" targetEvent="HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA" relation="BEFORE" targetEvent="HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [AN ENDEAVOR SPRINT RAPID EXCHANGE (RX) DRUG ELUTING STENT WAS IMPLANTED IN THE MID RCA]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HE WAS FOUND TO BE SUFFERING WITH STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+</CNTROTimeLineEventList>

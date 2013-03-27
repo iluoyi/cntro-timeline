@@ -1,0 +1,43 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_151.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+1	 	 	5;4	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_151.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2;2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+1	 	 	5;4	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_151.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_151.csv
+########## EVENTS ############
+EVENT # 0 ==>  TWO 2.5 X 28MM CYPHERS AND TWO 2.5 X 18MM CYPHERS WERE IMPLANTED WITH OVERLAP      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> IN-STENT THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT EXPERIENCED ST-ELEVATION MYOCARDIAL INFARCTION (STEMI)      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> A 3.5 X 23MM CYPHER WAS IMPLANTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> A 2.5 X 28MM CYPHER WAS IMPLANTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> 3.0 X 18MM CYPHER WAS IMPLANTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: (  TWO 2.5 X 28MM CYPHERS AND TWO 2.5 X 18MM CYPHE ...)==>[ BEFORE ]==>( A 2.5 X 28MM CYPHER WAS IMPLANTED ...)   
+EVENT-RELATION # 2: (  TWO 2.5 X 28MM CYPHERS AND TWO 2.5 X 18MM CYPHE ...)==>[ BEFORE ]==>( IN-STENT THROMBOSIS ...)   
+EVENT-RELATION # 3: (  TWO 2.5 X 28MM CYPHERS AND TWO 2.5 X 18MM CYPHE ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED ST-ELEVATION MYOCARDIAL INFA ...)   
+EVENT-RELATION # 4: ( IN-STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED ST-ELEVATION MYOCARDIAL INFA ...)   
+EVENT-RELATION # 5: ( A 2.5 X 28MM CYPHER WAS IMPLANTED ...)==>[ EQUAL ]==>( 3.0 X 18MM CYPHER WAS IMPLANTED ...)   
+EVENT-RELATION # 6: ( A 2.5 X 28MM CYPHER WAS IMPLANTED ...)==>[ EQUAL ]==>( A 3.5 X 23MM CYPHER WAS IMPLANTED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [ TWO 2.5 X 28MM CYPHERS AND TWO 2.5 X 18MM CYPHERS WERE IMPLANTED WITH OVERLAP]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [IN-STENT THROMBOSIS]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [PATIENT EXPERIENCED ST-ELEVATION MYOCARDIAL INFARCTION (STEMI)]}EVENT-TimeLineEntry # 4: {FollowUpStentProcedure : [A 3.5 X 23MM CYPHER WAS IMPLANTED] : [A 2.5 X 28MM CYPHER WAS IMPLANTED] : [3.0 X 18MM CYPHER WAS IMPLANTED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2;2;3 ]

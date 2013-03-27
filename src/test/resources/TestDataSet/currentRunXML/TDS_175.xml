@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/175.txt.owl">
+   <event id="0" name="THIRD STENT WAS PLACED IN THE PROXIMAL FIRST DIAGONAL ARTERY (D1)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THIRD STENT WAS PLACED IN THE PROXIMAL FIRST DIAGONAL ARTERY (D1)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)">
+      <relatedTo targetId="2;3;4;5;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="7;0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="SECOND STENT WAS PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SECOND STENT WAS PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="THE PATIENT WAS PLACED ON 325MG ASPIRIN AND 75MG CLOPIDOGREL DAILY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="5" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT WAS PLACED ON 325MG ASPIRIN AND 75MG CLOPIDOGREL DAILY</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;3;4;5;6;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="6" name="THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="ANTIPLATELET THERAPY WAS STOPPED">
+      <relatedTo targetId="3;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANTIPLATELET THERAPY WAS STOPPED</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="THE PATIENT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="ANTIPLATELET THERAPY WAS STOPPED"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="ANTIPLATELET THERAPY WAS STOPPED"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="BEFORE" targetEvent="THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="EQUAL" targetEvent="SECOND STENT WAS PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)"/>
+   <eventStmt sourceEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)" relation="EQUAL" targetEvent="THIRD STENT WAS PLACED IN THE PROXIMAL FIRST DIAGONAL ARTERY (D1)"/>
+   <eventStmt sourceEvent="THE PATIENT WAS PLACED ON 325MG ASPIRIN AND 75MG CLOPIDOGREL DAILY" relation="FINISH" targetEvent="ANTIPLATELET THERAPY WAS STOPPED"/>
+   <eventStmt sourceEvent="THE PATIENT WAS PLACED ON 325MG ASPIRIN AND 75MG CLOPIDOGREL DAILY" relation="START" targetEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="ANTIPLATELET THERAPY WAS STOPPED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)"/>
+   <eventStmt sourceEvent="THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)" relation="BEFORE" targetEvent="A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE"/>
+   <eventStmt sourceEvent="THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="ANTIPLATELET THERAPY WAS STOPPED" relation="BEFORE" targetEvent="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD"/>
+   <eventStmt sourceEvent="ANTIPLATELET THERAPY WAS STOPPED" relation="BEFORE" targetEvent="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD"/>
+   <eventStmt sourceEvent="ANTIPLATELET THERAPY WAS STOPPED" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <eventStmt sourceEvent="HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD" relation="BEFORE" targetEvent="THE PATIENT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [THIRD STENT WAS PLACED IN THE PROXIMAL FIRST DIAGONAL ARTERY (D1)]: [FIRST STENT WAS PLACED IN THE LEFT MAIN ARTERY (LM)]: [SECOND STENT WAS PLACED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)]: StartAntiplateletTherapy [THE PATIENT WAS PLACED ON 325MG ASPIRIN AND 75MG CLOPIDOGREL DAILY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT PRESENTED WITH A MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [THE PATIENT HAD AN ADDITIONAL STENT PLACED IN THE LEFT CIRCUMFLEX ARTERY (LCX)]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [A NON BSC BARE METAL STENT WAS ALSO PLACED IN A MARGINAL ARTERY AT AN UNKNOWN DATE]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [ANTIPLATELET THERAPY WAS STOPPED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HISTOLOGY REVEALED OCCLUSIVE THROMBUS ASSOCIATED WITH MALAPPOSED, POORLY ENDOTHELIALIZED STRUTS AND CHRONIC INFLAMMATION IN THE LM. POST-MORTEM THROMBUS WAS NOTED IN THE LAD]}</timelineEntry>
+   <timelineEntry>{Patient_Death [THE PATIENT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

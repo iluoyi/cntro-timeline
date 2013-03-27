@@ -1,0 +1,35 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_294.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_294.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	1	
+1	2;2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_294.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_294.csv
+########## EVENTS ############
+EVENT # 0 ==> PT'S ANTI-PLATELET THERAPY INCLUDED ASPIRIN 100MG DAILY AND CLOPIDOGREL 300MG DAILY      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> A 3.0 X 23MM CYPHER WAS IMPLANTED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> AN ECG REVEALED ST ELEVATION IN V1 TO V4. ANGIOGRAPHY SHOWED THROMBUS INSIDE THE CYPHER AND DISTALLY      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PT WAS HOSPITALIZED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PT'S ANTI-PLATELET THERAPY INCLUDED ASPIRIN 100M ...)==>[ START ]==>( A 3.0 X 23MM CYPHER WAS IMPLANTED ...)   
+EVENT-RELATION # 2: ( A 3.0 X 23MM CYPHER WAS IMPLANTED ...)==>[ BEFORE ]==>( AN ECG REVEALED ST ELEVATION IN V1 TO V4. ANGIOG ...)   
+EVENT-RELATION # 3: ( A 3.0 X 23MM CYPHER WAS IMPLANTED ...)==>[ BEFORE ]==>( PT WAS HOSPITALIZED ...)   
+EVENT-RELATION # 4: ( AN ECG REVEALED ST ELEVATION IN V1 TO V4. ANGIOG ...)==>[ BEFORE ]==>( PT WAS HOSPITALIZED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PT'S ANTI-PLATELET THERAPY INCLUDED ASPIRIN 100MG DAILY AND CLOPIDOGREL 300MG DAILY]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [A 3.0 X 23MM CYPHER WAS IMPLANTED]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [AN ECG REVEALED ST ELEVATION IN V1 TO V4. ANGIOGRAPHY SHOWED THROMBUS INSIDE THE CYPHER AND DISTALLY]}EVENT-TimeLineEntry # 4: {ER_Admission : [PT WAS HOSPITALIZED]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3 ]

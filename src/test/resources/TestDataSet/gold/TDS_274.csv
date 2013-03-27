@@ -1,0 +1,47 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> THE PATIENT WAS PLACED ON 75MG CLOPIDOGREL
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:2 YEARS}{Dur. unit:YEAR}{Dur. value:2}}}]
+   
+EVENT-DESC-EVENT # 1 ==> A 2.75X23MM TAXUS STENT WAS IMPLANTED IN A LESION THAT WAS LOCATED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> STENT WAS COMPLETELY OCCLUDED WITH THROMBUS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( THE PATIENT WAS PLACED ON 75MG CLOPIDOGREL ...)==>[ START ]==>( A 2.75X23MM TAXUS STENT WAS IMPLANTED IN A LESIO ...)
+   
+EVENT-RELATION # 2: ( A 2.75X23MM TAXUS STENT WAS IMPLANTED IN A LESIO ...)==>[ BEFORE ]==>( STENT WAS COMPLETELY OCCLUDED WITH THROMBUS ...)
+   
+EVENT-RELATION # 3: ( A 2.75X23MM TAXUS STENT WAS IMPLANTED IN A LESIO ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 4: ( STENT WAS COMPLETELY OCCLUDED WITH THROMBUS ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [THE PATIENT WAS PLACED ON 75MG CLOPIDOGREL]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [A 2.75X23MM TAXUS STENT WAS IMPLANTED IN A LESION THAT WAS LOCATED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [STENT WAS COMPLETELY OCCLUDED WITH THROMBUS]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED]}

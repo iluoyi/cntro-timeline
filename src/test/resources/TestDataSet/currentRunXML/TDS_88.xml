@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/88.txt.owl">
+   <event id="0" name="TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="PT RETURNED AND A STENT THROMBOSIS WAS DISCOVERED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT RETURNED AND A STENT THROMBOSIS WAS DISCOVERED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= )(Granularity=DAY)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PT RETURNED AND A STENT THROMBOSIS WAS DISCOVERED"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="PT RETURNED AND A STENT THROMBOSIS WAS DISCOVERED" relation="BEFORE" targetEvent="PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PT RETURNED AND A STENT THROMBOSIS WAS DISCOVERED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

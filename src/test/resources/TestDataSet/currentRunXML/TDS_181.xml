@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/181.txt.owl">
+   <event id="0" name="PATIENT DISCONTINUED THE USE OF PLAVIX">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT DISCONTINUED THE USE OF PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="2 CYPHER STENTS IMPLANTED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">2 CYPHER STENTS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="PATIENT SUFFERED A VERY LATE THROMBOSIS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUFFERED A VERY LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PLACED A 2.75 X 23MM BMS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLACED A 2.75 X 23MM BMS</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED THE USE OF PLAVIX" relation="BEFORE" targetEvent="PATIENT SUFFERED A VERY LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED THE USE OF PLAVIX" relation="BEFORE" targetEvent="PATIENT SUFFERED A VERY LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED THE USE OF PLAVIX" relation="BEFORE" targetEvent="PLACED A 2.75 X 23MM BMS"/>
+   <eventStmt sourceEvent="2 CYPHER STENTS IMPLANTED" relation="BEFORE" targetEvent="PATIENT SUFFERED A VERY LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="2 CYPHER STENTS IMPLANTED" relation="BEFORE" targetEvent="PLACED A 2.75 X 23MM BMS"/>
+   <eventStmt sourceEvent="PATIENT SUFFERED A VERY LATE THROMBOSIS" relation="BEFORE" targetEvent="PLACED A 2.75 X 23MM BMS"/>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT DISCONTINUED THE USE OF PLAVIX]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [2 CYPHER STENTS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT SUFFERED A VERY LATE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PLACED A 2.75 X 23MM BMS]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,61 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , ,3, , ,4
+
+EVENTID-4, , , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-2,1, , , , , , 
+
+EVENTID-1, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PATIENT WAS PLACED ON CLOPIDOGREL
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> RECANALISATION OF THE LESION WITH MULTIPLE TAXUS EXPRESS2 STENTS WAS PERFORMED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PATIENT HAD DISCONTINUED CLOPIDOGREL
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT WAS RESTARTED ON CLOPIDOGREL
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> VUS CONFIRMED A CHRONIC THROMBUS WITHIN THE INTIMA, PROTRUDING THROUGH THE STENT STRUTS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PATIENT WAS PLACED ON CLOPIDOGREL ...)==>[ BEFORE ]==>( VUS CONFIRMED A CHRONIC THROMBUS WITHIN THE INTI ...)
+   
+EVENT-RELATION # 2: ( PATIENT WAS PLACED ON CLOPIDOGREL ...)==>[ BEFORE ]==>( PATIENT WAS RESTARTED ON CLOPIDOGREL ...)
+   
+EVENT-RELATION # 3: ( PATIENT WAS PLACED ON CLOPIDOGREL ...)==>[ BEFORE ]==>( PATIENT HAD DISCONTINUED CLOPIDOGREL ...)
+   
+EVENT-RELATION # 4: ( PATIENT WAS PLACED ON CLOPIDOGREL ...)==>[ FINISH ]==>( PATIENT HAD DISCONTINUED CLOPIDOGREL ...)
+   
+EVENT-RELATION # 5: ( PATIENT WAS PLACED ON CLOPIDOGREL ...)==>[ START ]==>( RECANALISATION OF THE LESION WITH MULTIPLE TAXUS ...)
+   
+EVENT-RELATION # 6: ( PATIENT HAD DISCONTINUED CLOPIDOGREL ...)==>[ BEFORE ]==>( VUS CONFIRMED A CHRONIC THROMBUS WITHIN THE INTI ...)
+   
+EVENT-RELATION # 7: ( PATIENT HAD DISCONTINUED CLOPIDOGREL ...)==>[ BEFORE ]==>( PATIENT WAS RESTARTED ON CLOPIDOGREL ...)
+   
+EVENT-RELATION # 8: ( PATIENT WAS RESTARTED ON CLOPIDOGREL ...)==>[ BEFORE ]==>( VUS CONFIRMED A CHRONIC THROMBUS WITHIN THE INTI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PATIENT WAS PLACED ON CLOPIDOGREL]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [RECANALISATION OF THE LESION WITH MULTIPLE TAXUS EXPRESS2 STENTS WAS PERFORMED]}
+EVENT-TimeLineEntry # 3: {EndAntiplateletTherapy : [PATIENT HAD DISCONTINUED CLOPIDOGREL]}
+EVENT-TimeLineEntry # 4: {StartAntiplateletTherapy : [PATIENT WAS RESTARTED ON CLOPIDOGREL]}
+EVENT-TimeLineEntry # 5: {Late_Stent_Thrombosis : [VUS CONFIRMED A CHRONIC THROMBUS WITHIN THE INTIMA, PROTRUDING THROUGH THE STENT STRUTS]}

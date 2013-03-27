@@ -1,0 +1,63 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_71.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4;5	 	 	 	 	 	 	
+6	 	 	 	 	 	 	5	
+5	1;2;3;4	 	7	 	 	 	 	
+7	 	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_71.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4;5;5	 	 	 	 	 	 	
+6	 	 	 	 	 	 	5	
+5	1;1;2;3;4	 	7	 	 	 	 	
+7	 	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_71.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_71.csv
+########## EVENTS ############
+EVENT # 0 ==> PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 7 ==> STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> WITH AN ACUTE MI      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PT EXPIRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYO ...)==>[ BEFORE ]==>( PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE  ...)   
+EVENT-RELATION # 2: ( PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYO ...)==>[ BEFORE ]==>( WITH AN ACUTE MI ...)   
+EVENT-RELATION # 3: ( PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYO ...)==>[ BEFORE ]==>( PT PRESENTED ...)   
+EVENT-RELATION # 4: ( PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYO ...)==>[ BEFORE ]==>( PT EXPIRED ...)   
+EVENT-RELATION # 5: ( PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYO ...)==>[ BEFORE ]==>( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)   
+EVENT-RELATION # 6: ( ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDUR ...)==>[ START ]==>( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)   
+EVENT-RELATION # 7: ( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)==>[ BEFORE ]==>( PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE  ...)   
+EVENT-RELATION # 8: ( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)==>[ BEFORE ]==>( WITH AN ACUTE MI ...)   
+EVENT-RELATION # 9: ( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)==>[ BEFORE ]==>( PT PRESENTED ...)   
+EVENT-RELATION # 10: ( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)==>[ BEFORE ]==>( PT EXPIRED ...)   
+EVENT-RELATION # 11: ( STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUT ...)==>[ EQUAL ]==>( STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUT ...)   
+EVENT-RELATION # 12: ( PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE  ...)==>[ BEFORE ]==>( WITH AN ACUTE MI ...)   
+EVENT-RELATION # 13: ( PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE  ...)==>[ BEFORE ]==>( PT PRESENTED ...)   
+EVENT-RELATION # 14: ( PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE  ...)==>[ BEFORE ]==>( PT EXPIRED ...)   
+EVENT-RELATION # 15: ( WITH AN ACUTE MI ...)==>[ BEFORE ]==>( PT PRESENTED ...)   
+EVENT-RELATION # 16: ( WITH AN ACUTE MI ...)==>[ BEFORE ]==>( PT EXPIRED ...)   
+EVENT-RELATION # 17: ( PT PRESENTED ...)==>[ BEFORE ]==>( PT EXPIRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [PT PRESENTED WITH A NON-ST SEGMENT ELEVATION MYOCARDIAL INFARCTION (MI)]}EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [ASPIRIN AND PLAVIX WERE PRESCRIBED POST PROCEDURE]}EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [STENTED WITH A TAXUS EXPRESS2 2.5X16MM DRUG ELUTING STENT] : [STENTED WITH A TAXUS EXPRESS2 3.0X20MM DRUG ELUTING STENT]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [PT WAS FOUND TO HAVE IN-STENT THROMBOSES IN THE LAD WITH ABRUPT STENT OCCLUSION OF THE LAD]}EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [WITH AN ACUTE MI]}EVENT-TimeLineEntry # 6: {ER_Admission : [PT PRESENTED]}EVENT-TimeLineEntry # 7: {Patient_Death : [PT EXPIRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4;5 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4;5;5 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;1;2;3;4 ]

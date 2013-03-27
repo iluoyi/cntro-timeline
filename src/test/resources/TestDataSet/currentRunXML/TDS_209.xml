@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/209.txt.owl">
+   <event id="0" name="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="1;1;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN">
+      <relatedTo targetId="1;2;3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL">
+      <relatedTo targetId="2;3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="AN ACUTE MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId="2;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ACUTE MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="THE PATIENT WAS PLACED ON EFFIENT FOR FIFTEEN MONTHS AND ASPIRIN FOR LIFE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="5" relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT WAS PLACED ON EFFIENT FOR FIFTEEN MONTHS AND ASPIRIN FOR LIFE</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL"/>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL"/>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN"/>
+   <eventStmt sourceEvent="UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN" relation="BEFORE" targetEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL"/>
+   <eventStmt sourceEvent="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN" relation="BEFORE" targetEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN" relation="BEFORE" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL" relation="BEFORE" targetEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL" relation="BEFORE" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="PATIENT PRESENTED"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED" relation="BEFORE" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="THE PATIENT WAS PLACED ON EFFIENT FOR FIFTEEN MONTHS AND ASPIRIN FOR LIFE" relation="START" targetEvent="BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [UNKNOWN SIZE TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT HAD CEASED TAKING PLAVIX AND HAD MORE RECENTLY STOPPED TAKING ASPIRIN]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [IN-STENT THROMBOSIS WAS IDENTIFIED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY AND THE VESSEL]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [AN ACUTE MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [THE PATIENT WAS PLACED ON EFFIENT FOR FIFTEEN MONTHS AND ASPIRIN FOR LIFE]: FollowUpStentProcedure [BOTH A 2.5X24MM AND A3.0X15MM NON-BSC STENTS WERE PLACED IN THE LESION]}</timelineEntry>
+</CNTROTimeLineEventList>

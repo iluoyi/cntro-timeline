@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/125.txt.owl">
+   <event id="0" name="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY">
+      <relatedTo targetId="1;1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT PRESENTED">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT SUBSEQUENTLY EXPIRED.">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUBSEQUENTLY EXPIRED.</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED"/>
+   <eventStmt sourceEvent="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED"/>
+   <eventStmt sourceEvent="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY" relation="BEFORE" targetEvent="PT SUBSEQUENTLY EXPIRED."/>
+   <eventStmt sourceEvent="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED" relation="BEFORE" targetEvent="MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED" relation="BEFORE" targetEvent="PT SUBSEQUENTLY EXPIRED."/>
+   <eventStmt sourceEvent="MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT SUBSEQUENTLY EXPIRED."/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="PT SUBSEQUENTLY EXPIRED."/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO 2.5X16MM TAXUS EXPRESS2 DRUG ELUTING STENTS WERE DEPLOYED IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [A THROMBOTIC OCCLUSION OF A STENT IN THE MID LEFT ANTERIOR DESCENDING ARTERY AND FIRST OBTUSE MARGINAL BRANCH OF THE CIRCUMFLEX ARTERY WAS DISCOVERED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MASSIVE ANTEROAPICAL MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT SUBSEQUENTLY EXPIRED.]}</timelineEntry>
+</CNTROTimeLineEventList>

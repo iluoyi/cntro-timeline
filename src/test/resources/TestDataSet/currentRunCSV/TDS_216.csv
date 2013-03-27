@@ -1,0 +1,83 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;4, ,5, , , , 
+
+EVENTID-6, , , ,4, , ,0
+
+EVENTID-5, , , , , , , 
+
+EVENTID-4,1;2;3, , , , , , 
+
+EVENTID-1,2;3, , , , , , 
+
+EVENTID-3,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PATIENT WAS PUT ON PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> A 3.5X28MM NON BSC STENT WAS IMPLANTED IN THE DISTAL LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT DISCONTINUED USE OF PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> AN ACUTE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT PRESENTED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ BEFORE ]==>( STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 3: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ BEFORE ]==>( AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 4: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ BEFORE ]==>( PATIENT DISCONTINUED USE OF PLAVIX ...)
+   
+EVENT-RELATION # 5: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ BEFORE ]==>( PATIENT DISCONTINUED USE OF PLAVIX ...)
+   
+EVENT-RELATION # 6: ( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)==>[ EQUAL ]==>( A 3.5X28MM NON BSC STENT WAS IMPLANTED IN THE DI ...)
+   
+EVENT-RELATION # 7: ( PATIENT WAS PUT ON PLAVIX ...)==>[ FINISH ]==>( PATIENT DISCONTINUED USE OF PLAVIX ...)
+   
+EVENT-RELATION # 8: ( PATIENT WAS PUT ON PLAVIX ...)==>[ START ]==>( A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN  ...)
+   
+EVENT-RELATION # 9: ( PATIENT DISCONTINUED USE OF PLAVIX ...)==>[ BEFORE ]==>( STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 10: ( PATIENT DISCONTINUED USE OF PLAVIX ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 11: ( PATIENT DISCONTINUED USE OF PLAVIX ...)==>[ BEFORE ]==>( AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 12: ( STENT THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+EVENT-RELATION # 13: ( STENT THROMBOSIS ...)==>[ BEFORE ]==>( AN ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 14: ( AN ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [A 3.5X32MM TAXUS LIBERTE STENT WAS IMPLANTED IN THE PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)]: StartAntiplateletTherapy [PATIENT WAS PUT ON PLAVIX]: InitialDrugElutingStentImplantation [A 3.5X28MM NON BSC STENT WAS IMPLANTED IN THE DISTAL LAD]}
+EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy [PATIENT DISCONTINUED USE OF PLAVIX]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis [STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction [AN ACUTE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 5: {ER_Admission [PATIENT PRESENTED]}

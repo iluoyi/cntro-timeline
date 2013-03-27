@@ -1,0 +1,31 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_170.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_170.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_170.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_170.csv
+########## EVENTS ############
+EVENT # 0 ==> TWO TAXUS EXPRESS2 DRUG ELUTING STENTS OF UNKNOWN SIZE WERE IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> IN-STENT THROMBOSIS OCCURRED      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> MYOCARDIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TWO TAXUS EXPRESS2 DRUG ELUTING STENTS OF UNKNOW ...)==>[ BEFORE ]==>( IN-STENT THROMBOSIS OCCURRED ...)   
+EVENT-RELATION # 2: ( TWO TAXUS EXPRESS2 DRUG ELUTING STENTS OF UNKNOW ...)==>[ BEFORE ]==>( MYOCARDIAL INFARCTION ...)   
+EVENT-RELATION # 3: ( IN-STENT THROMBOSIS OCCURRED ...)==>[ BEFORE ]==>( MYOCARDIAL INFARCTION ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TWO TAXUS EXPRESS2 DRUG ELUTING STENTS OF UNKNOWN SIZE WERE IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [IN-STENT THROMBOSIS OCCURRED]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [MYOCARDIAL INFARCTION]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

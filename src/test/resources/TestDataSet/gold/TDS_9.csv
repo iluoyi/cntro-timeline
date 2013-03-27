@@ -1,0 +1,110 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-5,6;2;3;4;1, , , , , , 
+
+EVENTID-7, , , , , , , 
+
+EVENTID-8,6;2;3;4;1, ,7, , , , 
+
+EVENTID-6,2;3;4;1, , , , , , 
+
+EVENTID-2,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+
+EVENTID-3, , , ,2, , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION 
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> STOPPING PLAVIX AND ASPIRIN
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> TREATED WITH A TAXUS STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> LATE STENT THROMBOSIS 
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT RETURNED
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> REPORTED TO HAVE DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> SUB ACUTE STENT THROMBOSIS
+      		[Type = Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN ...)==>[ START ]==>( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)
+   
+EVENT-RELATION # 2: ( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 3: ( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)==>[ BEFORE ]==>( SUB ACUTE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 4: ( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)==>[ BEFORE ]==>( REPORTED TO HAVE DIED ...)
+   
+EVENT-RELATION # 5: ( STOPPING PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS  ...)
+   
+EVENT-RELATION # 6: ( STOPPING PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 7: ( STOPPING PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( SUB ACUTE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 8: ( STOPPING PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( REPORTED TO HAVE DIED ...)
+   
+EVENT-RELATION # 9: ( STOPPING PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)
+   
+EVENT-RELATION # 10: ( TREATED WITH A TAXUS STENT ...)==>[ BEFORE ]==>( LATE STENT THROMBOSIS  ...)
+   
+EVENT-RELATION # 11: ( TREATED WITH A TAXUS STENT ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 12: ( TREATED WITH A TAXUS STENT ...)==>[ BEFORE ]==>( SUB ACUTE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 13: ( TREATED WITH A TAXUS STENT ...)==>[ BEFORE ]==>( REPORTED TO HAVE DIED ...)
+   
+EVENT-RELATION # 14: ( TREATED WITH A TAXUS STENT ...)==>[ BEFORE ]==>( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)
+   
+EVENT-RELATION # 15: ( TREATED WITH A TAXUS STENT ...)==>[ EQUAL ]==>( INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA ...)
+   
+EVENT-RELATION # 16: ( LATE STENT THROMBOSIS  ...)==>[ BEFORE ]==>( PT RETURNED ...)
+   
+EVENT-RELATION # 17: ( LATE STENT THROMBOSIS  ...)==>[ BEFORE ]==>( SUB ACUTE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 18: ( LATE STENT THROMBOSIS  ...)==>[ BEFORE ]==>( REPORTED TO HAVE DIED ...)
+   
+EVENT-RELATION # 19: ( LATE STENT THROMBOSIS  ...)==>[ BEFORE ]==>( TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5M ...)
+   
+EVENT-RELATION # 20: ( PT RETURNED ...)==>[ BEFORE ]==>( REPORTED TO HAVE DIED ...)
+   
+EVENT-RELATION # 21: ( SUB ACUTE STENT THROMBOSIS ...)==>[ FINISH ]==>( PT RETURNED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN]}
+EVENT-TimeLineEntry # 2: {FollowUpStentProcedure : [TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION ]}
+EVENT-TimeLineEntry # 3: {EndAntiplateletTherapy : [STOPPING PLAVIX AND ASPIRIN]}
+EVENT-TimeLineEntry # 4: {InitialDrugElutingStentImplantation : [INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA] : [TREATED WITH A TAXUS STENT]}
+EVENT-TimeLineEntry # 5: {Late_Stent_Thrombosis : [LATE STENT THROMBOSIS ]}
+EVENT-TimeLineEntry # 6: {ER_Admission : [PT RETURNED]}
+EVENT-TimeLineEntry # 7: {Patient_Death : [REPORTED TO HAVE DIED]}
+EVENT-TimeLineEntry # 8: {Thrombosis : [SUB ACUTE STENT THROMBOSIS]}

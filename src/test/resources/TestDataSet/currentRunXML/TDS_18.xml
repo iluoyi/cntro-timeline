@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/18.txt.owl">
+   <event id="0" name="TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CARDIOGENIC SHOCK">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CARDIOGENIC SHOCK</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY" relation="BEFORE" targetEvent="STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY" relation="BEFORE" targetEvent="STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY" relation="BEFORE" targetEvent="CARDIOGENIC SHOCK"/>
+   <eventStmt sourceEvent="TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS" relation="BEFORE" targetEvent="CARDIOGENIC SHOCK"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="CARDIOGENIC SHOCK" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <eventStmt sourceEvent="CARDIOGENIC SHOCK" relation="BEFORE" targetEvent="PT EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TAXUS STENT PLACED IN LEFT ANTERIOR DESCENDING CORONARY ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CARDIOGENIC SHOCK]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

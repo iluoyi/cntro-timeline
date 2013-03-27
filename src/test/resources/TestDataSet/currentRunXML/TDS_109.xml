@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/109.txt.owl">
+   <event id="0" name="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED">
+      <relatedTo targetId="1;2;2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="6;7" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="FOLLOWED BY ANOTHER 3.5X12MM TAXUS EXPRESS2 DES">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">FOLLOWED BY ANOTHER 3.5X12MM TAXUS EXPRESS2 DES</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="FOLLOWED BY A 3.5X24MM TAXUS EXPRESS2 DES">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">FOLLOWED BY A 3.5X24MM TAXUS EXPRESS2 DES</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED TO THE EMERGENCY">
+      <relatedTo targetId="1;1;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED TO THE EMERGENCY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT.">
+      <relatedTo targetId="3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT.</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT WENT INTO CARDIOPULMONARY ARREST">
+      <relatedTo targetId="3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WENT INTO CARDIOPULMONARY ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="WAS TRANSPORTED TO THE HOSPITAL">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WAS TRANSPORTED TO THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT."/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="PATIENT PRESENTED TO THE EMERGENCY"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="PATIENT PRESENTED TO THE EMERGENCY"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="WAS TRANSPORTED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="PATIENT WENT INTO CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="BEFORE" targetEvent="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="EQUAL" targetEvent="FOLLOWED BY ANOTHER 3.5X12MM TAXUS EXPRESS2 DES"/>
+   <eventStmt sourceEvent="MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED" relation="EQUAL" targetEvent="FOLLOWED BY A 3.5X24MM TAXUS EXPRESS2 DES"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED TO THE EMERGENCY" relation="BEFORE" targetEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT."/>
+   <eventStmt sourceEvent="PATIENT PRESENTED TO THE EMERGENCY" relation="BEFORE" targetEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT."/>
+   <eventStmt sourceEvent="PATIENT PRESENTED TO THE EMERGENCY" relation="BEFORE" targetEvent="WAS TRANSPORTED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED TO THE EMERGENCY" relation="BEFORE" targetEvent="PATIENT WENT INTO CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED TO THE EMERGENCY" relation="BEFORE" targetEvent="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL"/>
+   <eventStmt sourceEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT." relation="BEFORE" targetEvent="WAS TRANSPORTED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT." relation="BEFORE" targetEvent="PATIENT WENT INTO CARDIOPULMONARY ARREST"/>
+   <eventStmt sourceEvent="EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT." relation="BEFORE" targetEvent="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL"/>
+   <eventStmt sourceEvent="PATIENT WENT INTO CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="WAS TRANSPORTED TO THE HOSPITAL"/>
+   <eventStmt sourceEvent="PATIENT WENT INTO CARDIOPULMONARY ARREST" relation="BEFORE" targetEvent="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL"/>
+   <eventStmt sourceEvent="WAS TRANSPORTED TO THE HOSPITAL" relation="BEFORE" targetEvent="PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [MID RCA WAS STENTED FIRST WITH A 3.5X12MM TAXUS EXPRESS 2 DRUG ELUTING STENT (DES) PLACED]: [FOLLOWED BY ANOTHER 3.5X12MM TAXUS EXPRESS2 DES]: [FOLLOWED BY A 3.5X24MM TAXUS EXPRESS2 DES]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED TO THE EMERGENCY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [EVIDENCE OF ACUTE MURAL THROMBOSIS WITH SUBSEQUENT LUMEN OCCLUSION 1 CM DISTAL TO STENT.]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT WENT INTO CARDIOPULMONARY ARREST]}</timelineEntry>
+   <timelineEntry>{ER_Admission [WAS TRANSPORTED TO THE HOSPITAL]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT WAS PRONOUNCED DEAD UPON ARRIVAL AT THE HOSPITAL]}</timelineEntry>
+</CNTROTimeLineEventList>

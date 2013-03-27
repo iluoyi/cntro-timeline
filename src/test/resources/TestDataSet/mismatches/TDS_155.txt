@@ -1,0 +1,31 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_155.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_155.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_155.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_155.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT SUFFERED A NON-QWAVE MI      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STE ...)==>[ BEFORE ]==>( A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE O ...)   
+EVENT-RELATION # 2: ( PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STE ...)==>[ BEFORE ]==>( PATIENT SUFFERED A NON-QWAVE MI ...)   
+EVENT-RELATION # 3: ( A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE O ...)==>[ BEFORE ]==>( PATIENT SUFFERED A NON-QWAVE MI ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [PATIENT SUFFERED A NON-QWAVE MI]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

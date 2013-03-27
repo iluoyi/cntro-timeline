@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0"
+    xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0"
+    elementFormDefault="qualified">
+    
+    <xs:simpleType name="temporalRelation">
+    	<xs:restriction base="xs:token">
+    		<xs:enumeration value="BEFORE"/>
+			<xs:enumeration value="MEET"/>
+			<xs:enumeration value="OVERLAP"/>
+			<xs:enumeration value="START"/>
+			<xs:enumeration value="DURING"/>
+			<xs:enumeration value="FINISH"/>
+			<xs:enumeration value="EQUAL"/>
+    	</xs:restriction>
+  	</xs:simpleType>
+
+	<xs:complexType name="annotationProperty">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Addtional property.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="name" type="xs:string" use="required" />
+				<xs:attribute name="type" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CNTROTimeLineRelation">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				A timeline event Relation.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="relationProperty" type="annotationProperty" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="targetId" type="xs:string" use="required"/>
+		<xs:attribute name="relation" type="temporalRelation" use="required"/>
+	</xs:complexType> 
+	
+	 <xs:complexType name="CNTROTimeLineEvent">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				A timeline object to get on the timeline.
+			</xs:documentation>
+		</xs:annotation>
+			<xs:sequence>
+				<xs:element name="relatedTo" type="CNTROTimeLineRelation" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="eventProperty" type="annotationProperty" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+	</xs:complexType>
+	 
+	 <xs:complexType name="CNTROTimeLineStatement">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				A timeline Statement.
+			</xs:documentation>
+		</xs:annotation>
+			<xs:sequence>
+				<xs:element name="statementProperty" type="annotationProperty" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="sourceEvent" type="xs:string" use="required"/>
+            <xs:attribute name="relation" type="temporalRelation" use="required"/>
+            <xs:attribute name="targetEvent" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+    <xs:element name="CNTROTimeLineEventList">
+        <xs:annotation>
+            <xs:documentation xml:lang="en"> A timeline event Collection. </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="event" type="CNTROTimeLineEvent" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="eventStmt" type="CNTROTimeLineStatement" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="timelineEntry" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="noteFileName" type="xs:string" use="optional"/>
+            <xs:attribute name="metaDataFileName" type="xs:string" use="optional"/>
+            <xs:attribute name="annotationFileName" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

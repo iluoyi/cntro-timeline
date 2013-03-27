@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/167.txt.owl">
+   <event id="0" name="TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT HAD DISCONTINUED TAKING CLOPIDOGREL AND WAS ONLY TAKING ASPIRIN">
+      <relatedTo targetId="1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD DISCONTINUED TAKING CLOPIDOGREL AND WAS ONLY TAKING ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT EXPERIENCED LATE THROMBOSIS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT" relation="BEFORE" targetEvent="PATIENT EXPERIENCED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT" relation="BEFORE" targetEvent="PATIENT EXPERIENCED LATE THROMBOSIS"/>
+   <eventStmt sourceEvent="TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT" relation="BEFORE" targetEvent="PATIENT HAD DISCONTINUED TAKING CLOPIDOGREL AND WAS ONLY TAKING ASPIRIN"/>
+   <eventStmt sourceEvent="PATIENT HAD DISCONTINUED TAKING CLOPIDOGREL AND WAS ONLY TAKING ASPIRIN" relation="BEFORE" targetEvent="PATIENT EXPERIENCED LATE THROMBOSIS"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TARGET LESION LOCATED IN AN UNKNOWN VESSEL WAS TREATED WITH AN UNKNOWN SIZE TAXUS EXPRESS2 STENT]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT HAD DISCONTINUED TAKING CLOPIDOGREL AND WAS ONLY TAKING ASPIRIN]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT EXPERIENCED LATE THROMBOSIS]}</timelineEntry>
+</CNTROTimeLineEventList>

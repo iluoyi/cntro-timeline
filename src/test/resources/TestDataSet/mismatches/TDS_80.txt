@@ -1,0 +1,91 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_80.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4;5	 	 	 	 	 	 	
+6	1;2;4;5;7;8	 	 	 	 	 	 	
+7	1;2;4;5	 	 	 	 	 	 	
+9	 	 	 	 	 	 	7;8	
+8	 	 	 	 	 	 	 	
+3	1;2;4;5	 	 	 	 	 	 	
+1	 	 	 	 	 	 	 	
+2	4;5	 	 	 	 	 	 	
+4	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_80.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;3;4;5	 	 	 	 	 	 	
+6	1;2;4;5;7;8	 	 	 	 	 	 	
+7	1;2;2;4;5	 	 	 	 	 	 	
+8	 	 	 	 	 	 	 	
+9	 	 	 	 	 	 	7;8	
+3	1;2;2;4;5	 	 	 	 	 	 	
+2	4;4;5	 	 	 	 	 	 	
+1	 	 	 	 	 	 	 	
+4	5	 	 	 	 	 	 	
+5	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_80.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_80.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT STOPPED THE ANTIPLATELET THERAPY      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> ST ELEVATION MYOCARDIAL INFARCTION (STEMI)      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 7 ==> IMPLANTATION OF TWO CYPHER STENTS      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 9 ==> ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 8 ==> A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> SURGERY OF A COLON MASS      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PATIENT HAD A THROMBOTIC EVENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> THROMBOTIC EVENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PATIENT HAD A CARDIOPULMONARY ARREST      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> SUBSEQUENTLY DIED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)   
+EVENT-RELATION # 2: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)   
+EVENT-RELATION # 3: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( SURGERY OF A COLON MASS ...)   
+EVENT-RELATION # 4: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)   
+EVENT-RELATION # 5: ( PATIENT STOPPED THE ANTIPLATELET THERAPY ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   
+EVENT-RELATION # 6: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)   
+EVENT-RELATION # 7: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)   
+EVENT-RELATION # 8: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)   
+EVENT-RELATION # 9: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   
+EVENT-RELATION # 10: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( IMPLANTATION OF TWO CYPHER STENTS ...)   
+EVENT-RELATION # 11: ( ST ELEVATION MYOCARDIAL INFARCTION (STEMI) ...)==>[ BEFORE ]==>( A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPL ...)   
+EVENT-RELATION # 12: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)   
+EVENT-RELATION # 13: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)   
+EVENT-RELATION # 14: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)   
+EVENT-RELATION # 15: ( IMPLANTATION OF TWO CYPHER STENTS ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   
+EVENT-RELATION # 16: ( ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE ...)==>[ START ]==>( IMPLANTATION OF TWO CYPHER STENTS ...)   
+EVENT-RELATION # 17: ( ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE ...)==>[ START ]==>( A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPL ...)   
+EVENT-RELATION # 18: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( PATIENT HAD A THROMBOTIC EVENT ...)   
+EVENT-RELATION # 19: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( THROMBOTIC EVENT ...)   
+EVENT-RELATION # 20: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)   
+EVENT-RELATION # 21: ( SURGERY OF A COLON MASS ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   
+EVENT-RELATION # 22: ( THROMBOTIC EVENT ...)==>[ BEFORE ]==>( PATIENT HAD A CARDIOPULMONARY ARREST ...)   
+EVENT-RELATION # 23: ( THROMBOTIC EVENT ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   
+EVENT-RELATION # 24: ( PATIENT HAD A CARDIOPULMONARY ARREST ...)==>[ BEFORE ]==>( SUBSEQUENTLY DIED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {EndAntiplateletTherapy : [PATIENT STOPPED THE ANTIPLATELET THERAPY]}EVENT-TimeLineEntry # 2: {Myocardial_Infarction : [ST ELEVATION MYOCARDIAL INFARCTION (STEMI)]}EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [IMPLANTATION OF TWO CYPHER STENTS]}EVENT-TimeLineEntry # 4: {StartAntiplateletTherapy : [ASPIRIN AND PLAVIX WERE PRESCRIBED AT DISCHARGE]}EVENT-TimeLineEntry # 5: {InitialDrugElutingStentImplantation : [A 3.5X13MM AND A 3.5X8MM CYPHER STENTS WERE IMPLANTED IN AN UNKNOWN SEGMENT OF THE CIRCUMFLEX ARTERY.]}EVENT-TimeLineEntry # 6: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis : [SURGERY OF A COLON MASS]}EVENT-TimeLineEntry # 7: {Late_Stent_Thrombosis : [PATIENT HAD A THROMBOTIC EVENT]}EVENT-TimeLineEntry # 8: {Late_Stent_Thrombosis : [THROMBOTIC EVENT]}EVENT-TimeLineEntry # 9: {Myocardial_Infarction : [PATIENT HAD A CARDIOPULMONARY ARREST]}EVENT-TimeLineEntry # 10: {Patient_Death : [SUBSEQUENTLY DIED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4;5 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;3;4;5 ]
+
+Expected: Event [ 7 ] --> [  BEFORE ] --> Event [ 1;2;4;5 ]
+Found: Event [ 7 ] --> [  BEFORE ] --> Event [ 1;2;2;4;5 ]
+
+Expected: Event [ 9 ] --> [  START  ] --> Event [ 7;8 ]
+Found: Event [ 8 ] --> [  START  ] --> Event [   ]
+
+Expected: Event [ 8 ] --> [  START  ] --> Event [   ]
+Found: Event [ 9 ] --> [  START  ] --> Event [ 7;8 ]
+
+Expected: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;2;4;5 ]
+Found: Event [ 3 ] --> [  BEFORE ] --> Event [ 1;2;2;4;5 ]
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 4;4;5 ]
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [ 4;5 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [   ]

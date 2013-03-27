@@ -1,0 +1,59 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-4, , , , , , ,3
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PT'S RECENT ANTERIOR MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PRIMARY STENTING OF THE LAD DONE WITH A CYPHER SELECT PLUS 3.0 X 33 MM STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> ASPIRIN 160 MG/DAY AND CLOPIDOGREL 75 MG/DAY WAS PRESCRIBED
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:SIX (6) MONTHS}{Dur. unit:MONTH}{Dur. value:0}}}]
+   
+EVENT-DESC-EVENT # 1 ==> ANGIOGRAM REVEALED A CYPHER SELECT PLUS STENT THAT WAS TOTALLY OCCLUDED WITH THROMBUS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT WAS HOSPITALIZED WITH AN ACUTE ANTERIOR WALL MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PT'S RECENT ANTERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( ANGIOGRAM REVEALED A CYPHER SELECT PLUS STENT TH ...)
+   
+EVENT-RELATION # 2: ( PT'S RECENT ANTERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT WAS HOSPITALIZED WITH AN ACUTE ANTERIOR WALL  ...)
+   
+EVENT-RELATION # 3: ( PT'S RECENT ANTERIOR MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PRIMARY STENTING OF THE LAD DONE WITH A CYPHER S ...)
+   
+EVENT-RELATION # 4: ( PRIMARY STENTING OF THE LAD DONE WITH A CYPHER S ...)==>[ BEFORE ]==>( ANGIOGRAM REVEALED A CYPHER SELECT PLUS STENT TH ...)
+   
+EVENT-RELATION # 5: ( PRIMARY STENTING OF THE LAD DONE WITH A CYPHER S ...)==>[ BEFORE ]==>( PT WAS HOSPITALIZED WITH AN ACUTE ANTERIOR WALL  ...)
+   
+EVENT-RELATION # 6: ( ASPIRIN 160 MG/DAY AND CLOPIDOGREL 75 MG/DAY WAS ...)==>[ START ]==>( PRIMARY STENTING OF THE LAD DONE WITH A CYPHER S ...)
+   
+EVENT-RELATION # 7: ( ANGIOGRAM REVEALED A CYPHER SELECT PLUS STENT TH ...)==>[ BEFORE ]==>( PT WAS HOSPITALIZED WITH AN ACUTE ANTERIOR WALL  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [PT'S RECENT ANTERIOR MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PRIMARY STENTING OF THE LAD DONE WITH A CYPHER SELECT PLUS 3.0 X 33 MM STENT]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [ASPIRIN 160 MG/DAY AND CLOPIDOGREL 75 MG/DAY WAS PRESCRIBED]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [ANGIOGRAM REVEALED A CYPHER SELECT PLUS STENT THAT WAS TOTALLY OCCLUDED WITH THROMBUS]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [PT WAS HOSPITALIZED WITH AN ACUTE ANTERIOR WALL MI]}

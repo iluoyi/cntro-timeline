@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/13.txt.owl">
+   <event id="0" name="PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="RIGHT SUPRACLAVICULAR NODE BIOPSY ">
+      <relatedTo targetId="2;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">RIGHT SUPRACLAVICULAR NODE BIOPSY </eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="LATE THROMBOSIS">
+      <relatedTo targetId="2;4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS" relation="BEFORE" targetEvent="RIGHT SUPRACLAVICULAR NODE BIOPSY "/>
+   <eventStmt sourceEvent="PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS" relation="BEFORE" targetEvent="RIGHT SUPRACLAVICULAR NODE BIOPSY "/>
+   <eventStmt sourceEvent="PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS" relation="BEFORE" targetEvent="PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC"/>
+   <eventStmt sourceEvent="RIGHT SUPRACLAVICULAR NODE BIOPSY " relation="BEFORE" targetEvent="PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC"/>
+   <eventStmt sourceEvent="RIGHT SUPRACLAVICULAR NODE BIOPSY " relation="BEFORE" targetEvent="PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC"/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC"/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="PT DIED"/>
+   <eventStmt sourceEvent="LATE THROMBOSIS" relation="BEFORE" targetEvent="PT DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PT UNDERWENT STENTING OF THE MID AND DISTAL RIGHT CORONARY ARTERIES WITH A 3.0 X 18MM AND 3.0 X 33MM CYPHERS STENTS]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [RIGHT SUPRACLAVICULAR NODE BIOPSY ]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT DEVELOPED CHEST PAIN, COMPLETE A-V BLOCK, CARDIOGENIC SHOCK, ETC]}</timelineEntry>
+</CNTROTimeLineEventList>

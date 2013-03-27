@@ -1,0 +1,31 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_154.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_154.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2	 	 	 	 	 	 	
+1	2	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_154.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_154.csv
+########## EVENTS ############
+EVENT # 0 ==> PATIENT RECEIVED 5 CYPHER STENTS IN THE FIRST DIAGONAL      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> WITH STENT THROMBOSIS IN STENTS 2 THROUGH 5       		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( PATIENT RECEIVED 5 CYPHER STENTS IN THE FIRST DI ...)==>[ BEFORE ]==>( WITH STENT THROMBOSIS IN STENTS 2 THROUGH 5  ...)   
+EVENT-RELATION # 2: ( PATIENT RECEIVED 5 CYPHER STENTS IN THE FIRST DI ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 3: ( WITH STENT THROMBOSIS IN STENTS 2 THROUGH 5  ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [PATIENT RECEIVED 5 CYPHER STENTS IN THE FIRST DIAGONAL]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [WITH STENT THROMBOSIS IN STENTS 2 THROUGH 5 ]}EVENT-TimeLineEntry # 3: {ER_Admission : [PATIENT PRESENTED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2 ]

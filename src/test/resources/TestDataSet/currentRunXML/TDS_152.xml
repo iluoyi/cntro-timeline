@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/152.txt.owl">
+   <event id="0" name=" STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX,">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX,</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="CAUSED BY ACUTE MYOCARDIAL THROMBOSIS">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CAUSED BY ACUTE MYOCARDIAL THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT WAS FOUND DEAD">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT WAS FOUND DEAD</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent=" STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX," relation="BEFORE" targetEvent="CAUSED BY ACUTE MYOCARDIAL THROMBOSIS"/>
+   <eventStmt sourceEvent=" STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX," relation="BEFORE" targetEvent="CAUSED BY ACUTE MYOCARDIAL THROMBOSIS"/>
+   <eventStmt sourceEvent=" STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX," relation="BEFORE" targetEvent="CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent=" STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX," relation="BEFORE" targetEvent="PT WAS FOUND DEAD"/>
+   <eventStmt sourceEvent="CAUSED BY ACUTE MYOCARDIAL THROMBOSIS" relation="BEFORE" targetEvent="CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="CAUSED BY ACUTE MYOCARDIAL THROMBOSIS" relation="BEFORE" targetEvent="PT WAS FOUND DEAD"/>
+   <eventStmt sourceEvent="CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT WAS FOUND DEAD"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [ STENTING WITH A XIENCE V STENT INTO A 99% RESTENOSED NON-ABBOTT DRUG ELUTING STENT IN THE DISTAL CIRCUMFLEX,]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CAUSED BY ACUTE MYOCARDIAL THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT WAS FOUND DEAD]}</timelineEntry>
+</CNTROTimeLineEventList>

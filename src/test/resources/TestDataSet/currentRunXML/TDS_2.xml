@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/2.txt.owl">
+   <event id="0" name="PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION">
+      <relatedTo targetId="2;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="6" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="6" name="ANOTHER STENT (HELI) WAS PLACED IN THE RCA">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANOTHER STENT (HELI) WAS PLACED IN THE RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="SUB-ACUTE THROMBOSIS IN THE LAD">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="5" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUB-ACUTE THROMBOSIS IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT RETURNED WITH CHEST PAIN AND EKG CHANGES">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT RETURNED WITH CHEST PAIN AND EKG CHANGES</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="PT DEVELOPED CARDIAC ARREST">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DEVELOPED CARDIAC ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT SUBSEQUENTLY DIED ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUBSEQUENTLY DIED </eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE" relation="START" targetEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION" relation="BEFORE" targetEvent="SUB-ACUTE THROMBOSIS IN THE LAD"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION" relation="BEFORE" targetEvent="PT RETURNED WITH CHEST PAIN AND EKG CHANGES"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION" relation="BEFORE" targetEvent="PT DEVELOPED CARDIAC ARREST"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION" relation="BEFORE" targetEvent="PT SUBSEQUENTLY DIED "/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION" relation="EQUAL" targetEvent="ANOTHER STENT (HELI) WAS PLACED IN THE RCA"/>
+   <eventStmt sourceEvent="SUB-ACUTE THROMBOSIS IN THE LAD" relation="BEFORE" targetEvent="PT DEVELOPED CARDIAC ARREST"/>
+   <eventStmt sourceEvent="SUB-ACUTE THROMBOSIS IN THE LAD" relation="BEFORE" targetEvent="PT SUBSEQUENTLY DIED "/>
+   <eventStmt sourceEvent="SUB-ACUTE THROMBOSIS IN THE LAD" relation="FINISH" targetEvent="PT SUBSEQUENTLY DIED "/>
+   <eventStmt sourceEvent="PT RETURNED WITH CHEST PAIN AND EKG CHANGES" relation="BEFORE" targetEvent="PT DEVELOPED CARDIAC ARREST"/>
+   <eventStmt sourceEvent="PT RETURNED WITH CHEST PAIN AND EKG CHANGES" relation="BEFORE" targetEvent="PT SUBSEQUENTLY DIED "/>
+   <eventStmt sourceEvent="PT DEVELOPED CARDIAC ARREST" relation="BEFORE" targetEvent="PT SUBSEQUENTLY DIED "/>
+   <timelineEntry>{StartAntiplateletTherapy [PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE]: InitialDrugElutingStentImplantation [TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION]: [ANOTHER STENT (HELI) WAS PLACED IN THE RCA]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [SUB-ACUTE THROMBOSIS IN THE LAD]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT RETURNED WITH CHEST PAIN AND EKG CHANGES]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PT DEVELOPED CARDIAC ARREST]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT SUBSEQUENTLY DIED ]}</timelineEntry>
+</CNTROTimeLineEventList>

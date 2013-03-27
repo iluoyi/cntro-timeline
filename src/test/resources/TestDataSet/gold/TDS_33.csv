@@ -1,0 +1,74 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1, , , , , , ,0;2
+
+EVENTID-2,3;4;5, ,6, , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-3,4;5, , , , , , 
+
+EVENTID-4,5, , , , , , 
+
+EVENTID-5, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> ON ASPIRIN AND PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELUTING STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PHYSICIAN TREATED THE LESION WITH PREDILATION AND SUCCESSFUL PLACEMENT OF A TAXUS LIBERTE' 3.50X32MM DRUG ELUTING STENT IN THE TARGET LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> STENT THROMBOSIS 
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT HAD A MYOCARDIAL INFARCTION (MI)
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ON ASPIRIN AND PLAVIX ...)==>[ START ]==>( CORONARY DRUG ELUTING STENTING TREATMENT PROCEDU ...)
+   
+EVENT-RELATION # 2: ( ON ASPIRIN AND PLAVIX ...)==>[ START ]==>( PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELU ...)
+   
+EVENT-RELATION # 3: ( PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELU ...)==>[ BEFORE ]==>( STENT THROMBOSIS  ...)
+   
+EVENT-RELATION # 4: ( PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELU ...)==>[ BEFORE ]==>( PT HAD A MYOCARDIAL INFARCTION (MI) ...)
+   
+EVENT-RELATION # 5: ( PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELU ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 6: ( PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELU ...)==>[ EQUAL ]==>( PHYSICIAN TREATED THE LESION WITH PREDILATION AN ...)
+   
+EVENT-RELATION # 7: ( STENT THROMBOSIS  ...)==>[ BEFORE ]==>( PT HAD A MYOCARDIAL INFARCTION (MI) ...)
+   
+EVENT-RELATION # 8: ( STENT THROMBOSIS  ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 9: ( PT HAD A MYOCARDIAL INFARCTION (MI) ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [CORONARY DRUG ELUTING STENTING TREATMENT PROCEDURE]}
+EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [ON ASPIRIN AND PLAVIX]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [PLACEMENT OF A TAXUS LIBERTE' 3.00X12MM DRUG ELUTING STENT] : [PHYSICIAN TREATED THE LESION WITH PREDILATION AND SUCCESSFUL PLACEMENT OF A TAXUS LIBERTE' 3.50X32MM DRUG ELUTING STENT IN THE TARGET LESION]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [STENT THROMBOSIS ]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [PT HAD A MYOCARDIAL INFARCTION (MI)]}
+EVENT-TimeLineEntry # 6: {Patient_Death : [EXPIRED]}

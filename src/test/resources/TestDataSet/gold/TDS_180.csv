@@ -1,0 +1,37 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1, , , , , , 
+
+EVENTID-2, , , , , , ,0
+
+EVENTID-1, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN TH ...)==>[ BEFORE ]==>( VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 2: ( PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH P ...)==>[ START ]==>( A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN TH ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD]}
+EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED]}

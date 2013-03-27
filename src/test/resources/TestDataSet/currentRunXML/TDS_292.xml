@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/292.txt.owl">
+   <event id="0" name="AN ACUTE MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId="1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ACUTE MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2005)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="HE WAS PRESCRIBED PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="3" relation="START"/>
+      <eventProperty name="description" type="text">HE WAS PRESCRIBED PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="3" name="MALE PT HAD TWO CYPHER STENTS IMPLANTED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MALE PT HAD TWO CYPHER STENTS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="LEADING TO ANOTHER MI">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LEADING TO ANOTHER MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="LEADING TO ANOTHER MI"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFARCTION (MI)" relation="BEFORE" targetEvent="MALE PT HAD TWO CYPHER STENTS IMPLANTED"/>
+   <eventStmt sourceEvent="HE WAS PRESCRIBED PLAVIX" relation="START" targetEvent="MALE PT HAD TWO CYPHER STENTS IMPLANTED"/>
+   <eventStmt sourceEvent="MALE PT HAD TWO CYPHER STENTS IMPLANTED" relation="BEFORE" targetEvent="HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS"/>
+   <eventStmt sourceEvent="MALE PT HAD TWO CYPHER STENTS IMPLANTED" relation="BEFORE" targetEvent="LEADING TO ANOTHER MI"/>
+   <eventStmt sourceEvent="HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS" relation="BEFORE" targetEvent="LEADING TO ANOTHER MI"/>
+   <timelineEntry>{Myocardial_Infarction [AN ACUTE MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [HE WAS PRESCRIBED PLAVIX]: InitialDrugElutingStentImplantation [MALE PT HAD TWO CYPHER STENTS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HE SUFFERED THROMBOSIS AT THE SITE OF THE STENTS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [LEADING TO ANOTHER MI]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,34 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_219.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1	 	2	 	 	 	 	
+2	 	 	 	 	 	 	 	
+3	 	 	 	 	 	 	0	
+1	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_219.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1	 	2	 	 	 	 	
+2	 	 	 	 	 	 	 	
+3	 	 	 	 	 	 	0	
+1	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_219.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_219.csv
+########## EVENTS ############
+EVENT # 0 ==> ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO 1ST DIAGONAL BRANCH      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO MID RCA.      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT WAS TAKING ASA AND CLOPIDOGREL 24 HOURS PRIOR TO EVENT      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> STENT THROMBOSIS OF THE MID RCA WAS REPORTED TO HAVE OCCURRED      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO  ...)==>[ BEFORE ]==>( STENT THROMBOSIS OF THE MID RCA WAS REPORTED TO  ...)   
+EVENT-RELATION # 2: ( ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO  ...)==>[ EQUAL ]==>( ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO  ...)   
+EVENT-RELATION # 3: ( PATIENT WAS TAKING ASA AND CLOPIDOGREL 24 HOURS  ...)==>[ START ]==>( ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO  ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO 1ST DIAGONAL BRANCH] : [ONE ENDEAVOR RX DRUG-ELUTING STENT IMPLANTED TO MID RCA.]}EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [PATIENT WAS TAKING ASA AND CLOPIDOGREL 24 HOURS PRIOR TO EVENT]}EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [STENT THROMBOSIS OF THE MID RCA WAS REPORTED TO HAVE OCCURRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1 ]

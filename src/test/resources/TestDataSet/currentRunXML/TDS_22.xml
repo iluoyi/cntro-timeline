@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/22.txt.owl">
+   <event id="0" name="TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY">
+      <relatedTo targetId="1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name="THROMBOSIS OF THE TAXUS STENT">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS OF THE TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= Feb 2006)(Granularity=MONTH)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="3" name="ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIET DIED ">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIET DIED </eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="THROMBOSIS OF THE TAXUS STENT"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY" relation="BEFORE" targetEvent="PATIET DIED "/>
+   <eventStmt sourceEvent="THROMBOSIS OF THE TAXUS STENT" relation="BEFORE" targetEvent="PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY"/>
+   <eventStmt sourceEvent="THROMBOSIS OF THE TAXUS STENT" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="THROMBOSIS OF THE TAXUS STENT" relation="BEFORE" targetEvent="PATIET DIED "/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIET DIED "/>
+   <eventStmt sourceEvent="PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY" relation="BEFORE" targetEvent="PATIET DIED "/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS OF THE TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIET DIED ]}</timelineEntry>
+</CNTROTimeLineEventList>

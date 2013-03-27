@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/244.txt.owl">
+   <event id="0" name="PLAVIX WAS PRESCRIBED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PLAVIX WAS PRESCRIBED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA">
+      <relatedTo targetId="2;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="LATE STENT THROMBOSIS">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="CAUSED MYOCARDIAL INFARCTION. TREATMENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CAUSED MYOCARDIAL INFARCTION. TREATMENT</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PLAVIX WAS PRESCRIBED" relation="START" targetEvent="TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA" relation="BEFORE" targetEvent="CAUSED MYOCARDIAL INFARCTION. TREATMENT"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="CAUSED MYOCARDIAL INFARCTION. TREATMENT"/>
+   <timelineEntry>{StartAntiplateletTherapy [PLAVIX WAS PRESCRIBED]: InitialDrugElutingStentImplantation [TWO CYPHER STENTS OF UNK LENGTH AND DIAMETER, UNK LOT NUMBER AND UNK EXPIRATION DATE, WERE DEPLOYED AT UNK PRESSURE IN AN UNIDENTIFIED SECTION OF THE RCA]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CAUSED MYOCARDIAL INFARCTION. TREATMENT]}</timelineEntry>
+</CNTROTimeLineEventList>

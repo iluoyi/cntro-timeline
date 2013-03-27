@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/48.txt.owl">
+   <event id="0" name="THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT">
+      <relatedTo targetId="1;2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="1;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="INTRA-PROCEDURE MEDICATIONS INCLUDED ASPIRIN, CLOPIDOGREL AND HEPARIN (5000 U)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="6" relation="START"/>
+      <eventProperty name="description" type="text">INTRA-PROCEDURE MEDICATIONS INCLUDED ASPIRIN, CLOPIDOGREL AND HEPARIN (5000 U)</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="3.5X18MM CYPER SELECT STENT">
+      <relatedTo targetId="1;7;7;3;4;8" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3.5X18MM CYPER SELECT STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="9" name="AN ACUTE MYOCARDIAL INFRACTION">
+      <relatedTo targetId="1;7;3;4;8" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ACUTE MYOCARDIAL INFRACTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="PATIENT RETURNED">
+      <relatedTo targetId="1;3;4;8" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT RETURNED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT">
+      <relatedTo targetId="1;3;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="10;11;12" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="11" name="0% STENOSED LESION IN THE OBTUSE MARGINAL WAS TREATED WITH A 2.5X23MM CYPHER SELECT STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">0% STENOSED LESION IN THE OBTUSE MARGINAL WAS TREATED WITH A 2.5X23MM CYPHER SELECT STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="12" name="A 70%  STENOSED LESION IN PROXIMAL CIRCUMFLEX WAS TREATED WITH A NON-CYPHER STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 70%  STENOSED LESION IN PROXIMAL CIRCUMFLEX WAS TREATED WITH A NON-CYPHER STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="10" name=" NEW LESION IN THE DISTAL LAD WAS TREATED WITH A 2.5X23MM CYPHER SELECT STEN">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> NEW LESION IN THE DISTAL LAD WAS TREATED WITH A 2.5X23MM CYPHER SELECT STEN</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT RETURNED ">
+      <relatedTo targetId="1;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT RETURNED </eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="IT WAS TREATED WITH AN UNK CIPHER STENT">
+      <relatedTo targetId="4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IT WAS TREATED WITH AN UNK CIPHER STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= )(Granularity=DAY)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="4" name="EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT" relation="BEFORE" targetEvent="ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="INTRA-PROCEDURE MEDICATIONS INCLUDED ASPIRIN, CLOPIDOGREL AND HEPARIN (5000 U)" relation="START" targetEvent="3.5X18MM CYPER SELECT STENT"/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="PATIENT RETURNED"/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="PATIENT RETURNED"/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="3.5X18MM CYPER SELECT STENT" relation="BEFORE" targetEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFRACTION" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFRACTION" relation="BEFORE" targetEvent="PATIENT RETURNED"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFRACTION" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFRACTION" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="AN ACUTE MYOCARDIAL INFRACTION" relation="BEFORE" targetEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="PATIENT RETURNED" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="PATIENT RETURNED" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="PATIENT RETURNED" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT RETURNED" relation="BEFORE" targetEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="BEFORE" targetEvent="PATIENT RETURNED "/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="EQUAL" targetEvent=" NEW LESION IN THE DISTAL LAD WAS TREATED WITH A 2.5X23MM CYPHER SELECT STEN"/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="EQUAL" targetEvent="0% STENOSED LESION IN THE OBTUSE MARGINAL WAS TREATED WITH A 2.5X23MM CYPHER SELECT STENT"/>
+   <eventStmt sourceEvent="OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT" relation="EQUAL" targetEvent="A 70%  STENOSED LESION IN PROXIMAL CIRCUMFLEX WAS TREATED WITH A NON-CYPHER STENT"/>
+   <eventStmt sourceEvent="PATIENT RETURNED " relation="BEFORE" targetEvent="IT WAS TREATED WITH AN UNK CIPHER STENT"/>
+   <eventStmt sourceEvent="PATIENT RETURNED " relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="IT WAS TREATED WITH AN UNK CIPHER STENT" relation="BEFORE" targetEvent="EXPIRED"/>
+   <eventStmt sourceEvent="IT WAS TREATED WITH AN UNK CIPHER STENT" relation="BEFORE" targetEvent="EXPIRED"/>
+   <timelineEntry>{Late_Stent_Thrombosis [THE PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [INTRA-PROCEDURE MEDICATIONS INCLUDED ASPIRIN, CLOPIDOGREL AND HEPARIN (5000 U)]: InitialDrugElutingStentImplantation [3.5X18MM CYPER SELECT STENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [AN ACUTE MYOCARDIAL INFRACTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT RETURNED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT]: [0% STENOSED LESION IN THE OBTUSE MARGINAL WAS TREATED WITH A 2.5X23MM CYPHER SELECT STENT]: [A 70%  STENOSED LESION IN PROXIMAL CIRCUMFLEX WAS TREATED WITH A NON-CYPHER STENT]: [ NEW LESION IN THE DISTAL LAD WAS TREATED WITH A 2.5X23MM CYPHER SELECT STEN]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT RETURNED ]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [IT WAS TREATED WITH AN UNK CIPHER STENT]}</timelineEntry>
+   <timelineEntry>{Patient_Death [EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

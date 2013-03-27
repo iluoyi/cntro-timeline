@@ -1,0 +1,53 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> EXPERIENCING AND ACUTE MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> CYPHER STENT IMPLANTED IN THE LAD
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( EXPERIENCING AND ACUTE MI ...)==>[ BEFORE ]==>( THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( EXPERIENCING AND ACUTE MI ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 3: ( EXPERIENCING AND ACUTE MI ...)==>[ BEFORE ]==>( CYPHER STENT IMPLANTED IN THE LAD ...)
+   
+EVENT-RELATION # 4: ( CYPHER STENT IMPLANTED IN THE LAD ...)==>[ BEFORE ]==>( THROMBOSIS ...)
+   
+EVENT-RELATION # 5: ( CYPHER STENT IMPLANTED IN THE LAD ...)==>[ BEFORE ]==>( THROMBOSIS ...)
+   
+EVENT-RELATION # 6: ( CYPHER STENT IMPLANTED IN THE LAD ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 7: ( THROMBOSIS ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction [EXPERIENCING AND ACUTE MI]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation [CYPHER STENT IMPLANTED IN THE LAD]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis [THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Patient_Death [EXPIRED]}

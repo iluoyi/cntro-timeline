@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/202.txt.owl">
+   <event id="0" name="TWO UNSPECIFIED TAXUS EXPRESS2 STENTS WERE IMPLANTED AT THE LESION SITE">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO UNSPECIFIED TAXUS EXPRESS2 STENTS WERE IMPLANTED AT THE LESION SITE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="LATE STENT THROMBOSIS WAS FOUND">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE STENT THROMBOSIS WAS FOUND</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT EXPERIENCED MYOCARDIAL INFARCTION (MI)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED MYOCARDIAL INFARCTION (MI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TWO UNSPECIFIED TAXUS EXPRESS2 STENTS WERE IMPLANTED AT THE LESION SITE" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS WAS FOUND"/>
+   <eventStmt sourceEvent="TWO UNSPECIFIED TAXUS EXPRESS2 STENTS WERE IMPLANTED AT THE LESION SITE" relation="BEFORE" targetEvent="PATIENT EXPERIENCED MYOCARDIAL INFARCTION (MI)"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS WAS FOUND" relation="BEFORE" targetEvent="PATIENT EXPERIENCED MYOCARDIAL INFARCTION (MI)"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TWO UNSPECIFIED TAXUS EXPRESS2 STENTS WERE IMPLANTED AT THE LESION SITE]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE STENT THROMBOSIS WAS FOUND]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT EXPERIENCED MYOCARDIAL INFARCTION (MI)]}</timelineEntry>
+</CNTROTimeLineEventList>

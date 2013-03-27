@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/4.txt.owl">
+   <event id="0" name="2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY">
+      <relatedTo targetId="1;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD">
+      <relatedTo targetId="3;4;4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="3" name="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD">
+      <relatedTo targetId="4;5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="6" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT RETURNED">
+      <relatedTo targetId="5;6" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT RETURNED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="AN ABBOTT STENT WAS PLACED">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN ABBOTT STENT WAS PLACED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="2.5X18MM CYPHER WAS PLACED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">2.5X18MM CYPHER WAS PLACED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PT DIED THE NEXT DAY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT DIED THE NEXT DAY</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY" relation="BEFORE" targetEvent="2.5X18MM CYPHER WAS PLACED"/>
+   <eventStmt sourceEvent="2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY" relation="BEFORE" targetEvent="2.5X18MM CYPHER WAS PLACED"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="PT DIED THE NEXT DAY"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="BEFORE" targetEvent="AN ABBOTT STENT WAS PLACED"/>
+   <eventStmt sourceEvent="PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD" relation="EQUAL" targetEvent="2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY"/>
+   <eventStmt sourceEvent="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD" relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD" relation="BEFORE" targetEvent="PT DIED THE NEXT DAY"/>
+   <eventStmt sourceEvent="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD" relation="BEFORE" targetEvent="AN ABBOTT STENT WAS PLACED"/>
+   <eventStmt sourceEvent="THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD" relation="FINISH" targetEvent="AN ABBOTT STENT WAS PLACED"/>
+   <eventStmt sourceEvent="PT RETURNED" relation="BEFORE" targetEvent="PT DIED THE NEXT DAY"/>
+   <eventStmt sourceEvent="PT RETURNED" relation="BEFORE" targetEvent="AN ABBOTT STENT WAS PLACED"/>
+   <eventStmt sourceEvent="AN ABBOTT STENT WAS PLACED" relation="BEFORE" targetEvent="PT DIED THE NEXT DAY"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [2.5X18MM CYPHER IMPLANTED IN THE FIRST DIAGONAL ARTERY]: [PT HAD A 3X33MM CYPHER IMPLANTED IN THE LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS IN THE PROXIMAL PORTION OF THE CYPHER IN THE LAD]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT RETURNED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [AN ABBOTT STENT WAS PLACED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [2.5X18MM CYPHER WAS PLACED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT DIED THE NEXT DAY]}</timelineEntry>
+</CNTROTimeLineEventList>

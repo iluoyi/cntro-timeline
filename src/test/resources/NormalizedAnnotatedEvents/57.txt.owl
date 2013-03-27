@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY AE-lst "http://www.cntro.org/AE-lst.owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY CNTRO "http://informatics.mayo.edu/CNTRO#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY annotation_1 "http://informatics.mayo.edu/annotation_1#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY CNTemporalRelation "http://informatics.mayo.edu/CNTemporalRelation#" >
+]>
+
+
+<rdf:RDF xmlns="http://informatics.mayo.edu/annotation_1#"
+     xml:base="http://informatics.mayo.edu/annotation_1"
+     xmlns:AE-lst="http://www.cntro.org/AE-lst.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CNTemporalRelation="http://informatics.mayo.edu/CNTemporalRelation#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:annotation_1="http://informatics.mayo.edu/annotation_1#"
+     xmlns:CNTRO="http://informatics.mayo.edu/CNTRO#">
+    <owl:Ontology rdf:about="http://informatics.mayo.edu/annotation_1">
+        <owl:imports rdf:resource="http://informatics.mayo.edu/CNTRO/AE-lst%20(new).owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration1">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en"> ALMOST 6 MONTHS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration2">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en">APPROX 8 WEEKS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Duration3 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Duration3">
+        <rdf:type rdf:resource="&CNTRO;Duration"/>
+        <rdfs:label xml:lang="en">2 DAYS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#ER_Admission1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;ER_Admission1">
+        <rdf:type rdf:resource="&AE-lst;ER_Admission"/>
+        <rdfs:label xml:lang="en">PT RETURNED</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;ER_Admission1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#ER_Admission2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;ER_Admission2">
+        <rdf:type rdf:resource="&AE-lst;ER_Admission"/>
+        <rdfs:label xml:lang="en">PT RETURNED</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;FollowUpStentProcedure5"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;ER_Admission2"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;FollowUpStentProcedure5"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure1">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">OSTIAL LESION IN THE PROXIMAL LAD WAS TREATED WITH A 3.0X23MM CYPHER SELECT STENT</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;ER_Admission2"/>
+        <CNTRO:equal rdf:resource="&annotation_1;FollowUpStentProcedure2"/>
+        <CNTRO:equal rdf:resource="&annotation_1;FollowUpStentProcedure3"/>
+        <CNTRO:equal rdf:resource="&annotation_1;FollowUpStentProcedure4"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration2"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;ER_Admission2"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;FollowUpStentProcedure1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure2">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">NEW LESION IN THE DISTAL LAD WAS TREATED WITH A 2.5X23MM CYPHER SELECT STENT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure3 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure3">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">70% STENOSED LESION IN THE OBTUSE MARGINAL WAS TREATED WITH A 2.5X33MM CYPHER SELECT STENT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure4 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure4">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">70% STENOSED LESION IN THE PROXIMAL CIRCUMFLEX WAS TREATED WITH A NON- CYPHER STENT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#FollowUpStentProcedure5 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;FollowUpStentProcedure5">
+        <rdf:type rdf:resource="&AE-lst;FollowUpStentProcedure"/>
+        <rdfs:label xml:lang="en">TREATED WITH A 3.5X23MM UNK CYPHER STENT</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;Patient_Death1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration3"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;FollowUpStentProcedure5"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;Patient_Death1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#InitialDrugElutingStentImplantation1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;InitialDrugElutingStentImplantation1">
+        <rdf:type rdf:resource="&AE-lst;InitialDrugElutingStentImplantation"/>
+        <rdfs:label xml:lang="en">DIRECT STENTING WAS PERFORMED WITH A 3.5X18MM CYPHER SELECT STENT AT UNK INFLATION PRESSURE</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;ER_Admission1"/>
+        <CNTRO:hasValidTime rdf:resource="&annotation_1;TimeInstant1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasTimeOffset rdf:resource="&annotation_1;Duration1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;ER_Admission1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;InitialDrugElutingStentImplantation1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Late_Stent_Thrombosis1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Late_Stent_Thrombosis1">
+        <rdf:type rdf:resource="&AE-lst;Late_Stent_Thrombosis"/>
+        <rdfs:label xml:lang="en">PROXIMAL CIRCUMFLEX WAS TOTALLY OCCLUDED AND THROMBUS WAS PRESENT</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;Myocardial_Infarction2"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;Late_Stent_Thrombosis1"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;Myocardial_Infarction2"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Myocardial_Infarction1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Myocardial_Infarction1">
+        <rdf:type rdf:resource="&AE-lst;Myocardial_Infarction"/>
+        <rdfs:label xml:lang="en">ACUTE MYOCARDIAL INFARCTION</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;ER_Admission1"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;ER_Admission1"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;Myocardial_Infarction1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Myocardial_Infarction2 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Myocardial_Infarction2">
+        <rdf:type rdf:resource="&AE-lst;Myocardial_Infarction"/>
+        <rdfs:label xml:lang="en">ACUTE MYOCARDIAL INFARCTION</rdfs:label>
+        <CNTRO:before rdf:resource="&annotation_1;ER_Admission2"/>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedProperty rdf:resource="&CNTRO;before"/>
+        <AE-lst:hasGranularity rdf:resource="&CNTRO;day"/>
+        <owl:annotatedTarget rdf:resource="&annotation_1;ER_Admission2"/>
+        <owl:annotatedSource rdf:resource="&annotation_1;Myocardial_Infarction2"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#Patient_Death1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;Patient_Death1">
+        <rdf:type rdf:resource="&AE-lst;Patient_Death"/>
+        <rdfs:label xml:lang="en">DEATH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://informatics.mayo.edu/annotation_1#TimeInstant1 -->
+
+    <owl:NamedIndividual rdf:about="&annotation_1;TimeInstant1">
+        <rdf:type rdf:resource="&CNTRO;TimeInstant"/>
+        <rdfs:label xml:lang="en">2004</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.22702) http://owlapi.sourceforge.net -->
+

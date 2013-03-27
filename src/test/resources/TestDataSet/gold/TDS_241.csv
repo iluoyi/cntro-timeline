@@ -1,0 +1,59 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-4, , , , , , ,3
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> ACUTE MYOCARDIAL INFARCTION (MI)
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> PRESCRIBED PLAVIX 
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:THREE MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 1 ==> HE SUFFERED VERY LATE STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> LEADING TO ANOTHER MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( ACUTE MYOCARDIAL INFARCTION (MI) ...)==>[ BEFORE ]==>( HE SUFFERED VERY LATE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( ACUTE MYOCARDIAL INFARCTION (MI) ...)==>[ BEFORE ]==>( LEADING TO ANOTHER MI ...)
+   
+EVENT-RELATION # 3: ( ACUTE MYOCARDIAL INFARCTION (MI) ...)==>[ BEFORE ]==>( PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMA ...)
+   
+EVENT-RELATION # 4: ( PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMA ...)==>[ BEFORE ]==>( HE SUFFERED VERY LATE STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 5: ( PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMA ...)==>[ BEFORE ]==>( LEADING TO ANOTHER MI ...)
+   
+EVENT-RELATION # 6: ( PRESCRIBED PLAVIX  ...)==>[ START ]==>( PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMA ...)
+   
+EVENT-RELATION # 7: ( HE SUFFERED VERY LATE STENT THROMBOSIS ...)==>[ BEFORE ]==>( LEADING TO ANOTHER MI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [ACUTE MYOCARDIAL INFARCTION (MI)]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PT HAD ONE CYPHER STENT IMPLANTED IN HIS PROXIMAL LEFT ANTERIOR DESCENDING ARTERY (LAD)]}
+EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [PRESCRIBED PLAVIX ]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [HE SUFFERED VERY LATE STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [LEADING TO ANOTHER MI]}

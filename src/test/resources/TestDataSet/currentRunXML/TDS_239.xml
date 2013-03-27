@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/239.txt.owl">
+   <event id="0" name="MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="2" relation="START"/>
+      <eventProperty name="description" type="text">MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="A 2.5X16MM TAXUS WAS IMPLANTED">
+      <relatedTo targetId="3;4;5;5;6;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="8" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5X16MM TAXUS WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT HAD STOPPED TAKING PLAVIX">
+      <relatedTo targetId="3;4;5;5;6;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD STOPPED TAKING PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY">
+      <relatedTo targetId="3;3;4;6;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH">
+      <relatedTo targetId="4;6;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION">
+      <relatedTo targetId="4;7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="EMERGENTLY HOSPITALIZED">
+      <relatedTo targetId="7" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">EMERGENTLY HOSPITALIZED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="9" name="MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="7" relation="START"/>
+      <eventProperty name="description" type="text">MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX" relation="FINISH" targetEvent="PATIENT HAD STOPPED TAKING PLAVIX"/>
+   <eventStmt sourceEvent="MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX" relation="START" targetEvent="A 2.5X16MM TAXUS WAS IMPLANTED"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="A 2.5X16MM TAXUS WAS IMPLANTED" relation="EQUAL" targetEvent="A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PATIENT HAD STOPPED TAKING PLAVIX" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY" relation="BEFORE" targetEvent="EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY" relation="BEFORE" targetEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH" relation="BEFORE" targetEvent="EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH" relation="BEFORE" targetEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="EMERGENTLY HOSPITALIZED"/>
+   <eventStmt sourceEvent="DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="EMERGENTLY HOSPITALIZED" relation="BEFORE" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <eventStmt sourceEvent="MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX" relation="START" targetEvent="IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED"/>
+   <timelineEntry>{StartAntiplateletTherapy [MEDICATIONS PRESCRIBED AT DISCHARGE INCLUDED ASPIRIN AND PLAVIX]: InitialDrugElutingStentImplantation [A 2.5X16MM TAXUS WAS IMPLANTED]: [A 2.5X8MM CYPHER IMPLANTED PROXIMALLY AND OVERLAPPING THE TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT HAD STOPPED TAKING PLAVIX]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PATIENT UNDERWENT A LEFT KNEE ARTHROPLASTY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CORONARY ANGIOGRAPHY REVEALED THE LAD WAS TOTALLY OCCLUDED IN THE PREVIOUSLY STENTED SEGMENT PAST THE ORIGIN OF THE DIAGONAL BRANCH]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [DIAGNOSED WITH ANTERIOR APICAL MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [EMERGENTLY HOSPITALIZED]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [IMPLANTATION OF A COMPETITOR+S STENT WAS CONDUCTED]: StartAntiplateletTherapy [MEDICATIONS AT DISCHARGE INCLUDED ASPIRIN, PLAVIX AND CHANTIX]}</timelineEntry>
+</CNTROTimeLineEventList>

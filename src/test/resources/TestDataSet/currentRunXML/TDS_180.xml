@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/180.txt.owl">
+   <event id="0" name="A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD">
+      <relatedTo targetId="1;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD" relation="BEFORE" targetEvent="VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD" relation="BEFORE" targetEvent="VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED"/>
+   <eventStmt sourceEvent="PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY" relation="START" targetEvent="A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A 3.0X16MM TAXUS EXPRESS2 STENT WAS PLACED IN THE LESION IN THE LAD]: StartAntiplateletTherapy [PATIENT WAS PRESCRIBED, AND WAS COMPLIANT WITH PLAVIX THERAPY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [VESSEL REOCCLUSION DUE TO THROMBOSIS OCCURRED]}</timelineEntry>
+</CNTROTimeLineEventList>

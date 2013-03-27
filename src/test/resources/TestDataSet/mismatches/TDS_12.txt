@@ -1,0 +1,113 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_12.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3;4;5;6;7	 	 	 	 	 	 	
+8	9;10	 	 	 	 	 	11;1;12	
+12	 	 	 	 	 	 	 	
+11	 	 	 	 	 	 	 	
+10	9	 	 	 	 	 	 	
+9	 	 	 	 	 	 	 	
+4	5;6	 	 	2;7	 	 	 	
+7	5;6	 	 	 	 	 	 	
+5	6	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_12.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3;4;5;6;7;7	 	 	 	 	 	 	
+8	 	 	 	 	 	 	 	
+9	10;11	 	 	 	 	 	8;1;12	
+12	 	 	 	 	 	 	 	
+2	 	 	 	 	 	 	 	
+7	5;6	 	 	 	 	 	 	
+11	10	 	 	 	 	 	 	
+10	 	 	 	 	 	 	 	
+4	5;6	 	 	2;7	 	 	 	
+3	 	 	 	 	 	 	 	
+5	6	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_12.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_12.csv
+########## EVENTS ############
+EVENT # 0 ==> VENTRICULAR FIBRILLATION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> INDEX PROCEDURE      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 8 ==> ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 12 ==> DEPLOYING ONE 3.0/23MM CYPHER STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 11 ==> DEPLOYING ONE 2.5/18MM CYPHER STENT      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 10 ==> STOPPED TAKING THEIR PLAVIX      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 9 ==> PT WAS BROUGHT TO THE ER       		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> LATE THROMBOSIS.      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 7 ==> RE-PTCA TO ONE OF THE LESIONS       		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> CARDIAC ARREST      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> DIED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> VESSELS WERE RE-STENTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PREVIOUSLY PLACE STENTS WERE OCCLUDED WITH THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( VESSELS WERE RE-STENTED ...)   
+EVENT-RELATION # 2: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PREVIOUSLY PLACE STENTS WERE OCCLUDED WITH THROM ...)   
+EVENT-RELATION # 3: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( LATE THROMBOSIS. ...)   
+EVENT-RELATION # 4: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)   
+EVENT-RELATION # 5: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 6: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( RE-PTCA TO ONE OF THE LESIONS  ...)   
+EVENT-RELATION # 7: ( ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA ...)==>[ BEFORE ]==>( PT WAS BROUGHT TO THE ER  ...)   
+EVENT-RELATION # 8: ( ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA ...)==>[ BEFORE ]==>( STOPPED TAKING THEIR PLAVIX ...)   
+EVENT-RELATION # 9: ( ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA ...)==>[ START ]==>( DEPLOYING ONE 2.5/18MM CYPHER STENT ...)   
+EVENT-RELATION # 10: ( ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA ...)==>[ START ]==>( INDEX PROCEDURE ...)   
+EVENT-RELATION # 11: ( ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA ...)==>[ START ]==>( DEPLOYING ONE 3.0/23MM CYPHER STENT ...)   
+EVENT-RELATION # 12: ( STOPPED TAKING THEIR PLAVIX ...)==>[ BEFORE ]==>( PT WAS BROUGHT TO THE ER  ...)   
+EVENT-RELATION # 13: ( LATE THROMBOSIS. ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)   
+EVENT-RELATION # 14: ( LATE THROMBOSIS. ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 15: ( LATE THROMBOSIS. ...)==>[ FINISH ]==>( VESSELS WERE RE-STENTED ...)   
+EVENT-RELATION # 16: ( LATE THROMBOSIS. ...)==>[ FINISH ]==>( RE-PTCA TO ONE OF THE LESIONS  ...)   
+EVENT-RELATION # 17: ( RE-PTCA TO ONE OF THE LESIONS  ...)==>[ BEFORE ]==>( CARDIAC ARREST ...)   
+EVENT-RELATION # 18: ( RE-PTCA TO ONE OF THE LESIONS  ...)==>[ BEFORE ]==>( DIED ...)   
+EVENT-RELATION # 19: ( CARDIAC ARREST ...)==>[ BEFORE ]==>( DIED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [VENTRICULAR FIBRILLATION]}EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [INDEX PROCEDURE]}EVENT-TimeLineEntry # 3: {StartAntiplateletTherapy : [ONGOING MEDICATIONS INCLUDED PLAVIX AND ASA]}EVENT-TimeLineEntry # 4: {InitialDrugElutingStentImplantation : [DEPLOYING ONE 3.0/23MM CYPHER STENT] : [DEPLOYING ONE 2.5/18MM CYPHER STENT]}EVENT-TimeLineEntry # 5: {EndAntiplateletTherapy : [STOPPED TAKING THEIR PLAVIX]}EVENT-TimeLineEntry # 6: {ER_Admission : [PT WAS BROUGHT TO THE ER ]}EVENT-TimeLineEntry # 7: {Late_Stent_Thrombosis : [LATE THROMBOSIS.]}EVENT-TimeLineEntry # 8: {FollowUpStentProcedure : [RE-PTCA TO ONE OF THE LESIONS ]}EVENT-TimeLineEntry # 9: {Myocardial_Infarction : [CARDIAC ARREST]}EVENT-TimeLineEntry # 10: {Patient_Death : [DIED]}EVENT-TimeLineEntry # 11: {FollowUpStentProcedure : [VESSELS WERE RE-STENTED]}EVENT-TimeLineEntry # 12: {Late_Stent_Thrombosis : [PREVIOUSLY PLACE STENTS WERE OCCLUDED WITH THROMBOSIS]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3;4;5;6;7 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3;4;5;6;7;7 ]
+
+Expected: Event [ 8 ] --> [  BEFORE ] --> Event [ 9;10 ]
+Found: Event [ 8 ] --> [  BEFORE ] --> Event [   ]
+
+Expected: Event [ 8 ] --> [  START  ] --> Event [ 11;1;12 ]
+Found: Event [ 8 ] --> [  START  ] --> Event [   ]
+
+Expected: Event [ 12 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 9 ] --> [  BEFORE ] --> Event [ 10;11 ]
+
+Expected: Event [ 12 ] --> [  START  ] --> Event [   ]
+Found: Event [ 9 ] --> [  START  ] --> Event [ 8;1;12 ]
+
+Expected: Event [ 10 ] --> [  BEFORE ] --> Event [ 9 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [   ]
+
+Expected: Event [ 9 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 7 ] --> [  BEFORE ] --> Event [ 5;6 ]
+
+Expected: Event [ 4 ] --> [  BEFORE ] --> Event [ 5;6 ]
+Found: Event [ 11 ] --> [  BEFORE ] --> Event [ 10 ]
+
+Expected: Event [ 4 ] --> [  FINISH ] --> Event [ 2;7 ]
+Found: Event [ 11 ] --> [  FINISH ] --> Event [   ]
+
+Expected: Event [ 7 ] --> [  BEFORE ] --> Event [ 5;6 ]
+Found: Event [ 10 ] --> [  BEFORE ] --> Event [   ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 6 ]
+Found: Event [ 4 ] --> [  BEFORE ] --> Event [ 5;6 ]
+
+Expected: Event [ 5 ] --> [  FINISH ] --> Event [   ]
+Found: Event [ 4 ] --> [  FINISH ] --> Event [ 2;7 ]
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [   ]
+Found: Event [ 5 ] --> [  BEFORE ] --> Event [ 6 ]

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/45.txt.owl">
+   <event id="0" name="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE">
+      <relatedTo targetId="1;2;3;4;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT DISCONTINUED PLAVIX THERAPY">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT DISCONTINUED PLAVIX THERAPY</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PATIENT SUDDENLY EXPIRED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUDDENLY EXPIRED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE" relation="BEFORE" targetEvent="STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE" relation="BEFORE" targetEvent="PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE" relation="BEFORE" targetEvent="PATIENT SUDDENLY EXPIRED"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE" relation="BEFORE" targetEvent="PATIENT DISCONTINUED PLAVIX THERAPY"/>
+   <eventStmt sourceEvent="TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE" relation="BEFORE" targetEvent="PATIENT DISCONTINUED PLAVIX THERAPY"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED PLAVIX THERAPY" relation="BEFORE" targetEvent="STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED PLAVIX THERAPY" relation="BEFORE" targetEvent="STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED PLAVIX THERAPY" relation="BEFORE" targetEvent="PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)"/>
+   <eventStmt sourceEvent="PATIENT DISCONTINUED PLAVIX THERAPY" relation="BEFORE" targetEvent="PATIENT SUDDENLY EXPIRED"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS" relation="BEFORE" targetEvent="PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS" relation="BEFORE" targetEvent="PATIENT SUDDENLY EXPIRED"/>
+   <eventStmt sourceEvent="PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)" relation="BEFORE" targetEvent="PATIENT SUDDENLY EXPIRED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [TAXUS EXPRESS2 3.00X12MM DES WAS USED IN THE PROCEDURE]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PATIENT DISCONTINUED PLAVIX THERAPY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT HAD EXPERIENCED ACUTE MYOCARDIAL INFARCTION (AMI)]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PATIENT SUDDENLY EXPIRED]}</timelineEntry>
+</CNTROTimeLineEventList>

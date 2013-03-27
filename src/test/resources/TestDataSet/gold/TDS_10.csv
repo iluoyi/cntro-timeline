@@ -1,0 +1,29 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1, , , , , , 
+
+EVENTID-1, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> POST PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBUS PRESENT IN THE LEFT MAIN
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( POST PROCEDURE ...)==>[ BEFORE ]==>( THROMBUS PRESENT IN THE LEFT MAIN ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [POST PROCEDURE]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [THROMBUS PRESENT IN THE LEFT MAIN]}

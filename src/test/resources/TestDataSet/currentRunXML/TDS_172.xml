@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/172.txt.owl">
+   <event id="0" name="A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="3" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="A SECOND TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE DIAGONAL ARTERY">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A SECOND TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE DIAGONAL ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT EXPERIENCED A MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)" relation="EQUAL" targetEvent="A SECOND TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE DIAGONAL ARTERY"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS" relation="BEFORE" targetEvent="PATIENT EXPERIENCED A MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [A TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE LEFT ANTERIOR DESCENDING ARTERY (LAD)]: [A SECOND TAXUS EXPRESS2 STENT WAS IMPLANTED IN THE DIAGONAL ARTERY]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS WAS DISCOVERED IN THE PREVIOUSLY IMPLANTED STENTS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT EXPERIENCED A MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

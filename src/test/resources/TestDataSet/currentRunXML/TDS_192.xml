@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/192.txt.owl">
+   <event id="0" name="PATIENT WAS DISCHARGED ON PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="1" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT WAS DISCHARGED ON PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION">
+      <relatedTo targetId="3;4;1;1;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PLAVIX TREATMENT WAS STOPPED">
+      <relatedTo targetId="3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PLAVIX TREATMENT WAS STOPPED</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="VERY LATE STENT THROMBOSIS">
+      <relatedTo targetId="4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">VERY LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PATIENT PRESENTED EMERGENTLY">
+      <relatedTo targetId="5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED EMERGENTLY</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="A NON BSC STENT WAS PLACED IN THE LESION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A NON BSC STENT WAS PLACED IN THE LESION</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT WAS DISCHARGED ON PLAVIX" relation="FINISH" targetEvent="PLAVIX TREATMENT WAS STOPPED"/>
+   <eventStmt sourceEvent="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION" relation="BEFORE" targetEvent="VERY LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION" relation="BEFORE" targetEvent="PLAVIX TREATMENT WAS STOPPED"/>
+   <eventStmt sourceEvent="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION" relation="BEFORE" targetEvent="PLAVIX TREATMENT WAS STOPPED"/>
+   <eventStmt sourceEvent="AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION" relation="BEFORE" targetEvent="A NON BSC STENT WAS PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="PLAVIX TREATMENT WAS STOPPED" relation="BEFORE" targetEvent="VERY LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="PLAVIX TREATMENT WAS STOPPED" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="PLAVIX TREATMENT WAS STOPPED" relation="BEFORE" targetEvent="A NON BSC STENT WAS PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="PATIENT PRESENTED EMERGENTLY"/>
+   <eventStmt sourceEvent="VERY LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="A NON BSC STENT WAS PLACED IN THE LESION"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED EMERGENTLY" relation="BEFORE" targetEvent="A NON BSC STENT WAS PLACED IN THE LESION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [AN UNKNOWN TAXUS EXPRESS2 DRUG ELUTING STENT WAS IMPLANTED IN THE LESION]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [PLAVIX TREATMENT WAS STOPPED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [VERY LATE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED EMERGENTLY]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [A NON BSC STENT WAS PLACED IN THE LESION]}</timelineEntry>
+   <timelineEntry>UNCLASSIFIED EVENTS:{StartAntiplateletTherapy [PATIENT WAS DISCHARGED ON PLAVIX]}</timelineEntry>
+</CNTROTimeLineEventList>

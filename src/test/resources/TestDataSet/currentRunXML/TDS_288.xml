@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/288.txt.owl">
+   <event id="0" name="STENT WAS IMPLANTED IN HIS LAD">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT WAS IMPLANTED IN HIS LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PLAVIX WAS PRESCRIBED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="0" relation="START"/>
+      <eventProperty name="description" type="text">PLAVIX WAS PRESCRIBED</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">{TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}</eventProperty>
+   </event>
+   <event id="1" name="HE SUFFERED LATE STENT THROMBOSIS">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">HE SUFFERED LATE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="RESULTING IN MYOCARDIAL INFARCTION">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">RESULTING IN MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="STENT WAS IMPLANTED IN HIS LAD" relation="BEFORE" targetEvent="HE SUFFERED LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="STENT WAS IMPLANTED IN HIS LAD" relation="BEFORE" targetEvent="HE SUFFERED LATE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="STENT WAS IMPLANTED IN HIS LAD" relation="BEFORE" targetEvent="RESULTING IN MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PLAVIX WAS PRESCRIBED" relation="START" targetEvent="STENT WAS IMPLANTED IN HIS LAD"/>
+   <eventStmt sourceEvent="HE SUFFERED LATE STENT THROMBOSIS" relation="BEFORE" targetEvent="RESULTING IN MYOCARDIAL INFARCTION"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [STENT WAS IMPLANTED IN HIS LAD]: StartAntiplateletTherapy [PLAVIX WAS PRESCRIBED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [HE SUFFERED LATE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [RESULTING IN MYOCARDIAL INFARCTION]}</timelineEntry>
+</CNTROTimeLineEventList>

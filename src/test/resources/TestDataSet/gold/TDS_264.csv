@@ -1,0 +1,47 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2, , , , , , 
+
+EVENTID-3, , , , , , ,0
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A CYPHER STENT IMPLANTED IN A CRITICAL STENOSIS IN THIS CIRCUMFLEX ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2005)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> HE WAS PRESCRIBED PLAVIX
+      		[Type = StartAntiplateletTherapy][Computed Time Value = {TimeInterval{mod:false}{Assembly Method:ASSERTED}{Dur:{Dur. label:3 MONTHS}{Dur. unit:MONTH}{Dur. value:3}}}]
+   
+EVENT-DESC-EVENT # 1 ==> HE SUFFERED STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> LEADING TO ACUTE MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A CYPHER STENT IMPLANTED IN A CRITICAL STENOSIS  ...)==>[ BEFORE ]==>( HE SUFFERED STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( A CYPHER STENT IMPLANTED IN A CRITICAL STENOSIS  ...)==>[ BEFORE ]==>( LEADING TO ACUTE MI ...)
+   
+EVENT-RELATION # 3: ( HE WAS PRESCRIBED PLAVIX ...)==>[ START ]==>( A CYPHER STENT IMPLANTED IN A CRITICAL STENOSIS  ...)
+   
+EVENT-RELATION # 4: ( HE SUFFERED STENT THROMBOSIS ...)==>[ BEFORE ]==>( LEADING TO ACUTE MI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A CYPHER STENT IMPLANTED IN A CRITICAL STENOSIS IN THIS CIRCUMFLEX ARTERY]}
+EVENT-TimeLineEntry # 2: {StartAntiplateletTherapy : [HE WAS PRESCRIBED PLAVIX]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [HE SUFFERED STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [LEADING TO ACUTE MI]}

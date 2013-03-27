@@ -1,0 +1,65 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4, , , , , , 
+
+EVENTID-1,2;3;4, , , , , , 
+
+EVENTID-3,2;4, , , , , , 
+
+EVENTID-2,4, , , , , , 
+
+EVENTID-4, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBOSIS OF THE TAXUS STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= Feb 2006)(Granularity=MONTH)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> ACUTE MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIET DIED 
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS P ...)==>[ BEFORE ]==>( THROMBOSIS OF THE TAXUS STENT ...)
+   
+EVENT-RELATION # 2: ( TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS P ...)==>[ BEFORE ]==>( PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLA ...)
+   
+EVENT-RELATION # 3: ( TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS P ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 4: ( TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS P ...)==>[ BEFORE ]==>( PATIET DIED  ...)
+   
+EVENT-RELATION # 5: ( THROMBOSIS OF THE TAXUS STENT ...)==>[ BEFORE ]==>( PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLA ...)
+   
+EVENT-RELATION # 6: ( THROMBOSIS OF THE TAXUS STENT ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 7: ( THROMBOSIS OF THE TAXUS STENT ...)==>[ BEFORE ]==>( PATIET DIED  ...)
+   
+EVENT-RELATION # 8: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLA ...)
+   
+EVENT-RELATION # 9: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIET DIED  ...)
+   
+EVENT-RELATION # 10: ( PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLA ...)==>[ BEFORE ]==>( PATIET DIED  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [TAXUS EXPRESS2 3.0X28MM DRUG ELUTING STENT WAS PLACED IN THE LEFT ANTERIOR DESCENDING (LAD) ARTERY]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [THROMBOSIS OF THE TAXUS STENT]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [ACUTE MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT WAS BROUGHT TO THE CATH LAB FOR ANGIOPLASTY]}
+EVENT-TimeLineEntry # 5: {Patient_Death : [PATIET DIED ]}

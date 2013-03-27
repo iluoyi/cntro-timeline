@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/91.txt.owl">
+   <event id="0" name="3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)">
+      <relatedTo targetId="1;1;2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name=" PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="MYOCARDIAL INFARCTION">
+      <relatedTo targetId="3;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="DEATH FROM CARDIAC ARREST">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DEATH FROM CARDIAC ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent=" PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent=" PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="DEATH FROM CARDIAC ARREST"/>
+   <eventStmt sourceEvent=" PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS" relation="BEFORE" targetEvent="MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent=" PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS" relation="BEFORE" targetEvent="DEATH FROM CARDIAC ARREST"/>
+   <eventStmt sourceEvent="MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="DEATH FROM CARDIAC ARREST"/>
+   <eventStmt sourceEvent="MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="DEATH FROM CARDIAC ARREST"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [3 CYPHER STENTS IMPLANT TO THE RIGHT CORONARY ARTERY (RCA)]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ PATIENT SUFFERED INJURIES DESCRIBED AS STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{Patient_Death [DEATH FROM CARDIAC ARREST]}</timelineEntry>
+</CNTROTimeLineEventList>

@@ -1,0 +1,41 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_197.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;3;4	 	0	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_197.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	 	 	 	 	 	 	 	
+1	2;2;3;4	 	0	 	 	 	 	
+2	3;4	 	 	 	 	 	 	
+3	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_197.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_197.csv
+########## EVENTS ############
+EVENT # 0 ==> THREE ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANTED TO THE PROXIMAL RCA FOR TREATMENT OF A TARGET LESION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANTED TO THE MID LAD FOR TREATMENT OF THE TARGET LESION      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> STENT THROMBOSIS WAS CONFIRMED      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> TWO PROMUS STENTS WERE IMPLANTED      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANT ...)==>[ BEFORE ]==>( STENT THROMBOSIS WAS CONFIRMED ...)   
+EVENT-RELATION # 2: ( TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANT ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 3: ( TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANT ...)==>[ BEFORE ]==>( TWO PROMUS STENTS WERE IMPLANTED ...)   
+EVENT-RELATION # 4: ( TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANT ...)==>[ EQUAL ]==>( THREE ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLA ...)   
+EVENT-RELATION # 5: ( STENT THROMBOSIS WAS CONFIRMED ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 6: ( STENT THROMBOSIS WAS CONFIRMED ...)==>[ BEFORE ]==>( TWO PROMUS STENTS WERE IMPLANTED ...)   
+EVENT-RELATION # 7: ( PATIENT PRESENTED ...)==>[ BEFORE ]==>( TWO PROMUS STENTS WERE IMPLANTED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [THREE ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANTED TO THE PROXIMAL RCA FOR TREATMENT OF A TARGET LESION] : [TWO ENDEAVOR RX DRUG-ELUTING STENTS WERE IMPLANTED TO THE MID LAD FOR TREATMENT OF THE TARGET LESION]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [STENT THROMBOSIS WAS CONFIRMED]}EVENT-TimeLineEntry # 3: {ER_Admission : [PATIENT PRESENTED]}EVENT-TimeLineEntry # 4: {FollowUpStentProcedure : [TWO PROMUS STENTS WERE IMPLANTED]}
+
+##############################
+
+Expected: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;3;4 ]
+Found: Event [ 1 ] --> [  BEFORE ] --> Event [ 2;2;3;4 ]

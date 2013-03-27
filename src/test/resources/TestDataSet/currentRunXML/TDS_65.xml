@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/65.txt.owl">
+   <event id="0" name="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)">
+      <relatedTo targetId="1;1;2;3;4;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="THE PATIENT HAD STOPPED TAKING PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT HAD STOPPED TAKING PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT">
+      <relatedTo targetId="2;3;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)">
+      <relatedTo targetId="2;3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="THE PATIENT WAS SENT FOR STOMACH SURGERY">
+      <relatedTo targetId="3" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PATIENT WAS SENT FOR STOMACH SURGERY</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="THE PATIENT WAS SENT FOR STOMACH SURGERY"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="THE PATIENT HAD STOPPED TAKING PLAVIX"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="THE PATIENT HAD STOPPED TAKING PLAVIX"/>
+   <eventStmt sourceEvent="PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)" relation="BEFORE" targetEvent="PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT" relation="BEFORE" targetEvent="THE PATIENT WAS SENT FOR STOMACH SURGERY"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT" relation="BEFORE" targetEvent="PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)" relation="BEFORE" targetEvent="THE PATIENT WAS SENT FOR STOMACH SURGERY"/>
+   <eventStmt sourceEvent="PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="THE PATIENT WAS SENT FOR STOMACH SURGERY" relation="BEFORE" targetEvent="DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PHYSICIAN IMPLANTED A 3.00X32MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE PROXIMAL RIGHT CORONARY ARTERY (RCA)]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [THE PATIENT HAD STOPPED TAKING PLAVIX]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [PATIENT PRESENTED WITH A THROMBOSIS IN THE 3.00X32MM TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [PHYSICIAN TREATED THE THROMBOSIS WITH BARE METAL STENTS (UNKNOWN SIZE/TYPE)]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [THE PATIENT WAS SENT FOR STOMACH SURGERY]}</timelineEntry>
+   <timelineEntry>{Patient_Death [DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

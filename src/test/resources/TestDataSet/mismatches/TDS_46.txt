@@ -1,0 +1,62 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_46.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4;5	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+5	1;2;3;4	 	6	 	 	 	 	
+4	1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_46.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4;5;5	 	 	 	 	 	 	
+6	 	 	 	 	 	 	 	
+5	1;2;3;4;4	 	6	 	 	 	 	
+4	1;1;2;3	 	 	 	 	 	 	
+1	2;3	 	 	 	 	 	 	
+2	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_46.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_46.csv
+########## EVENTS ############
+EVENT # 0 ==> A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 6 ==> TAXUS EXPRESS2 3.00X20MM DES WAS DEPLOYED IN THE RCA      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE LCX      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> PATIENT DISCONTINUED PLAVIX THERAPY      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==>  THROMBOSIS OCCURRED DUE TO THE STENT      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION (AMI)       		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT SUDDENLY EXPIRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED ...)==>[ BEFORE ]==>(  THROMBOSIS OCCURRED DUE TO THE STENT ...)   
+EVENT-RELATION # 2: ( A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED ...)==>[ BEFORE ]==>( CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION ( ...)   
+EVENT-RELATION # 3: ( A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED ...)==>[ BEFORE ]==>( PATIENT SUDDENLY EXPIRED ...)   
+EVENT-RELATION # 4: ( A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED ...)==>[ BEFORE ]==>( PATIENT DISCONTINUED PLAVIX THERAPY ...)   
+EVENT-RELATION # 5: ( A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED ...)==>[ BEFORE ]==>( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)   
+EVENT-RELATION # 6: ( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)==>[ BEFORE ]==>(  THROMBOSIS OCCURRED DUE TO THE STENT ...)   
+EVENT-RELATION # 7: ( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)==>[ BEFORE ]==>( CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION ( ...)   
+EVENT-RELATION # 8: ( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)==>[ BEFORE ]==>( PATIENT SUDDENLY EXPIRED ...)   
+EVENT-RELATION # 9: ( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)==>[ BEFORE ]==>( PATIENT DISCONTINUED PLAVIX THERAPY ...)   
+EVENT-RELATION # 10: ( TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE ...)==>[ EQUAL ]==>( TAXUS EXPRESS2 3.00X20MM DES WAS DEPLOYED IN THE ...)   
+EVENT-RELATION # 11: ( PATIENT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>(  THROMBOSIS OCCURRED DUE TO THE STENT ...)   
+EVENT-RELATION # 12: ( PATIENT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>( CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION ( ...)   
+EVENT-RELATION # 13: ( PATIENT DISCONTINUED PLAVIX THERAPY ...)==>[ BEFORE ]==>( PATIENT SUDDENLY EXPIRED ...)   
+EVENT-RELATION # 14: (  THROMBOSIS OCCURRED DUE TO THE STENT ...)==>[ BEFORE ]==>( CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION ( ...)   
+EVENT-RELATION # 15: (  THROMBOSIS OCCURRED DUE TO THE STENT ...)==>[ BEFORE ]==>( PATIENT SUDDENLY EXPIRED ...)   
+EVENT-RELATION # 16: ( CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION ( ...)==>[ BEFORE ]==>( PATIENT SUDDENLY EXPIRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A TAXUS EXPRESS2  3.00X32MM DES WAS DEPLOYED]}EVENT-TimeLineEntry # 2: {FollowUpStentProcedure : [TAXUS EXPRESS2 3.00X20MM DES WAS DEPLOYED IN THE RCA] : [TAXUS EXPRESS2 3.00X24MM DES WAS DEPLOYED IN THE LCX]}EVENT-TimeLineEntry # 3: {EndAntiplateletTherapy : [PATIENT DISCONTINUED PLAVIX THERAPY]}EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [ THROMBOSIS OCCURRED DUE TO THE STENT]}EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [CAUSE OF DEATH WAS ACUTE MYOCARDIAL INFARCTION (AMI) ]}EVENT-TimeLineEntry # 6: {Patient_Death : [PATIENT SUDDENLY EXPIRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4;5 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4;5;5 ]
+
+Expected: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 5 ] --> [  BEFORE ] --> Event [ 1;2;3;4;4 ]
+
+Expected: Event [ 4 ] --> [  BEFORE ] --> Event [ 1;2;3 ]
+Found: Event [ 4 ] --> [  BEFORE ] --> Event [ 1;1;2;3 ]

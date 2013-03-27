@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/155.txt.owl">
+   <event id="0" name="PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT">
+      <relatedTo targetId="1;1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT SUFFERED A NON-QWAVE MI">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUFFERED A NON-QWAVE MI</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT" relation="BEFORE" targetEvent="A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT" relation="BEFORE" targetEvent="A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED"/>
+   <eventStmt sourceEvent="PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT" relation="BEFORE" targetEvent="PATIENT SUFFERED A NON-QWAVE MI"/>
+   <eventStmt sourceEvent="A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED" relation="BEFORE" targetEvent="PATIENT SUFFERED A NON-QWAVE MI"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [PATIENT RECEIVED AN ENDEAVOR RX DRUG-ELUTING STENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [A (LATE) STENT THROMBOSIS WAS REPORTED TO HAVE OCCURRED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT SUFFERED A NON-QWAVE MI]}</timelineEntry>
+</CNTROTimeLineEventList>

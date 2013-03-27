@@ -1,0 +1,57 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_79.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4	 	 	 	 	 	 	
+5	1;2;3;4	 	 	 	 	 	 	
+2	1;3;4	 	 	 	 	 	 	
+1	3;4	 	 	 	 	 	 	
+4	3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_79.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;2;3;4	 	 	 	 	 	 	
+5	1;2;3;4	 	 	 	 	 	 	
+2	1;1;3;4	 	 	 	 	 	 	
+1	3;4	 	 	 	 	 	 	
+4	3;3	 	 	 	 	 	 	
+3	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_79.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_79.csv
+########## EVENTS ############
+EVENT # 0 ==> INDEX PROCEDURE      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 5 ==> CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS OBSERVED PROXIMAL AND IN THE PREVIOUSLY IMPLANTED CYPHER 2.5 X 23 MM STENT IN THE MID LEFT ANTERIOR DESCENDING TARGET LESION      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT COMPLAINED OF CHEST PAIN       		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> PATIENT WAS ADMITTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLANTED PROXIMAL TO THE OTHER CYPHER STENT IN OVERLAPPING FASHION      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> PATIENT EXPIRED      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED ...)   
+EVENT-RELATION # 2: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PATIENT COMPLAINED OF CHEST PAIN  ...)   
+EVENT-RELATION # 3: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 4: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLAN ...)   
+EVENT-RELATION # 5: ( CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS O ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED ...)   
+EVENT-RELATION # 6: ( CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS O ...)==>[ BEFORE ]==>( PATIENT COMPLAINED OF CHEST PAIN  ...)   
+EVENT-RELATION # 7: ( CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS O ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 8: ( CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS O ...)==>[ BEFORE ]==>( N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLAN ...)   
+EVENT-RELATION # 9: ( PATIENT COMPLAINED OF CHEST PAIN  ...)==>[ BEFORE ]==>( PATIENT WAS ADMITTED ...)   
+EVENT-RELATION # 10: ( PATIENT COMPLAINED OF CHEST PAIN  ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 11: ( PATIENT COMPLAINED OF CHEST PAIN  ...)==>[ BEFORE ]==>( N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLAN ...)   
+EVENT-RELATION # 12: ( PATIENT WAS ADMITTED ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   
+EVENT-RELATION # 13: ( PATIENT WAS ADMITTED ...)==>[ BEFORE ]==>( N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLAN ...)   
+EVENT-RELATION # 14: ( N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLAN ...)==>[ BEFORE ]==>( PATIENT EXPIRED ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [INDEX PROCEDURE]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [CORONARY ANGIOGRAPHY WAS DONE AND THROMBUS WAS OBSERVED PROXIMAL AND IN THE PREVIOUSLY IMPLANTED CYPHER 2.5 X 23 MM STENT IN THE MID LEFT ANTERIOR DESCENDING TARGET LESION]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [PATIENT COMPLAINED OF CHEST PAIN ]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT WAS ADMITTED]}EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [N ADDITIONAL CYPHER 3.0 X 28 MM STENT WAS IMPLANTED PROXIMAL TO THE OTHER CYPHER STENT IN OVERLAPPING FASHION]}EVENT-TimeLineEntry # 6: {Patient_Death : [PATIENT EXPIRED]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;2;3;4 ]
+
+Expected: Event [ 2 ] --> [  BEFORE ] --> Event [ 1;3;4 ]
+Found: Event [ 2 ] --> [  BEFORE ] --> Event [ 1;1;3;4 ]
+
+Expected: Event [ 4 ] --> [  BEFORE ] --> Event [ 3 ]
+Found: Event [ 4 ] --> [  BEFORE ] --> Event [ 3;3 ]

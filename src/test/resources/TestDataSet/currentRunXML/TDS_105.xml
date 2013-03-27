@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/105.txt.owl">
+   <event id="0" name="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD">
+      <relatedTo targetId="1;1;2;3;4;5;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="STENT THROMBOSIS WAS ALSO EVIDENT">
+      <relatedTo targetId="2;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT THROMBOSIS WAS ALSO EVIDENT</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="SUFFERED CARDIAC ARREST">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUFFERED CARDIAC ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PATIENT PRESENTED IN THE HOSPITAL">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT PRESENTED IN THE HOSPITAL</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM &amp; 3.00 X 23MM)">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM &amp; 3.00 X 23MM)</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS ALSO EVIDENT"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="STENT THROMBOSIS WAS ALSO EVIDENT"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="PATIENT PRESENTED IN THE HOSPITAL"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="SUFFERED CARDIAC ARREST"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM &amp; 3.00 X 23MM)"/>
+   <eventStmt sourceEvent="ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD" relation="BEFORE" targetEvent="TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM &amp; 3.00 X 23MM)"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS WAS ALSO EVIDENT" relation="BEFORE" targetEvent="PATIENT PRESENTED IN THE HOSPITAL"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS WAS ALSO EVIDENT" relation="BEFORE" targetEvent="SUFFERED CARDIAC ARREST"/>
+   <eventStmt sourceEvent="STENT THROMBOSIS WAS ALSO EVIDENT" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="SUFFERED CARDIAC ARREST" relation="BEFORE" targetEvent="PATIENT PRESENTED IN THE HOSPITAL"/>
+   <eventStmt sourceEvent="SUFFERED CARDIAC ARREST" relation="BEFORE" targetEvent="DIED"/>
+   <eventStmt sourceEvent="PATIENT PRESENTED IN THE HOSPITAL" relation="BEFORE" targetEvent="DIED"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [ONE ENDEAVOR SPRINT DRUG-ELUTING STENT WAS IMPLANTED IN THE PROXIMAL LAD]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [STENT THROMBOSIS WAS ALSO EVIDENT]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [SUFFERED CARDIAC ARREST]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PATIENT PRESENTED IN THE HOSPITAL]}</timelineEntry>
+   <timelineEntry>{FollowUpStentProcedure [TWO BARE METAL STENTS FROM ANOTHER MANUFACTURER WERE IMPLANTED (2.5 X 18MM &amp; 3.00 X 23MM)]}</timelineEntry>
+   <timelineEntry>{Patient_Death [DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

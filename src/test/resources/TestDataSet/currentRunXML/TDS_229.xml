@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/229.txt.owl">
+   <event id="0" name="STENT WAS IMPLANTED">
+      <relatedTo targetId="1;2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STENT WAS IMPLANTED</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="1" name=" IN-STENT THROMBOSIS WAS OBSERVED">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> IN-STENT THROMBOSIS WAS OBSERVED</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">(Normalized Time= 2008)(Granularity=YEAR)(Computed As=ASSERTED)</eventProperty>
+   </event>
+   <event id="2" name="PATIENT SUFFERED A HEART ATTACK">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PATIENT SUFFERED A HEART ATTACK</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="STENT WAS IMPLANTED" relation="BEFORE" targetEvent=" IN-STENT THROMBOSIS WAS OBSERVED"/>
+   <eventStmt sourceEvent="STENT WAS IMPLANTED" relation="BEFORE" targetEvent="PATIENT SUFFERED A HEART ATTACK"/>
+   <eventStmt sourceEvent=" IN-STENT THROMBOSIS WAS OBSERVED" relation="BEFORE" targetEvent="PATIENT SUFFERED A HEART ATTACK"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [STENT WAS IMPLANTED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [ IN-STENT THROMBOSIS WAS OBSERVED]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [PATIENT SUFFERED A HEART ATTACK]}</timelineEntry>
+</CNTROTimeLineEventList>

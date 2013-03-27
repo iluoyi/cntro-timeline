@@ -1,0 +1,163 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;5;6;7;8;9;10, , , , , , 
+
+EVENTID-10, , , , , , , 
+
+EVENTID-2, , , , , , , 
+
+EVENTID-5, , , , , , , 
+
+EVENTID-8,1;2;3;4;5;6;9, , , , , , 
+
+EVENTID-7,1;2;3;4;5;6;9, , , , , , 
+
+EVENTID-1,3;4;5;6, , , , , , 
+
+EVENTID-3,4;5;6, , , , , , 
+
+EVENTID-4,5;6, , , , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-11,12, , , , , ,9
+
+EVENTID-9, , , , , , , 
+
+EVENTID-12, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 10 ==> PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X24MM STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT EXPERIENCED A STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 8 ==> CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 7 ==> INDEX PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETELY OCCLUDED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> ECG SHOWED A LATERAL AND POSTERIOR INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> ARRIVAL TO THE CATH LAB
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> PT EXPIRED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 11 ==> PT WAS DISCHARGED ON PLAVIX AND ASPIRIN
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 9 ==> PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM STENT IN THE LAD
+      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 12 ==> PT HAD STOPPED PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)
+   
+EVENT-RELATION # 2: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT EXPERIENCED A STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 3: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)
+   
+EVENT-RELATION # 4: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( ARRIVAL TO THE CATH LAB ...)
+   
+EVENT-RELATION # 5: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 6: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 7: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( INDEX PROCEDURE ...)
+   
+EVENT-RELATION # 8: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)
+   
+EVENT-RELATION # 9: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM ST ...)
+   
+EVENT-RELATION # 10: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X24MM ST ...)
+   
+EVENT-RELATION # 11: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)
+   
+EVENT-RELATION # 12: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT EXPERIENCED A STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 13: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)
+   
+EVENT-RELATION # 14: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( ARRIVAL TO THE CATH LAB ...)
+   
+EVENT-RELATION # 15: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 16: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 17: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM ST ...)
+   
+EVENT-RELATION # 18: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)
+   
+EVENT-RELATION # 19: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PT EXPERIENCED A STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 20: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)
+   
+EVENT-RELATION # 21: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( ARRIVAL TO THE CATH LAB ...)
+   
+EVENT-RELATION # 22: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 23: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 24: ( INDEX PROCEDURE ...)==>[ BEFORE ]==>( PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM ST ...)
+   
+EVENT-RELATION # 25: ( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)==>[ BEFORE ]==>( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)
+   
+EVENT-RELATION # 26: ( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)==>[ BEFORE ]==>( ARRIVAL TO THE CATH LAB ...)
+   
+EVENT-RELATION # 27: ( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 28: ( STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETE ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 29: ( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)==>[ BEFORE ]==>( ARRIVAL TO THE CATH LAB ...)
+   
+EVENT-RELATION # 30: ( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 31: ( ECG SHOWED A LATERAL AND POSTERIOR INFARCTION ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 32: ( ARRIVAL TO THE CATH LAB ...)==>[ BEFORE ]==>( EXPIRED ...)
+   
+EVENT-RELATION # 33: ( ARRIVAL TO THE CATH LAB ...)==>[ BEFORE ]==>( PT EXPIRED ...)
+   
+EVENT-RELATION # 34: ( PT WAS DISCHARGED ON PLAVIX AND ASPIRIN ...)==>[ BEFORE ]==>( PT HAD STOPPED PLAVIX ...)
+   
+EVENT-RELATION # 35: ( PT WAS DISCHARGED ON PLAVIX AND ASPIRIN ...)==>[ START ]==>( PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM ST ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X24MM STENT]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [PT EXPERIENCED A STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 4: {Patient_Death : [EXPIRED]}
+EVENT-TimeLineEntry # 5: {InitialDrugElutingStentImplantation : [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE]}
+EVENT-TimeLineEntry # 6: {InitialDrugElutingStentImplantation : [INDEX PROCEDURE]}
+EVENT-TimeLineEntry # 7: {Late_Stent_Thrombosis : [STENTS IMPLANTED IN THE LAD AND CX WERE COMPLETELY OCCLUDED]}
+EVENT-TimeLineEntry # 8: {Myocardial_Infarction : [ECG SHOWED A LATERAL AND POSTERIOR INFARCTION]}
+EVENT-TimeLineEntry # 9: {ER_Admission : [ARRIVAL TO THE CATH LAB]}
+EVENT-TimeLineEntry # 10: {Patient_Death : [PT EXPIRED]}
+EVENT-TimeLineEntry # 11: {StartAntiplateletTherapy : [PT WAS DISCHARGED ON PLAVIX AND ASPIRIN]}
+EVENT-TimeLineEntry # 12: {FollowUpStentProcedure : [PHYSICIAN DEPLOYED A TAXUS EXPRESS2 2.75X32MM STENT IN THE LAD]}
+EVENT-TimeLineEntry # 13: {EndAntiplateletTherapy : [PT HAD STOPPED PLAVIX]}

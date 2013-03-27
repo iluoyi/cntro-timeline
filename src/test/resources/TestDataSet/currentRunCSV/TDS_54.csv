@@ -1,0 +1,81 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3;4;4, , , , , , 
+
+EVENTID-4,1;2;2;3, , , , , , 
+
+EVENTID-5,1;3, , , , , , 
+
+EVENTID-2,1;3, , , , , , 
+
+EVENTID-1,3;3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOWN SIZE WAS IMPLANTED IN AN UNSPECIFIED VESSEL
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PATIENT WAS DISCONTINUED FROM PLAVIX
+      		[Type = EndAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==>  STENT THROMBOSIS 
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> HERNIA SURGERY
+      		[Type = Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> TRANSFERRED TO ANOTHER HOSPITAL
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> THE PATIENT DIED 
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOW ...)==>[ BEFORE ]==>( TRANSFERRED TO ANOTHER HOSPITAL ...)
+   
+EVENT-RELATION # 2: ( A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOW ...)==>[ BEFORE ]==>( HERNIA SURGERY ...)
+   
+EVENT-RELATION # 3: ( A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOW ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+EVENT-RELATION # 4: ( A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOW ...)==>[ BEFORE ]==>( PATIENT WAS DISCONTINUED FROM PLAVIX ...)
+   
+EVENT-RELATION # 5: ( A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOW ...)==>[ BEFORE ]==>( PATIENT WAS DISCONTINUED FROM PLAVIX ...)
+   
+EVENT-RELATION # 6: ( PATIENT WAS DISCONTINUED FROM PLAVIX ...)==>[ BEFORE ]==>( TRANSFERRED TO ANOTHER HOSPITAL ...)
+   
+EVENT-RELATION # 7: ( PATIENT WAS DISCONTINUED FROM PLAVIX ...)==>[ BEFORE ]==>( HERNIA SURGERY ...)
+   
+EVENT-RELATION # 8: ( PATIENT WAS DISCONTINUED FROM PLAVIX ...)==>[ BEFORE ]==>( HERNIA SURGERY ...)
+   
+EVENT-RELATION # 9: ( PATIENT WAS DISCONTINUED FROM PLAVIX ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+EVENT-RELATION # 10: (  STENT THROMBOSIS  ...)==>[ BEFORE ]==>( TRANSFERRED TO ANOTHER HOSPITAL ...)
+   
+EVENT-RELATION # 11: (  STENT THROMBOSIS  ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+EVENT-RELATION # 12: ( HERNIA SURGERY ...)==>[ BEFORE ]==>( TRANSFERRED TO ANOTHER HOSPITAL ...)
+   
+EVENT-RELATION # 13: ( HERNIA SURGERY ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+EVENT-RELATION # 14: ( TRANSFERRED TO ANOTHER HOSPITAL ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+EVENT-RELATION # 15: ( TRANSFERRED TO ANOTHER HOSPITAL ...)==>[ BEFORE ]==>( THE PATIENT DIED  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [A TAXUS EXPRESS2 DRUG ELUTING STENT OF AN UNKNOWN SIZE WAS IMPLANTED IN AN UNSPECIFIED VESSEL]}
+EVENT-TimeLineEntry # 2: {EndAntiplateletTherapy [PATIENT WAS DISCONTINUED FROM PLAVIX]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis [ STENT THROMBOSIS ]}
+EVENT-TimeLineEntry # 4: {Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [HERNIA SURGERY]}
+EVENT-TimeLineEntry # 5: {ER_Admission [TRANSFERRED TO ANOTHER HOSPITAL]}
+EVENT-TimeLineEntry # 6: {Patient_Death [THE PATIENT DIED ]}

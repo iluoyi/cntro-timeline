@@ -1,0 +1,46 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1,2;3, ,0, , , , 
+
+EVENTID-2,3, , , , , , 
+
+EVENTID-3, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PATIENT EXPERIENCED A STENT THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> THE PATIENT EXPERIENCED A ST AND MI
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT  ...)==>[ BEFORE ]==>( PATIENT EXPERIENCED A STENT THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT  ...)==>[ BEFORE ]==>( THE PATIENT EXPERIENCED A ST AND MI ...)
+   
+EVENT-RELATION # 3: ( THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT  ...)==>[ EQUAL ]==>( THE SECOND STENT WAS PLACED IN AN OVERLAPPING FA ...)
+   
+EVENT-RELATION # 4: ( PATIENT EXPERIENCED A STENT THROMBOSIS ...)==>[ BEFORE ]==>( THE PATIENT EXPERIENCED A ST AND MI ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [THE SECOND STENT WAS PLACED IN AN OVERLAPPING FASHION PROXIMAL TO THE FIRST STENT] : [THE FIRST STENT WAS A 3.0X24MM AND SECOND STENT 3.0X12MM]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [PATIENT EXPERIENCED A STENT THROMBOSIS]}
+EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [THE PATIENT EXPERIENCED A ST AND MI]}

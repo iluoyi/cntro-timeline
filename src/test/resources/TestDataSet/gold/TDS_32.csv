@@ -1,0 +1,77 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , , 
+
+EVENTID-1, , , , , , , 
+
+EVENTID-2,3;4;5;6, , , , , , 
+
+EVENTID-3,4;5;6, , , , , , 
+
+EVENTID-5,4;6, , , , , , 
+
+EVENTID-4,6, , , , , , 
+
+EVENTID-6, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> .0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT PRESENTED WITH THROMBOSIS
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> ACUTE MYOCARIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 4 ==> PT WAS ADMITTED TO THE HOSP
+      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 6 ==> DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT PRESENTED WITH THROMBOSIS ...)
+   
+EVENT-RELATION # 2: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)
+   
+EVENT-RELATION # 3: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( ACUTE MYOCARIAL INFARCTION ...)
+   
+EVENT-RELATION # 4: ( CORONARY ARTERY DRUG ELUTING STENTING TREATMENT  ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 5: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)
+   
+EVENT-RELATION # 6: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( ACUTE MYOCARIAL INFARCTION ...)
+   
+EVENT-RELATION # 7: ( PT PRESENTED WITH THROMBOSIS ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 8: ( ACUTE MYOCARIAL INFARCTION ...)==>[ BEFORE ]==>( PT WAS ADMITTED TO THE HOSP ...)
+   
+EVENT-RELATION # 9: ( ACUTE MYOCARIAL INFARCTION ...)==>[ BEFORE ]==>( DIED ...)
+   
+EVENT-RELATION # 10: ( PT WAS ADMITTED TO THE HOSP ...)==>[ BEFORE ]==>( DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [MEDICATION USED DURING THE PROCEDURE INCLUDE PLAVIX, ASPIRIN AND LISINOPRIL. ASPIRIN AND PLAVIX WERE PRESCRIBED FOR FOLLOW UP]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [.0X16MM TAXUS LIBERTE' DRUG ELUTING STENT WAS DEPLOYED]}
+EVENT-TimeLineEntry # 3: {InitialDrugElutingStentImplantation : [CORONARY ARTERY DRUG ELUTING STENTING TREATMENT PROCEDURE]}
+EVENT-TimeLineEntry # 4: {Late_Stent_Thrombosis : [PT PRESENTED WITH THROMBOSIS]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [ACUTE MYOCARIAL INFARCTION]}
+EVENT-TimeLineEntry # 6: {ER_Admission : [PT WAS ADMITTED TO THE HOSP]}
+EVENT-TimeLineEntry # 7: {Patient_Death : [DIED]}

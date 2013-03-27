@@ -1,0 +1,80 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0, , , , , , ,1
+
+EVENTID-1,2;3;4;5, ,6, , , , 
+
+EVENTID-6, , , , , , , 
+
+EVENTID-2,4;5, , ,5, , , 
+
+EVENTID-3,4;5, , , , , , 
+
+EVENTID-4,5, , , , , , 
+
+EVENTID-5, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE
+      		[Type = StartAntiplateletTherapy][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = (Normalized Time= 2003)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 6 ==> ANOTHER STENT (HELI) WAS PLACED IN THE RCA
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> SUB-ACUTE THROMBOSIS IN THE LAD
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 3 ==> PT RETURNED WITH CHEST PAIN AND EKG CHANGES
+      		[Type = ER_Admission][Computed Time Value = (Normalized Time= 2004)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 4 ==> PT DEVELOPED CARDIAC ARREST
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 5 ==> PT SUBSEQUENTLY DIED 
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PLAVIX WAS ADMINISTERED FOR LOADING AND POST PRO ...)==>[ START ]==>( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)
+   
+EVENT-RELATION # 2: ( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)==>[ BEFORE ]==>( SUB-ACUTE THROMBOSIS IN THE LAD ...)
+   
+EVENT-RELATION # 3: ( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)==>[ BEFORE ]==>( PT RETURNED WITH CHEST PAIN AND EKG CHANGES ...)
+   
+EVENT-RELATION # 4: ( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)==>[ BEFORE ]==>( PT DEVELOPED CARDIAC ARREST ...)
+   
+EVENT-RELATION # 5: ( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED  ...)
+   
+EVENT-RELATION # 6: ( TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PL ...)==>[ EQUAL ]==>( ANOTHER STENT (HELI) WAS PLACED IN THE RCA ...)
+   
+EVENT-RELATION # 7: ( SUB-ACUTE THROMBOSIS IN THE LAD ...)==>[ BEFORE ]==>( PT DEVELOPED CARDIAC ARREST ...)
+   
+EVENT-RELATION # 8: ( SUB-ACUTE THROMBOSIS IN THE LAD ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED  ...)
+   
+EVENT-RELATION # 9: ( SUB-ACUTE THROMBOSIS IN THE LAD ...)==>[ FINISH ]==>( PT SUBSEQUENTLY DIED  ...)
+   
+EVENT-RELATION # 10: ( PT RETURNED WITH CHEST PAIN AND EKG CHANGES ...)==>[ BEFORE ]==>( PT DEVELOPED CARDIAC ARREST ...)
+   
+EVENT-RELATION # 11: ( PT RETURNED WITH CHEST PAIN AND EKG CHANGES ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED  ...)
+   
+EVENT-RELATION # 12: ( PT DEVELOPED CARDIAC ARREST ...)==>[ BEFORE ]==>( PT SUBSEQUENTLY DIED  ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {StartAntiplateletTherapy : [PLAVIX WAS ADMINISTERED FOR LOADING AND POST PROCEDURE]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [TAXUS EXPRESS2 8.8% 2.75 MM X 24 MM STENT WAS PLACED IN A 90% STENOSED. NON CALCIFIED LAD LESION] : [ANOTHER STENT (HELI) WAS PLACED IN THE RCA]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [SUB-ACUTE THROMBOSIS IN THE LAD]}
+EVENT-TimeLineEntry # 4: {ER_Admission : [PT RETURNED WITH CHEST PAIN AND EKG CHANGES]}
+EVENT-TimeLineEntry # 5: {Myocardial_Infarction : [PT DEVELOPED CARDIAC ARREST]}
+EVENT-TimeLineEntry # 6: {Patient_Death : [PT SUBSEQUENTLY DIED ]}

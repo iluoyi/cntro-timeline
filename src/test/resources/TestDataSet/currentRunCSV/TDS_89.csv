@@ -1,0 +1,43 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;1;2;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTING STENT, UNK SIZE, TO AN UNK VESSEL
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> THROMBOSIS OCCURRED
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 2 ==> PT DIED
+      		[Type = Patient_Death][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTIN ...)==>[ BEFORE ]==>( THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 2: ( PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTIN ...)==>[ BEFORE ]==>( THROMBOSIS OCCURRED ...)
+   
+EVENT-RELATION # 3: ( PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTIN ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+EVENT-RELATION # 4: ( PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTIN ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+EVENT-RELATION # 5: ( THROMBOSIS OCCURRED ...)==>[ BEFORE ]==>( PT DIED ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation [PHYSICIAN IMPLANTED A TAXUS EXPRESS2 DRUG ELUTING STENT, UNK SIZE, TO AN UNK VESSEL]}
+EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis [THROMBOSIS OCCURRED]}
+EVENT-TimeLineEntry # 3: {Patient_Death [PT DIED]}

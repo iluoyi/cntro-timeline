@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/9.txt.owl">
+   <event id="0" name="PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION ">
+      <relatedTo targetId="2;2;3;3;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION </eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="STOPPING PLAVIX AND ASPIRIN">
+      <relatedTo targetId="6;6;2;3;4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">STOPPING PLAVIX AND ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">EndAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="8" name="TREATED WITH A TAXUS STENT">
+      <relatedTo targetId="6;6;2;3;4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="7" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">TREATED WITH A TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="LATE STENT THROMBOSIS ">
+      <relatedTo targetId="2;3;4;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">LATE STENT THROMBOSIS </eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="SUB ACUTE STENT THROMBOSIS">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="2" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">SUB ACUTE STENT THROMBOSIS</eventProperty>
+      <eventProperty name="eventType" type="text">Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT RETURNED">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT RETURNED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="REPORTED TO HAVE DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">REPORTED TO HAVE DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN" relation="START" targetEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION "/>
+   <eventStmt sourceEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION " relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION " relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION " relation="BEFORE" targetEvent="SUB ACUTE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION " relation="BEFORE" targetEvent="SUB ACUTE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION " relation="BEFORE" targetEvent="REPORTED TO HAVE DIED"/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS "/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS "/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="SUB ACUTE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="REPORTED TO HAVE DIED"/>
+   <eventStmt sourceEvent="STOPPING PLAVIX AND ASPIRIN" relation="BEFORE" targetEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION "/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS "/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="LATE STENT THROMBOSIS "/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="SUB ACUTE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="REPORTED TO HAVE DIED"/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="BEFORE" targetEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION "/>
+   <eventStmt sourceEvent="TREATED WITH A TAXUS STENT" relation="EQUAL" targetEvent="INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS " relation="BEFORE" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS " relation="BEFORE" targetEvent="SUB ACUTE STENT THROMBOSIS"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS " relation="BEFORE" targetEvent="REPORTED TO HAVE DIED"/>
+   <eventStmt sourceEvent="LATE STENT THROMBOSIS " relation="BEFORE" targetEvent="TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION "/>
+   <eventStmt sourceEvent="SUB ACUTE STENT THROMBOSIS" relation="FINISH" targetEvent="PT RETURNED"/>
+   <eventStmt sourceEvent="PT RETURNED" relation="BEFORE" targetEvent="REPORTED TO HAVE DIED"/>
+   <timelineEntry>{StartAntiplateletTherapy [PT WAS LATER DISCHARGED ON PLAVIX AND ASPIRIN]: FollowUpStentProcedure [TREATED WITH TWO OVERLAPPING CYPHER STENTS (3.5MM X 33MM AND 3.5MM X 13MM) TO TREAT THE THROMBOSIS IN A TYPE C LESION ]}</timelineEntry>
+   <timelineEntry>{EndAntiplateletTherapy [STOPPING PLAVIX AND ASPIRIN]}</timelineEntry>
+   <timelineEntry>{InitialDrugElutingStentImplantation [INTERVENTION WITH A TAXUS PLACED IN PROXIMAL RCA]: [TREATED WITH A TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [LATE STENT THROMBOSIS ]}</timelineEntry>
+   <timelineEntry>{Thrombosis [SUB ACUTE STENT THROMBOSIS]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT RETURNED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [REPORTED TO HAVE DIED]}</timelineEntry>
+</CNTROTimeLineEventList>

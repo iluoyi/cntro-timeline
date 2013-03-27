@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/1.txt.owl">
+   <event id="0" name="ONE REGULAR STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ONE REGULAR STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="2;3;3;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0;6" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="ANOTHER MEDICATED STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">ANOTHER MEDICATED STENT</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="PT REMAINED ON PLAVIX">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="3" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="1" relation="START"/>
+      <eventProperty name="description" type="text">PT REMAINED ON PLAVIX</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED">
+      <relatedTo targetId="2;2;4;5" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED</eventProperty>
+      <eventProperty name="eventType" type="text">Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY">
+      <relatedTo targetId="2;4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="4" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="CARDIAC ARREST">
+      <relatedTo targetId="4" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CARDIAC ARREST</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PT PASSED AWAY THAT NIGHT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PASSED AWAY THAT NIGHT</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="CARDIAC ARREST"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT PASSED AWAY THAT NIGHT"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="EQUAL" targetEvent="ONE REGULAR STENT"/>
+   <eventStmt sourceEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY" relation="EQUAL" targetEvent="ANOTHER MEDICATED STENT"/>
+   <eventStmt sourceEvent="PT REMAINED ON PLAVIX" relation="FINISH" targetEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED"/>
+   <eventStmt sourceEvent="PT REMAINED ON PLAVIX" relation="START" targetEvent="CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED" relation="BEFORE" targetEvent="CARDIAC ARREST"/>
+   <eventStmt sourceEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED" relation="BEFORE" targetEvent="CARDIAC ARREST"/>
+   <eventStmt sourceEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED" relation="BEFORE" targetEvent="PT PASSED AWAY THAT NIGHT"/>
+   <eventStmt sourceEvent="PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED" relation="BEFORE" targetEvent="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY"/>
+   <eventStmt sourceEvent="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="CARDIAC ARREST"/>
+   <eventStmt sourceEvent="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY" relation="BEFORE" targetEvent="PT PASSED AWAY THAT NIGHT"/>
+   <eventStmt sourceEvent="THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY" relation="FINISH" targetEvent="PT PASSED AWAY THAT NIGHT"/>
+   <eventStmt sourceEvent="CARDIAC ARREST" relation="BEFORE" targetEvent="PT PASSED AWAY THAT NIGHT"/>
+   <timelineEntry>{InitialDrugElutingStentImplantation [ONE REGULAR STENT]: [CYPHER STENT PUT IN THE LEFT ANTERIOR DESCENDING ARTERY]: [ANOTHER MEDICATED STENT]: StartAntiplateletTherapy [PT REMAINED ON PLAVIX]}</timelineEntry>
+   <timelineEntry>{Surgery_Occurring_In-between_Initial_Stent_Implantation_And_Late_Stent_Thrombosis [PT HAD SURGERY TO HAVE THEIR SPLEEN REMOVED]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [THROMBOSIS OF STENT OF THE LEFT ANTERIOR DESCENDING ARTERY]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [CARDIAC ARREST]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT PASSED AWAY THAT NIGHT]}</timelineEntry>
+</CNTROTimeLineEventList>

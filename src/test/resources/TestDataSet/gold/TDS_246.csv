@@ -1,0 +1,51 @@
+
+STARTTOKENEVENT, BEFORE, DURING, EQUAL, FINISH, MEET, OVERLAP, START DATAMARKER
+   
+EVENTID-0,1;2;3, , , , , , 
+
+EVENTID-3,1;2, , , , , , 
+
+EVENTID-1,2, , , , , , 
+
+EVENTID-2, , , , , , , 
+ENDTOKEN
+
+All Event Descriptions:
+=======================
+
+
+EVENT-DESC-EVENT # 0 ==> MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = (Normalized Time= 2006)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 3 ==> CYPHER STENT WAS PLACED IN LEFT CIRCUMFLEX ARTERY
+      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]
+   
+EVENT-DESC-EVENT # 1 ==> PATIENT SUFFERED A THROMBOSIS AT THE SITE OF THE STENT
+      		[Type = Late_Stent_Thrombosis][Computed Time Value = (Normalized Time= 2007)(Granularity=YEAR)(Computed As=ASSERTED)]
+   
+EVENT-DESC-EVENT # 2 ==> CAUSING MYOCARDIAL INFARCTION
+      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]
+   
+
+All Asserted and Inferred Relations:
+====================================
+
+EVENT-RELATION # 1: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT SUFFERED A THROMBOSIS AT THE SITE OF THE ...)
+   
+EVENT-RELATION # 2: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( CAUSING MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 3: ( MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( CYPHER STENT WAS PLACED IN LEFT CIRCUMFLEX ARTER ...)
+   
+EVENT-RELATION # 4: ( CYPHER STENT WAS PLACED IN LEFT CIRCUMFLEX ARTER ...)==>[ BEFORE ]==>( PATIENT SUFFERED A THROMBOSIS AT THE SITE OF THE ...)
+   
+EVENT-RELATION # 5: ( CYPHER STENT WAS PLACED IN LEFT CIRCUMFLEX ARTER ...)==>[ BEFORE ]==>( CAUSING MYOCARDIAL INFARCTION ...)
+   
+EVENT-RELATION # 6: ( PATIENT SUFFERED A THROMBOSIS AT THE SITE OF THE ...)==>[ BEFORE ]==>( CAUSING MYOCARDIAL INFARCTION ...)
+   
+Timeline Buckets:
+================
+
+EVENT-TimeLineEntry # 1: {Myocardial_Infarction : [MYOCARDIAL INFARCTION]}
+EVENT-TimeLineEntry # 2: {InitialDrugElutingStentImplantation : [CYPHER STENT WAS PLACED IN LEFT CIRCUMFLEX ARTERY]}
+EVENT-TimeLineEntry # 3: {Late_Stent_Thrombosis : [PATIENT SUFFERED A THROMBOSIS AT THE SITE OF THE STENT]}
+EVENT-TimeLineEntry # 4: {Myocardial_Infarction : [CAUSING MYOCARDIAL INFARCTION]}

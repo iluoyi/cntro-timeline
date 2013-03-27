@@ -1,0 +1,44 @@
+
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_286.csv
+Expected Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;2;3;4	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+3	2;4	 	 	 	 	 	 	
+2	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_286.csv
+Computed Results:
+
+EVENT  BEFORE  DURING  EQUAL  FINISH  MEET  OVERLAP  START  
+0	1;1;2;3;4	 	 	 	 	 	 	
+1	2;3;4	 	 	 	 	 	 	
+3	2;4	 	 	 	 	 	 	
+2	4	 	 	 	 	 	 	
+4	 	 	 	 	 	 	 	
+Expected Results File: src/test/resources/TestDataSet/gold/TDS_286.csv
+Computed Results File: src/test/resources/TestDataSet/currentRunCSV/TDS_286.csv
+########## EVENTS ############
+EVENT # 0 ==> A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED      		[Type = InitialDrugElutingStentImplantation][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 1 ==> RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS      		[Type = Late_Stent_Thrombosis][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 3 ==> ACUTE MYOCARDIAL INFARCTION      		[Type = Myocardial_Infarction][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 2 ==> PATIENT PRESENTED      		[Type = ER_Admission][Computed Time Value = Could not compute time from annotations!]   
+EVENT # 4 ==> 3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION      		[Type = FollowUpStentProcedure][Computed Time Value = Could not compute time from annotations!]   
+All Asserted and Inferred Relations:
+====================================
+EVENT-RELATION # 1: ( A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (D ...)==>[ BEFORE ]==>( RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS ...)   
+EVENT-RELATION # 2: ( A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (D ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 3: ( A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (D ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)   
+EVENT-RELATION # 4: ( A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (D ...)==>[ BEFORE ]==>( 3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESIO ...)   
+EVENT-RELATION # 5: ( RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 6: ( RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS ...)==>[ BEFORE ]==>( ACUTE MYOCARDIAL INFARCTION ...)   
+EVENT-RELATION # 7: ( RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS ...)==>[ BEFORE ]==>( 3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESIO ...)   
+EVENT-RELATION # 8: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( PATIENT PRESENTED ...)   
+EVENT-RELATION # 9: ( ACUTE MYOCARDIAL INFARCTION ...)==>[ BEFORE ]==>( 3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESIO ...)   
+EVENT-RELATION # 10: ( PATIENT PRESENTED ...)==>[ BEFORE ]==>( 3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESIO ...)   Timeline Buckets:================EVENT-TimeLineEntry # 1: {InitialDrugElutingStentImplantation : [A 3.00X16MM TAXUS EXPRESS2 DRUG ELUTING STENT (DES) WAS DEPLOYED]}EVENT-TimeLineEntry # 2: {Late_Stent_Thrombosis : [RCA WAS 100% OCCLUDED WITH DISTAL THROMBOSIS]}EVENT-TimeLineEntry # 3: {Myocardial_Infarction : [ACUTE MYOCARDIAL INFARCTION]}EVENT-TimeLineEntry # 4: {ER_Admission : [PATIENT PRESENTED]}EVENT-TimeLineEntry # 5: {FollowUpStentProcedure : [3.0X15MM NON BSC STENT WAS DEPLOYED IN THE LESION]}
+
+##############################
+
+Expected: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;2;3;4 ]
+Found: Event [ 0 ] --> [  BEFORE ] --> Event [ 1;1;2;3;4 ]

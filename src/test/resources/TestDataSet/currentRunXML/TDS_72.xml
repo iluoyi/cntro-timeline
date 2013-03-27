@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<CNTROTimeLineEventList xmlns="http://informatics.mayo.edu/CNTRO/CNTROTimeLine1.0" noteFileName="src/test/resources/NormalizedAnnotatedEvents/72.txt.owl">
+   <event id="0" name="THE PHYSICIAN IMPLANTED AN UNK SIZE LIBERTE BARE METAL STENT IN THE PROXIMAL PORTION OF THE 2.50X16MM TAXUS STENT">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">THE PHYSICIAN IMPLANTED AN UNK SIZE LIBERTE BARE METAL STENT IN THE PROXIMAL PORTION OF THE 2.50X16MM TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="1" name=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT">
+      <relatedTo targetId="2" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId="0" relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text"> AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT</eventProperty>
+      <eventProperty name="eventType" type="text">FollowUpStentProcedure</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="3" name="MEDICATIONS TAKEN BY THE PT INCLUDED NITROGLYCERINE, SIGMART, HEPARIN, PANALDINE, AND ASPIRIN">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId="2" relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId="4" relation="START"/>
+      <eventProperty name="description" type="text">MEDICATIONS TAKEN BY THE PT INCLUDED NITROGLYCERINE, SIGMART, HEPARIN, PANALDINE, AND ASPIRIN</eventProperty>
+      <eventProperty name="eventType" type="text">StartAntiplateletTherapy</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="4" name="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL">
+      <relatedTo targetId="5;5;6;7;2;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL</eventProperty>
+      <eventProperty name="eventType" type="text">InitialDrugElutingStentImplantation</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="5" name="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL">
+      <relatedTo targetId="6;7;2;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL</eventProperty>
+      <eventProperty name="eventType" type="text">Late_Stent_Thrombosis</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="7" name="WITH AN ACUTE MYOCARDIAL INFARCTION">
+      <relatedTo targetId="6;2;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">WITH AN ACUTE MYOCARDIAL INFARCTION</eventProperty>
+      <eventProperty name="eventType" type="text">Myocardial_Infarction</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="6" name="PT PRESENTED">
+      <relatedTo targetId="2;1" relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT PRESENTED</eventProperty>
+      <eventProperty name="eventType" type="text">ER_Admission</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <event id="2" name="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED">
+      <relatedTo targetId=" " relation="BEFORE"/>
+      <relatedTo targetId=" " relation="DURING"/>
+      <relatedTo targetId=" " relation="EQUAL"/>
+      <relatedTo targetId=" " relation="FINISH"/>
+      <relatedTo targetId=" " relation="MEET"/>
+      <relatedTo targetId=" " relation="OVERLAP"/>
+      <relatedTo targetId=" " relation="START"/>
+      <eventProperty name="description" type="text">PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED</eventProperty>
+      <eventProperty name="eventType" type="text">Patient_Death</eventProperty>
+      <eventProperty name="time" type="text">Could not compute time from annotations!</eventProperty>
+   </event>
+   <eventStmt sourceEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT" relation="BEFORE" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT" relation="EQUAL" targetEvent="THE PHYSICIAN IMPLANTED AN UNK SIZE LIBERTE BARE METAL STENT IN THE PROXIMAL PORTION OF THE 2.50X16MM TAXUS STENT"/>
+   <eventStmt sourceEvent="MEDICATIONS TAKEN BY THE PT INCLUDED NITROGLYCERINE, SIGMART, HEPARIN, PANALDINE, AND ASPIRIN" relation="FINISH" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent="MEDICATIONS TAKEN BY THE PT INCLUDED NITROGLYCERINE, SIGMART, HEPARIN, PANALDINE, AND ASPIRIN" relation="START" targetEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent="PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="WITH AN ACUTE MYOCARDIAL INFARCTION"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent="CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL" relation="BEFORE" targetEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT"/>
+   <eventStmt sourceEvent="WITH AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT PRESENTED"/>
+   <eventStmt sourceEvent="WITH AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent="WITH AN ACUTE MYOCARDIAL INFARCTION" relation="BEFORE" targetEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent="PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED"/>
+   <eventStmt sourceEvent="PT PRESENTED" relation="BEFORE" targetEvent=" AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT"/>
+   <timelineEntry>{FollowUpStentProcedure [THE PHYSICIAN IMPLANTED AN UNK SIZE LIBERTE BARE METAL STENT IN THE PROXIMAL PORTION OF THE 2.50X16MM TAXUS STENT]: [ AN UNK SIZE NON-BSC BARE METAL STENT WAS IMPLANTED IN THE DISTAL PORTION OF THE 2.50X16MM TAXUS STENT]}</timelineEntry>
+   <timelineEntry>{StartAntiplateletTherapy [MEDICATIONS TAKEN BY THE PT INCLUDED NITROGLYCERINE, SIGMART, HEPARIN, PANALDINE, AND ASPIRIN]: InitialDrugElutingStentImplantation [PHYSICIAN THEN IMPLANTED THE 2.50X16MM TAXUS EXPRESS2 DRUG ELUTING STENT IN THE DISTAL LCX TO LPL]}</timelineEntry>
+   <timelineEntry>{Late_Stent_Thrombosis [CORONARY ANGIOGRAPHY REVEALED A COMPLETE TOTAL OCCLUSION INSIDE THE 2.50X16MM TAXUS STENT IN THE DISTAL LCX TO LPL]}</timelineEntry>
+   <timelineEntry>{Myocardial_Infarction [WITH AN ACUTE MYOCARDIAL INFARCTION]}</timelineEntry>
+   <timelineEntry>{ER_Admission [PT PRESENTED]}</timelineEntry>
+   <timelineEntry>{Patient_Death [PT SUFFERED SEVERE HEMODYNAMIC DETERIORATION AND DIED]}</timelineEntry>
+</CNTROTimeLineEventList>
