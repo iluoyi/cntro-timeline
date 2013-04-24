@@ -21,6 +21,7 @@ import edu.mayo.informatics.cntro.queryIF.CNTROQuery;
 import edu.mayo.informatics.cntro.queryIF.EventFeature;
 import edu.mayo.informatics.cntro.queryIF.Granularity;
 import edu.mayo.informatics.cntro.queryIF.ParserType;
+import edu.mayo.informatics.cntro.utils.CNTROUtils;
 
 public class SampleEventTest 
 {
@@ -71,6 +72,21 @@ public class SampleEventTest
 			assertNotNull(events);
 			// This is one way to process the event list. Hashtable key shows you the sequence on the timeline.
 			String eventsStr = TestUtils.marshallTimeLine(events, false, cetl);
+			
+			//System.out.println("\n##################### Timeline Events in XML format ##########################");
+			//System.out.println(eventsStr);
+			//System.out.println("\n############################################################");
+			
+			List<String> tl = CNTROUtils.getTimeLineEventsDetails(events, false);
+			System.out.println("\n##################### Timeline Sequence ##########################");
+			System.out.println("\nTime line sequence is denoted by their serial number. \n" +
+					"Integer part of sequence denotes the order. \n" +
+					"Same items in same rank are seprated by decimal parts.");
+			System.out.println("\n############################################################");
+			for (String tle : tl)
+				System.out.println("\nTime Line Sequence:" + tle);
+			System.out.println("\n############################################################");
+			
 			assertNotNull(eventsStr);
 		}
 		catch(Exception e)
@@ -85,6 +101,7 @@ public class SampleEventTest
 	{
 		try
 		{
+			System.out.println("######################## Testing Duration #####################################");
 			List<Event> eventList = query.findEvents("A 2.75X12MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE RV BRANCH", false);
 			assertFalse(eventList.isEmpty());
 			assertTrue(eventList.size() == 1);
@@ -100,6 +117,12 @@ public class SampleEventTest
 			// Computing duration in months between 2006-2010
 			long computed = query.getDurationBetweenEvents(startEvent, endEvent, Granularity.MONTH);
 			assertTrue(computed == 48);
+			System.out.println("Correct Duration found! = " + computed + " " + Granularity.MONTH + " between events:\n");
+			System.out.println("Start Event" + startEvent.getClsId());
+			System.out.println("Start Event Duration" + startEvent.getTime(true));
+			System.out.println("\nEnd Event" + endEvent.getClsId());
+			System.out.println("End Event Duration" + endEvent.getTime(true));
+			System.out.println("\n############################################################");
 		}
 		catch(Exception e)
 		{

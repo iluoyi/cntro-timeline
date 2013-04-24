@@ -496,20 +496,6 @@ public class CNTROUtils
 			int nextIndentSeq = 1;
 			List<Event> sortedSubListOfEvents = le;
 			
-			/*
-			if (sortedSubListOfEvents.size() > 1)
-			{
-				Hashtable<String, List<Event>> subTimeLine = CNTROUtils.getEventsTimeline(false, false, false, false, le);
-				
-				if ((subTimeLine != null)&&(!subTimeLine.isEmpty())&&(subTimeLine.size() == sortedSubListOfEvents.size()))
-				{
-					List<String> sortedListOfEvents = CNTROUtils.getTimeLineEventsDetails(subTimeLine, false);
-					str.addAll(sortedListOfEvents);
-					return str;
-				}
-			}
-			*/
-			
 			for (Event e : sortedSubListOfEvents)
 			{
 				TimeInstant et;

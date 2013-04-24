@@ -146,34 +146,34 @@ public class CNTROOWLAPIParser implements CNTROParser
 		Hashtable<String, OWLAnnotationProperty> AllAnnotationProperties = new Hashtable<String, OWLAnnotationProperty>();
 		Hashtable<String, OWLDataProperty> AllDataProperties = new Hashtable<String, OWLDataProperty>();
 		
-		System.out.println("\n################################\n");
+		//System.out.println("\n################################\n");
 		Set<OWLObjectProperty> allObjectPros = ontology.getObjectPropertiesInSignature(true);
 		
 		for (OWLObjectProperty p : allObjectPros)
 		{
-			System.out.println("Object Property: " + p.getIRI());
+			//System.out.println("Object Property: " + p.getIRI());
 			AllObjectProperties.put(getPropertyIdFromIRI(p.getIRI()), p);
 		}
 		
-		System.out.println("\n################################\n");
+		//System.out.println("\n################################\n");
 		Set<OWLDataProperty> allDataPros = ontology.getDataPropertiesInSignature(true);
 		
 		for (OWLDataProperty dp : allDataPros)
 		{
-			System.out.println("Data Property: " + dp.getIRI());
+			//System.out.println("Data Property: " + dp.getIRI());
 			AllDataProperties.put(getPropertyIdFromIRI(dp.getIRI()), dp);
 		}
 		
-		System.out.println("\n################################\n");
+		//System.out.println("\n################################\n");
 		Set<OWLAnnotationProperty> allAnnotPros = ontology.getAnnotationPropertiesInSignature();
 		
 		for (OWLAnnotationProperty ap : allAnnotPros)
 		{
-			System.out.println("Annotation Property: " + ap.getIRI());
+			//System.out.println("Annotation Property: " + ap.getIRI());
 			AllAnnotationProperties.put(getPropertyIdFromIRI(ap.getIRI()), ap);
 		}
 
-		System.out.println("\n################################\n");
+		//System.out.println("\n################################\n");
 		//All Object Properties
 		hasValidTime = AllObjectProperties.get(CNTROConstants.CNTRO_HASVALIDTIME_PRP_NAME);
 		hasNoteTime = AllObjectProperties.get(CNTROConstants.CNTRO_HASNOTETIME_PRP_NAME);
@@ -220,77 +220,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		hasGranularity = AllAnnotationProperties.get(CNTROConstants.CNTRO_HASGRANULARITY_PRP_NAME);
 		
 		System.out.println("Loaded All Properties!!");
-		/*
-		hasValidTime = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASVALIDTIME_PRP));
-		hasNoteTime = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASNOTETIME_PRP));
-		hasOriginalTime = df.getOWLDataProperty(IRI.create(CNTROConstants.CNTRO_HASORIGINALTIME_PRP));
-		hasNormalizedTime = df.getOWLDataProperty(IRI.create(CNTROConstants.CNTRO_HASNORMALIZEDTIME_PRP));
-		
-		hasStartTime = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASSTARTTIME_PRP));
-		hasEndTime = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASENDTIME_PRP));
-		hasDuration = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASDURATION_PRP));
-		hasDurationValue = df.getOWLDataProperty(IRI.create(CNTROConstants.CNTRO_HASDURATIONVALUE_PRP));
-		hasOffset = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASOFFSET_PRP));
-		hasTimeOffset = df.getOWLAnnotationProperty(IRI.create(CNTROConstants.CNTRO_HASTIMEOFFSET_PRP));
-		hasDurationUnit = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_HASDURATIONUNIT_PRP));
-		
-		continuesThrough = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_CONTINUES_THROUGH_PRP));
-		include = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_INCLUDE_PRP));
-		isIncluded = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_IS_INCLUDED_PRP));
-		overlappedBy = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_OVERLAPPED_BY_PRP));
-		initiate = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_INITIATE_PRP));
-		simultaneous = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_SIMULTANEOUS_PRP));
-		terminate = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_TERMINATE_PRP));
-		sameas = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_SAMEAS_PRP));
-		
-		temporalSubject = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_SUBJECT_PRP));
-		temporalObject = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_OBJECT_PRP));
-		temporalPredicate = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_PREDICATE_PRP));
-
-		after = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_AFTER_PRP));
-		before = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_BEFORE_PRP));
-		meet = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_MEET_PRP));
-		overlap = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_OVERLAP_PRP));
-		contain = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_CONTAIN_PRP));
-		during = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_DURING_PRP));
-		equal = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_EQUAL_PRP));
-		finish = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_FINISH_PRP));
-		start = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TR_START_PRP));
-		
-		temporalRelation = df.getOWLObjectProperty(IRI.create(CNTROConstants.CNTRO_TEMPORALRELATION_PRP));
-		
-		for (OWLObjectProperty oe : allObjectPros)
-		{
-			// check if it coincides with any of the temporal relation types we have defined.
-			if (getTemporalRelationTypeForProperty(oe) != null)
-			{
-				// See if temporal Relation has it
-				if (!temporalRelations.contains(oe))
-					temporalRelations.add(oe);
-			}
-		}
-		*/
-		
-		/*
-		temporalRelations.add(after);
-		temporalRelations.add(before);
-		temporalRelations.add(meet);
-		temporalRelations.add(overlap);
-		temporalRelations.add(contain);
-		temporalRelations.add(during);
-		temporalRelations.add(equal);
-		temporalRelations.add(finish);
-		temporalRelations.add(start);
-		*/
-		//temporalRelations.add(continuesThrough);
-		//temporalRelations.add(include);
-		//temporalRelations.add(isIncluded);
-		
-		//temporalRelations.add(overlappedBy);
-		//temporalRelations.add(initiate);
-		//temporalRelations.add(simultaneous);
-		//temporalRelations.add(terminate);
-		//temporalRelations.add(sameas);
 	}
 	
 	private String getPropertyIdFromIRI(IRI propIRI)
@@ -365,8 +294,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 					Event evt = parseEvents(ind);
 					isReadingSmooth = ((evt != null) && isReadingSmooth);
 				}
-				//else
-				//	System.out.println("\nAlready processed:" + ind.toString());
 			}
 		}
 
@@ -454,12 +381,10 @@ public class CNTROOWLAPIParser implements CNTROParser
 		Time time = null;
 
 		String stmtName= getAnnotationPropertyValue(owlInst, rdfLabel);
-		//System.out.println("Processing Statement:" + stmtName);
 		
 		Set<OWLNamedIndividual> subjects = getObjectPropertyValue(owlInst, temporalSubject);
 		if ((subjects == null)||(subjects.isEmpty()))
 		{
-			//System.out.println("Subjects are Empty, Returning...");
 			return;
 		}
 		
@@ -480,7 +405,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		Set<OWLNamedIndividual> objects = getObjectPropertyValue(owlInst, temporalObject);
 		if ((objects == null)||(objects.isEmpty()))
 		{
-			//System.out.println("Objects are Empty, Returning...");
 			return;
 		}
 
@@ -501,7 +425,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		Set<OWLNamedIndividual> predicates = getObjectPropertyValue(owlInst, temporalPredicate);
 		if ((predicates == null)||(predicates.isEmpty()))
 		{
-			//System.out.println("Predicates are Empty, Returning...");
 			return;
 		}
 		
@@ -513,11 +436,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 			rel = getTemporalRelationTypeForName(predlabel);	
 		}
 
-		
-		//List<CNTROCls> times = processTargets(validTimes, owlInst);
-		
-		//if ((times != null)&&(!times.isEmpty()))
-			//evt.eventTime = CNTROUtils.getTimeFromCNTROCls(times.get(0));
 		
 		if (firstRun)
 		{
@@ -532,17 +450,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		}
 		if (!firstRun)
 		{
-			//System.out.println("Subject:" + source.getClsId());
-			//System.out.println("Object:" + target.getClsId());
-			//System.out.println("Predicate:" + rel);
-
 			Set<OWLNamedIndividual> offset = getObjectPropertyValue(owlInst, hasOffset);
 
 			if ((offset == null)||(offset.isEmpty()))
 			{
 				// try to find out offset that might not have carried over 
 				// in case of inferred (reverse direction) temporal relation
-				
 				try 
 				{
 					List<TemporalRelation> reverseRels = target.getTemporalRelationByRelation(source);
@@ -588,7 +501,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 				if (duration != null)
 				{
 					TemporalOffset to = new TemporalOffset();
-					//System.out.println("Offset:Duration:" + duration);
 					String durlabel = getAnnotationPropertyValue(duration, rdfLabel);
 					to.label = durlabel;
 					
@@ -596,7 +508,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 					if ((durationValues != null)&&(!durationValues.isEmpty()))
 					{
 						to.value = Integer.parseInt(durationValues.iterator().next().getLiteral());
-						//System.out.println("Duration Value=" + to.value);
 					}
 	
 					Set<OWLNamedIndividual> durationUnits = getObjectPropertyValue(duration, hasDurationUnit);
@@ -606,8 +517,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 					}
 					else
 						to.unit = CNTROUtils.getGranularityFromString(durationUnits.iterator().next().toString());
-					
-					//System.out.println("Duration Units=" + durationUnits.iterator().next().toString());
 					
 					addTemporalRelation(source, target, rel, to);
 					
@@ -757,35 +666,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 				}
 			}
 		}
-		
-		/*
-		for (OWLObjectProperty currentProperty : objectPropertiesOfInst)
-		{
-			if (!temporalRelations.contains(currentProperty))
-				System.out.println("Ignored event's property:" + currentProperty.getIRI());
-			
-			Set<OWLNamedIndividual> relations = getObjectPropertyValue(owlInst, currentProperty);
-			
-			if (relations != null)
-			{
-				TemporalRelationType relType = getTemporalRelationTypeForProperty(currentProperty);
-				populateRelations(relations, owlInst, evt, relType);
-			}
-		}
-		*/
-		/*
-		for (int i=0; i < temporalRelations.size(); i++)
-		{
-			OWLObjectProperty currentProperty = temporalRelations.elementAt(i);
-			Set<OWLNamedIndividual> relations = getObjectPropertyValue(owlInst, currentProperty);
-		
-			if (relations != null)
-			{
-				TemporalRelationType relType = getTemporalRelationTypeForProperty(currentProperty);
-				populateRelations(relations, owlInst, evt, relType);
-			}
-		}
-		*/
 	}
 	
 	private boolean containsType(Set<OWLClassExpression> typeCollection, String type)
@@ -823,19 +703,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 				return itself;
 		}
 		
-		//System.out.println("Trying to find superclasses of " + currentClass.getIRI());
 		Set<OWLClassExpression> superClasses = currentClass.getSuperClasses(ontology);
 		
 		Set<OWLClassExpression> importedscls = currentClass.getSuperClasses(ontology.getImports());
 		superClasses.addAll(importedscls);
 		
-		//System.out.println("SuperClasses:" + superClasses.size());
-		
-		//for (OWLClassExpression sc : importedscls)
-		//{
-		//	System.out.println("\tSuperClass: " + sc);
-		//}
-			
 		if (containsType(superClasses, "Thing")||
 			containsType(superClasses, CNTROConstants.CNTRO_EVENT_CLS)||
 			containsType(superClasses, CNTROConstants.CNTRO_TIMEINSTANCE_CLS)||
@@ -980,31 +852,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 					}
 				}
 			}
-			
-			
-			// Add offset here from annotation properties of this relation
-			/*
-			String labelAsTime2 = getAnnotationPropertyValue(owlInst, rdfLabel);
-			Set<OWLIndividual> duras = owlInst.getObjectPropertyValues(hasDuration, this.ontology);
-			
-			String ds = "";
-			for (OWLIndividual dur :duras)
-				ds = getAnnotationPropertyValue(dur.asOWLNamedIndividual(), rdfLabel);
-			
-			OWLObjectPropertyAssertionAxiom annotsI = df.getOWLObjectPropertyAssertionAxiom(before, owlInst, target);
-			OWLAxiom oa = annotsI.getNNF();
-
-			Object at = annotsI.getSimplified();
-			Set<OWLAnnotation> vala = annotsI.getAnnotations();
-					for(OWLAnnotation va : vala)
-					{
-						System.out.println("here is the value" + va.getValue().toString());
-					}
-			String offsetValue = getAnnotationPropertyValue(owlInst, hasTimeOffset);
-			
-			if (offsetValue != null)
-				System.out.println("here");
-				*/
 		}
 		
 		return retTargets;
@@ -1039,18 +886,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 
 		Set<OWLNamedIndividual> propList = reasoner.getObjectPropertyValues(pI, objProperty).getFlattened();
 		
-		/*
-		Map<OWLObjectPropertyExpression, Set<OWLIndividual>> objProperties = pI.getObjectPropertyValues(ontology);
-
-		if (objProperties.containsKey(objProperty))
-		{
-			//System.out.println("Found property:" + objProperty.toString());
-			return objProperties.get(objProperty);
-		}
-
-		return null;
-		*/
-		
 		return propList;
 	}
 	
@@ -1060,20 +895,14 @@ public class CNTROOWLAPIParser implements CNTROParser
 		if ((pI == null)||(dataProperty == null))
 			return null;
 
-		//Set<OWLLiteral> dataProperties = reasoner.getDataPropertyValues(pI, dataProperty);
-		
 		Map<OWLDataPropertyExpression, Set<OWLLiteral>> dataProperties = pI.getDataPropertyValues(ontology);
 
 		if (dataProperties.containsKey(dataProperty))
 		{
-			//System.out.println("Found data property:" + dataProperty.toString());
 			return dataProperties.get(dataProperty);
 		}
 
 		return null;
-		
-		
-		//return dataProperties;
 	}
 	
 	public Date NormalizeTimeComponents(OWLNamedIndividual ind) 
@@ -1115,9 +944,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 						
 						if (CNTROUtils.isNull(normalizedTime))
 							continue;
-						
-						//System.out.println("Original Time:" + originalTime);
-						//System.out.println("Normalized Time:" + normalizedTime);
 						
 						OWLDataPropertyAssertionAxiom assertion = df.getOWLDataPropertyAssertionAxiom(hasNormalizedTime, ind, normalizedTime);
 						AddAxiom addAxiomChange = new AddAxiom(ontology, assertion);
@@ -1379,21 +1205,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		
 		if (tr != null)
 		{
-			/*
-			boolean found = false;
-			int index = -1;
-			
-			Vector<TemporalRelation> sourceEvtrelations = source.getTemporalRelations();
-			for (int i=0; i < sourceEvtrelations.size(); i++)
-				if (sourceEvtrelations.elementAt(i).getClsId().equals(tr.getClsId()))
-				{
-					found = true;
-					index = i;
-				}
-
-			
-			if ((sourceEvtrelations.isEmpty())||(!found))
-			*/
 			tr.offset = offset;
 			source.addTemporalRelation(tr);
 
@@ -1520,9 +1331,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		
 		Date normalizedDate = dateParser.parse(dateString, new ParsePosition(0));
 		
-		//if (normalizedDate == null)
-		//	System.out.println("Normalized Date is null for string:" + dateString);
-		
 		if (normalizedDate == null)
 			return null;
 	
@@ -1546,15 +1354,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 	{
 		String normalizedTime = dateParser.normaltoUSDateString(dt);
 		
-		//if (CNTROUtils.isNull(normalizedTime))
-		//	System.out.println("Normalized Date String is null for date:" + dt);
-	
 		return normalizedTime;
 	}
 	
 	public void printOWLNamedIndividual(OWLNamedIndividual ind, OWLOntology ontology)
 	{
-		//System.out.println(ind);
 		if (ind != null)
 		{
 			System.out.println("\nAnnotation Properties\n--------------------");
