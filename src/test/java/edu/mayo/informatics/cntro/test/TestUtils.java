@@ -196,8 +196,46 @@ public class TestUtils
 								if (CNTROUtils.isNull(tid))
 									tid = "" + tei;
 								else
-									tid += TestCfg.ENTRY_DELIM + tei;
-								
+								{
+									boolean toAddIndex = true;
+									if (tid.indexOf(TestCfg.ENTRY_DELIM) != -1)
+									{
+										String[] existingIds = tid.split(TestCfg.ENTRY_DELIM);
+										
+										for (String extId : existingIds)
+										{
+											try
+											{
+												int existingIntV = Integer.valueOf(extId.trim());
+												if (existingIntV == tei)
+												{
+													toAddIndex = false;
+													break;
+												}
+											}
+											catch(Exception nfe) 
+											{
+											
+											}
+										}
+									}
+									else
+									{
+										try
+										{
+											int existingIntVal = Integer.valueOf(tid.trim());
+											if (existingIntVal == tei)
+												toAddIndex = false;
+										}
+										catch(Exception nfe) 
+										{
+											
+										}
+									}
+									
+									if (toAddIndex)
+										tid += TestCfg.ENTRY_DELIM + tei;
+								}
 								// Create relation entry here...
 								CNTROTimeLineStatement cstmt = new CNTROTimeLineStatement();
 								cstmt.setSourceEvent(e.description);
