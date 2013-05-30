@@ -2,6 +2,7 @@ package edu.mayo.informatics.cntro.impl;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
@@ -12,6 +13,7 @@ import edu.mayo.informatics.cntro.exceptions.CNTROException;
 import edu.mayo.informatics.cntro.main.CNTROAuxiliary;
 import edu.mayo.informatics.cntro.model.Duration;
 import edu.mayo.informatics.cntro.model.Event;
+import edu.mayo.informatics.cntro.model.EventComparison;
 import edu.mayo.informatics.cntro.model.TemporalOffset;
 import edu.mayo.informatics.cntro.model.TemporalRelation;
 import edu.mayo.informatics.cntro.model.Time;
@@ -99,7 +101,11 @@ public class CNTROQueryImpl implements CNTROQuery
 					if (et instanceof TimeInterval)
 					{
 						if (((TimeInterval)et).getDuration() != null)
-							return ((TimeInterval)et).getDuration();
+						{
+							Duration tid = ((TimeInterval)et).getDuration();
+							tid.isAsserted = true;
+							return tid;
+						}
 					}
 					else
 					{
@@ -118,6 +124,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		if (dur > -1)
 		{
 			Duration d = new Duration();
+			d.isAsserted = true;
 			d.unit = dg;
 			d.value = dur;
 			d.label = label;
@@ -128,13 +135,13 @@ public class CNTROQueryImpl implements CNTROQuery
 		throw new CNTROException(msg);
 	}
 
-	public long getDurationBetweenEvents(Event startEvent, Event endEvent)
+	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent)
 					throws CNTROException 
 	{
-		return getDurationBetweenEvents(startEvent, endEvent, null);
+		return  getDurationBetweenEvents(startEvent, endEvent, null);
 	}
 
-	public long getDurationBetweenEvents(Event startEvent, Event endEvent, Granularity granularity)
+	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent, Granularity granularity, boolean useOffset)
 			throws CNTROException 
 	{
 		try 
@@ -186,8 +193,14 @@ public class CNTROQueryImpl implements CNTROQuery
 				}
 			}
 
+			Duration dur = new Duration();
+			dur.value = -1;
+			
 			if ((endOf1 == null)||(startOf2 == null))
 			{
+				if (!useOffset)
+					return dur;
+				
 				try
 				{
 					return getDurationFromOffset(startEvent, endEvent, granularity, false);
@@ -207,7 +220,12 @@ public class CNTROQueryImpl implements CNTROQuery
 			else
 				temporalGranularity = CNTROUtils.getTemporalGranularityFromTime(granularity);
 			
-			return period.duration(temporalGranularity);
+			long dval = period.duration(temporalGranularity);
+			
+			
+			dur.unit = CNTROUtils.getTemporalGranularityFromTime(temporalGranularity);
+			dur.value = dval;
+			return dur;
 		} 
 		catch (TemporalException e) 
 		{
@@ -216,22 +234,22 @@ public class CNTROQueryImpl implements CNTROQuery
 		}
 	}
 
-	public long convertValueBasedOnGranularity(Period period, Granularity fromGranularity, Granularity toGranularity) throws TemporalException
+	public Duration convertValueBasedOnGranularity(Period period, Granularity fromGranularity, Granularity toGranularity) throws TemporalException
 	{
 		int defaultGranularity = CNTROUtils.getTemporalGranularityFromTime(Granularity.DAY);
 		
 		if ((fromGranularity == null)||(toGranularity == null))
-			return period.duration(defaultGranularity);
+			return (new Duration("computed by program", (int) period.duration(defaultGranularity), Granularity.DAY));
 		
 		int toTempGranularity = CNTROUtils.getTemporalGranularityFromTime(toGranularity);
 	    
-		return period.duration(toTempGranularity);
+		return (new Duration("computed by program", (int) period.duration(toTempGranularity), toGranularity));
 	}
 
-	private long getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, boolean justUseSynonyms)
+	private Duration getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, boolean justUseSynonyms)
 										throws CNTROException
 	{
-		long collectiveDur = 0;
+		Duration collectiveDur = new Duration("Null", -1, Granularity.UNKNOWN);
 		List<Event> eventstl = null;
 		
 		String msg = "Can't determine duration: Events are either not related (with or without offset)" +
@@ -239,6 +257,11 @@ public class CNTROQueryImpl implements CNTROQuery
 		
 		try
 		{
+			collectiveDur = computeDurationIfPresent(startEvent, endEvent, granularity);
+			
+			if (collectiveDur.value > -1)
+				return collectiveDur;
+			
 			if (!justUseSynonyms)
 				eventstl = eventsBetweenEvents(startEvent, endEvent, true, false, null);
 		}
@@ -270,6 +293,18 @@ public class CNTROQueryImpl implements CNTROQuery
 						if (ae.description.equals(be.description))
 							continue;
 
+						Duration durbetweenIntermediates = getDurationBetweenEvents(ae, be, granularity, false);
+						
+						if (durbetweenIntermediates.value > -1)
+						{
+							if (collectiveDur.value > -1)
+								collectiveDur.value += durbetweenIntermediates.value;
+							else
+								collectiveDur = durbetweenIntermediates;
+							
+							continue;
+						}
+						
 						List<TemporalRelation> sameAsStartEvents = ae.getTemporalRelationByRelationType(types);
 						List<TemporalRelation> sameAsEndEvents = be.getTemporalRelationByRelationType(types);
 						
@@ -279,16 +314,36 @@ public class CNTROQueryImpl implements CNTROQuery
 						if (sameAsEndEvents.isEmpty())
 							sameAsEndEvents = ae.getTemporalRelationByRelation(be);
 						
-						if ((sameAsStartEvents.isEmpty())&&(sameAsEndEvents.isEmpty()))
-								continue;
-						
 						Vector<Event> sameAsStartEventsList = new Vector<Event>();
 						Vector<Event> sameAsEndEventsList = new Vector<Event>();
+
+						if (sameAsStartEvents.isEmpty())
+						{
+							Collection<Event> allEvents = this.aux.parser_.getEvents();
+							for (Event ce : allEvents)
+							{
+								if ((EventComparison.EQUAL == CNTROUtils.compareTwoEvents(ce, ae))&&(!(ae.getClsId().equals(ce.getClsId()))))
+									sameAsStartEventsList.add(ce);
+							}
+						}
+							
+						if (sameAsEndEvents.isEmpty())
+						{
+							Collection<Event> allEvents = this.aux.parser_.getEvents();
+							for (Event ee : allEvents)
+							{
+								if ((EventComparison.EQUAL == CNTROUtils.compareTwoEvents(ee, be))&&(!(be.getClsId().equals(ee.getClsId()))))
+									sameAsEndEventsList.add(ee);
+							}
+						}
+						
+						//if ((sameAsStartEvents.isEmpty())&&(sameAsEndEvents.isEmpty()))
+						//		continue;
 						
 						sameAsStartEventsList.add(ae);
 						sameAsEndEventsList.add(be);
 						
-						if (!sameAsStartEvents.isEmpty())
+						if (!sameAsStartEventsList.isEmpty())
 						{
 							for (TemporalRelation relst : sameAsStartEvents)
 							{
@@ -305,7 +360,7 @@ public class CNTROQueryImpl implements CNTROQuery
 							}
 						}
 						
-						if (!sameAsEndEvents.isEmpty())
+						if (!sameAsEndEventsList.isEmpty())
 						{
 							for (TemporalRelation relen : sameAsEndEvents)
 							{
@@ -322,7 +377,7 @@ public class CNTROQueryImpl implements CNTROQuery
 							}
 						}
 
-						long countInThisCycle = 0;
+						Duration countInThisCycle = new Duration("Null", -1, Granularity.UNKNOWN);
 						for (Event eventS : sameAsStartEventsList)
 						{
 							if (eventS == null)
@@ -342,110 +397,21 @@ public class CNTROQueryImpl implements CNTROQuery
 								if (eventS.description.equals(eventE.description)) // if duplicate events
 									continue;
 								
-								List<TemporalRelation> relo1 = eventS.getTemporalRelationByRelation(eventE);
+								countInThisCycle = computeDurationIfPresent(eventS, eventE, granularity);
 								
-								for (TemporalRelation relse : relo1)
-								{
-									if ((relse.relation == TemporalRelationType.SAMEAS)||(relse.relation == TemporalRelationType.EQUAL)||(relse.relation == TemporalRelationType.SIMULTANEOUS))
-										continue;
-									
-									if (relse.offset != null)
-									{
-										System.out.println("\nDuration between(1st Check):" + relse.sourceEvent.description + " and " + relse.targetEvent.description);
-										countInThisCycle = getDurationFromOffset(relse.sourceEvent, eventS, granularity, relse.offset);
-										System.out.println("Duration:" + countInThisCycle);
-										foundDuration = true;
-										break;
-									}
-								}
-									
-								if (!foundDuration)
-								{
-									List<TemporalRelation> relo2 = eventE.getTemporalRelationByRelation(eventS);
-									
-									for (TemporalRelation reles : relo2)
-									{
-										if ((reles.relation == TemporalRelationType.SAMEAS)||(reles.relation == TemporalRelationType.EQUAL)||(reles.relation == TemporalRelationType.SIMULTANEOUS))
-											continue;
-
-										if (reles.offset != null)
-										{
-											System.out.println("\nDuration between(2nd Check):" + reles.sourceEvent.description + " and " + reles.targetEvent.description);
-											countInThisCycle = getDurationFromOffset(reles.sourceEvent, eventE, granularity, reles.offset);
-											System.out.println("Duration:" + countInThisCycle);
-											foundDuration = true;
-											break;
-										}
-									}
-								}
+								if (countInThisCycle.value != -1)
+									foundDuration = true;
 							}
 						}
 
 						
-						
-						/*
-						long countInThisCycle = 0;
-						for (TemporalRelation rels : sameAsStartEvents)
+						if ((foundDuration)&&(countInThisCycle.value != -1))
 						{
-							if (foundDuration)
-								break;
-
-							for (TemporalRelation rele : sameAsEndEvents)
-							{
-								if (foundDuration)
-									break;
-								
-								if (rels.targetEvent.description.equals(rele.targetEvent.description)) // if duplicate events
-									continue;
-								
-								List<TemporalRelation> relo1 = rels.targetEvent.getTemporalRelationByRelation(rele.targetEvent);
-								
-								for (TemporalRelation relse : relo1)
-								{
-									//if ((relse.relation == TemporalRelationType.SAMEAS)||(relse.relation == TemporalRelationType.EQUAL)||(relse.relation == TemporalRelationType.SIMULTANEOUS))
-										//duplicate = true;
-										
-									//if (duplicate) 
-									//	continue;
-									
-									if (relse.offset != null)
-									{
-										System.out.println("\nDuration between(1st Check):" + relse.sourceEvent.description + " and " + relse.targetEvent.description);
-										countInThisCycle = getDurationFromOffset(relse.sourceEvent, relse.targetEvent, granularity, relse.offset);
-										System.out.println("Duration:" + countInThisCycle);
-										foundDuration = true;
-										break;
-									}
-								}
-									
-								if (!foundDuration)
-								{
-									List<TemporalRelation> relo2 = rele.targetEvent.getTemporalRelationByRelation(rels.targetEvent);
-									
-									for (TemporalRelation reles : relo2)
-									{
-										//if ((reles.relation == TemporalRelationType.SAMEAS)||(reles.relation == TemporalRelationType.EQUAL)||(reles.relation == TemporalRelationType.SIMULTANEOUS))
-										//	duplicate = true;
-										
-										//if (duplicate) 
-										//	continue;
-
-										if (reles.offset != null)
-										{
-											System.out.println("\nDuration between(2nd Check):" + reles.sourceEvent.description + " and " + reles.targetEvent.description);
-											countInThisCycle = getDurationFromOffset(reles.sourceEvent, reles.targetEvent, granularity, reles.offset);
-											System.out.println("Duration:" + countInThisCycle);
-											foundDuration = true;
-											break;
-										}
-									}
-								}
-							}
+							if (collectiveDur.value > -1)
+								collectiveDur.value += countInThisCycle.value;
+							else
+								collectiveDur = countInThisCycle;
 						}
-						*/
-						
-						if (foundDuration)
-							collectiveDur += countInThisCycle;
 					}
 					catch(Exception e)
 					{
@@ -453,7 +419,7 @@ public class CNTROQueryImpl implements CNTROQuery
 						System.out.println(e.getMessage());
 					}
 					
-					if ((!foundDuration)&&(collectiveDur < 1))
+					if ((!foundDuration)&&(collectiveDur.value < 1))
 						throw new CNTROException(msg);
 				}
 				return collectiveDur;
@@ -467,8 +433,52 @@ public class CNTROQueryImpl implements CNTROQuery
 		throw new CNTROException(msg);
 	}
 	
+	private Duration computeDurationIfPresent(Event StartEvent, Event endEvent, Granularity granularity) throws CNTROException
+	{
+		Duration retDuration = new Duration("Null", -1, Granularity.UNKNOWN);
+		boolean foundDuration = false;
+		
+		List<TemporalRelation> relo1 = StartEvent.getTemporalRelationByRelation(endEvent);
+		
+		for (TemporalRelation relse : relo1)
+		{
+			if ((relse.relation == TemporalRelationType.SAMEAS)||(relse.relation == TemporalRelationType.EQUAL)||(relse.relation == TemporalRelationType.SIMULTANEOUS))
+				continue;
+			
+			if (relse.offset != null)
+			{
+				System.out.println("\nDuration between(1st Check):" + relse.sourceEvent.description + " and " + relse.targetEvent.description);
+				retDuration = getDurationFromOffset(relse.sourceEvent, StartEvent, granularity, relse.offset);
+				System.out.println("Duration:" + retDuration);
+				foundDuration = true;
+				break;
+			}
+		}
+			
+		if (!foundDuration)
+		{
+			List<TemporalRelation> relo2 = endEvent.getTemporalRelationByRelation(StartEvent);
+			
+			for (TemporalRelation reles : relo2)
+			{
+				if ((reles.relation == TemporalRelationType.SAMEAS)||(reles.relation == TemporalRelationType.EQUAL)||(reles.relation == TemporalRelationType.SIMULTANEOUS))
+					continue;
+
+				if (reles.offset != null)
+				{
+					System.out.println("\nDuration between(2nd Check):" + reles.sourceEvent.description + " and " + reles.targetEvent.description);
+					retDuration = getDurationFromOffset(reles.sourceEvent, endEvent, granularity, reles.offset);
+					System.out.println("Duration:" + retDuration);
+					foundDuration = true;
+					break;
+				}
+			}
+		}
+		
+		return retDuration;
+	}
 	
-	private long getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, TemporalOffset offset) 
+	private Duration getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, TemporalOffset offset) 
 	throws CNTROException
 	{
 		try
@@ -486,16 +496,18 @@ public class CNTROQueryImpl implements CNTROQuery
 			Date eD =  cal.getTime();
 		
 			Period period = new Period(temporal, sD, eD);
-		
-			int temporalGranularity = CNTROUtils.getTemporalGranularityFromTime(Granularity.DAY);
-			
+
 			if (granularity == null)
 			{
-				temporalGranularity = CNTROUtils.getFinestGranularityBetweenEvents(startEvent, endEvent);
-				return period.duration(temporalGranularity);
+				int defaultTemporalGranularity = CNTROUtils.getTemporalGranularityFromTime(Granularity.DAY);
+				defaultTemporalGranularity = CNTROUtils.getFinestGranularityBetweenEvents(startEvent, endEvent);
+				return new Duration("Computed by program", (int) period.duration(defaultTemporalGranularity), CNTROUtils.getTemporalGranularityFromTime(defaultTemporalGranularity));
 			}
 			
-			return convertValueBasedOnGranularity(period, offset.unit, granularity);
+			if (offset.unit != granularity)
+				return convertValueBasedOnGranularity(period, offset.unit, granularity);
+			else
+				return new Duration("Read From Offset", (int) offset.value, offset.unit);
 		}
 		catch(TemporalException e)
 		{
@@ -683,6 +695,33 @@ public class CNTROQueryImpl implements CNTROQuery
 	}
 	*/
 	
+	public List<Event> commonEventsRelatedTo2Events(Event event1, Event event2) 
+			   throws CNTROException
+	{
+		List<Event> common = new ArrayList<Event>();
+		
+		if ((event1 == null)||(event2 == null))
+			return common;
+		
+		Vector<TemporalRelation> list1 = event1.getTemporalRelations();
+		Vector<TemporalRelation> list2 = event2.getTemporalRelations();
+		
+		if (list1.isEmpty() || list2.isEmpty())
+			return common;
+		
+		for (TemporalRelation tr1 : list1)
+		{
+			Event list1e = tr1.targetEvent;
+			for (TemporalRelation tr2 : list2)
+			{
+				Event list2e = tr2.targetEvent;
+				if ((list1e.equals(list2e))&&(!list1e.equals(event2)))
+					common.add(list1e);
+			}
+		}
+		return common;
+	}
+	
 	private List<Event> eventsBetweenEvents(Event startEvent, 
 										   Event endEvent, 
 										   boolean includeStartAndEndEvents,
@@ -787,5 +826,73 @@ public class CNTROQueryImpl implements CNTROQuery
 		}
 
 		return section;
+	}
+
+	public static boolean tryShared = true;
+	
+	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent,
+			Granularity granularity) throws CNTROException 
+	{
+		Duration duration = new Duration("Null", -1, Granularity.UNKNOWN);
+	
+		try
+		{
+			duration = this.getDurationBetweenEvents(startEvent, endEvent, granularity, true);
+		}
+		catch(Exception e)
+		{
+			System.out.println("Failed to get duration, now trying to find shared events that can help...");
+		}
+		
+		if (tryShared == false)
+			return duration;
+		
+		if (duration.value == -1)
+		{
+			tryShared = false;
+			List<Event> common = this.commonEventsRelatedTo2Events(startEvent, endEvent);
+			
+			for (Event comEvt : common)
+			{
+				Duration dur1 = getDurationBetweenEvents(startEvent, comEvt, null);
+				Duration dur2 = getDurationBetweenEvents(endEvent, comEvt, null);
+				
+				if ((dur1.value != -1)||(dur2.value != -1))
+				{
+					if (dur1.value == -1) dur1.value = 0;
+					if (dur2.value == -1) dur2.value = 0;
+					
+					Vector<TemporalRelationType> rels1 = getTemporalRelationType(startEvent, comEvt);
+					Vector<TemporalRelationType> rels2 = getTemporalRelationType(endEvent, comEvt);
+					
+					boolean sameRels = false;
+					
+					for (TemporalRelationType rel1 : rels1)
+					{
+						for (TemporalRelationType rel2 : rels2)
+						{
+							if (rel1 == rel2)
+							{
+								sameRels = true;
+								break;
+							}
+						}
+						
+						if (sameRels == true)
+							break;
+					}
+					
+					duration = new Duration("Computed by program", -1 , dur1.unit);
+					if (sameRels)
+						duration.value = Math.abs(dur1.value - dur2.value);
+					else
+						duration.value = dur1.value + dur2.value;
+				}
+				
+			}
+		}
+		
+		tryShared = true;
+		return duration;
 	}
 }

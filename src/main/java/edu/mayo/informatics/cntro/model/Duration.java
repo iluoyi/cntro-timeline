@@ -4,6 +4,7 @@ import edu.mayo.informatics.cntro.queryIF.Granularity;
 
 public class Duration extends CNTROCls
 {
+	public boolean isAsserted = false;
 	public String label = null;
 	public long value;
 	public Granularity unit = Granularity.UNKNOWN;

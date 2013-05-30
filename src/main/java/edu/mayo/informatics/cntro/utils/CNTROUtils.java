@@ -84,10 +84,13 @@ public class CNTROUtils
 	
 	public static Granularity getGranularityFromString(String str)
 	{
-		if (str.toLowerCase().indexOf("year") != -1)
+		if ((str.toLowerCase().indexOf("year") != -1)||
+			(str.toLowerCase().indexOf("yrs") != -1)||
+			(str.toLowerCase().indexOf("yr") != -1))
 			return Granularity.YEAR;
 
-		if (str.toLowerCase().indexOf("month") != -1)
+		if ((str.toLowerCase().indexOf("month") != -1)||
+			(str.toLowerCase().indexOf("mos") != -1))
 			return Granularity.MONTH;
 
 		if (str.toLowerCase().indexOf("week") != -1)
@@ -106,12 +109,15 @@ public class CNTROUtils
 		
 		String granularities[] = {"day", "days", "hour", "hours", "minute", "minutes", 
 									"second", "seconds", "month", "months", "week", "weeks", 
-									"year", "years", 
+									"year", "years", "yrs", "yr", "yr.", "mon", "mos", 
 									"approximately", "approx", "approx.", "app",
 									"estimated", "est", "est.", "about", "close", "close to",
-									"exact", "exactly"};
+									"exact", "exactly", "over", "under", "near", "nearly", 
+									"beyond", "during", "wihtin", "with-in", "next", "previous", 
+									"coming", "recent", "recently", "ongoing", "half", "double", 
+									"triple", "quarter"};
 		
-		String auxiliaryWords[] = {"in", "a", "to", "the", "from"};
+		String auxiliaryWords[] = {"in", "a", "to", "the", "from", "and"};
 		
 		String[] words = str.split("\\s+");
 		for (int i = 0; i < words.length; i++) 
@@ -129,8 +135,7 @@ public class CNTROUtils
 			
 			for (String h : auxiliaryWords)
 			{
-				if ((words[i].trim().toLowerCase().indexOf(" " + h) != -1)||
-						(words[i].trim().toLowerCase().indexOf("" + h + " ") != -1))
+				if (h.equalsIgnoreCase(words[i].trim()))
 				{
 					words[i] = "";
 				}
@@ -139,7 +144,7 @@ public class CNTROUtils
 		
 		String convStr = "";
 		for (int i = 0; i < words.length; i++) 
-			convStr += words[i];
+			convStr += " " + words[i];
 		
 		return convStr;
 	}
@@ -169,7 +174,8 @@ public class CNTROUtils
 			
 			try
 			{
-				return Long.parseLong(str.trim());
+				long val =  Long.parseLong(str.trim());
+				return multiplyIfNeeded(pstr, val);
 			}
 			catch(Exception e)
 			{
@@ -181,25 +187,29 @@ public class CNTROUtils
 			// Now try splitting words and try them one by one
 			try
 			{
-				if (str.trim().indexOf(" ") != -1)
-				{
+				//if (str.trim().indexOf(" ") != -1)
+				//{
 					String[] tokens = str.split(" ");
 					long valueFromStringFragment = -1;
 					
 					for (String token :tokens)
 					{
-						valueFromStringFragment = CNTROUtils.getNumericValueFromString(token);
+						//valueFromStringFragment = CNTROUtils.getNumericValueFromString(token);
+						valueFromStringFragment = Words2Numbers.parse(str.trim());
 						if (valueFromStringFragment > -1)
-							return valueFromStringFragment;
+						{
+							return multiplyIfNeeded(pstr, valueFromStringFragment);
+						}
 					}
-				}
+				//}
 			}
 			catch(Exception ae)
 			{
+				System.out.println("Could not find numerical value of " + str);
 			}
 			
 			if (str.trim().toLowerCase().indexOf("next") != -1)
-				return 1;
+				return multiplyIfNeeded(pstr, 1);
 			else
 				if ((str.trim().toLowerCase().indexOf("prev") != -1)||
 						(str.trim().toLowerCase().indexOf("previous") != -1))
@@ -209,6 +219,17 @@ public class CNTROUtils
 		}
 		
 		//throw new Exception("Could not covert string \"" + str + "\" to its numeric value.");
+	}
+	
+	public static long multiplyIfNeeded(String str, long val)
+	{
+		if (str == null)
+			return val;
+		
+		if (str.toLowerCase().indexOf("half") != -1)
+			return val + (val/2);
+		
+		return val;
 	}
 	
 	public static CNTROException getException(String message)
@@ -279,6 +300,17 @@ public class CNTROUtils
 			case UNKNOWN:
 			default: return Temporal.DAYS;
 		}
+	}
+	
+	public static Granularity getTemporalGranularityFromTime(int temporalGranularity)
+	{
+			if (temporalGranularity == Temporal.YEARS) return Granularity.YEAR;
+			if (temporalGranularity ==  Temporal.MONTHS) return Granularity.MONTH;
+			if (temporalGranularity ==  Temporal.HOURS) return Granularity.HOUR;
+			if (temporalGranularity ==  Temporal.MINUTES) return Granularity.MINUTE;
+			if (temporalGranularity ==  Temporal.SECONDS) return Granularity.SECOND;
+
+			return Granularity.DAY;
 	}
 
 	public static TemporalRelationType findRelationBetween2Instants(Instant instant1, Instant instant2, int granularity) throws TemporalException
@@ -495,6 +527,20 @@ public class CNTROUtils
 			
 			int nextIndentSeq = 1;
 			List<Event> sortedSubListOfEvents = le;
+			
+			/*
+			if (sortedSubListOfEvents.size() > 1)
+			{
+				Hashtable<String, List<Event>> subTimeLine = CNTROUtils.getEventsTimeline(false, false, false, false, le);
+				
+				if ((subTimeLine != null)&&(!subTimeLine.isEmpty())&&(subTimeLine.size() == sortedSubListOfEvents.size()))
+				{
+					List<String> sortedListOfEvents = CNTROUtils.getTimeLineEventsDetails(subTimeLine, false);
+					str.addAll(sortedListOfEvents);
+					return str;
+				}
+			}
+			*/
 			
 			for (Event e : sortedSubListOfEvents)
 			{

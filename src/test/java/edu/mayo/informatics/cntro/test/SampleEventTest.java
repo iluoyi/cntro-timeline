@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import edu.mayo.informatics.cntro.impl.CNTROQueryImpl;
 import edu.mayo.informatics.cntro.main.CNTROAuxiliary;
+import edu.mayo.informatics.cntro.model.Duration;
 import edu.mayo.informatics.cntro.model.Event;
 import edu.mayo.informatics.cntro.model.Time;
 import edu.mayo.informatics.cntro.model.timeline.CNTROTimeLineEventList;
@@ -115,8 +116,8 @@ public class SampleEventTest
 			Event endEvent = eventList2.get(0);
 			
 			// Computing duration in months between 2006-2010
-			long computed = query.getDurationBetweenEvents(startEvent, endEvent, Granularity.MONTH);
-			assertTrue(computed == 48);
+			Duration computed = query.getDurationBetweenEvents(startEvent, endEvent, Granularity.MONTH);
+			assertTrue(computed.value == 48);
 			System.out.println("Correct Duration found! = " + computed + " " + Granularity.MONTH + " between events:\n");
 			System.out.println("Start Event" + startEvent.getClsId());
 			System.out.println("Start Event Duration" + startEvent.getTime(true));

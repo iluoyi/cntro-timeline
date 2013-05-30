@@ -23,7 +23,7 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 	}
 
 	@Override
-	public long getDurationBetweenEvents(Event startEvent, Event endEvent,
+	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent,
 			Granularity granularity) throws CNTROException 
 	{
 		try
@@ -37,9 +37,11 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 				Date endOf1 = startEvent.findEventEndTime();
 				Date startOf2 = endEvent.findEventStartTime();
 				
+				Time endTime = null;
+				
 				if (endOf1 == null)
 				{
-					Time endTime = startEvent.getTime(true);
+					endTime = startEvent.getTime(true);
 					
 					if ((endTime != null)&&(endTime instanceof TimeInstant))
 					{
@@ -47,9 +49,10 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 					}
 				}
 
+				Time strTime = null;
 				if (startOf2 == null)
 				{
-					Time strTime = endEvent.getTime(true);
+					 strTime = endEvent.getTime(true);
 					
 					if ((strTime != null)&&(strTime instanceof TimeInstant))
 					{
@@ -59,27 +62,48 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 
 				if ((endOf1 != null)&&(startOf2 != null))
 				{			
-					Granularity gran1 = startEvent.getGranularity();
-					Granularity gran2 = endEvent.getGranularity();
+					Granularity gran1 = Granularity.DAY;
+					Granularity gran2 = Granularity.DAY;
 				
+					if (endTime != null)
+						gran1 = endTime.granularity;
+					else
+						gran1 = startEvent.getGranularity();
+					
+					if (strTime != null)
+						gran2 = strTime.granularity;
+					else
+						gran2 = endEvent.getGranularity();
+
 					int ydiff = (startOf2.getYear() - endOf1.getYear());
 			
+					Duration dd = new Duration("Computed by program", -1, Granularity.MONTH);
 					if ((granularity == Granularity.MONTH)&&(gran1 == Granularity.YEAR)&&(gran2 == Granularity.YEAR))
 					{
 						if ( ydiff > 0)
 						{
-							return Math.abs(((ydiff - 1)*12) + 6);
+							dd.value = Math.abs(((ydiff - 1)*12) + 6);
 						}
 						else
-							return 6;
+							dd.value = 6;
+						
+						return dd;
+					}
+					
+					if ( ydiff > 0)
+					{
+						dd.value = ydiff;
+						return dd;
 					}
 					
 					if ((granularity == Granularity.MONTH)&&(gran1 == Granularity.DAY)&&(gran2 == Granularity.DAY))
 					{
-						long daysDiff = super.getDurationBetweenEvents(startEvent, endEvent, Granularity.DAY);
-						if (daysDiff > 0)
+						dd = super.getDurationBetweenEvents(startEvent, endEvent, Granularity.DAY);
+						
+						if (dd.value > 0)
 						{
-							return (daysDiff/30) + (((daysDiff%30) > 14)?1:0);
+							dd.value = (dd.value/30) + (((dd.value%30) > 14)?1:0);
+							return dd;
 						}
 					}
 				}
@@ -89,7 +113,12 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 			e.printStackTrace();
 		}
 		
-		return super.getDurationBetweenEvents(startEvent, endEvent, granularity);
+		Duration dur = super.getDurationBetweenEvents(startEvent, endEvent, granularity);
+		
+		//if (dur != -1)
+			//return getKimModifiedGranularityInMonths(dur, startEvent.getGranularity(), true);
+		
+		return dur;
 	}
 
 	public long getDuration(Event event, boolean adjustForKimsCalculaiton) throws CNTROException 
@@ -127,7 +156,7 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 		throw (new CNTROException("Event is null!!"));
 	}
 
-	public long convertValueBasedOnGranularity(Period period, Granularity fromGranularity, Granularity toGranularity) throws TemporalException
+	public Duration convertValueBasedOnGranularity(Period period, Granularity fromGranularity, Granularity toGranularity) throws TemporalException
 	{
 		if ((fromGranularity == null)||(toGranularity == null))
 			return super.convertValueBasedOnGranularity(period, fromGranularity, toGranularity);
@@ -145,13 +174,15 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 		int fromTemGranularity = CNTROUtils.getTemporalGranularityFromTime(fromAdjusted);
 		int toTempGranularity = CNTROUtils.getTemporalGranularityFromTime(toAdjusted);
 	    
+		long finalValue = -1;
 		if (fromTemGranularity != toTempGranularity)
 		{
 			long computedValue = period.duration(fromTemGranularity);
-			return KimCNTROQueryImpl.getKimModifiedGranularityInMonths(computedValue, fromAdjusted, false);
+			finalValue = KimCNTROQueryImpl.getKimModifiedGranularityInMonths(computedValue, fromAdjusted, false);
+			return new Duration("Compouted after adjustment", (int) finalValue, Granularity.MONTH);
 		}
 		
-		return period.duration(toTempGranularity);
+		return new Duration("Compouted after adjustment", (int) period.duration(toTempGranularity), Granularity.MONTH);
 	}
 	
 	public static long getKimModifiedGranularityInMonths(long value, Granularity fromGranularity, boolean adjust)
@@ -170,7 +201,7 @@ public class KimCNTROQueryImpl extends CNTROQueryImpl
 					return 6;
 		}
 		
-		if (fromGranularity == Granularity.DAY)
+		if ((fromGranularity == Granularity.DAY)||(fromGranularity == Granularity.UNKNOWN))
 		{
 			if (value > 0)
 			{
