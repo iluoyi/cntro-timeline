@@ -278,8 +278,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 		}
 
 		/**
-		 * Yi: this line is redundant.
-		 * for testing.
+		 * Yi: this line is redundant, for testing.
 		 */
 		//reasoner = com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory.getInstance().createReasoner( this.ontology );
 		
