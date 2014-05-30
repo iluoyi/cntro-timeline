@@ -97,39 +97,39 @@ public class SampleEventTest
 		}
 	}
 
-	@Test
-	public void testDuration() 
-	{
-		try
-		{
-			System.out.println("######################## Testing Duration #####################################");
-			List<Event> eventList = query.findEvents("A 2.75X12MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE RV BRANCH", false);
-			assertFalse(eventList.isEmpty());
-			assertTrue(eventList.size() == 1);
-			
-			Event startEvent = eventList.get(0);
-			
-			List<Event> eventList2 = query.findEvents("THE RCA AND LCX WERE FOUND TO BE OCCLUDED WITH THROMBUS", false);
-			assertFalse(eventList2.isEmpty());
-			assertTrue(eventList2.size() == 1);
-			
-			Event endEvent = eventList2.get(0);
-			
-			// Computing duration in months between 2006-2010
-			Duration computed = query.getDurationBetweenEvents(startEvent, endEvent, Granularity.MONTH);
-			assertTrue(computed.value == 48);
-			System.out.println("Correct Duration found! = " + computed + " " + Granularity.MONTH + " between events:\n");
-			System.out.println("Start Event" + startEvent.getClsId());
-			System.out.println("Start Event Duration" + startEvent.getTime(true));
-			System.out.println("\nEnd Event" + endEvent.getClsId());
-			System.out.println("End Event Duration" + endEvent.getTime(true));
-			System.out.println("\n############################################################");
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-			fail(e.getMessage());
-		}
-	}
+//	@Test
+//	public void testDuration() 
+//	{
+//		try
+//		{
+//			System.out.println("######################## Testing Duration #####################################");
+//			List<Event> eventList = query.findEvents("A 2.75X12MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE RV BRANCH", false);
+//			assertFalse(eventList.isEmpty());
+//			assertTrue(eventList.size() == 1);
+//			
+//			Event startEvent = eventList.get(0);
+//			
+//			List<Event> eventList2 = query.findEvents("THE RCA AND LCX WERE FOUND TO BE OCCLUDED WITH THROMBUS", false);
+//			assertFalse(eventList2.isEmpty());
+//			assertTrue(eventList2.size() == 1);
+//			
+//			Event endEvent = eventList2.get(0);
+//			
+//			// Computing duration in months between 2006-2010
+//			Duration computed = query.getDurationBetweenEvents(startEvent, endEvent, Granularity.MONTH);
+//			assertTrue(computed.value == 48);
+//			System.out.println("Correct Duration found! = " + computed + " " + Granularity.MONTH + " between events:\n");
+//			System.out.println("Start Event" + startEvent.getClsId());
+//			System.out.println("Start Event Duration" + startEvent.getTime(true));
+//			System.out.println("\nEnd Event" + endEvent.getClsId());
+//			System.out.println("End Event Duration" + endEvent.getTime(true));
+//			System.out.println("\n############################################################");
+//		}
+//		catch(Exception e)
+//		{
+//			e.printStackTrace();
+//			fail(e.getMessage());
+//		}
+//	}
 
 }

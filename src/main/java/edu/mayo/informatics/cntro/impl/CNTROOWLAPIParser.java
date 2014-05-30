@@ -257,17 +257,22 @@ public class CNTROOWLAPIParser implements CNTROParser
 	public boolean parse()
 	{
 		boolean isReadingSmooth = true;
-		
 		OWLClass c = null;
 		Set<OWLNamedIndividual> individuals = null;
 		
+		/*
+		 * Yi: To find out all individuals of "TemporalRelationStatement" class
+		 * 
+		 * What is the meaning of firstRun?
+		 */
+		System.out.println("Yi: Try to find individuals of TemporalRelationStatement class.");
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_RELATION_STMT_CLS)); 
-
 		individuals = reasoner.getInstances(c, false).getFlattened();
 		for (OWLNamedIndividual ind : individuals)
 		{
 			if (ind != null)
 			{
+				System.out.println("Yi: Processing TemporalRelationStatements.");
 				//System.out.println("\n[####################################]\nProcessing TemporalRelationStatements....-->");
 				//printOWLNamedIndividual(ind, this.ontology);
 				String label = getAnnotationPropertyValue(ind, rdfLabel);
@@ -276,21 +281,29 @@ public class CNTROOWLAPIParser implements CNTROParser
 				//isReadingSmooth = ((evt != null) && isReadingSmooth);
 			}
 		}
+		System.out.println("Yi: Finished the finding of TemporalRelationStatements.");
 
-		/**
-		 * Yi: this line is redundant, for testing.
-		 */
-		//reasoner = com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory.getInstance().createReasoner( this.ontology );
 		
-		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_EVENT_CLS)); 
-
+		/*
+		 * Yi: this line is redundant here, remove it for testing.
+		 * 
+		 * reasoner = com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory.getInstance().createReasoner( this.ontology );
+		 */
+		
+		
+		/*
+		 * Yi: To find out all individuals of "Event" class
+		 */
+		System.out.println("Yi: Try to find individuals of Event class.");
+		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_EVENT_CLS));
 		individuals = reasoner.getInstances(c, false).getFlattened();
 		for (OWLNamedIndividual ind : individuals)
 		{
 			if (ind != null)
 			{
+				System.out.println("Yi: Processing Events.");
 				//System.out.println("\n[####################################]\nProcessing Events....--> " + ind.toString());
-				//printOWLNamedIndividual(ind, this.ontology);
+				printOWLNamedIndividual(ind, this.ontology);
 				String label = getAnnotationPropertyValue(ind, rdfLabel);
 				if (eventsHolder.getByLabel(label) == null)
 				{
@@ -299,9 +312,13 @@ public class CNTROOWLAPIParser implements CNTROParser
 				}
 			}
 		}
+		System.out.println("Yi: Finished the finding of Events.");
 
-		firstRun = false;
 		
+		
+		
+		
+		firstRun = false;
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_RELATION_STMT_CLS)); 
 
 		individuals = reasoner.getInstances(c, false).getFlattened();
@@ -860,6 +877,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return retTargets;
 	}
 
+	// return the first label annotation
 	public String getAnnotationPropertyValue(OWLNamedIndividual pI, OWLAnnotationProperty annProperty)
 	{
 		if ((pI == null)||
@@ -869,6 +887,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 
 		Set<OWLAnnotation> annotations = pI.getAnnotations(ontology, annProperty);
 
+		// return the first label annotation
 		for (OWLAnnotation ann : annotations) 
 		{
 			if ((ann.getValue() != null)&&
