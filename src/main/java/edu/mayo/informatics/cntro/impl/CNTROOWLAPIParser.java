@@ -277,9 +277,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 			}
 		}
 
-		/**
-		 * Yi: this line is redundant.
-		 */
 		//reasoner = com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory.getInstance().createReasoner( this.ontology );
 		
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_EVENT_CLS)); 
