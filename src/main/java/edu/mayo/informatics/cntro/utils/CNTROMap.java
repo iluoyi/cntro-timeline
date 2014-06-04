@@ -22,6 +22,7 @@ public class CNTROMap
 		return true;
 	}
 	
+	// Yi: why do we use label as the key value?
 	public CNTROCls getByLabel(String key)
 	{
 		if (CNTROUtils.isNull(key))

@@ -292,7 +292,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 		
 		
 		/*
-		 * Yi: To find out all individuals of "Event" class
+		 * Yi: To find out all individuals of "Event" class after reasoning.
 		 */
 		System.out.println("Yi: Try to find individuals of Event class.");
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_EVENT_CLS));
@@ -305,7 +305,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 				//System.out.println("\n[####################################]\nProcessing Events....--> " + ind.toString());
 				printOWLNamedIndividual(ind, this.ontology);
 				String label = getAnnotationPropertyValue(ind, rdfLabel);
-				if (eventsHolder.getByLabel(label) == null)
+				if (eventsHolder.getByLabel(label) == null) // if this event is not existed in the eventHolder
 				{
 					Event evt = parseEvents(ind);
 					isReadingSmooth = ((evt != null) && isReadingSmooth);
@@ -315,9 +315,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 		System.out.println("Yi: Finished the finding of Events.");
 
 		
-		
-		
-		
+		/*
+		 * Yi: To find out all individuals of "TemporalRelationStatement" class
+		 * 
+		 * What is the meaning of firstRun?
+		 */
 		firstRun = false;
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_RELATION_STMT_CLS)); 
 
@@ -338,7 +340,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 		
 		return isReadingSmooth;
 	}
+	
 
+	/**
+	 * Yi: The method to parse a CNTRO Event from the loaded ontology
+	 */
 	public Event parseEvents(Object eventInstance) 
 	{
 		if ((eventInstance == null)||
@@ -350,18 +356,18 @@ public class CNTROOWLAPIParser implements CNTROParser
 		//System.out.println("\n<<<<<<<<<<<<<@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>\nProcessing Event \"" +  owlInst.getIRI() + "\"");
 		String eventName= getAnnotationPropertyValue(owlInst, rdfLabel);
 		
-		Event retEvent = eventsHolder.getEventByLabel(eventName);
+		Event retEvent = eventsHolder.getEventByLabel(eventName); // might be redundant
 		
 		if (retEvent != null)
 			return retEvent;
 		
-		String eventCategory = eventName;
+		String eventCategory = eventName; // initialized as the "label", e.g. "THE PATIENT WAS TAKING PLAVIX"
 		
 		Set<OWLClassExpression> eventTypes = owlInst.getTypes(this.ontology);
 		
 		if (eventTypes != null)
 		{
-			for (OWLClassExpression oe : eventTypes)
+			for (OWLClassExpression oe : eventTypes) // why do we use for loop here?
 			{
 				try
 				{
@@ -377,16 +383,19 @@ public class CNTROOWLAPIParser implements CNTROParser
 		}
 		
 		retEvent = new Event(eventCategory);
-		retEvent.description = eventName;
-		retEvent.setClsId(eventName);
-		eventsHolder.add(retEvent);
+		retEvent.description = eventName; // set the label as description
+		retEvent.setClsId(eventName); // set the label as id?
+		eventsHolder.add(retEvent); 
 		
-		readTimeProperties(retEvent, owlInst);
-		readTemporalRelations(retEvent, owlInst);
+		readTimeProperties(retEvent, owlInst); // for hasValidTime, hasNoteTime, and hasDuration
+		readTemporalRelations(retEvent, owlInst); // Warning Yi: this will recuisely call parseEvent().
 		
 		return retEvent;
 	}
 
+	/**
+	 * Yi: The method is to parse a CNTRO statement from the loaded ontology
+	 */
 	public void parseStatements(Object stmtInstance) 
 	{
 		if ((stmtInstance == null)||
@@ -402,15 +411,18 @@ public class CNTROOWLAPIParser implements CNTROParser
 
 		String stmtName= getAnnotationPropertyValue(owlInst, rdfLabel);
 		
-		Set<OWLNamedIndividual> subjects = getObjectPropertyValue(owlInst, temporalSubject);
+		Set<OWLNamedIndividual> subjects = getObjectPropertyValue(owlInst, temporalSubject); // Yi: should be only one subject for a single statement
 		if ((subjects == null)||(subjects.isEmpty()))
 		{
 			return;
 		}
 		
-		OWLNamedIndividual sub = subjects.iterator().next();
+		OWLNamedIndividual sub = subjects.iterator().next(); // get the subject
 		
-		if (!firstRun)
+		
+		// if it is not the first run, we can get the real source Event 
+		// because we have parsed Events from the parseEvent() method
+		if (!firstRun) 
 		{
 			if (sub != null)
 			{
@@ -428,8 +440,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 			return;
 		}
 
-		OWLNamedIndividual obj = objects.iterator().next();
+		OWLNamedIndividual obj = objects.iterator().next(); // get the object
 		
+		
+		// if it is not the first run, we can get the real target Event 
+		// because we have parsed Events from the parseEvent() method
 		if (!firstRun)
 		{
 			if (obj != null)
@@ -448,16 +463,16 @@ public class CNTROOWLAPIParser implements CNTROParser
 			return;
 		}
 		
-		OWLNamedIndividual pred = predicates.iterator().next();
+		OWLNamedIndividual pred = predicates.iterator().next(); // get the predicate
 		
-		if (pred != null)
+		if (pred != null) // if predicate is not null, we get the relation type as well
 		{
 			String predlabel  = pred.getIRI().getFragment();
 			rel = getTemporalRelationTypeForName(predlabel);	
 		}
 
 		
-		if (firstRun)
+		if (firstRun) // Yi: if this is the first run, why do we need to add this axiom? 
 		{
 			OWLObjectProperty relationProp = getObjectPropertyForTemporalRelationType(rel);
 			
@@ -486,8 +501,8 @@ public class CNTROOWLAPIParser implements CNTROParser
 						if (rtr.offset != null)
 						{
 							addTemporalRelation(source, target, rel, rtr.offset);
-							// Add same offset to all other events which might be same as target here.
 							
+							// Add same offset to all other events which might be same as target here.
 							List<TemporalRelationType> types = new ArrayList<TemporalRelationType>();
 							types.add(TemporalRelationType.EQUAL);
 							types.add(TemporalRelationType.SAMEAS);
@@ -538,7 +553,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 					else
 						to.unit = CNTROUtils.getGranularityFromString(durationUnits.iterator().next().toString());
 					
-					addTemporalRelation(source, target, rel, to);
+					addTemporalRelation(source, target, rel, to); 
 					
 					// try to find out offset that might not have carried over 
 					// in case of inferred (reverse direction) temporal relation
@@ -583,27 +598,33 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return;
 	}
 
+	/**
+	 * This method helps to parse time attributes of an Event
+	 * @param evt
+	 * @param owlInst
+	 */
 	private void readTimeProperties(Event evt, OWLNamedIndividual owlInst)
 	{
-		Set<OWLNamedIndividual> validTimes = getObjectPropertyValue(owlInst, hasValidTime);
-		List<CNTROCls> times = processTargets(validTimes, owlInst);
-		
+		Set<OWLNamedIndividual> validTimes = getObjectPropertyValue(owlInst, hasValidTime); // to collect a list of time individuals
+		List<CNTROCls> times = processTargets(validTimes, owlInst); 
 		if ((times != null)&&(!times.isEmpty()))
-			evt.eventTime = CNTROUtils.getTimeFromCNTROCls(times.get(0)); 
+			evt.eventTime = CNTROUtils.getTimeFromCNTROCls(times.get(0)); // Yi: so we just select the first one as the eventTime? 
+																		  // or maybe we assume it represents the unique eventTime.
 		
 		Set<OWLNamedIndividual> noteTimes = getObjectPropertyValue(owlInst, hasNoteTime);
 		times = processTargets(noteTimes, owlInst);
 		if ((times != null)&&(!times.isEmpty()))
 			evt.noteTime = CNTROUtils.getTimeFromCNTROCls(times.get(0));
 		
-		Set<OWLNamedIndividual> durations = getObjectPropertyValue(owlInst, hasDuration);
 		
+		Set<OWLNamedIndividual> durations = getObjectPropertyValue(owlInst, hasDuration);
 		if ((durations != null)&&(!durations.isEmpty()))
 		{
 			Duration dur = processDuration(durations, owlInst);
 			
 			if (dur != null)
 			{
+				// if it has duration, it must be an interval
 				TimeInterval tintv = new TimeInterval(TimeAssemblyMethod.INFERRED);
 				
 				if (evt.eventTime != null)
@@ -615,6 +636,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		}
 	}
 	
+	
+	/**
+	 * This method helps to parse all temporal relations of an Event (and all sameAs individuals)
+	 * @param evt
+	 * @param owlInst
+	 */
 	private void readTemporalRelations(Event evt, OWLNamedIndividual owlInst)
 	{
 		if (owlInst == null)
@@ -636,16 +663,17 @@ public class CNTROOWLAPIParser implements CNTROParser
 				continue;
 			}
 			
+			// Yi: if it is a temporal relation, then we retrieve all related individuals
 			Set<OWLNamedIndividual> relations = getObjectPropertyValue(owlInst, currentProperty);
 			
 			if (relations != null)
 			{
 				TemporalRelationType relType = getTemporalRelationTypeForProperty(currentProperty);
-				populateRelations(relations, owlInst, evt, relType);
+				populateRelations(relations, owlInst, evt, relType); // populate relations for this event
 			}
-			
 		}
 		
+		// Yi: we also need to handle TemporalRelationType.SAMEAS relation
 		Set<OWLIndividual> sameAsInstances = owlInst.getSameIndividuals(this.ontology);
 		
 		if (sameAsInstances != null)
@@ -680,6 +708,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 								System.out.println("Warning: failed to find time for Same As relation with event:" + sae.description);
 							}
 							
+							// call addTemporalRelation(Event source, Event target, TemporalRelationType relation, Time time)
 							addTemporalRelation(evt, sae, TemporalRelationType.SAMEAS, toSetTime);
 						}
 					}
@@ -687,6 +716,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 			}
 		}
 	}
+	
 	
 	private boolean containsType(Set<OWLClassExpression> typeCollection, String type)
 	{
@@ -763,6 +793,16 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return superClasses;
 	}
 	
+	
+	/**
+	 * This is a method for general usage. It processes target individuals one by one. It transfers each 
+	 * target into a CNTRO class and add it into a list.
+	 * Target individuals might be an Event (before...), timeInstant (hasValidTime), timeInterval, timePhase and timePeriod.
+	 * 
+	 * @param objProp
+	 * @param owlInst
+	 * @return
+	 */
 	private List<CNTROCls> processTargets(Set<OWLNamedIndividual> objProp, OWLNamedIndividual owlInst)
 	{
 		List<CNTROCls> retTargets = new ArrayList<CNTROCls>();
@@ -778,21 +818,24 @@ public class CNTROOWLAPIParser implements CNTROParser
 			Set<OWLClassExpression> oiTypes = target.getTypes(ontology);
 			for (OWLClassExpression oce : oiTypes)
 			{
-				superClasses = getCNTROSuperClasses(oce);
+				superClasses = getCNTROSuperClasses(oce); // all the super classes
 				if ((superClasses != null)&&(!superClasses.isEmpty()))
 					break;
 			}
 			
+			// Here we extract time info from the label and build a timeInstant.
 			String labelAsTime = getAnnotationPropertyValue(target, rdfLabel);
-			TimeInstant tiFromLabel = getTimeInstantFromLabel(target);
+			TimeInstant tiFromLabel = getTimeInstantFromLabel(target); // we presume the label contains exactly the time
 			
+			
+			// Yi: how can it be an event if we've extracted a timeInstant from the label information?
 			// If this is an event
 			if (containsType(superClasses, CNTROConstants.CNTRO_EVENT_CLS))
 			{
 					Event event = this.eventsHolder.getEventByLabel(labelAsTime);
 					
 					if (event == null)
-						event = this.parseEvents(target);
+						event = this.parseEvents(target); // Warning - Yi: this is a recursive call
 					
 					if (event == null)
 						continue;
@@ -830,12 +873,13 @@ public class CNTROOWLAPIParser implements CNTROParser
 					}
 						
 					if (tiFromLabel != null)
-						CNTROUtils.copyTimeInstantValuesIfNull(tiFromLabel, tinst);
+						CNTROUtils.copyTimeInstantValuesIfNull(tiFromLabel, tinst); // source = tiFromLabel, target = tinst
 						
 					retTargets.add(tinst);
 				}
 				else
 				{
+					// if this is a timeInterval
 					if (containsType(superClasses, CNTROConstants.CNTRO_TIMEINTERVAL_CLS))
 					{
 						TimeInterval tintv = new TimeInterval(TimeAssemblyMethod.ASSERTED);
@@ -901,6 +945,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return null;
 	}
 	
+	/**
+	 * To retrieve a set of (object) individuals of an object property for a given (subject) individual
+	 * @param pI
+	 * @param objProperty
+	 * @return
+	 */
 	public Set<OWLNamedIndividual> getObjectPropertyValue(OWLNamedIndividual pI, OWLObjectProperty objProperty)
 	{
 		if ((pI == null)||(objProperty == null))
@@ -910,6 +960,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 		
 		return propList;
 	}
+	
 	
 	public Set<OWLLiteral> getDataPropertyValue(OWLNamedIndividual pI, 
 			   OWLDataProperty dataProperty)
@@ -978,6 +1029,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return normDate;
 	}
 	
+	/**
+	 * This method processes duration individuals
+	 * @param objProp
+	 * @param owlInst
+	 * @return
+	 */
 	private Duration processDuration(Set<OWLNamedIndividual> objProp, OWLNamedIndividual owlInst)
 	{
 		Duration retDuration = null;
@@ -985,7 +1042,9 @@ public class CNTROOWLAPIParser implements CNTROParser
 		if ((objProp == null)||(objProp.isEmpty()))
 			return null;
 				
-		for (OWLNamedIndividual oi : objProp)
+		//TODO - Yi: if we are pretty sure that there is only one duration attribute, why should 
+		//           we use a for loop here?
+		for (OWLNamedIndividual oi : objProp) 
 		{
 			if (oi == null)
 				continue;
@@ -1065,16 +1124,21 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return retDuration;
 	}
 	
-	private void  populateRelations(Set<OWLNamedIndividual> relations, 
-														OWLNamedIndividual owlInst, 
-														Event sourceEvent, 
-														TemporalRelationType relType)
-	{
+	
+	/**
+	 * Populate relations and individuals for an event.
+	 * 
+	 * @param relations
+	 * @param owlInst
+	 * @param sourceEvent
+	 * @param relType
+	 */
+	private void  populateRelations(Set<OWLNamedIndividual> relations, OWLNamedIndividual owlInst, Event sourceEvent,TemporalRelationType relType) {
 		List<CNTROCls> targetTimes = processTargets(relations, owlInst);
 		
 		if ((targetTimes != null)&&(!targetTimes.isEmpty()))
 		{
-			for (int i=0; i < targetTimes.size(); i++)
+			for (int i=0; i < targetTimes.size(); i++) // to deal with each target event one by one
 			{
 				CNTROCls trg = targetTimes.get(i);
 				
@@ -1100,6 +1164,7 @@ public class CNTROOWLAPIParser implements CNTROParser
 				if ((trgTime == null)&&(trgEvt == null))
 					continue;
 				
+				// Yi: to handle temporal offset info (read in timeOffset from axiom statements)
 				TemporalOffset to = null;
 				boolean added = false;
 				Set<OWLObjectPropertyAssertionAxiom> assertions = this.ontology.getObjectPropertyAssertionAxioms(owlInst);
@@ -1165,20 +1230,22 @@ public class CNTROOWLAPIParser implements CNTROParser
 							}
 					}
 					
-					addTemporalRelation(sourceEvent, trgEvt, relType, trgTime);
+					addTemporalRelation(sourceEvent, trgEvt, relType, trgTime); // add this common relation
 
 					if (to != null)
-						addTemporalRelation(sourceEvent, trgEvt, relType, to);
+						addTemporalRelation(sourceEvent, trgEvt, relType, to); // this timeOffset relation will replace the common relation
 					
 					added = true;
 				}
+				
 				
 				if (!added)
 					addTemporalRelation(sourceEvent, trgEvt, relType, trgTime);
 			}
 		}
 	}
-
+	
+	// Yi: add a common temporal relation
 	private void addTemporalRelation(Event source, Event target, TemporalRelationType relation, Time time)
 	{
 		if ((source == null)||
@@ -1205,11 +1272,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 			
 			if ((sourceEvtrelations.isEmpty())||(!found))
 				source.addTemporalRelation(tr);
-
 			this.relationsHolder.add(tr);
 		}
 	}
-
+	
+	// Yi: add temporal relation for a timeOffset
 	private void addTemporalRelation(Event source, Event target, TemporalRelationType relation, TemporalOffset offset)
 	{
 		if ((source == null)||
@@ -1229,7 +1296,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 		{
 			tr.offset = offset;
 			source.addTemporalRelation(tr);
-
 			this.relationsHolder.add(tr);
 		}
 	}
@@ -1320,6 +1386,11 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return null;
 	}
 
+	/**
+	 * Helper method, used to create a timeInstant from the label
+	 * @param oi
+	 * @return
+	 */
 	private TimeInstant getTimeInstantFromLabel(OWLNamedIndividual oi)
 	{
 		TimeInstant ti = null;
@@ -1346,6 +1417,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		return ti;
 	}
 	
+	/**
+	 * Return a normalized date from the dateString
+	 * @param dateString
+	 * @param owlInst
+	 * @return
+	 */
 	public NormalizedDate normalize(String dateString, OWLNamedIndividual owlInst)
 	{
 		if (CNTROUtils.isNull(dateString))
@@ -1360,8 +1437,8 @@ public class CNTROOWLAPIParser implements CNTROParser
 		if ((!CNTROUtils.isNull(normalizedTime))&&(owlInst != null))
 		{
 			OWLDataPropertyAssertionAxiom assertion = 
-				df.getOWLDataPropertyAssertionAxiom(hasNormalizedTime, owlInst, normalizedTime);
-			AddAxiom addAxiomChange = new AddAxiom(ontology, assertion);
+				df.getOWLDataPropertyAssertionAxiom(hasNormalizedTime, owlInst, normalizedTime); // add one assertion about normalized time
+			AddAxiom addAxiomChange = new AddAxiom(ontology, assertion); // Yi: this is inferred by this CNTRO reasoner
 			manager.applyChange(addAxiomChange);
 		}
 		

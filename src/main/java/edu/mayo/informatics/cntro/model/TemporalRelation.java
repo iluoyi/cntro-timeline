@@ -11,7 +11,7 @@ public class TemporalRelation  extends CNTROCls
 	
 	public Event sourceEvent;
 	public TemporalRelationType relation;
-	public Time targetTime;
+	public Time targetTime; // Yi: what does this target time mean?
 	public Event targetEvent;
 	public TemporalOffset offset;
 	

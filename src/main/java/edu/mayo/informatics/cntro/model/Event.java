@@ -13,15 +13,16 @@ import edu.mayo.informatics.cntro.queryIF.Granularity;
 import edu.mayo.informatics.cntro.queryIF.TemporalRelationType;
 import edu.mayo.informatics.cntro.utils.CNTROUtils;
 
+
 public class Event  extends CNTROCls implements Comparable<Event> 
 {
 	public boolean isComputed = false;
 	public String description;
-	public Time eventTime;
-	public Time noteTime;
+	public Time eventTime; // can be timeInstant, timeInterval, timePeriod, and timePhase...
+	public Time noteTime; 
 	private Vector<TemporalRelation> hasTemporalRelations = new Vector<TemporalRelation>();
 	
-	public String normalizedEventCategory = null;
+	public String normalizedEventCategory = null; // TODO - Yi: what does this mean?
 	
 	public Event(String normalizedEventName)
 	{
@@ -417,6 +418,7 @@ public class Event  extends CNTROCls implements Comparable<Event>
 		return this.hasTemporalRelations;
 	}
 	
+	// Yi: to add a temporal relation (a common one or an offset)
 	public void addTemporalRelation(TemporalRelation rel)
 	{
 		boolean found = false;

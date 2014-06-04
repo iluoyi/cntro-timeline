@@ -237,6 +237,11 @@ public class CNTROUtils
 		return (new CNTROException());
 	}
 	
+	/**
+	 * To copy missing information to the target timeInstant from the source timeInstant 
+	 * @param source
+	 * @param target
+	 */
 	public static void copyTimeInstantValuesIfNull(TimeInstant source, TimeInstant target)
 	{
 		if ((source == null)||(target == null))
@@ -364,6 +369,7 @@ public class CNTROUtils
 	
 		return TemporalRelationType.UNKNOWN;
 	}
+	
 	
 	public static Time getTimeFromCNTROCls(CNTROCls cntroCls)
 	{
