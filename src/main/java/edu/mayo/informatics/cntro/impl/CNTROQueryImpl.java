@@ -36,8 +36,12 @@ import edu.stanford.smi.protegex.owl.swrl.bridge.builtins.temporal.exceptions.Te
 public class CNTROQueryImpl implements CNTROQuery 
 {
 	CNTROAuxiliary aux = null;
-	public Temporal temporal = null;
+	public Temporal temporal = null; // swrl component
 	
+	/**
+	 * Constructor
+	 * @param pAux
+	 */
 	public CNTROQueryImpl(CNTROAuxiliary pAux)
 	{
 		aux = pAux;
@@ -45,20 +49,21 @@ public class CNTROQueryImpl implements CNTROQuery
 		temporal = new Temporal(d);
 	}
 
+	/**
+	 * To get the duration of an Event
+	 */
 	public Duration getDuration(Event event) throws CNTROException 
 	{
 		if (event == null)
 			return null;
 		
 		String msg = "";
-		
 		String label = "";
 		
 		long dur = -1;
 		Granularity dg = event.getGranularity();
 		
-		try 
-		{
+		try {
 			Date start = event.findEventStartTime();
 			int granularity = event.getTemporalGranularity();
 			
@@ -66,16 +71,16 @@ public class CNTROQueryImpl implements CNTROQuery
 			
 			if ((start != null)&&(end != null))
 			{
-				Period period = new Period(temporal, start, end);
+				Period period = new Period(temporal, start, end); // To calculate the duration between two date through the SWRL library
 				dur = period.duration(granularity);
 			}
 			
-			if (event.isInstant())
+			if (event.isInstant()) // if this event has a timeInstant 
 			{
 				if (start != null)
 				{
 					Instant instance = new Instant(temporal, start);
-					dur = instance.duration(instance, granularity);
+					dur = instance.duration(instance, granularity); // TODO - Yi: how can we get a duration for an instant event?
 				}
 				
 				if (end != null)
@@ -84,13 +89,11 @@ public class CNTROQueryImpl implements CNTROQuery
 					dur = instance.duration(instance, granularity);
 				}
 			}
-		} 
-		catch (TemporalException e) 
-		{
+		} catch (TemporalException e) {
 			msg = e.getMessage();
 		}
 		
-		if (dur == -1)
+		if (dur == -1) // if none of the above, we try to directly retrieve the duration attribute if event has a TimeInterval
 		{
 			try
 			{
@@ -111,7 +114,7 @@ public class CNTROQueryImpl implements CNTROQuery
 					{
 						label = et.label;
 						dg = CNTROUtils.getGranularityFromString(et.label);
-						dur = CNTROUtils.getNumericValueFromString(et.label);
+						dur = CNTROUtils.getNumericValueFromString(et.label);// ...
 					}
 				}
 			}
@@ -135,12 +138,14 @@ public class CNTROQueryImpl implements CNTROQuery
 		throw new CNTROException(msg);
 	}
 
+	
 	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent)
 					throws CNTROException 
 	{
 		return  getDurationBetweenEvents(startEvent, endEvent, null);
 	}
 
+	
 	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent, Granularity granularity, boolean useOffset)
 			throws CNTROException 
 	{
@@ -234,6 +239,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		}
 	}
 
+	
 	public Duration convertValueBasedOnGranularity(Period period, Granularity fromGranularity, Granularity toGranularity) throws TemporalException
 	{
 		int defaultGranularity = CNTROUtils.getTemporalGranularityFromTime(Granularity.DAY);
@@ -246,6 +252,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		return (new Duration("computed by program", (int) period.duration(toTempGranularity), toGranularity));
 	}
 
+	
 	private Duration getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, boolean justUseSynonyms)
 										throws CNTROException
 	{
@@ -433,6 +440,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		throw new CNTROException(msg);
 	}
 	
+	
 	private Duration computeDurationIfPresent(Event StartEvent, Event endEvent, Granularity granularity) throws CNTROException
 	{
 		Duration retDuration = new Duration("Null", -1, Granularity.UNKNOWN);
@@ -478,6 +486,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		return retDuration;
 	}
 	
+	
 	private Duration getDurationFromOffset(Event startEvent, Event endEvent, Granularity granularity, TemporalOffset offset) 
 	throws CNTROException
 	{
@@ -516,6 +525,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		}
 	}
 	
+	
 	public Date getEventFeature(Event event, EventFeature feature, boolean computeIfNeeded)
 			throws CNTROException 
 	{
@@ -530,6 +540,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		return rd;
 	}
 
+	
 	public Vector<TemporalRelationType> getTemporalRelationType(Event oneEvent,
 			Event twoEvent) throws CNTROException 
 	{
@@ -583,6 +594,7 @@ public class CNTROQueryImpl implements CNTROQuery
 		}
 	}
 
+	
 	public TemporalRelationType getTemporalRelationType(Event oneEvent,
 			Time time) throws CNTROException 
 	{
@@ -600,10 +612,12 @@ public class CNTROQueryImpl implements CNTROQuery
 		return null;
 	}
 
+	
 	public List<Event> findEvents(String searchText) 
 	{
 		return findEvents(searchText, true);
 	}
+	
 	
 	public List<Event> findEvents(String searchText, boolean exactMatch) 
 	{
@@ -830,6 +844,10 @@ public class CNTROQueryImpl implements CNTROQuery
 
 	public static boolean tryShared = true;
 	
+	
+	/**
+	 * To calculate the duration between two events
+	 */
 	public Duration getDurationBetweenEvents(Event startEvent, Event endEvent,
 			Granularity granularity) throws CNTROException 
 	{

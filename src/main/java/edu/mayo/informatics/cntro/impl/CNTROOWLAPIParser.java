@@ -15,10 +15,8 @@ import java.util.Vector;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
-import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLAnnotationProperty;
 import org.semanticweb.owlapi.model.OWLAnnotationValue;
-import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
@@ -34,7 +32,6 @@ import org.semanticweb.owlapi.model.OWLObjectPropertyExpression;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
-import com.clarkparsia.owlapiv3.OWL;
 import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
 
 import edu.mayo.informatics.cntro.exceptions.CNTROException;
@@ -265,14 +262,12 @@ public class CNTROOWLAPIParser implements CNTROParser
 		 * 
 		 * What is the meaning of firstRun?
 		 */
-		System.out.println("Yi: Try to find individuals of TemporalRelationStatement class.");
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_TR_TEMPORAL_RELATION_STMT_CLS)); 
 		individuals = reasoner.getInstances(c, false).getFlattened();
 		for (OWLNamedIndividual ind : individuals)
 		{
 			if (ind != null)
 			{
-				System.out.println("Yi: Processing TemporalRelationStatements.");
 				//System.out.println("\n[####################################]\nProcessing TemporalRelationStatements....-->");
 				//printOWLNamedIndividual(ind, this.ontology);
 				String label = getAnnotationPropertyValue(ind, rdfLabel);
@@ -281,7 +276,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 				//isReadingSmooth = ((evt != null) && isReadingSmooth);
 			}
 		}
-		System.out.println("Yi: Finished the finding of TemporalRelationStatements.");
 
 		
 		/*
@@ -294,16 +288,14 @@ public class CNTROOWLAPIParser implements CNTROParser
 		/*
 		 * Yi: To find out all individuals of "Event" class after reasoning.
 		 */
-		System.out.println("Yi: Try to find individuals of Event class.");
 		c = df.getOWLClass(IRI.create(CNTROConstants.CNTRO_EVENT_CLS));
 		individuals = reasoner.getInstances(c, false).getFlattened();
 		for (OWLNamedIndividual ind : individuals)
 		{
 			if (ind != null)
 			{
-				System.out.println("Yi: Processing Events.");
 				//System.out.println("\n[####################################]\nProcessing Events....--> " + ind.toString());
-				printOWLNamedIndividual(ind, this.ontology);
+				//printOWLNamedIndividual(ind, this.ontology);
 				String label = getAnnotationPropertyValue(ind, rdfLabel);
 				if (eventsHolder.getByLabel(label) == null) // if this event is not existed in the eventHolder
 				{
@@ -312,7 +304,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 				}
 			}
 		}
-		System.out.println("Yi: Finished the finding of Events.");
 
 		
 		/*
@@ -337,7 +328,6 @@ public class CNTROOWLAPIParser implements CNTROParser
 			}
 		}
 
-		
 		return isReadingSmooth;
 	}
 	

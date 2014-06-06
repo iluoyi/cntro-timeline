@@ -45,6 +45,7 @@ public class SampleEventTest
 		{
 			e.printStackTrace();
 		}
+		System.out.println("\n\n");
 	}
 
 	@Test
@@ -74,9 +75,9 @@ public class SampleEventTest
 			// This is one way to process the event list. Hashtable key shows you the sequence on the timeline.
 			String eventsStr = TestUtils.marshallTimeLine(events, false, cetl);
 			
-			//System.out.println("\n##################### Timeline Events in XML format ##########################");
-			//System.out.println(eventsStr);
-			//System.out.println("\n############################################################");
+//			System.out.println("\n##################### Timeline Events in XML format ##########################");
+//			System.out.println(eventsStr);
+//			System.out.println("\n############################################################");
 			
 			List<String> tl = CNTROUtils.getTimeLineEventsDetails(events, false);
 			System.out.println("\n##################### Timeline Sequence ##########################");
@@ -105,7 +106,7 @@ public class SampleEventTest
 //			System.out.println("######################## Testing Duration #####################################");
 //			List<Event> eventList = query.findEvents("A 2.75X12MM TAXUS EXPRESS2 STENT WAS DEPLOYED IN THE RV BRANCH", false);
 //			assertFalse(eventList.isEmpty());
-//			assertTrue(eventList.size() == 1);
+//			assertTrue(eventList.size() == 1); // there is exactly one event matching the criteria
 //			
 //			Event startEvent = eventList.get(0);
 //			

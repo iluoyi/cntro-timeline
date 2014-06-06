@@ -66,6 +66,7 @@ public class CNTROAuxiliary
 	
 	public void parse()
 	{
+		boolean parseError = true;
 		parser_ = null;
 		switch(this.parsertype)
 		{
@@ -75,7 +76,7 @@ public class CNTROAuxiliary
 				else
 				{
 					parser_ = new CNTROOWLAPIParser(ontology_);
-					parser_.parse();
+					parseError = parser_.parse();
 				}
 				break;
 			case JENA:
@@ -84,13 +85,16 @@ public class CNTROAuxiliary
 				else
 				{
 					parser_ = new CNTROJenaAPIParser(model_);
-					parser_.parse();
+					parseError = parser_.parse();
 				}
 				break;
 			default: System.out.println("Incorrect Parser Type: Has to be either OWL API or Jena.");
 				return;
 		}
-		System.out.println("Events Loaded=" + parser_.getEventCount());
+		System.out.println("Parsing Error=" + parseError);
+		System.out.println("Events Loaded=" + parser_.getEventCount() + ", " + parser_.getEventMap().size());
+		System.out.println("Statements Loaded=" + parser_.getRelationMap().size());
+		//System.out.println(parser_.getRelationMap().toString());
 	}
 	
 	/*

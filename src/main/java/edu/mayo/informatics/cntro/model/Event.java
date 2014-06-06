@@ -14,11 +14,11 @@ import edu.mayo.informatics.cntro.queryIF.TemporalRelationType;
 import edu.mayo.informatics.cntro.utils.CNTROUtils;
 
 
-public class Event  extends CNTROCls implements Comparable<Event> 
+public class Event extends CNTROCls implements Comparable<Event> 
 {
 	public boolean isComputed = false;
 	public String description;
-	public Time eventTime; // can be timeInstant, timeInterval, timePeriod, and timePhase...
+	public Time eventTime; // can be timeInstant, timeInterval, timePeriod, and timePhase... this is weird...
 	public Time noteTime; 
 	private Vector<TemporalRelation> hasTemporalRelations = new Vector<TemporalRelation>();
 	
@@ -461,7 +461,7 @@ public class Event  extends CNTROCls implements Comparable<Event>
 	
 	private Time computeEventTimeUsingTemporalRelations() throws CNTROException
 	{
-		for (TemporalRelation rel : getTemporalRelations())
+		for (TemporalRelation rel : getTemporalRelations()) // so the assumption is that every relation leads to the same inferred result
 		{
 			Time ti = computeTime(rel);
 			
